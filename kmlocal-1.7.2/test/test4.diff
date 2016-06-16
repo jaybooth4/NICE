@@ -1,0 +1,3062 @@
+16c16
+<   cluster_sep   = 3.309
+---
+>   cluster_sep   = 2.37
+27,527c27,527
+< 	<stage: 0 curr: 0.1404 best: 0.1404 >
+< 	<stage: 1 curr: 0.1402 best: 0.1404 >
+< 	<stage: 2 curr: 0.1402 best: 0.1402 >
+< 	<stage: 3 curr: 0.1399 best: 0.1402 >
+< 	<stage: 4 curr: 0.06783 best: 0.1399 >
+< 	<stage: 5 curr: 0.0582 best: 0.06783 >
+< 	<stage: 6 curr: 0.0582 best: 0.0582 >
+< 	<stage: 7 curr: 0.05843 best: 0.0582 >
+< 	<stage: 8 curr: 0.04021 best: 0.0582 >
+< 	<stage: 9 curr: 0.04019 best: 0.04021 >
+< 	<stage: 10 curr: 0.04016 best: 0.04019 >
+< 	<stage: 11 curr: 0.04016 best: 0.04016 >
+< 	<stage: 12 curr: 0.04031 best: 0.04016 >
+< 	<stage: 13 curr: 0.04015 best: 0.04016 >
+< 	<stage: 14 curr: 0.04672 best: 0.04015 >
+< 	<stage: 15 curr: 0.04018 best: 0.04015 >
+< 	<stage: 16 curr: 0.04012 best: 0.04015 >
+< 	<stage: 17 curr: 0.03984 best: 0.04012 >
+< 	<stage: 18 curr: 0.03979 best: 0.03984 >
+< 	<stage: 19 curr: 0.1119 best: 0.03979 >
+< 	<stage: 20 curr: 0.05794 best: 0.03979 >
+< 	<stage: 21 curr: 0.04089 best: 0.03979 >
+< 	<stage: 22 curr: 0.03976 best: 0.03979 >
+< 	<stage: 23 curr: 0.03952 best: 0.03976 >
+< 	<stage: 24 curr: 0.03952 best: 0.03952 >
+< 	<stage: 25 curr: 0.03954 best: 0.03952 >
+< 	<stage: 26 curr: 0.03954 best: 0.03952 >
+< 	<stage: 27 curr: 0.04982 best: 0.03952 >
+< 	<stage: 28 curr: 0.04125 best: 0.03952 >
+< 	<stage: 29 curr: 0.04126 best: 0.03952 >
+< 	<stage: 30 curr: 0.03389 best: 0.03952 >
+< 	<stage: 31 curr: 0.03387 best: 0.03389 >
+< 	<stage: 32 curr: 0.03361 best: 0.03387 >
+< 	<stage: 33 curr: 0.03604 best: 0.03361 >
+< 	<stage: 34 curr: 0.03362 best: 0.03361 >
+< 	<stage: 35 curr: 0.03602 best: 0.03361 >
+< 	<stage: 36 curr: 0.03702 best: 0.03361 >
+< 	<stage: 37 curr: 0.03604 best: 0.03361 >
+< 	<stage: 38 curr: 0.03363 best: 0.03361 >
+< 	<stage: 39 curr: 0.03364 best: 0.03361 >
+< 	<stage: 40 curr: 0.03086 best: 0.03361 >
+< 	<stage: 41 curr: 0.01924 best: 0.03086 >
+< 	<stage: 42 curr: 0.03693 best: 0.01924 >
+< 	<stage: 43 curr: 0.02179 best: 0.01924 >
+< 	<stage: 44 curr: 0.01926 best: 0.01924 >
+< 	<stage: 45 curr: 0.01923 best: 0.01924 >
+< 	<stage: 46 curr: 0.04052 best: 0.01923 >
+< 	<stage: 47 curr: 0.02434 best: 0.01923 >
+< 	<stage: 48 curr: 0.02434 best: 0.01923 >
+< 	<stage: 49 curr: 0.01924 best: 0.01923 >
+< 	<stage: 50 curr: 0.01951 best: 0.01923 >
+< 	<stage: 51 curr: 0.01921 best: 0.01923 >
+< 	<stage: 52 curr: 0.02431 best: 0.01921 >
+< 	<stage: 53 curr: 0.01944 best: 0.01921 >
+< 	<stage: 54 curr: 0.02094 best: 0.01921 >
+< 	<stage: 55 curr: 0.01921 best: 0.01921 >
+< 	<stage: 56 curr: 0.02163 best: 0.01921 >
+< 	<stage: 57 curr: 0.01923 best: 0.01921 >
+< 	<stage: 58 curr: 0.02416 best: 0.01921 >
+< 	<stage: 59 curr: 0.01921 best: 0.01921 >
+< 	<stage: 60 curr: 0.03708 best: 0.01921 >
+< 	<stage: 61 curr: 0.0192 best: 0.01921 >
+< 	<stage: 62 curr: 0.01923 best: 0.0192 >
+< 	<stage: 63 curr: 0.02988 best: 0.0192 >
+< 	<stage: 64 curr: 0.02431 best: 0.0192 >
+< 	<stage: 65 curr: 0.03707 best: 0.0192 >
+< 	<stage: 66 curr: 0.01921 best: 0.0192 >
+< 	<stage: 67 curr: 0.03707 best: 0.0192 >
+< 	<stage: 68 curr: 0.02416 best: 0.0192 >
+< 	<stage: 69 curr: 0.01923 best: 0.0192 >
+< 	<stage: 70 curr: 0.02416 best: 0.0192 >
+< 	<stage: 71 curr: 0.01943 best: 0.0192 >
+< 	<stage: 72 curr: 0.01921 best: 0.0192 >
+< 	<stage: 73 curr: 0.01945 best: 0.0192 >
+< 	<stage: 74 curr: 0.01921 best: 0.0192 >
+< 	<stage: 75 curr: 0.01923 best: 0.0192 >
+< 	<stage: 76 curr: 0.02808 best: 0.0192 >
+< 	<stage: 77 curr: 0.04382 best: 0.0192 >
+< 	<stage: 78 curr: 0.02094 best: 0.0192 >
+< 	<stage: 79 curr: 0.02416 best: 0.0192 >
+< 	<stage: 80 curr: 0.01923 best: 0.0192 >
+< 	<stage: 81 curr: 0.03707 best: 0.0192 >
+< 	<stage: 82 curr: 0.0267 best: 0.0192 >
+< 	<stage: 83 curr: 0.01988 best: 0.0192 >
+< 	<stage: 84 curr: 0.04826 best: 0.0192 >
+< 	<stage: 85 curr: 0.01923 best: 0.0192 >
+< 	<stage: 86 curr: 0.03707 best: 0.0192 >
+< 	<stage: 87 curr: 0.03737 best: 0.0192 >
+< 	<stage: 88 curr: 0.02416 best: 0.0192 >
+< 	<stage: 89 curr: 0.01921 best: 0.0192 >
+< 	<stage: 90 curr: 0.01588 best: 0.0192 >
+< 	<stage: 91 curr: 0.01761 best: 0.01588 >
+< 	<stage: 92 curr: 0.01299 best: 0.01588 >
+< 	<stage: 93 curr: 0.02083 best: 0.01299 >
+< 	<stage: 94 curr: 0.0376 best: 0.01299 >
+< 	<stage: 95 curr: 0.03761 best: 0.01299 >
+< 	<stage: 96 curr: 0.01809 best: 0.01299 >
+< 	<stage: 97 curr: 0.0154 best: 0.01299 >
+< 	<stage: 98 curr: 0.02173 best: 0.01299 >
+< 	<stage: 99 curr: 0.01531 best: 0.01299 >
+< 	<stage: 100 curr: 0.01299 best: 0.01299 >
+< 	<stage: 101 curr: 0.02174 best: 0.01299 >
+< 	<stage: 102 curr: 0.013 best: 0.01299 >
+< 	<stage: 103 curr: 0.02084 best: 0.01299 >
+< 	<stage: 104 curr: 0.01624 best: 0.01299 >
+< 	<stage: 105 curr: 0.01529 best: 0.01299 >
+< 	<stage: 106 curr: 0.03709 best: 0.01299 >
+< 	<stage: 107 curr: 0.01299 best: 0.01299 >
+< 	<stage: 108 curr: 0.01472 best: 0.01299 >
+< 	<stage: 109 curr: 0.01298 best: 0.01299 >
+< 	<stage: 110 curr: 0.01472 best: 0.01298 >
+< 	<stage: 111 curr: 0.01299 best: 0.01298 >
+< 	<stage: 112 curr: 0.01303 best: 0.01298 >
+< 	<stage: 113 curr: 0.01401 best: 0.01298 >
+< 	<stage: 114 curr: 0.01312 best: 0.01298 >
+< 	<stage: 115 curr: 0.013 best: 0.01298 >
+< 	<stage: 116 curr: 0.01541 best: 0.01298 >
+< 	<stage: 117 curr: 0.00827 best: 0.01298 >
+< 	<stage: 118 curr: 0.008394 best: 0.00827 >
+< 	<stage: 119 curr: 0.008261 best: 0.00827 >
+< 	<stage: 120 curr: 0.02675 best: 0.008261 >
+< 	<stage: 121 curr: 0.00826 best: 0.008261 >
+< 	<stage: 122 curr: 0.008301 best: 0.00826 >
+< 	<stage: 123 curr: 0.01092 best: 0.00826 >
+< 	<stage: 124 curr: 0.008268 best: 0.00826 >
+< 	<stage: 125 curr: 0.008267 best: 0.00826 >
+< 	<stage: 126 curr: 0.009919 best: 0.00826 >
+< 	<stage: 127 curr: 0.01271 best: 0.00826 >
+< 	<stage: 128 curr: 0.008253 best: 0.00826 >
+< 	<stage: 129 curr: 0.009984 best: 0.008253 >
+< 	<stage: 130 curr: 0.01299 best: 0.008253 >
+< 	<stage: 131 curr: 0.03287 best: 0.008253 >
+< 	<stage: 132 curr: 0.02185 best: 0.008253 >
+< 	<stage: 133 curr: 0.006766 best: 0.008253 >
+< 	<stage: 134 curr: 0.01374 best: 0.006766 >
+< 	<stage: 135 curr: 0.008499 best: 0.006766 >
+< 	<stage: 136 curr: 0.007941 best: 0.006766 >
+< 	<stage: 137 curr: 0.00909 best: 0.006766 >
+< 	<stage: 138 curr: 0.006645 best: 0.006766 >
+< 	<stage: 139 curr: 0.006664 best: 0.006645 >
+< 	<stage: 140 curr: 0.01362 best: 0.006645 >
+< 	<stage: 141 curr: 0.006528 best: 0.006645 >
+< 	<stage: 142 curr: 0.008713 best: 0.006528 >
+< 	<stage: 143 curr: 0.00648 best: 0.006528 >
+< 	<stage: 144 curr: 0.008906 best: 0.00648 >
+< 	<stage: 145 curr: 0.01194 best: 0.00648 >
+< 	<stage: 146 curr: 0.0311 best: 0.00648 >
+< 	<stage: 147 curr: 0.008212 best: 0.00648 >
+< 	<stage: 148 curr: 0.006482 best: 0.00648 >
+< 	<stage: 149 curr: 0.0079 best: 0.00648 >
+< 	<stage: 150 curr: 0.03101 best: 0.00648 >
+< 	<stage: 151 curr: 0.01346 best: 0.00648 >
+< 	<stage: 152 curr: 0.008801 best: 0.00648 >
+< 	<stage: 153 curr: 0.0004493 best: 0.00648 >
+< 	<stage: 154 curr: 0.004016 best: 0.0004493 >
+< 	<stage: 155 curr: 0.01017 best: 0.0004493 >
+< 	<stage: 156 curr: 0.01018 best: 0.0004493 >
+< 	<stage: 157 curr: 0.002073 best: 0.0004493 >
+< 	<stage: 158 curr: 0.0004542 best: 0.0004493 >
+< 	<stage: 159 curr: 0.0004518 best: 0.0004493 >
+< 	<stage: 160 curr: 0.0008079 best: 0.0004493 >
+< 	<stage: 161 curr: 0.005285 best: 0.0004493 >
+< 	<stage: 162 curr: 0.001864 best: 0.0004493 >
+< 	<stage: 163 curr: 0.000691 best: 0.0004493 >
+< 	<stage: 164 curr: 0.000444 best: 0.0004493 >
+< 	<stage: 165 curr: 0.002059 best: 0.000444 >
+< 	<stage: 166 curr: 0.00654 best: 0.000444 >
+< 	<stage: 167 curr: 0.008294 best: 0.000444 >
+< 	<stage: 168 curr: 0.002873 best: 0.000444 >
+< 	<stage: 169 curr: 0.002874 best: 0.000444 >
+< 	<stage: 170 curr: 0.0004601 best: 0.000444 >
+< 	<stage: 171 curr: 0.0004596 best: 0.000444 >
+< 	<stage: 172 curr: 0.004006 best: 0.000444 >
+< 	<stage: 173 curr: 0.001858 best: 0.000444 >
+< 	<stage: 174 curr: 0.003574 best: 0.000444 >
+< 	<stage: 175 curr: 0.00592 best: 0.000444 >
+< 	<stage: 176 curr: 0.005918 best: 0.000444 >
+< 	<stage: 177 curr: 0.001859 best: 0.000444 >
+< 	<stage: 178 curr: 0.007717 best: 0.000444 >
+< 	<stage: 179 curr: 0.005815 best: 0.000444 >
+< 	<stage: 180 curr: 0.0005748 best: 0.000444 >
+< 	<stage: 181 curr: 0.001946 best: 0.000444 >
+< 	<stage: 182 curr: 0.006529 best: 0.000444 >
+< 	<stage: 183 curr: 0.001858 best: 0.000444 >
+< 	<stage: 184 curr: 0.005632 best: 0.000444 >
+< 	<stage: 185 curr: 0.002854 best: 0.000444 >
+< 	<stage: 186 curr: 0.002759 best: 0.000444 >
+< 	<stage: 187 curr: 0.002172 best: 0.000444 >
+< 	<stage: 188 curr: 0.0004483 best: 0.000444 >
+< 	<stage: 189 curr: 0.01567 best: 0.000444 >
+< 	<stage: 190 curr: 0.002764 best: 0.000444 >
+< 	<stage: 191 curr: 0.0006869 best: 0.000444 >
+< 	<stage: 192 curr: 0.005167 best: 0.000444 >
+< 	<stage: 193 curr: 0.005653 best: 0.000444 >
+< 	<stage: 194 curr: 0.005922 best: 0.000444 >
+< 	<stage: 195 curr: 0.001852 best: 0.000444 >
+< 	<stage: 196 curr: 0.0006874 best: 0.000444 >
+< 	<stage: 197 curr: 0.002048 best: 0.000444 >
+< 	<stage: 198 curr: 0.0004492 best: 0.000444 >
+< 	<stage: 199 curr: 0.01017 best: 0.000444 >
+< 	<stage: 200 curr: 0.0004397 best: 0.000444 >
+< 	<stage: 201 curr: 0.0007916 best: 0.0004397 >
+< 	<stage: 202 curr: 0.006526 best: 0.0004397 >
+< 	<stage: 203 curr: 0.0004578 best: 0.0004397 >
+< 	<stage: 204 curr: 0.01565 best: 0.0004397 >
+< 	<stage: 205 curr: 0.001855 best: 0.0004397 >
+< 	<stage: 206 curr: 0.002173 best: 0.0004397 >
+< 	<stage: 207 curr: 0.01017 best: 0.0004397 >
+< 	<stage: 208 curr: 0.002156 best: 0.0004397 >
+< 	<stage: 209 curr: 0.002063 best: 0.0004397 >
+< 	<stage: 210 curr: 0.007602 best: 0.0004397 >
+< 	<stage: 211 curr: 0.006536 best: 0.0004397 >
+< 	<stage: 212 curr: 0.008286 best: 0.0004397 >
+< 	<stage: 213 curr: 0.008165 best: 0.0004397 >
+< 	<stage: 214 curr: 0.002156 best: 0.0004397 >
+< 	<stage: 215 curr: 0.0007921 best: 0.0004397 >
+< 	<stage: 216 curr: 0.002174 best: 0.0004397 >
+< 	<stage: 217 curr: 0.01567 best: 0.0004397 >
+< 	<stage: 218 curr: 0.002866 best: 0.0004397 >
+< 	<stage: 219 curr: 0.002157 best: 0.0004397 >
+< 	<stage: 220 curr: 0.001727 best: 0.0004397 >
+< 	<stage: 221 curr: 0.008184 best: 0.0004397 >
+< 	<stage: 222 curr: 0.008295 best: 0.0004397 >
+< 	<stage: 223 curr: 0.002058 best: 0.0004397 >
+< 	<stage: 224 curr: 0.003568 best: 0.0004397 >
+< 	<stage: 225 curr: 0.003561 best: 0.0004397 >
+< 	<stage: 226 curr: 0.003946 best: 0.0004397 >
+< 	<stage: 227 curr: 0.0004549 best: 0.0004397 >
+< 	<stage: 228 curr: 0.00401 best: 0.0004397 >
+< 	<stage: 229 curr: 0.002866 best: 0.0004397 >
+< 	<stage: 230 curr: 0.002758 best: 0.0004397 >
+< 	<stage: 231 curr: 0.005274 best: 0.0004397 >
+< 	<stage: 232 curr: 0.004012 best: 0.0004397 >
+< 	<stage: 233 curr: 0.002761 best: 0.0004397 >
+< 	<stage: 234 curr: 0.0007818 best: 0.0004397 >
+< 	<stage: 235 curr: 0.002056 best: 0.0004397 >
+< 	<stage: 236 curr: 0.005281 best: 0.0004397 >
+< 	<stage: 237 curr: 0.002167 best: 0.0004397 >
+< 	<stage: 238 curr: 0.002763 best: 0.0004397 >
+< 	<stage: 239 curr: 0.002167 best: 0.0004397 >
+< 	<stage: 240 curr: 0.01017 best: 0.0004397 >
+< 	<stage: 241 curr: 0.0006877 best: 0.0004397 >
+< 	<stage: 242 curr: 0.001854 best: 0.0004397 >
+< 	<stage: 243 curr: 0.007723 best: 0.0004397 >
+< 	<stage: 244 curr: 0.005278 best: 0.0004397 >
+< 	<stage: 245 curr: 0.0006866 best: 0.0004397 >
+< 	<stage: 246 curr: 0.005913 best: 0.0004397 >
+< 	<stage: 247 curr: 0.007713 best: 0.0004397 >
+< 	<stage: 248 curr: 0.005918 best: 0.0004397 >
+< 	<stage: 249 curr: 0.005281 best: 0.0004397 >
+< 	<stage: 250 curr: 0.0006823 best: 0.0004397 >
+< 	<stage: 251 curr: 0.005918 best: 0.0004397 >
+< 	<stage: 252 curr: 0.001798 best: 0.0004397 >
+< 	<stage: 253 curr: 0.0004492 best: 0.0004397 >
+< 	<stage: 254 curr: 0.01564 best: 0.0004397 >
+< 	<stage: 255 curr: 0.002741 best: 0.0004397 >
+< 	<stage: 256 curr: 0.0006784 best: 0.0004397 >
+< 	<stage: 257 curr: 0.008296 best: 0.0004397 >
+< 	<stage: 258 curr: 0.0007788 best: 0.0004397 >
+< 	<stage: 259 curr: 0.0004229 best: 0.0004397 >
+< 	<stage: 260 curr: 0.002852 best: 0.0004229 >
+< 	<stage: 261 curr: 0.0004341 best: 0.0004229 >
+< 	<stage: 262 curr: 0.006523 best: 0.0004229 >
+< 	<stage: 263 curr: 0.0007822 best: 0.0004229 >
+< 	<stage: 264 curr: 0.0006645 best: 0.0004229 >
+< 	<stage: 265 curr: 0.006517 best: 0.0004229 >
+< 	<stage: 266 curr: 0.009738 best: 0.0004229 >
+< 	<stage: 267 curr: 0.002853 best: 0.0004229 >
+< 	<stage: 268 curr: 0.002044 best: 0.0004229 >
+< 	<stage: 269 curr: 0.01014 best: 0.0004229 >
+< 	<stage: 270 curr: 0.0189 best: 0.0004229 >
+< 	<stage: 271 curr: 0.007708 best: 0.0004229 >
+< 	<stage: 272 curr: 0.002154 best: 0.0004229 >
+< 	<stage: 273 curr: 0.002044 best: 0.0004229 >
+< 	<stage: 274 curr: 0.0006641 best: 0.0004229 >
+< 	<stage: 275 curr: 0.002046 best: 0.0004229 >
+< 	<stage: 276 curr: 0.007694 best: 0.0004229 >
+< 	<stage: 277 curr: 0.003992 best: 0.0004229 >
+< 	<stage: 278 curr: 0.01015 best: 0.0004229 >
+< 	<stage: 279 curr: 0.007706 best: 0.0004229 >
+< 	<stage: 280 curr: 0.005265 best: 0.0004229 >
+< 	<stage: 281 curr: 0.008269 best: 0.0004229 >
+< 	<stage: 282 curr: 0.0004252 best: 0.0004229 >
+< 	<stage: 283 curr: 0.0006623 best: 0.0004229 >
+< 	<stage: 284 curr: 0.003546 best: 0.0004229 >
+< 	<stage: 285 curr: 0.01015 best: 0.0004229 >
+< 	<stage: 286 curr: 0.005898 best: 0.0004229 >
+< 	<stage: 287 curr: 0.002634 best: 0.0004229 >
+< 	<stage: 288 curr: 0.005629 best: 0.0004229 >
+< 	<stage: 289 curr: 0.005027 best: 0.0004229 >
+< 	<stage: 290 curr: 0.01015 best: 0.0004229 >
+< 	<stage: 291 curr: 0.01566 best: 0.0004229 >
+< 	<stage: 292 curr: 0.0007784 best: 0.0004229 >
+< 	<stage: 293 curr: 0.01891 best: 0.0004229 >
+< 	<stage: 294 curr: 0.007694 best: 0.0004229 >
+< 	<stage: 295 curr: 0.0004395 best: 0.0004229 >
+< 	<stage: 296 curr: 0.007502 best: 0.0004229 >
+< 	<stage: 297 curr: 0.002046 best: 0.0004229 >
+< 	<stage: 298 curr: 0.006517 best: 0.0004229 >
+< 	<stage: 299 curr: 0.00213 best: 0.0004229 >
+< 	<stage: 300 curr: 0.0004444 best: 0.0004229 >
+< 	<stage: 301 curr: 0.007577 best: 0.0004229 >
+< 	<stage: 302 curr: 0.01015 best: 0.0004229 >
+< 	<stage: 303 curr: 0.007708 best: 0.0004229 >
+< 	<stage: 304 curr: 0.008279 best: 0.0004229 >
+< 	<stage: 305 curr: 0.008262 best: 0.0004229 >
+< 	<stage: 306 curr: 0.002732 best: 0.0004229 >
+< 	<stage: 307 curr: 0.005898 best: 0.0004229 >
+< 	<stage: 308 curr: 0.000778 best: 0.0004229 >
+< 	<stage: 309 curr: 0.0004339 best: 0.0004229 >
+< 	<stage: 310 curr: 0.002155 best: 0.0004229 >
+< 	<stage: 311 curr: 0.0007753 best: 0.0004229 >
+< 	<stage: 312 curr: 0.002741 best: 0.0004229 >
+< 	<stage: 313 curr: 0.0007681 best: 0.0004229 >
+< 	<stage: 314 curr: 0.005901 best: 0.0004229 >
+< 	<stage: 315 curr: 0.0059 best: 0.0004229 >
+< 	<stage: 316 curr: 0.002039 best: 0.0004229 >
+< 	<stage: 317 curr: 0.002155 best: 0.0004229 >
+< 	<stage: 318 curr: 0.0004444 best: 0.0004229 >
+< 	<stage: 319 curr: 0.002151 best: 0.0004229 >
+< 	<stage: 320 curr: 0.01565 best: 0.0004229 >
+< 	<stage: 321 curr: 0.0007815 best: 0.0004229 >
+< 	<stage: 322 curr: 0.002156 best: 0.0004229 >
+< 	<stage: 323 curr: 0.007702 best: 0.0004229 >
+< 	<stage: 324 curr: 0.01891 best: 0.0004229 >
+< 	<stage: 325 curr: 0.002153 best: 0.0004229 >
+< 	<stage: 326 curr: 0.006389 best: 0.0004229 >
+< 	<stage: 327 curr: 0.002846 best: 0.0004229 >
+< 	<stage: 328 curr: 0.002741 best: 0.0004229 >
+< 	<stage: 329 curr: 0.002742 best: 0.0004229 >
+< 	<stage: 330 curr: 0.0006688 best: 0.0004229 >
+< 	<stage: 331 curr: 0.008272 best: 0.0004229 >
+< 	<stage: 332 curr: 0.0004228 best: 0.0004229 >
+< 	<stage: 333 curr: 0.01015 best: 0.0004228 >
+< 	<stage: 334 curr: 0.006518 best: 0.0004228 >
+< 	<stage: 335 curr: 0.002153 best: 0.0004228 >
+< 	<stage: 336 curr: 0.005902 best: 0.0004228 >
+< 	<stage: 337 curr: 0.006523 best: 0.0004228 >
+< 	<stage: 338 curr: 0.005903 best: 0.0004228 >
+< 	<stage: 339 curr: 0.0004319 best: 0.0004228 >
+< 	<stage: 340 curr: 0.002335 best: 0.0004228 >
+< 	<stage: 341 curr: 0.008277 best: 0.0004228 >
+< 	<stage: 342 curr: 0.0004198 best: 0.0004228 >
+< 	<stage: 343 curr: 0.007703 best: 0.0004198 >
+< 	<stage: 344 curr: 0.01014 best: 0.0004198 >
+< 	<stage: 345 curr: 0.006518 best: 0.0004198 >
+< 	<stage: 346 curr: 0.002149 best: 0.0004198 >
+< 	<stage: 347 curr: 0.0004233 best: 0.0004198 >
+< 	<stage: 348 curr: 0.0004265 best: 0.0004198 >
+< 	<stage: 349 curr: 0.005633 best: 0.0004198 >
+< 	<stage: 350 curr: 0.008276 best: 0.0004198 >
+< 	<stage: 351 curr: 0.002154 best: 0.0004198 >
+< 	<stage: 352 curr: 0.006512 best: 0.0004198 >
+< 	<stage: 353 curr: 0.005267 best: 0.0004198 >
+< 	<stage: 354 curr: 0.01002 best: 0.0004198 >
+< 	<stage: 355 curr: 0.0007743 best: 0.0004198 >
+< 	<stage: 356 curr: 0.003989 best: 0.0004198 >
+< 	<stage: 357 curr: 0.002334 best: 0.0004198 >
+< 	<stage: 358 curr: 0.01552 best: 0.0004198 >
+< 	<stage: 359 curr: 0.008145 best: 0.0004198 >
+< 	<stage: 360 curr: 0.0006666 best: 0.0004198 >
+< 	<stage: 361 curr: 0.002333 best: 0.0004198 >
+< 	<stage: 362 curr: 0.002737 best: 0.0004198 >
+< 	<stage: 363 curr: 0.0189 best: 0.0004198 >
+< 	<stage: 364 curr: 0.003549 best: 0.0004198 >
+< 	<stage: 365 curr: 0.00563 best: 0.0004198 >
+< 	<stage: 366 curr: 0.0004268 best: 0.0004198 >
+< 	<stage: 367 curr: 0.002152 best: 0.0004198 >
+< 	<stage: 368 curr: 0.0004258 best: 0.0004198 >
+< 	<stage: 369 curr: 0.00652 best: 0.0004198 >
+< 	<stage: 370 curr: 0.005765 best: 0.0004198 >
+< 	<stage: 371 curr: 0.007703 best: 0.0004198 >
+< 	<stage: 372 curr: 0.0006622 best: 0.0004198 >
+< 	<stage: 373 curr: 0.00065 best: 0.0004198 >
+< 	<stage: 374 curr: 0.005631 best: 0.0004198 >
+< 	<stage: 375 curr: 0.0004176 best: 0.0004198 >
+< 	<stage: 376 curr: 0.008268 best: 0.0004176 >
+< 	<stage: 377 curr: 0.01878 best: 0.0004176 >
+< 	<stage: 378 curr: 0.002843 best: 0.0004176 >
+< 	<stage: 379 curr: 0.01565 best: 0.0004176 >
+< 	<stage: 380 curr: 0.006508 best: 0.0004176 >
+< 	<stage: 381 curr: 0.002738 best: 0.0004176 >
+< 	<stage: 382 curr: 0.01564 best: 0.0004176 >
+< 	<stage: 383 curr: 0.003072 best: 0.0004176 >
+< 	<stage: 384 curr: 0.0003043 best: 0.0004176 >
+< 	<stage: 385 curr: 0.007587 best: 0.0003043 >
+< 	<stage: 386 curr: 0.01553 best: 0.0003043 >
+< 	<stage: 387 curr: 0.006402 best: 0.0003043 >
+< 	<stage: 388 curr: 0.002622 best: 0.0003043 >
+< 	<stage: 389 curr: 0.01003 best: 0.0003043 >
+< 	<stage: 390 curr: 0.0004036 best: 0.0003043 >
+< 	<stage: 391 curr: 0.0003383 best: 0.0003043 >
+< 	<stage: 392 curr: 0.002735 best: 0.0003043 >
+< 	<stage: 393 curr: 0.0004124 best: 0.0003043 >
+< 	<stage: 394 curr: 0.0005505 best: 0.0003043 >
+< 	<stage: 395 curr: 0.0004274 best: 0.0003043 >
+< 	<stage: 396 curr: 0.005148 best: 0.0003043 >
+< 	<stage: 397 curr: 0.0004066 best: 0.0003043 >
+< 	<stage: 398 curr: 0.008159 best: 0.0003043 >
+< 	<stage: 399 curr: 0.01003 best: 0.0003043 >
+< 	<stage: 400 curr: 0.002958 best: 0.0003043 >
+< 	<stage: 401 curr: 0.005511 best: 0.0003043 >
+< 	<stage: 402 curr: 0.002625 best: 0.0003043 >
+< 	<stage: 403 curr: 0.01004 best: 0.0003043 >
+< 	<stage: 404 curr: 0.005777 best: 0.0003043 >
+< 	<stage: 405 curr: 0.002734 best: 0.0003043 >
+< 	<stage: 406 curr: 0.0004261 best: 0.0003043 >
+< 	<stage: 407 curr: 0.006402 best: 0.0003043 >
+< 	<stage: 408 curr: 0.00387 best: 0.0003043 >
+< 	<stage: 409 curr: 0.002035 best: 0.0003043 >
+< 	<stage: 410 curr: 0.00055 best: 0.0003043 >
+< 	<stage: 411 curr: 0.002212 best: 0.0003043 >
+< 	<stage: 412 curr: 0.005147 best: 0.0003043 >
+< 	<stage: 413 curr: 0.005512 best: 0.0003043 >
+< 	<stage: 414 curr: 0.0003891 best: 0.0003043 >
+< 	<stage: 415 curr: 0.008143 best: 0.0003043 >
+< 	<stage: 416 curr: 0.0002984 best: 0.0003043 >
+< 	<stage: 417 curr: 0.006394 best: 0.0002984 >
+< 	<stage: 418 curr: 0.005773 best: 0.0002984 >
+< 	<stage: 419 curr: 0.002727 best: 0.0002984 >
+< 	<stage: 420 curr: 0.005136 best: 0.0002984 >
+< 	<stage: 421 curr: 0.0004025 best: 0.0002984 >
+< 	<stage: 422 curr: 0.0003701 best: 0.0002984 >
+< 	<stage: 423 curr: 0.0002957 best: 0.0002984 >
+< 	<stage: 424 curr: 0.002716 best: 0.0002957 >
+< 	<stage: 425 curr: 0.002606 best: 0.0002957 >
+< 	<stage: 426 curr: 0.0005339 best: 0.0002957 >
+< 	<stage: 427 curr: 0.005774 best: 0.0002957 >
+< 	<stage: 428 curr: 0.006384 best: 0.0002957 >
+< 	<stage: 429 curr: 0.0004224 best: 0.0002957 >
+< 	<stage: 430 curr: 0.002724 best: 0.0002957 >
+< 	<stage: 431 curr: 0.01878 best: 0.0002957 >
+< 	<stage: 432 curr: 0.007804 best: 0.0002957 >
+< 	<stage: 433 curr: 0.002725 best: 0.0002957 >
+< 	<stage: 434 curr: 0.0005378 best: 0.0002957 >
+< 	<stage: 435 curr: 0.005496 best: 0.0002957 >
+< 	<stage: 436 curr: 0.006399 best: 0.0002957 >
+< 	<stage: 437 curr: 0.002023 best: 0.0002957 >
+< 	<stage: 438 curr: 0.01552 best: 0.0002957 >
+< 	<stage: 439 curr: 0.002949 best: 0.0002957 >
+< 	<stage: 440 curr: 0.0005409 best: 0.0002957 >
+< 	<stage: 441 curr: 0.01552 best: 0.0002957 >
+< 	<stage: 442 curr: 0.007858 best: 0.0002957 >
+< 	<stage: 443 curr: 0.0004268 best: 0.0002957 >
+< 	<stage: 444 curr: 0.0003924 best: 0.0002957 >
+< 	<stage: 445 curr: 0.01877 best: 0.0002957 >
+< 	<stage: 446 curr: 0.0002964 best: 0.0002957 >
+< 	<stage: 447 curr: 0.004814 best: 0.0002957 >
+< 	<stage: 448 curr: 0.008137 best: 0.0002957 >
+< 	<stage: 449 curr: 0.005508 best: 0.0002957 >
+< 	<stage: 450 curr: 0.004819 best: 0.0002957 >
+< 	<stage: 451 curr: 0.008151 best: 0.0002957 >
+< 	<stage: 452 curr: 0.0004449 best: 0.0002957 >
+< 	<stage: 453 curr: 0.004775 best: 0.0002957 >
+< 	<stage: 454 curr: 0.00203 best: 0.0002957 >
+< 	<stage: 455 curr: 0.006394 best: 0.0002957 >
+< 	<stage: 456 curr: 0.00221 best: 0.0002957 >
+< 	<stage: 457 curr: 0.009144 best: 0.0002957 >
+< 	<stage: 458 curr: 0.01878 best: 0.0002957 >
+< 	<stage: 459 curr: 0.0002979 best: 0.0002957 >
+< 	<stage: 460 curr: 0.006394 best: 0.0002957 >
+< 	<stage: 461 curr: 0.006392 best: 0.0002957 >
+< 	<stage: 462 curr: 0.0002961 best: 0.0002957 >
+< 	<stage: 463 curr: 0.00815 best: 0.0002957 >
+< 	<stage: 464 curr: 0.004813 best: 0.0002957 >
+< 	<stage: 465 curr: 0.0004218 best: 0.0002957 >
+< 	<stage: 466 curr: 0.00173 best: 0.0002957 >
+< 	<stage: 467 curr: 0.003865 best: 0.0002957 >
+< 	<stage: 468 curr: 0.00221 best: 0.0002957 >
+< 	<stage: 469 curr: 0.01528 best: 0.0002957 >
+< 	<stage: 470 curr: 0.0004257 best: 0.0002957 >
+< 	<stage: 471 curr: 0.0003979 best: 0.0002957 >
+< 	<stage: 472 curr: 0.003865 best: 0.0002957 >
+< 	<stage: 473 curr: 0.01553 best: 0.0002957 >
+< 	<stage: 474 curr: 0.000398 best: 0.0002957 >
+< 	<stage: 475 curr: 0.002206 best: 0.0002957 >
+< 	<stage: 476 curr: 0.002714 best: 0.0002957 >
+< 	<stage: 477 curr: 0.0003974 best: 0.0002957 >
+< 	<stage: 478 curr: 0.002952 best: 0.0002957 >
+< 	<stage: 479 curr: 0.0003247 best: 0.0002957 >
+< 	<stage: 480 curr: 0.0002958 best: 0.0002957 >
+< 	<stage: 481 curr: 0.002024 best: 0.0002957 >
+< 	<stage: 482 curr: 0.005507 best: 0.0002957 >
+< 	<stage: 483 curr: 0.006397 best: 0.0002957 >
+< 	<stage: 484 curr: 0.00295 best: 0.0002957 >
+< 	<stage: 485 curr: 0.002028 best: 0.0002957 >
+< 	<stage: 486 curr: 0.00272 best: 0.0002957 >
+< 	<stage: 487 curr: 0.002211 best: 0.0002957 >
+< 	<stage: 488 curr: 0.002948 best: 0.0002957 >
+< 	<stage: 489 curr: 0.01877 best: 0.0002957 >
+< 	<stage: 490 curr: 0.006392 best: 0.0002957 >
+< 	<stage: 491 curr: 0.004814 best: 0.0002957 >
+< 	<stage: 492 curr: 0.004812 best: 0.0002957 >
+< 	<stage: 493 curr: 0.003864 best: 0.0002957 >
+< 	<stage: 494 curr: 0.005773 best: 0.0002957 >
+< 	<stage: 495 curr: 0.01002 best: 0.0002957 >
+< 	<stage: 496 curr: 0.005507 best: 0.0002957 >
+< 	<stage: 497 curr: 0.01552 best: 0.0002957 >
+< 	<stage: 498 curr: 0.002029 best: 0.0002957 >
+< 	<stage: 499 curr: 0.004816 best: 0.0002957 >
+< 	<stage: 500 curr: 0.002616 best: 0.0002957 >
+---
+> 	<stage: 0 curr: 0.07099 best: 0.07099 >
+> 	<stage: 1 curr: 0.06568 best: 0.07099 >
+> 	<stage: 2 curr: 0.06568 best: 0.06568 >
+> 	<stage: 3 curr: 0.06327 best: 0.06568 >
+> 	<stage: 4 curr: 0.02015 best: 0.06327 >
+> 	<stage: 5 curr: 0.01978 best: 0.02015 >
+> 	<stage: 6 curr: 0.02048 best: 0.01978 >
+> 	<stage: 7 curr: 0.01979 best: 0.01978 >
+> 	<stage: 8 curr: 0.02215 best: 0.01978 >
+> 	<stage: 9 curr: 0.02047 best: 0.01978 >
+> 	<stage: 10 curr: 0.01287 best: 0.01978 >
+> 	<stage: 11 curr: 0.01209 best: 0.01287 >
+> 	<stage: 12 curr: 0.01467 best: 0.01209 >
+> 	<stage: 13 curr: 0.01394 best: 0.01209 >
+> 	<stage: 14 curr: 0.01109 best: 0.01209 >
+> 	<stage: 15 curr: 0.01109 best: 0.01109 >
+> 	<stage: 16 curr: 0.01033 best: 0.01109 >
+> 	<stage: 17 curr: 0.01027 best: 0.01033 >
+> 	<stage: 18 curr: 0.008423 best: 0.01027 >
+> 	<stage: 19 curr: 0.01077 best: 0.008423 >
+> 	<stage: 20 curr: 0.01226 best: 0.008423 >
+> 	<stage: 21 curr: 0.008414 best: 0.008423 >
+> 	<stage: 22 curr: 0.008412 best: 0.008414 >
+> 	<stage: 23 curr: 0.06884 best: 0.008412 >
+> 	<stage: 24 curr: 0.06853 best: 0.008412 >
+> 	<stage: 25 curr: 0.009912 best: 0.008412 >
+> 	<stage: 26 curr: 0.008413 best: 0.008412 >
+> 	<stage: 27 curr: 0.008471 best: 0.008412 >
+> 	<stage: 28 curr: 0.008411 best: 0.008412 >
+> 	<stage: 29 curr: 0.01951 best: 0.008411 >
+> 	<stage: 30 curr: 0.008409 best: 0.008411 >
+> 	<stage: 31 curr: 0.007728 best: 0.008409 >
+> 	<stage: 32 curr: 0.007729 best: 0.007728 >
+> 	<stage: 33 curr: 0.02934 best: 0.007728 >
+> 	<stage: 34 curr: 0.01202 best: 0.007728 >
+> 	<stage: 35 curr: 0.005453 best: 0.007728 >
+> 	<stage: 36 curr: 0.006101 best: 0.005453 >
+> 	<stage: 37 curr: 0.005456 best: 0.005453 >
+> 	<stage: 38 curr: 0.01672 best: 0.005453 >
+> 	<stage: 39 curr: 0.0102 best: 0.005453 >
+> 	<stage: 40 curr: 0.01292 best: 0.005453 >
+> 	<stage: 41 curr: 0.009052 best: 0.005453 >
+> 	<stage: 42 curr: 0.02708 best: 0.005453 >
+> 	<stage: 43 curr: 0.01019 best: 0.005453 >
+> 	<stage: 44 curr: 0.01355 best: 0.005453 >
+> 	<stage: 45 curr: 0.01292 best: 0.005453 >
+> 	<stage: 46 curr: 0.005443 best: 0.005453 >
+> 	<stage: 47 curr: 0.005456 best: 0.005443 >
+> 	<stage: 48 curr: 0.00633 best: 0.005443 >
+> 	<stage: 49 curr: 0.005454 best: 0.005443 >
+> 	<stage: 50 curr: 0.005443 best: 0.005443 >
+> 	<stage: 51 curr: 0.01557 best: 0.005443 >
+> 	<stage: 52 curr: 0.0061 best: 0.005443 >
+> 	<stage: 53 curr: 0.00771 best: 0.005443 >
+> 	<stage: 54 curr: 0.006694 best: 0.005443 >
+> 	<stage: 55 curr: 0.00545 best: 0.005443 >
+> 	<stage: 56 curr: 0.007557 best: 0.005443 >
+> 	<stage: 57 curr: 0.02797 best: 0.005443 >
+> 	<stage: 58 curr: 0.005449 best: 0.005443 >
+> 	<stage: 59 curr: 0.005449 best: 0.005443 >
+> 	<stage: 60 curr: 0.007779 best: 0.005443 >
+> 	<stage: 61 curr: 0.0129 best: 0.005443 >
+> 	<stage: 62 curr: 0.00777 best: 0.005443 >
+> 	<stage: 63 curr: 0.005426 best: 0.005443 >
+> 	<stage: 64 curr: 0.007769 best: 0.005426 >
+> 	<stage: 65 curr: 0.0129 best: 0.005426 >
+> 	<stage: 66 curr: 0.01287 best: 0.005426 >
+> 	<stage: 67 curr: 0.005431 best: 0.005426 >
+> 	<stage: 68 curr: 0.01555 best: 0.005426 >
+> 	<stage: 69 curr: 0.005414 best: 0.005426 >
+> 	<stage: 70 curr: 0.009727 best: 0.005414 >
+> 	<stage: 71 curr: 0.00678 best: 0.005414 >
+> 	<stage: 72 curr: 0.005368 best: 0.005414 >
+> 	<stage: 73 curr: 0.06585 best: 0.005368 >
+> 	<stage: 74 curr: 0.006946 best: 0.005368 >
+> 	<stage: 75 curr: 0.0279 best: 0.005368 >
+> 	<stage: 76 curr: 0.01013 best: 0.005368 >
+> 	<stage: 77 curr: 0.008253 best: 0.005368 >
+> 	<stage: 78 curr: 0.007696 best: 0.005368 >
+> 	<stage: 79 curr: 0.01013 best: 0.005368 >
+> 	<stage: 80 curr: 0.06586 best: 0.005368 >
+> 	<stage: 81 curr: 0.003539 best: 0.005368 >
+> 	<stage: 82 curr: 0.004666 best: 0.003539 >
+> 	<stage: 83 curr: 0.008239 best: 0.003539 >
+> 	<stage: 84 curr: 0.003549 best: 0.003539 >
+> 	<stage: 85 curr: 0.003539 best: 0.003539 >
+> 	<stage: 86 curr: 0.006767 best: 0.003539 >
+> 	<stage: 87 curr: 0.02607 best: 0.003539 >
+> 	<stage: 88 curr: 0.004204 best: 0.003539 >
+> 	<stage: 89 curr: 0.01366 best: 0.003539 >
+> 	<stage: 90 curr: 0.006768 best: 0.003539 >
+> 	<stage: 91 curr: 0.005821 best: 0.003539 >
+> 	<stage: 92 curr: 0.00447 best: 0.003539 >
+> 	<stage: 93 curr: 0.003548 best: 0.003539 >
+> 	<stage: 94 curr: 0.02608 best: 0.003539 >
+> 	<stage: 95 curr: 0.003554 best: 0.003539 >
+> 	<stage: 96 curr: 0.005867 best: 0.003539 >
+> 	<stage: 97 curr: 0.003487 best: 0.003539 >
+> 	<stage: 98 curr: 0.004605 best: 0.003487 >
+> 	<stage: 99 curr: 0.005819 best: 0.003487 >
+> 	<stage: 100 curr: 0.003487 best: 0.003487 >
+> 	<stage: 101 curr: 0.004371 best: 0.003487 >
+> 	<stage: 102 curr: 0.004614 best: 0.003487 >
+> 	<stage: 103 curr: 0.004606 best: 0.003487 >
+> 	<stage: 104 curr: 0.006718 best: 0.003487 >
+> 	<stage: 105 curr: 0.005772 best: 0.003487 >
+> 	<stage: 106 curr: 0.008161 best: 0.003487 >
+> 	<stage: 107 curr: 0.003567 best: 0.003487 >
+> 	<stage: 108 curr: 0.005823 best: 0.003487 >
+> 	<stage: 109 curr: 0.0136 best: 0.003487 >
+> 	<stage: 110 curr: 0.003492 best: 0.003487 >
+> 	<stage: 111 curr: 0.003568 best: 0.003487 >
+> 	<stage: 112 curr: 0.00577 best: 0.003487 >
+> 	<stage: 113 curr: 0.001237 best: 0.003487 >
+> 	<stage: 114 curr: 0.002362 best: 0.001237 >
+> 	<stage: 115 curr: 0.004464 best: 0.001237 >
+> 	<stage: 116 curr: 0.0091 best: 0.001237 >
+> 	<stage: 117 curr: 0.02377 best: 0.001237 >
+> 	<stage: 118 curr: 0.01135 best: 0.001237 >
+> 	<stage: 119 curr: 0.0091 best: 0.001237 >
+> 	<stage: 120 curr: 0.002119 best: 0.001237 >
+> 	<stage: 121 curr: 0.004938 best: 0.001237 >
+> 	<stage: 122 curr: 0.003104 best: 0.001237 >
+> 	<stage: 123 curr: 0.002364 best: 0.001237 >
+> 	<stage: 124 curr: 0.009101 best: 0.001237 >
+> 	<stage: 125 curr: 0.003118 best: 0.001237 >
+> 	<stage: 126 curr: 0.001892 best: 0.001237 >
+> 	<stage: 127 curr: 0.001672 best: 0.001237 >
+> 	<stage: 128 curr: 0.008261 best: 0.001237 >
+> 	<stage: 129 curr: 0.004423 best: 0.001237 >
+> 	<stage: 130 curr: 0.02377 best: 0.001237 >
+> 	<stage: 131 curr: 0.002125 best: 0.001237 >
+> 	<stage: 132 curr: 0.005231 best: 0.001237 >
+> 	<stage: 133 curr: 0.002125 best: 0.001237 >
+> 	<stage: 134 curr: 0.002644 best: 0.001237 >
+> 	<stage: 135 curr: 0.02377 best: 0.001237 >
+> 	<stage: 136 curr: 0.002124 best: 0.001237 >
+> 	<stage: 137 curr: 0.008263 best: 0.001237 >
+> 	<stage: 138 curr: 0.008264 best: 0.001237 >
+> 	<stage: 139 curr: 0.001287 best: 0.001237 >
+> 	<stage: 140 curr: 0.001238 best: 0.001237 >
+> 	<stage: 141 curr: 0.01136 best: 0.001237 >
+> 	<stage: 142 curr: 0.003562 best: 0.001237 >
+> 	<stage: 143 curr: 0.003493 best: 0.001237 >
+> 	<stage: 144 curr: 0.001262 best: 0.001237 >
+> 	<stage: 145 curr: 0.00358 best: 0.001237 >
+> 	<stage: 146 curr: 0.003521 best: 0.001237 >
+> 	<stage: 147 curr: 0.001993 best: 0.001237 >
+> 	<stage: 148 curr: 0.003573 best: 0.001237 >
+> 	<stage: 149 curr: 0.001239 best: 0.001237 >
+> 	<stage: 150 curr: 0.003563 best: 0.001237 >
+> 	<stage: 151 curr: 0.01136 best: 0.001237 >
+> 	<stage: 152 curr: 0.01135 best: 0.001237 >
+> 	<stage: 153 curr: 0.003565 best: 0.001237 >
+> 	<stage: 154 curr: 0.003532 best: 0.001237 >
+> 	<stage: 155 curr: 0.001982 best: 0.001237 >
+> 	<stage: 156 curr: 0.001277 best: 0.001237 >
+> 	<stage: 157 curr: 0.004416 best: 0.001237 >
+> 	<stage: 158 curr: 0.001668 best: 0.001237 >
+> 	<stage: 159 curr: 0.001239 best: 0.001237 >
+> 	<stage: 160 curr: 0.005227 best: 0.001237 >
+> 	<stage: 161 curr: 0.02376 best: 0.001237 >
+> 	<stage: 162 curr: 0.001438 best: 0.001237 >
+> 	<stage: 163 curr: 0.001289 best: 0.001237 >
+> 	<stage: 164 curr: 0.004973 best: 0.001237 >
+> 	<stage: 165 curr: 0.002114 best: 0.001237 >
+> 	<stage: 166 curr: 0.008266 best: 0.001237 >
+> 	<stage: 167 curr: 0.004468 best: 0.001237 >
+> 	<stage: 168 curr: 0.001289 best: 0.001237 >
+> 	<stage: 169 curr: 0.002126 best: 0.001237 >
+> 	<stage: 170 curr: 0.004462 best: 0.001237 >
+> 	<stage: 171 curr: 0.001234 best: 0.001237 >
+> 	<stage: 172 curr: 0.004972 best: 0.001234 >
+> 	<stage: 173 curr: 0.004421 best: 0.001234 >
+> 	<stage: 174 curr: 0.001286 best: 0.001234 >
+> 	<stage: 175 curr: 0.002116 best: 0.001234 >
+> 	<stage: 176 curr: 0.002356 best: 0.001234 >
+> 	<stage: 177 curr: 0.005229 best: 0.001234 >
+> 	<stage: 178 curr: 0.003164 best: 0.001234 >
+> 	<stage: 179 curr: 0.004463 best: 0.001234 >
+> 	<stage: 180 curr: 0.001287 best: 0.001234 >
+> 	<stage: 181 curr: 0.001245 best: 0.001234 >
+> 	<stage: 182 curr: 0.02376 best: 0.001234 >
+> 	<stage: 183 curr: 0.004422 best: 0.001234 >
+> 	<stage: 184 curr: 0.002112 best: 0.001234 >
+> 	<stage: 185 curr: 0.00404 best: 0.001234 >
+> 	<stage: 186 curr: 0.001238 best: 0.001234 >
+> 	<stage: 187 curr: 0.004452 best: 0.001234 >
+> 	<stage: 188 curr: 0.0003958 best: 0.001234 >
+> 	<stage: 189 curr: 0.001149 best: 0.0003958 >
+> 	<stage: 190 curr: 0.002732 best: 0.0003958 >
+> 	<stage: 191 curr: 0.002327 best: 0.0003958 >
+> 	<stage: 192 curr: 0.003582 best: 0.0003958 >
+> 	<stage: 193 curr: 0.0003974 best: 0.0003958 >
+> 	<stage: 194 curr: 0.02293 best: 0.0003958 >
+> 	<stage: 195 curr: 0.0003442 best: 0.0003958 >
+> 	<stage: 196 curr: 0.001232 best: 0.0003442 >
+> 	<stage: 197 curr: 0.008209 best: 0.0003442 >
+> 	<stage: 198 curr: 0.0003366 best: 0.0003442 >
+> 	<stage: 199 curr: 0.001228 best: 0.0003366 >
+> 	<stage: 200 curr: 0.00221 best: 0.0003366 >
+> 	<stage: 201 curr: 0.00268 best: 0.0003366 >
+> 	<stage: 202 curr: 0.002264 best: 0.0003366 >
+> 	<stage: 203 curr: 0.0003295 best: 0.0003366 >
+> 	<stage: 204 curr: 0.002236 best: 0.0003295 >
+> 	<stage: 205 curr: 0.002258 best: 0.0003295 >
+> 	<stage: 206 curr: 0.008193 best: 0.0003295 >
+> 	<stage: 207 curr: 0.0003132 best: 0.0003295 >
+> 	<stage: 208 curr: 0.004243 best: 0.0003132 >
+> 	<stage: 209 curr: 0.001423 best: 0.0003132 >
+> 	<stage: 210 curr: 0.01043 best: 0.0003132 >
+> 	<stage: 211 curr: 0.004192 best: 0.0003132 >
+> 	<stage: 212 curr: 0.01043 best: 0.0003132 >
+> 	<stage: 213 curr: 0.001069 best: 0.0003132 >
+> 	<stage: 214 curr: 0.008179 best: 0.0003132 >
+> 	<stage: 215 curr: 0.002189 best: 0.0003132 >
+> 	<stage: 216 curr: 0.0035 best: 0.0003132 >
+> 	<stage: 217 curr: 0.0042 best: 0.0003132 >
+> 	<stage: 218 curr: 0.0042 best: 0.0003132 >
+> 	<stage: 219 curr: 0.002193 best: 0.0003132 >
+> 	<stage: 220 curr: 0.001215 best: 0.0003132 >
+> 	<stage: 221 curr: 0.001201 best: 0.0003132 >
+> 	<stage: 222 curr: 0.001222 best: 0.0003132 >
+> 	<stage: 223 curr: 0.0003356 best: 0.0003132 >
+> 	<stage: 224 curr: 0.01044 best: 0.0003132 >
+> 	<stage: 225 curr: 0.02359 best: 0.0003132 >
+> 	<stage: 226 curr: 0.001201 best: 0.0003132 >
+> 	<stage: 227 curr: 0.001189 best: 0.0003132 >
+> 	<stage: 228 curr: 0.003508 best: 0.0003132 >
+> 	<stage: 229 curr: 0.001199 best: 0.0003132 >
+> 	<stage: 230 curr: 0.004246 best: 0.0003132 >
+> 	<stage: 231 curr: 0.001064 best: 0.0003132 >
+> 	<stage: 232 curr: 0.007346 best: 0.0003132 >
+> 	<stage: 233 curr: 0.00218 best: 0.0003132 >
+> 	<stage: 234 curr: 0.00122 best: 0.0003132 >
+> 	<stage: 235 curr: 0.001212 best: 0.0003132 >
+> 	<stage: 236 curr: 0.001429 best: 0.0003132 >
+> 	<stage: 237 curr: 0.00107 best: 0.0003132 >
+> 	<stage: 238 curr: 0.01043 best: 0.0003132 >
+> 	<stage: 239 curr: 0.00355 best: 0.0003132 >
+> 	<stage: 240 curr: 0.002642 best: 0.0003132 >
+> 	<stage: 241 curr: 0.004245 best: 0.0003132 >
+> 	<stage: 242 curr: 0.004233 best: 0.0003132 >
+> 	<stage: 243 curr: 0.0003128 best: 0.0003132 >
+> 	<stage: 244 curr: 0.00338 best: 0.0003128 >
+> 	<stage: 245 curr: 0.003553 best: 0.0003128 >
+> 	<stage: 246 curr: 0.007356 best: 0.0003128 >
+> 	<stage: 247 curr: 0.002634 best: 0.0003128 >
+> 	<stage: 248 curr: 0.02229 best: 0.0003128 >
+> 	<stage: 249 curr: 0.001203 best: 0.0003128 >
+> 	<stage: 250 curr: 0.007344 best: 0.0003128 >
+> 	<stage: 251 curr: 0.005066 best: 0.0003128 >
+> 	<stage: 252 curr: 0.008167 best: 0.0003128 >
+> 	<stage: 253 curr: 0.02229 best: 0.0003128 >
+> 	<stage: 254 curr: 0.001437 best: 0.0003128 >
+> 	<stage: 255 curr: 0.001204 best: 0.0003128 >
+> 	<stage: 256 curr: 0.0003188 best: 0.0003128 >
+> 	<stage: 257 curr: 0.0003027 best: 0.0003128 >
+> 	<stage: 258 curr: 0.0003147 best: 0.0003027 >
+> 	<stage: 259 curr: 0.003079 best: 0.0003027 >
+> 	<stage: 260 curr: 0.002637 best: 0.0003027 >
+> 	<stage: 261 curr: 0.0003191 best: 0.0003027 >
+> 	<stage: 262 curr: 0.003546 best: 0.0003027 >
+> 	<stage: 263 curr: 0.008171 best: 0.0003027 >
+> 	<stage: 264 curr: 0.0003079 best: 0.0003027 >
+> 	<stage: 265 curr: 0.0003213 best: 0.0003027 >
+> 	<stage: 266 curr: 0.00308 best: 0.0003027 >
+> 	<stage: 267 curr: 0.001202 best: 0.0003027 >
+> 	<stage: 268 curr: 0.003494 best: 0.0003027 >
+> 	<stage: 269 curr: 0.004233 best: 0.0003027 >
+> 	<stage: 270 curr: 0.002637 best: 0.0003027 >
+> 	<stage: 271 curr: 0.01042 best: 0.0003027 >
+> 	<stage: 272 curr: 0.004228 best: 0.0003027 >
+> 	<stage: 273 curr: 0.001211 best: 0.0003027 >
+> 	<stage: 274 curr: 0.00264 best: 0.0003027 >
+> 	<stage: 275 curr: 0.003545 best: 0.0003027 >
+> 	<stage: 276 curr: 0.0003936 best: 0.0003027 >
+> 	<stage: 277 curr: 0.008177 best: 0.0003027 >
+> 	<stage: 278 curr: 0.003544 best: 0.0003027 >
+> 	<stage: 279 curr: 0.001212 best: 0.0003027 >
+> 	<stage: 280 curr: 0.0003007 best: 0.0003027 >
+> 	<stage: 281 curr: 0.001179 best: 0.0003007 >
+> 	<stage: 282 curr: 0.001414 best: 0.0003007 >
+> 	<stage: 283 curr: 0.0003 best: 0.0003007 >
+> 	<stage: 284 curr: 0.008134 best: 0.0003 >
+> 	<stage: 285 curr: 0.002622 best: 0.0003 >
+> 	<stage: 286 curr: 0.004226 best: 0.0003 >
+> 	<stage: 287 curr: 0.004185 best: 0.0003 >
+> 	<stage: 288 curr: 0.007335 best: 0.0003 >
+> 	<stage: 289 curr: 0.004228 best: 0.0003 >
+> 	<stage: 290 curr: 0.003331 best: 0.0003 >
+> 	<stage: 291 curr: 0.001179 best: 0.0003 >
+> 	<stage: 292 curr: 0.004191 best: 0.0003 >
+> 	<stage: 293 curr: 0.008145 best: 0.0003 >
+> 	<stage: 294 curr: 0.005056 best: 0.0003 >
+> 	<stage: 295 curr: 0.002539 best: 0.0003 >
+> 	<stage: 296 curr: 0.02285 best: 0.0003 >
+> 	<stage: 297 curr: 0.001052 best: 0.0003 >
+> 	<stage: 298 curr: 0.002632 best: 0.0003 >
+> 	<stage: 299 curr: 0.004231 best: 0.0003 >
+> 	<stage: 300 curr: 0.01042 best: 0.0003 >
+> 	<stage: 301 curr: 0.00354 best: 0.0003 >
+> 	<stage: 302 curr: 0.0003055 best: 0.0003 >
+> 	<stage: 303 curr: 0.002628 best: 0.0003 >
+> 	<stage: 304 curr: 0.007343 best: 0.0003 >
+> 	<stage: 305 curr: 0.004181 best: 0.0003 >
+> 	<stage: 306 curr: 0.00218 best: 0.0003 >
+> 	<stage: 307 curr: 0.002721 best: 0.0003 >
+> 	<stage: 308 curr: 0.007343 best: 0.0003 >
+> 	<stage: 309 curr: 0.004193 best: 0.0003 >
+> 	<stage: 310 curr: 0.008143 best: 0.0003 >
+> 	<stage: 311 curr: 0.0003886 best: 0.0003 >
+> 	<stage: 312 curr: 0.004182 best: 0.0003 >
+> 	<stage: 313 curr: 0.00349 best: 0.0003 >
+> 	<stage: 314 curr: 0.002538 best: 0.0003 >
+> 	<stage: 315 curr: 0.0003114 best: 0.0003 >
+> 	<stage: 316 curr: 0.0003169 best: 0.0003 >
+> 	<stage: 317 curr: 0.001055 best: 0.0003 >
+> 	<stage: 318 curr: 0.001174 best: 0.0003 >
+> 	<stage: 319 curr: 0.002721 best: 0.0003 >
+> 	<stage: 320 curr: 0.005059 best: 0.0003 >
+> 	<stage: 321 curr: 0.002715 best: 0.0003 >
+> 	<stage: 322 curr: 0.005056 best: 0.0003 >
+> 	<stage: 323 curr: 0.00506 best: 0.0003 >
+> 	<stage: 324 curr: 0.0003091 best: 0.0003 >
+> 	<stage: 325 curr: 0.002726 best: 0.0003 >
+> 	<stage: 326 curr: 0.007342 best: 0.0003 >
+> 	<stage: 327 curr: 0.003492 best: 0.0003 >
+> 	<stage: 328 curr: 0.005059 best: 0.0003 >
+> 	<stage: 329 curr: 0.008126 best: 0.0003 >
+> 	<stage: 330 curr: 0.00506 best: 0.0003 >
+> 	<stage: 331 curr: 0.00418 best: 0.0003 >
+> 	<stage: 332 curr: 0.001055 best: 0.0003 >
+> 	<stage: 333 curr: 0.001189 best: 0.0003 >
+> 	<stage: 334 curr: 0.00119 best: 0.0003 >
+> 	<stage: 335 curr: 0.01042 best: 0.0003 >
+> 	<stage: 336 curr: 0.001425 best: 0.0003 >
+> 	<stage: 337 curr: 0.002621 best: 0.0003 >
+> 	<stage: 338 curr: 0.001178 best: 0.0003 >
+> 	<stage: 339 curr: 0.003542 best: 0.0003 >
+> 	<stage: 340 curr: 0.005057 best: 0.0003 >
+> 	<stage: 341 curr: 0.00255 best: 0.0003 >
+> 	<stage: 342 curr: 0.0003893 best: 0.0003 >
+> 	<stage: 343 curr: 0.002551 best: 0.0003 >
+> 	<stage: 344 curr: 0.02284 best: 0.0003 >
+> 	<stage: 345 curr: 0.0003894 best: 0.0003 >
+> 	<stage: 346 curr: 0.001185 best: 0.0003 >
+> 	<stage: 347 curr: 0.02285 best: 0.0003 >
+> 	<stage: 348 curr: 0.001186 best: 0.0003 >
+> 	<stage: 349 curr: 0.004185 best: 0.0003 >
+> 	<stage: 350 curr: 0.004069 best: 0.0003 >
+> 	<stage: 351 curr: 0.00505 best: 0.0003 >
+> 	<stage: 352 curr: 0.007344 best: 0.0003 >
+> 	<stage: 353 curr: 0.003478 best: 0.0003 >
+> 	<stage: 354 curr: 0.002634 best: 0.0003 >
+> 	<stage: 355 curr: 0.007344 best: 0.0003 >
+> 	<stage: 356 curr: 0.007341 best: 0.0003 >
+> 	<stage: 357 curr: 0.003543 best: 0.0003 >
+> 	<stage: 358 curr: 0.001207 best: 0.0003 >
+> 	<stage: 359 curr: 0.0003011 best: 0.0003 >
+> 	<stage: 360 curr: 0.001053 best: 0.0003 >
+> 	<stage: 361 curr: 0.0003117 best: 0.0003 >
+> 	<stage: 362 curr: 0.002632 best: 0.0003 >
+> 	<stage: 363 curr: 0.001186 best: 0.0003 >
+> 	<stage: 364 curr: 0.0003924 best: 0.0003 >
+> 	<stage: 365 curr: 0.0003506 best: 0.0003 >
+> 	<stage: 366 curr: 0.00506 best: 0.0003 >
+> 	<stage: 367 curr: 0.005055 best: 0.0003 >
+> 	<stage: 368 curr: 0.008131 best: 0.0003 >
+> 	<stage: 369 curr: 0.00419 best: 0.0003 >
+> 	<stage: 370 curr: 0.0003871 best: 0.0003 >
+> 	<stage: 371 curr: 0.003488 best: 0.0003 >
+> 	<stage: 372 curr: 0.002551 best: 0.0003 >
+> 	<stage: 373 curr: 0.00218 best: 0.0003 >
+> 	<stage: 374 curr: 0.00505 best: 0.0003 >
+> 	<stage: 375 curr: 0.002045 best: 0.0003 >
+> 	<stage: 376 curr: 0.003543 best: 0.0003 >
+> 	<stage: 377 curr: 0.003539 best: 0.0003 >
+> 	<stage: 378 curr: 0.0003919 best: 0.0003 >
+> 	<stage: 379 curr: 0.004176 best: 0.0003 >
+> 	<stage: 380 curr: 0.003535 best: 0.0003 >
+> 	<stage: 381 curr: 0.004138 best: 0.0003 >
+> 	<stage: 382 curr: 0.001185 best: 0.0003 >
+> 	<stage: 383 curr: 0.008143 best: 0.0003 >
+> 	<stage: 384 curr: 0.0003033 best: 0.0003 >
+> 	<stage: 385 curr: 0.007333 best: 0.0003 >
+> 	<stage: 386 curr: 0.00423 best: 0.0003 >
+> 	<stage: 387 curr: 0.005061 best: 0.0003 >
+> 	<stage: 388 curr: 0.007334 best: 0.0003 >
+> 	<stage: 389 curr: 0.00142 best: 0.0003 >
+> 	<stage: 390 curr: 0.003482 best: 0.0003 >
+> 	<stage: 391 curr: 0.001209 best: 0.0003 >
+> 	<stage: 392 curr: 0.002552 best: 0.0003 >
+> 	<stage: 393 curr: 0.0003109 best: 0.0003 >
+> 	<stage: 394 curr: 0.0003138 best: 0.0003 >
+> 	<stage: 395 curr: 0.001207 best: 0.0003 >
+> 	<stage: 396 curr: 0.008138 best: 0.0003 >
+> 	<stage: 397 curr: 0.000286 best: 0.0003 >
+> 	<stage: 398 curr: 0.001039 best: 0.000286 >
+> 	<stage: 399 curr: 0.0003768 best: 0.000286 >
+> 	<stage: 400 curr: 0.001173 best: 0.000286 >
+> 	<stage: 401 curr: 0.0002902 best: 0.000286 >
+> 	<stage: 402 curr: 0.003526 best: 0.000286 >
+> 	<stage: 403 curr: 0.002709 best: 0.000286 >
+> 	<stage: 404 curr: 0.0103 best: 0.000286 >
+> 	<stage: 405 curr: 0.002536 best: 0.000286 >
+> 	<stage: 406 curr: 0.001038 best: 0.000286 >
+> 	<stage: 407 curr: 0.01041 best: 0.000286 >
+> 	<stage: 408 curr: 0.001036 best: 0.000286 >
+> 	<stage: 409 curr: 0.002167 best: 0.000286 >
+> 	<stage: 410 curr: 0.000286 best: 0.000286 >
+> 	<stage: 411 curr: 0.001174 best: 0.000286 >
+> 	<stage: 412 curr: 0.000302 best: 0.000286 >
+> 	<stage: 413 curr: 0.001161 best: 0.000286 >
+> 	<stage: 414 curr: 0.008127 best: 0.000286 >
+> 	<stage: 415 curr: 0.002527 best: 0.000286 >
+> 	<stage: 416 curr: 0.002165 best: 0.000286 >
+> 	<stage: 417 curr: 0.001039 best: 0.000286 >
+> 	<stage: 418 curr: 0.002711 best: 0.000286 >
+> 	<stage: 419 curr: 0.00104 best: 0.000286 >
+> 	<stage: 420 curr: 0.002536 best: 0.000286 >
+> 	<stage: 421 curr: 0.0003899 best: 0.000286 >
+> 	<stage: 422 curr: 0.0027 best: 0.000286 >
+> 	<stage: 423 curr: 0.002535 best: 0.000286 >
+> 	<stage: 424 curr: 0.001367 best: 0.000286 >
+> 	<stage: 425 curr: 0.004219 best: 0.000286 >
+> 	<stage: 426 curr: 0.0003186 best: 0.000286 >
+> 	<stage: 427 curr: 0.00136 best: 0.000286 >
+> 	<stage: 428 curr: 0.002706 best: 0.000286 >
+> 	<stage: 429 curr: 0.003516 best: 0.000286 >
+> 	<stage: 430 curr: 0.007331 best: 0.000286 >
+> 	<stage: 431 curr: 0.00409 best: 0.000286 >
+> 	<stage: 432 curr: 0.008123 best: 0.000286 >
+> 	<stage: 433 curr: 0.003522 best: 0.000286 >
+> 	<stage: 434 curr: 0.004218 best: 0.000286 >
+> 	<stage: 435 curr: 0.002165 best: 0.000286 >
+> 	<stage: 436 curr: 0.001409 best: 0.000286 >
+> 	<stage: 437 curr: 0.001039 best: 0.000286 >
+> 	<stage: 438 curr: 0.0002777 best: 0.000286 >
+> 	<stage: 439 curr: 0.002259 best: 0.0002777 >
+> 	<stage: 440 curr: 0.0003098 best: 0.0002777 >
+> 	<stage: 441 curr: 0.004163 best: 0.0002777 >
+> 	<stage: 442 curr: 0.001175 best: 0.0002777 >
+> 	<stage: 443 curr: 0.001352 best: 0.0002777 >
+> 	<stage: 444 curr: 0.001079 best: 0.0002777 >
+> 	<stage: 445 curr: 0.007316 best: 0.0002777 >
+> 	<stage: 446 curr: 0.004208 best: 0.0002777 >
+> 	<stage: 447 curr: 0.0104 best: 0.0002777 >
+> 	<stage: 448 curr: 0.00812 best: 0.0002777 >
+> 	<stage: 449 curr: 0.0002968 best: 0.0002777 >
+> 	<stage: 450 curr: 0.001079 best: 0.0002777 >
+> 	<stage: 451 curr: 0.02283 best: 0.0002777 >
+> 	<stage: 452 curr: 0.004169 best: 0.0002777 >
+> 	<stage: 453 curr: 0.005038 best: 0.0002777 >
+> 	<stage: 454 curr: 0.0104 best: 0.0002777 >
+> 	<stage: 455 curr: 0.0104 best: 0.0002777 >
+> 	<stage: 456 curr: 0.0104 best: 0.0002777 >
+> 	<stage: 457 curr: 0.001081 best: 0.0002777 >
+> 	<stage: 458 curr: 0.02283 best: 0.0002777 >
+> 	<stage: 459 curr: 0.00108 best: 0.0002777 >
+> 	<stage: 460 curr: 0.004171 best: 0.0002777 >
+> 	<stage: 461 curr: 0.008 best: 0.0002777 >
+> 	<stage: 462 curr: 0.002527 best: 0.0002777 >
+> 	<stage: 463 curr: 0.004169 best: 0.0002777 >
+> 	<stage: 464 curr: 0.001405 best: 0.0002777 >
+> 	<stage: 465 curr: 0.003516 best: 0.0002777 >
+> 	<stage: 466 curr: 0.008118 best: 0.0002777 >
+> 	<stage: 467 curr: 0.00352 best: 0.0002777 >
+> 	<stage: 468 curr: 0.00253 best: 0.0002777 >
+> 	<stage: 469 curr: 0.0003832 best: 0.0002777 >
+> 	<stage: 470 curr: 0.0003124 best: 0.0002777 >
+> 	<stage: 471 curr: 0.004209 best: 0.0002777 >
+> 	<stage: 472 curr: 0.001176 best: 0.0002777 >
+> 	<stage: 473 curr: 0.001162 best: 0.0002777 >
+> 	<stage: 474 curr: 0.001173 best: 0.0002777 >
+> 	<stage: 475 curr: 0.004203 best: 0.0002777 >
+> 	<stage: 476 curr: 0.00253 best: 0.0002777 >
+> 	<stage: 477 curr: 0.005037 best: 0.0002777 >
+> 	<stage: 478 curr: 0.007312 best: 0.0002777 >
+> 	<stage: 479 curr: 0.007322 best: 0.0002777 >
+> 	<stage: 480 curr: 0.004207 best: 0.0002777 >
+> 	<stage: 481 curr: 0.004209 best: 0.0002777 >
+> 	<stage: 482 curr: 0.02283 best: 0.0002777 >
+> 	<stage: 483 curr: 0.0104 best: 0.0002777 >
+> 	<stage: 484 curr: 0.001068 best: 0.0002777 >
+> 	<stage: 485 curr: 0.002613 best: 0.0002777 >
+> 	<stage: 486 curr: 0.002703 best: 0.0002777 >
+> 	<stage: 487 curr: 0.008121 best: 0.0002777 >
+> 	<stage: 488 curr: 0.001152 best: 0.0002777 >
+> 	<stage: 489 curr: 0.0002873 best: 0.0002777 >
+> 	<stage: 490 curr: 0.002157 best: 0.0002777 >
+> 	<stage: 491 curr: 0.001076 best: 0.0002777 >
+> 	<stage: 492 curr: 0.001166 best: 0.0002777 >
+> 	<stage: 493 curr: 0.02283 best: 0.0002777 >
+> 	<stage: 494 curr: 0.00139 best: 0.0002777 >
+> 	<stage: 495 curr: 0.0002877 best: 0.0002777 >
+> 	<stage: 496 curr: 0.001405 best: 0.0002777 >
+> 	<stage: 497 curr: 0.0003016 best: 0.0002777 >
+> 	<stage: 498 curr: 0.0003092 best: 0.0002777 >
+> 	<stage: 499 curr: 0.003469 best: 0.0002777 >
+> 	<stage: 500 curr: 0.02283 best: 0.0002777 >
+531,534c531,534
+<   total_time    = 0.72 sec
+<   init_time     = 0.03 sec
+<   stage_time    = 0.00138 sec/stage_(excl_init) 0.00144 sec/stage_(incl_init)
+<   average_distort = 0.0002957
+---
+>   total_time    = 0.02374 sec
+>   init_time     = 0.00198 sec
+>   stage_time    = 4.351e-05 sec/stage_(excl_init) 4.747e-05 sec/stage_(incl_init)
+>   average_distort = 0.0002777
+536,555c536,555
+<        0	[   0.9195   0.4727 ] dist =  0.01022
+<        1	[   0.5716  -0.3746 ] dist =  0.02445
+<        2	[  0.06363   0.8993 ] dist =  0.01569
+<        3	[    0.294 -0.08563 ] dist =  0.02304
+<        4	[  0.07251  -0.8238 ] dist = 0.009392
+<        5	[   0.9164   0.8788 ] dist =  0.01072
+<        6	[  -0.2958   0.1774 ] dist = 0.008057
+<        7	[   -0.718   0.2776 ] dist =  0.01214
+<        8	[   0.1735  0.04778 ] dist =  0.01159
+<        9	[   0.9142  -0.1995 ] dist =  0.02455
+<       10	[   0.1231   0.8797 ] dist =   0.0155
+<       11	[  -0.5105   0.9874 ] dist =  0.01839
+<       12	[   0.1824  -0.6496 ] dist =  0.01662
+<       13	[   0.9169   -0.382 ] dist =  0.01229
+<       14	[    0.762  -0.9376 ] dist =  0.01489
+<       15	[   0.1421    0.931 ] dist =  0.01578
+<       16	[  -0.0855   0.6241 ] dist =  0.01279
+<       17	[   0.6821  -0.5637 ] dist =  0.01629
+<       18	[   0.7491   0.1654 ] dist = 0.007499
+<       19	[   -0.986  -0.2227 ] dist =  0.01578
+---
+>        0	[  0.01502   0.8776 ] dist =  0.01147
+>        1	[  0.04276    0.191 ] dist =  0.01379
+>        2	[  -0.8399   0.5186 ] dist =   0.0139
+>        3	[  -0.5726  0.08645 ] dist =  0.02157
+>        4	[  -0.3342  -0.2961 ] dist =  0.01222
+>        5	[  -0.6576  -0.8968 ] dist = 0.009672
+>        6	[  -0.4572   0.6773 ] dist = 0.008821
+>        7	[  0.05605  -0.8825 ] dist =  0.01207
+>        8	[  -0.8888  -0.3122 ] dist =  0.01742
+>        9	[  -0.1778   0.1156 ] dist =  0.01031
+>       10	[   0.2668  -0.7497 ] dist =  0.01398
+>       11	[  -0.8327  -0.7041 ] dist =  0.02197
+>       12	[  -0.6122  -0.2578 ] dist =   0.0105
+>       13	[  -0.5919   0.2639 ] dist =  0.02017
+>       14	[  -0.5621   0.7767 ] dist =  0.02461
+>       15	[  -0.4785  -0.2509 ] dist = 0.008987
+>       16	[  -0.9531   0.1501 ] dist = 0.008896
+>       17	[   0.7163  0.03851 ] dist =  0.01267
+>       18	[   -0.489   0.6461 ] dist =  0.01324
+>       19	[  0.03586   0.4266 ] dist =  0.01141
+561,1560c561,1560
+<        0       2    0.0006121
+<        1       4    7.407e-05
+<        2       0    4.087e-05
+<        3       9    0.0006335
+<        4       0    0.0001292
+<        5      12    0.0003457
+<        6      16    0.0001942
+<        7       0            0
+<        8       0    0.0003069
+<        9      19    0.0001373
+<       10      18    0.0004954
+<       11       7    0.0001868
+<       12       9    0.0004907
+<       13       4     0.000339
+<       14      11    0.0004969
+<       15      15    4.448e-06
+<       16      19    0.0002035
+<       17      12    0.0006329
+<       18       1    0.0001354
+<       19      15    5.858e-05
+<       20      11    3.248e-05
+<       21       7    0.0002211
+<       22       6    7.995e-05
+<       23      17    0.0002762
+<       24      14    0.0003826
+<       25       0     0.001812
+<       26       8    0.0001474
+<       27       3    0.0004415
+<       28      10    8.461e-05
+<       29       8    4.405e-05
+<       30      16    0.0001686
+<       31       1    0.0001377
+<       32       0    0.0001678
+<       33       2     1.74e-05
+<       34      11    7.187e-05
+<       35       4     0.000419
+<       36      16    5.401e-05
+<       37       6    0.0001243
+<       38       6    0.0001658
+<       39      14    0.0005687
+<       40       5    0.0002633
+<       41      11    0.0004958
+<       42      15    0.0002702
+<       43      19    2.444e-05
+<       44       6    4.271e-05
+<       45       9    0.0002101
+<       46      12      0.00048
+<       47       5    0.0001563
+<       48      18    0.0001374
+<       49      18    0.0001289
+<       50       6    0.0001321
+<       51       9    0.0002901
+<       52      15    0.0005731
+<       53       7     0.000338
+<       54       1    0.0001717
+<       55      11    9.045e-05
+<       56      14    0.0007814
+<       57       0    0.0004327
+<       58      15    0.0002829
+<       59       8    5.419e-05
+<       60      18    0.0003862
+<       61       8    9.475e-06
+<       62      14            0
+<       63       0    8.881e-05
+<       64      17    0.0001669
+<       65      15    8.484e-06
+<       66       9    0.0004613
+<       67       1    0.0001294
+<       68      17     0.001048
+<       69      15    0.0001947
+<       70      19    0.0004472
+<       71      13    0.0008955
+<       72      11      0.00108
+<       73      10    0.0006377
+<       74       9     0.001036
+<       75      11    3.061e-05
+<       76      15    0.0004183
+<       77       5    0.0004544
+<       78       3    0.0003163
+<       79      11    0.0005367
+<       80       7     0.000338
+<       81      15     8.23e-06
+<       82       8    0.0001641
+<       83       7    0.0002911
+<       84      16    0.0005692
+<       85       5    0.0001678
+<       86      16    0.0005341
+<       87       4    0.0001133
+<       88       0    0.0001821
+<       89      11    0.0001165
+<       90      16    0.0001447
+<       91      19    0.0002091
+<       92      17    0.0002032
+<       93      13    0.0005486
+<       94       7    0.0007908
+<       95      13     0.000348
+<       96       9    0.0006814
+<       97      15    0.0005333
+<       98       4    4.964e-05
+<       99       3    0.0001352
+<      100      14    0.0005239
+<      101      16    0.0001765
+<      102       5    0.0004059
+<      103      15     0.000104
+<      104      10    0.0003267
+<      105      19    5.583e-05
+<      106       5    0.0004393
+<      107      15    0.0008124
+<      108       3     0.001189
+<      109       1    8.208e-06
+<      110      11    0.0005144
+<      111      11      2.5e-05
+<      112       8    0.0001004
+<      113      15    0.0004236
+<      114      13     0.000148
+<      115       3    0.0001885
+<      116       4    0.0003939
+<      117       5    1.746e-05
+<      118      15    0.0003663
+<      119      10    0.0004211
+<      120       7    0.0004315
+<      121      11     4.54e-05
+<      122      11    5.785e-05
+<      123       4    0.0002611
+<      124      19    6.856e-05
+<      125       1    0.0002233
+<      126       5    0.0001864
+<      127      12     0.000408
+<      128       7    0.0003851
+<      129       1    9.357e-05
+<      130      13    0.0002239
+<      131      11    0.0001218
+<      132       5    0.0001644
+<      133       1    0.0001941
+<      134       8     0.000384
+<      135       6    0.0003547
+<      136       5    0.0002225
+<      137      19    0.0004738
+<      138      15    0.0002562
+<      139       8    3.051e-05
+<      140       6    0.0001635
+<      141       1     0.000376
+<      142      12    0.0004574
+<      143      15    0.0001024
+<      144       2    0.0002566
+<      145       6    5.371e-05
+<      146      11    0.0002317
+<      147       1    4.127e-06
+<      148      10    0.0006012
+<      149      12     0.000112
+<      150       9     0.000793
+<      151       7    0.0003581
+<      152       2    0.0005254
+<      153       2     0.000363
+<      154       9    0.0001895
+<      155       1    0.0009555
+<      156       8    0.0002585
+<      157      11    0.0002546
+<      158      15    0.0003528
+<      159       4    0.0002443
+<      160      10     0.000213
+<      161       9    0.0009212
+<      162       3    0.0006948
+<      163      11    0.0004989
+<      164      10     0.000573
+<      165       8    0.0004222
+<      166       5    5.752e-05
+<      167      11    5.656e-05
+<      168       8    0.0003034
+<      169      13    2.794e-05
+<      170      11    0.0002038
+<      171      17    0.0003588
+<      172      11    0.0001571
+<      173      15    0.0002597
+<      174       9    0.0006413
+<      175      14    9.902e-05
+<      176      15    0.0001227
+<      177      17      1.7e-07
+<      178       1    0.0002722
+<      179       6    0.0001281
+<      180       2    0.0001463
+<      181       1    0.0004308
+<      182      15    6.023e-05
+<      183      11    0.0003318
+<      184      19            0
+<      185       9    2.358e-05
+<      186       1    5.834e-05
+<      187       6    2.457e-05
+<      188       4    8.239e-05
+<      189      17     0.001398
+<      190      16    0.0001205
+<      191      10    4.032e-05
+<      192       8    6.392e-05
+<      193       6     2.26e-05
+<      194       0    4.712e-05
+<      195       1    7.735e-05
+<      196       9     0.000392
+<      197       6    1.879e-05
+<      198       4    6.361e-05
+<      199       4    0.0001971
+<      200      11    0.0003987
+<      201       8    1.243e-06
+<      202       3    7.368e-05
+<      203       8    6.119e-05
+<      204       5    0.0001052
+<      205       8    0.0001294
+<      206       5    0.0003246
+<      207      16    3.378e-05
+<      208      15     3.86e-05
+<      209      12    7.595e-05
+<      210      15    0.0001614
+<      211      15    5.548e-05
+<      212      19     0.001387
+<      213      17    0.0008504
+<      214       1    0.0001957
+<      215      15    0.0003943
+<      216      19    0.0005631
+<      217       6    5.081e-06
+<      218       3     0.002069
+<      219      15    0.0008358
+<      220       3    9.916e-05
+<      221       2    2.045e-05
+<      222      12     0.000135
+<      223       9    0.0007305
+<      224       6     4.78e-07
+<      225       1    9.067e-06
+<      226      17    0.0002604
+<      227      19    8.514e-05
+<      228      16     9.12e-05
+<      229       3    0.0008601
+<      230       0    0.0006803
+<      231       9    0.0009379
+<      232       7    3.495e-05
+<      233       5    0.0001037
+<      234       7    5.912e-05
+<      235       3    0.0001992
+<      236       7    0.0001249
+<      237      18            0
+<      238      13    1.061e-05
+<      239       2    0.0003431
+<      240       1    0.0002149
+<      241       3    0.0002368
+<      242       2    9.538e-05
+<      243       2    0.0005084
+<      244      15    0.0001286
+<      245      17    0.0001726
+<      246      15    0.0003013
+<      247       6    2.767e-05
+<      248       3    0.0009053
+<      249      11    0.0003614
+<      250       8     5.62e-05
+<      251       5    0.0005933
+<      252      16    1.244e-05
+<      253      13    0.0005348
+<      254       3      3.6e-05
+<      255       3    0.0008657
+<      256      12    0.0009783
+<      257       1    0.0005849
+<      258      15    4.434e-05
+<      259       7    0.0001673
+<      260       1     0.001036
+<      261       9    8.085e-05
+<      262       5    8.793e-06
+<      263      16    0.0004801
+<      264       0    0.0004263
+<      265       8    2.611e-05
+<      266      14     3.88e-05
+<      267       1    0.0006517
+<      268       0    6.036e-05
+<      269      10    0.0004055
+<      270      14    0.0002174
+<      271      19    0.0002363
+<      272      10    9.655e-05
+<      273      19    8.314e-05
+<      274      12    0.0002183
+<      275       0    1.187e-05
+<      276       1    0.0001709
+<      277      14    0.0001134
+<      278       0    1.487e-05
+<      279      15    0.0006638
+<      280      17    0.0002676
+<      281       7    6.065e-05
+<      282      16    0.0007174
+<      283       5     0.000293
+<      284       5      0.00133
+<      285      17    2.792e-05
+<      286       1    0.0001353
+<      287       2    0.0002541
+<      288       6    7.038e-05
+<      289      19    0.0002256
+<      290      12     0.000282
+<      291      14    0.0009531
+<      292      15    0.0002673
+<      293      12    0.0002357
+<      294       8            0
+<      295       9    0.0004553
+<      296      12     0.000165
+<      297      12    0.0007809
+<      298      18    0.0003514
+<      299      18    7.989e-05
+<      300       6    5.613e-05
+<      301      19    0.0001069
+<      302      10    0.0005049
+<      303      19    0.0006208
+<      304       4    4.422e-05
+<      305       2    4.277e-05
+<      306       3     0.001224
+<      307      16    0.0001336
+<      308       0     3.38e-05
+<      309      19    2.246e-05
+<      310       4     0.000217
+<      311      12    2.086e-05
+<      312      13    0.0006546
+<      313       7     0.001021
+<      314       4    0.0004238
+<      315       3    0.0008237
+<      316       8    0.0005222
+<      317      13    9.796e-05
+<      318      11    0.0004922
+<      319       8    0.0005191
+<      320      19    3.067e-05
+<      321      17    0.0003033
+<      322       4    0.0001142
+<      323       4    0.0004941
+<      324      10    0.0003642
+<      325      10     0.000495
+<      326       2    0.0007382
+<      327      15    0.0007125
+<      328      17    6.332e-05
+<      329       0    2.134e-05
+<      330      19    0.0005775
+<      331       0    8.692e-05
+<      332       3    1.942e-05
+<      333      15    0.0002947
+<      334      13    2.371e-05
+<      335      17    0.0007847
+<      336      12    0.0004062
+<      337       5    2.217e-05
+<      338       4    0.0003432
+<      339      14    0.0004799
+<      340       6    0.0006136
+<      341       5    4.674e-05
+<      342      13    0.0005335
+<      343      18    0.0003954
+<      344       8    4.806e-05
+<      345      13    0.0003549
+<      346       8    0.0003487
+<      347      10     0.000193
+<      348       4    0.0001477
+<      349       1    0.0003363
+<      350      12            0
+<      351       5    0.0002897
+<      352      16    0.0001617
+<      353      18    0.0007761
+<      354      18    4.828e-05
+<      355      19    0.0003768
+<      356       0    7.347e-05
+<      357       4    9.505e-05
+<      358      18    0.0002253
+<      359       6    8.865e-05
+<      360      16    0.0006444
+<      361       0    0.0002102
+<      362       7    0.0003085
+<      363      15    0.0001758
+<      364      16    0.0005121
+<      365       4    0.0001855
+<      366      17    0.0001382
+<      367       2    0.0002164
+<      368      16    0.0001091
+<      369      13    0.0001145
+<      370      17    4.051e-05
+<      371      12    0.0002044
+<      372      11     4.07e-06
+<      373       2    0.0002436
+<      374      13    0.0002367
+<      375       7    9.567e-05
+<      376      12    9.015e-05
+<      377       9    0.0001221
+<      378      13    0.0001321
+<      379       9     0.001096
+<      380      12     0.000495
+<      381       1    0.0006801
+<      382      18    9.516e-05
+<      383       3    0.0002112
+<      384       2    0.0001394
+<      385       5    0.0001996
+<      386       0     1.87e-05
+<      387      10    2.888e-05
+<      388       6    2.595e-06
+<      389       9    0.0001604
+<      390       3     8.52e-05
+<      391      13    8.562e-06
+<      392       3     0.001089
+<      393       0    0.0002563
+<      394       8    0.0008179
+<      395      13    2.303e-05
+<      396      15    7.451e-06
+<      397       5    9.519e-05
+<      398       0    0.0002095
+<      399       6    7.168e-06
+<      400      12    0.0001546
+<      401      16    0.0006947
+<      402       2    0.0003439
+<      403      17    6.155e-06
+<      404      19    0.0007261
+<      405       8    0.0004317
+<      406      10    0.0003638
+<      407      17    0.0003885
+<      408      16    3.797e-05
+<      409       3     0.001168
+<      410       2    0.0004682
+<      411      17    0.0006399
+<      412       4    5.951e-05
+<      413      16    0.0001822
+<      414      14    4.049e-07
+<      415      16    9.055e-06
+<      416       3    7.391e-05
+<      417       5    0.0001373
+<      418      10    4.385e-05
+<      419      17    6.078e-05
+<      420       2    7.738e-06
+<      421       0      0.00041
+<      422       6    0.0001707
+<      423      13    2.921e-05
+<      424       6    0.0001272
+<      425       9     0.001328
+<      426      12    0.0003584
+<      427      11    0.0002962
+<      428       5    7.492e-06
+<      429      17    0.0004251
+<      430      12    4.141e-05
+<      431      14    0.0001305
+<      432       2    4.721e-05
+<      433       7    0.0004261
+<      434      11    0.0001797
+<      435       4    0.0002449
+<      436       8    0.0001816
+<      437      17    4.644e-05
+<      438       9    0.0008845
+<      439       2    0.0005599
+<      440       6    8.574e-05
+<      441      16    0.0004594
+<      442      12    0.0009032
+<      443       2    0.0002901
+<      444      16    5.875e-05
+<      445      15    4.579e-05
+<      446      15    0.0001524
+<      447      10    0.0001307
+<      448       1    0.0008936
+<      449       6    7.331e-05
+<      450      16     0.000264
+<      451       8    0.0001435
+<      452      10    0.0004762
+<      453      12    0.0002003
+<      454       0    0.0001851
+<      455      10    0.0001423
+<      456       8    0.0003813
+<      457      15    0.0005221
+<      458       5     6.71e-05
+<      459       8    3.045e-06
+<      460       8    0.0001115
+<      461       7    0.0004297
+<      462      17    9.375e-05
+<      463       9    0.0001755
+<      464      15    0.0004863
+<      465      12    0.0001462
+<      466       7    0.0001913
+<      467      12     0.001254
+<      468      13    0.0007999
+<      469      19    6.331e-05
+<      470      12    4.934e-05
+<      471      11    0.0006419
+<      472       5    0.0001193
+<      473      16    0.0002091
+<      474       1    0.0006984
+<      475      17    3.064e-05
+<      476      15    9.566e-05
+<      477       3    0.0002868
+<      478      19    0.0005512
+<      479       2    0.0002481
+<      480       6    0.0001704
+<      481       0    9.263e-05
+<      482      11    0.0008761
+<      483      15     0.000475
+<      484       0    0.0003734
+<      485       2    0.0001753
+<      486      17    9.055e-05
+<      487      13     0.001384
+<      488       6    0.0005199
+<      489       4    0.0001187
+<      490      16    0.0001073
+<      491      17    0.0001074
+<      492       4     0.000615
+<      493       7    0.0001368
+<      494      19    0.0005867
+<      495      17    0.0004719
+<      496      11    1.684e-05
+<      497      16    0.0003938
+<      498       2    0.0003546
+<      499       4    0.0001187
+<      500       5    0.0002918
+<      501      12    0.0004433
+<      502      15    0.0001495
+<      503      12    0.0001237
+<      504      14     0.001021
+<      505      13    0.0001785
+<      506       8    0.0004248
+<      507       4    1.899e-05
+<      508       3    2.958e-05
+<      509       3    0.0003171
+<      510      11    0.0004715
+<      511       0    3.949e-05
+<      512       4    0.0003743
+<      513      17    0.0002346
+<      514      19    0.0004623
+<      515      11            0
+<      516      15    0.0009271
+<      517       1      9.2e-05
+<      518      11    5.026e-05
+<      519      17    6.767e-06
+<      520       0    0.0001624
+<      521       4    2.796e-05
+<      522      11    0.0006432
+<      523      11    0.0008254
+<      524      17    0.0001224
+<      525      16    7.332e-05
+<      526       4     0.000193
+<      527      11     0.000836
+<      528      14    0.0008191
+<      529       2    0.0001969
+<      530      18    6.126e-05
+<      531      18    1.773e-05
+<      532       9            0
+<      533       0    0.0001595
+<      534       9    0.0006641
+<      535       2    0.0003005
+<      536      14    0.0003657
+<      537       0    0.0001176
+<      538      17            0
+<      539       1    0.0007525
+<      540      11    0.0002928
+<      541      18    0.0002064
+<      542      18    0.0003103
+<      543      11    2.708e-05
+<      544      12    0.0001958
+<      545       1      9.9e-05
+<      546       6    0.0001544
+<      547       1    4.022e-07
+<      548       9    0.0007689
+<      549      18    5.254e-05
+<      550      10    0.0004473
+<      551       2    0.0005815
+<      552       2    0.0001103
+<      553       6    4.153e-05
+<      554      13    0.0002535
+<      555      14    0.0003508
+<      556      10    5.378e-05
+<      557       2    1.898e-06
+<      558      17    7.807e-05
+<      559      16    0.0003195
+<      560       0    0.0003711
+<      561      19    0.0005156
+<      562       4    0.0003342
+<      563       4      0.00012
+<      564       7    0.0001315
+<      565      17     0.000106
+<      566      11    0.0002342
+<      567      10    0.0006475
+<      568       7     0.000638
+<      569      18    0.0002571
+<      570      16    8.036e-05
+<      571       3    6.319e-05
+<      572      11     0.000103
+<      573       9    0.0004944
+<      574      17    0.0001751
+<      575      19    0.0007572
+<      576      14    0.0001682
+<      577      12    0.0001026
+<      578      14    0.0006033
+<      579      10    0.0003987
+<      580       8    2.366e-05
+<      581       3    6.128e-05
+<      582      16    3.598e-05
+<      583       2    0.0002845
+<      584       3    4.016e-05
+<      585       0     0.000607
+<      586      12    0.0001123
+<      587      19    0.0004293
+<      588       4    0.0001174
+<      589       5    0.0004387
+<      590      17    0.0001951
+<      591       0    0.0009959
+<      592       7    0.0002892
+<      593       0    9.024e-05
+<      594       1    0.0003944
+<      595       3    0.0008568
+<      596       9    6.339e-05
+<      597       6    6.232e-05
+<      598      17    0.0003797
+<      599      10    0.0006479
+<      600      13     0.000271
+<      601      11    0.0003118
+<      602      19    0.0004946
+<      603       6    0.0001165
+<      604       2    0.0007239
+<      605       4    7.248e-05
+<      606      15            0
+<      607      18    3.991e-06
+<      608      18    7.992e-05
+<      609       9    0.0001867
+<      610      10    0.0004059
+<      611       7    0.0002079
+<      612       8    0.0002041
+<      613      14    0.0004791
+<      614      19    7.424e-05
+<      615       6    0.0005317
+<      616       5    3.815e-05
+<      617      17    0.0002402
+<      618      11    0.0003585
+<      619      15    0.0004343
+<      620       1     0.001033
+<      621       0    0.0002193
+<      622       8    0.0003052
+<      623       6    9.009e-05
+<      624       6    0.0002344
+<      625       5    9.509e-05
+<      626      12    2.741e-05
+<      627       3    0.0002504
+<      628      16    0.0002941
+<      629       1    0.0001017
+<      630      15    0.0003279
+<      631      16    0.0001973
+<      632       9    0.0007964
+<      633       4    0.0001026
+<      634       4    0.0002423
+<      635      17    0.0004257
+<      636       7    0.0006118
+<      637       9    0.0007468
+<      638      15    8.988e-05
+<      639      16    8.351e-05
+<      640      10    0.0001237
+<      641       6    0.0001657
+<      642       4    3.863e-05
+<      643       6    0.0001245
+<      644       7    1.649e-05
+<      645      10    0.0004285
+<      646       2    0.0004804
+<      647       7    0.0001795
+<      648      11    5.034e-05
+<      649       5     3.09e-06
+<      650      13    0.0001688
+<      651      13    0.0001724
+<      652       1    0.0001987
+<      653       9     5.27e-05
+<      654       1    0.0001542
+<      655       1    6.252e-06
+<      656       5    0.0001109
+<      657       3    0.0002392
+<      658      19    0.0003253
+<      659       6     0.000294
+<      660       6    0.0002017
+<      661      16            0
+<      662       1     0.001091
+<      663       3    8.091e-07
+<      664      11    1.717e-05
+<      665      10    1.699e-05
+<      666      15    7.615e-05
+<      667      14    0.0003202
+<      668       3    0.0006561
+<      669       9    0.0001726
+<      670       6     0.000886
+<      671       3    0.0001296
+<      672       0    4.706e-05
+<      673      17    0.0007566
+<      674      13    0.0001714
+<      675       8    3.327e-05
+<      676       0    5.366e-05
+<      677       7    8.885e-05
+<      678       2    0.0001445
+<      679      13     0.001342
+<      680      10    7.277e-05
+<      681      16    0.0007521
+<      682      10    9.469e-05
+<      683      14    0.0003008
+<      684       6    7.443e-05
+<      685       7    0.0004663
+<      686       8     0.000153
+<      687      11    0.0004151
+<      688      18    3.382e-07
+<      689       3    0.0003873
+<      690      15    2.716e-06
+<      691      14    0.0002246
+<      692      13    7.757e-06
+<      693       8    0.0008723
+<      694      18    0.0002073
+<      695      19     0.001779
+<      696       2    0.0009642
+<      697       1    0.0003764
+<      698      16    0.0002842
+<      699      15    2.786e-05
+<      700       5    0.0004468
+<      701      18    0.0003609
+<      702       0    4.596e-05
+<      703       5    8.542e-06
+<      704       1    8.857e-05
+<      705      12    7.447e-05
+<      706      13            0
+<      707       5     0.000129
+<      708       9    0.0007406
+<      709       3    0.0002516
+<      710       3    0.0001181
+<      711       1    0.0001152
+<      712      17    6.916e-05
+<      713      17    0.0003227
+<      714      16    0.0002458
+<      715      19    0.0003031
+<      716       7    0.0002275
+<      717      11    0.0006531
+<      718       4    0.0003133
+<      719      15    0.0002395
+<      720       9     0.001587
+<      721       4    2.508e-05
+<      722      10    2.947e-05
+<      723      14     0.001193
+<      724       3    8.403e-05
+<      725      12    0.0004124
+<      726       1     0.001128
+<      727      17    0.0001848
+<      728       9    0.0002594
+<      729       4    4.264e-06
+<      730       6    0.0001678
+<      731      13    0.0004083
+<      732      10    0.0002034
+<      733       0    0.0001867
+<      734      11    0.0004603
+<      735      19    0.0001695
+<      736      12    0.0001377
+<      737      12    0.0003565
+<      738       8     0.000119
+<      739       3    0.0006012
+<      740      16    2.609e-05
+<      741       3    0.0004483
+<      742       3            0
+<      743      16    0.0001442
+<      744       8    0.0001798
+<      745       1    9.928e-05
+<      746       0    5.924e-05
+<      747      10    0.0003756
+<      748       2    0.0003365
+<      749      12    0.0004268
+<      750       6    0.0002474
+<      751      16    0.0002813
+<      752       4    1.165e-05
+<      753       6    0.0001912
+<      754       2     2.04e-05
+<      755       2    9.172e-05
+<      756       8    0.0002042
+<      757       3    0.0005968
+<      758      19    5.946e-05
+<      759      14    0.0004896
+<      760      19    0.0003592
+<      761      10    0.0005854
+<      762       2    0.0005288
+<      763      10    0.0001995
+<      764      10    0.0002558
+<      765      15    5.427e-05
+<      766      19    0.0002356
+<      767       3    0.0002466
+<      768      13    9.656e-06
+<      769      13    1.465e-05
+<      770       3    0.0007744
+<      771       5    0.0001475
+<      772      12    7.906e-05
+<      773      17    0.0001314
+<      774       1    0.0003748
+<      775       1    0.0002621
+<      776      12    2.193e-05
+<      777       0    0.0001157
+<      778       1            0
+<      779      12    0.0003375
+<      780      15     0.000499
+<      781      15     0.000246
+<      782      17    0.0003801
+<      783      12    0.0003871
+<      784      12    0.0004115
+<      785      14    0.0001416
+<      786       7    0.0003183
+<      787      16    0.0006449
+<      788      10    3.632e-05
+<      789      18    4.605e-06
+<      790       4    9.247e-05
+<      791       1    0.0007884
+<      792      15    0.0002578
+<      793      15    0.0004061
+<      794       8    0.0008487
+<      795      17    0.0005604
+<      796       6    0.0002657
+<      797      13    0.0001613
+<      798       2    0.0007466
+<      799      10     0.001127
+<      800      17      0.00057
+<      801      14    0.0001543
+<      802       7    0.0003881
+<      803      10    0.0006716
+<      804       4    8.882e-05
+<      805      17    0.0005799
+<      806      11    0.0002434
+<      807      10    0.0007517
+<      808       5    0.0006416
+<      809      19    2.413e-06
+<      810       7     0.000475
+<      811       4    1.056e-05
+<      812      14    0.0004287
+<      813      16    2.711e-05
+<      814       1    0.0007342
+<      815       1    1.705e-05
+<      816      16    0.0003367
+<      817      10            0
+<      818      12    4.273e-05
+<      819      19     0.000285
+<      820      19    0.0002495
+<      821       9    0.0003859
+<      822      13    6.161e-05
+<      823      13     2.13e-05
+<      824      19    0.0001622
+<      825       1     0.000381
+<      826       1    9.294e-05
+<      827       2            0
+<      828       8    0.0001323
+<      829      18    0.0003959
+<      830       7    2.043e-05
+<      831       1    0.0005065
+<      832      14    2.872e-05
+<      833       7            0
+<      834      15    0.0002239
+<      835       1    0.0003047
+<      836       3    0.0004804
+<      837       1    0.0007777
+<      838       2     0.000556
+<      839      11    1.058e-05
+<      840       9    2.185e-05
+<      841      12    0.0007711
+<      842      10    0.0001595
+<      843      18    0.0001052
+<      844       9    0.0003182
+<      845       4    0.0003123
+<      846      16    2.216e-05
+<      847       1    0.0008626
+<      848       0    2.439e-05
+<      849       0    0.0001498
+<      850       5    0.0004551
+<      851      15    5.138e-05
+<      852       9     0.001171
+<      853       0      0.00011
+<      854       8    3.571e-05
+<      855      18    0.0002479
+<      856      11    0.0004076
+<      857      10    0.0004415
+<      858       1    0.0002979
+<      859      12    4.079e-05
+<      860       9    0.0009133
+<      861       3    0.0002187
+<      862       8     0.000208
+<      863       3     0.001425
+<      864      18    0.0006352
+<      865      13    0.0004191
+<      866      19    0.0004582
+<      867       3     0.001032
+<      868      17    0.0001159
+<      869      17    0.0003166
+<      870       4    0.0004039
+<      871      19    9.036e-05
+<      872       7    0.0008223
+<      873       1    1.432e-05
+<      874      11    0.0001014
+<      875       7     1.12e-05
+<      876      16    0.0007838
+<      877      16    0.0002741
+<      878       3    0.0002009
+<      879       5    0.0001144
+<      880      17    0.0001502
+<      881      18    2.053e-05
+<      882      13    3.403e-05
+<      883      10    0.0001451
+<      884      19    9.603e-05
+<      885      13    3.556e-05
+<      886      14    0.0005687
+<      887       8     0.000114
+<      888       2    0.0007171
+<      889       9    9.478e-05
+<      890      15    0.0002066
+<      891       6    1.578e-06
+<      892      14    0.0004656
+<      893       7    6.688e-05
+<      894       4    0.0002509
+<      895       2    0.0007429
+<      896      16    0.0004666
+<      897       3    0.0002436
+<      898       9    3.111e-05
+<      899       5    0.0004743
+<      900      10    0.0001455
+<      901      11    0.0002427
+<      902      10    7.874e-06
+<      903      11     0.001314
+<      904      13    0.0004907
+<      905      11    0.0004127
+<      906      19    0.0002253
+<      907      18    0.0005007
+<      908       1    0.0004005
+<      909      17    0.0004418
+<      910      19    0.0002637
+<      911       9    0.0003021
+<      912       6    0.0001311
+<      913       4            0
+<      914       4    0.0001579
+<      915      12    0.0007777
+<      916       2    0.0001556
+<      917       5    0.0001081
+<      918      12    0.0004043
+<      919      14    0.0005018
+<      920       0    8.142e-05
+<      921      18    5.026e-05
+<      922      14     0.001564
+<      923       1     0.000455
+<      924      13    0.0001071
+<      925      12    0.0001281
+<      926       1    0.0002737
+<      927      13    3.469e-05
+<      928      11    2.451e-05
+<      929       9    0.0004054
+<      930      16    0.0001159
+<      931       4    0.0002405
+<      932       7    7.742e-05
+<      933      15    0.0001567
+<      934       2    0.0005252
+<      935      14    1.964e-05
+<      936       8    0.0001694
+<      937       4    0.0001272
+<      938      18    0.0003832
+<      939       1    0.0003011
+<      940      18    4.388e-05
+<      941       8    0.0001017
+<      942       8    0.0002514
+<      943      17    3.755e-05
+<      944       5            0
+<      945      17    0.0004868
+<      946       1    0.0002178
+<      947      11    0.0006139
+<      948       4    7.515e-05
+<      949       1     0.000526
+<      950       1     0.001009
+<      951       5    4.501e-05
+<      952      14    5.273e-05
+<      953       9    0.0004539
+<      954      11    0.0002733
+<      955      10    0.0001876
+<      956       2    0.0002062
+<      957       6            0
+<      958      18    0.0002549
+<      959      13    0.0006705
+<      960      11    0.0002777
+<      961       6    0.0002422
+<      962       1    0.0006358
+<      963       7    0.0002092
+<      964       4    0.0001165
+<      965       0    1.974e-05
+<      966      17    0.0004979
+<      967       9     0.000791
+<      968      10    5.248e-06
+<      969      10    0.0005933
+<      970       5     5.28e-06
+<      971      10     2.18e-05
+<      972       1    1.104e-05
+<      973       4    6.006e-05
+<      974      18    9.469e-05
+<      975       7    0.0001862
+<      976       1    0.0006039
+<      977       2    0.0002521
+<      978      13    0.0001279
+<      979      18    8.479e-05
+<      980       6    6.032e-06
+<      981       7     0.000316
+<      982       6     5.42e-05
+<      983      14    0.0001931
+<      984      14    0.0001428
+<      985       6    0.0001402
+<      986      10    7.758e-05
+<      987       8     0.001208
+<      988       5    0.0008836
+<      989      12     4.14e-06
+<      990       9    0.0003912
+<      991      12    0.0004063
+<      992       8    0.0001272
+<      993      16    2.681e-05
+<      994       0    0.0001878
+<      995       8    0.0001082
+<      996       6    0.0003027
+<      997      15    0.0003287
+<      998      19    0.0001217
+<      999      12    0.0007676
+---
+>        0      14    0.0003308
+>        1      18    7.667e-05
+>        2       1    0.0003387
+>        3      12            0
+>        4      12    7.452e-05
+>        5       2    0.0001876
+>        6       4    0.0005927
+>        7      10    0.0002649
+>        8      12    1.942e-05
+>        9      13     0.000588
+>       10      12     7.55e-05
+>       11       7    6.968e-05
+>       12       9    0.0005108
+>       13      10    9.201e-05
+>       14       2    0.0006127
+>       15      13    0.0001787
+>       16      13    0.0001472
+>       17       8    0.0005063
+>       18      18    3.126e-06
+>       19      14    0.0004255
+>       20       3    9.233e-05
+>       21      15     2.37e-05
+>       22      16    0.0002463
+>       23      15    8.387e-05
+>       24       2    1.942e-05
+>       25      18    3.581e-05
+>       26      16     0.000209
+>       27       5    0.0001003
+>       28       7    2.889e-05
+>       29      10    5.955e-05
+>       30      15    4.052e-05
+>       31       0    5.947e-05
+>       32      19    8.151e-05
+>       33       1    4.412e-05
+>       34       2    2.874e-05
+>       35      11    0.0007515
+>       36      18    0.0002446
+>       37      10    5.632e-05
+>       38      16    0.0001418
+>       39      17    0.0007095
+>       40       0    0.0003852
+>       41       4    3.996e-05
+>       42      14    0.0007666
+>       43       4    3.237e-05
+>       44      18    8.064e-05
+>       45      15    0.0002995
+>       46      17    3.133e-05
+>       47       6    9.612e-05
+>       48      19    0.0001324
+>       49       8    7.343e-05
+>       50       1    0.0001769
+>       51       3    7.433e-06
+>       52      12    0.0004284
+>       53       4    0.0003921
+>       54       2    0.0001816
+>       55       3    0.0002575
+>       56       0    0.0002956
+>       57      10    0.0001816
+>       58      18    0.0001747
+>       59      11    0.0001106
+>       60      17    0.0005127
+>       61       9      0.00011
+>       62       4    7.618e-05
+>       63       7    0.0003206
+>       64      11    0.0005179
+>       65       5    0.0001623
+>       66      17    0.0005102
+>       67      14     0.001499
+>       68      19    0.0007499
+>       69       7    5.322e-05
+>       70      10    0.0001416
+>       71       3    0.0001507
+>       72      15     0.000248
+>       73       0     4.01e-05
+>       74      16    0.0006083
+>       75      11    0.0007803
+>       76      19    1.485e-05
+>       77       6    0.0001545
+>       78       1    0.0001887
+>       79      11    0.0001841
+>       80      15    0.0003722
+>       81       7     0.001131
+>       82       7    0.0001382
+>       83      19    5.804e-05
+>       84       8    0.0003841
+>       85      18    0.0004368
+>       86       8     0.000998
+>       87      18    0.0001187
+>       88       1    0.0001866
+>       89      12     0.001384
+>       90      18    0.0001122
+>       91       4    6.999e-06
+>       92      13     0.001136
+>       93      11    0.0006886
+>       94       4    0.0001538
+>       95      17     3.97e-05
+>       96       2     0.000147
+>       97      10    0.0009614
+>       98       8    0.0003546
+>       99      18    6.867e-05
+>      100       1    9.214e-05
+>      101      19     0.000211
+>      102      18    0.0002784
+>      103       8    7.431e-05
+>      104       1    0.0001011
+>      105       7    0.0001458
+>      106       3    0.0003644
+>      107      16    3.305e-05
+>      108      15    0.0002324
+>      109      19    0.0002739
+>      110      11    4.782e-05
+>      111      10     0.000143
+>      112       3    0.0001904
+>      113      14    0.0003185
+>      114      18    0.0004575
+>      115       7    0.0001173
+>      116       2            0
+>      117      11     0.000292
+>      118       5    3.992e-07
+>      119       0    0.0002583
+>      120      11    7.819e-05
+>      121      11     0.001343
+>      122      19    7.785e-05
+>      123      15     0.000159
+>      124       1    0.0008119
+>      125       5    0.0003213
+>      126      16    0.0001092
+>      127      13     0.001258
+>      128      13    0.0005354
+>      129      19    2.958e-05
+>      130       4    0.0001981
+>      131      18    6.512e-06
+>      132      12    0.0001645
+>      133       4    0.0001419
+>      134       7    0.0005713
+>      135      13     0.000647
+>      136      12    6.349e-05
+>      137       4    0.0006039
+>      138       7    0.0001564
+>      139       3    2.034e-05
+>      140      18    6.099e-05
+>      141      11    0.0002656
+>      142       1    0.0002899
+>      143       5    0.0001964
+>      144      12    0.0002488
+>      145      18    0.0002564
+>      146      11    0.0001892
+>      147       3    5.192e-05
+>      148       2    0.0001312
+>      149       8    0.0001382
+>      150       9    5.183e-05
+>      151       2    0.0001459
+>      152       6    0.0002524
+>      153       4    0.0001906
+>      154      17    3.717e-06
+>      155      12    1.094e-05
+>      156      19            0
+>      157       5    0.0003714
+>      158      17    0.0006335
+>      159       6    3.044e-06
+>      160       8    2.781e-05
+>      161      19    7.103e-05
+>      162      11    9.859e-06
+>      163      10    5.053e-05
+>      164      10    0.0004997
+>      165      17    0.0004958
+>      166      17    0.0005505
+>      167       8    0.0007926
+>      168      14    0.0009282
+>      169      18    6.077e-06
+>      170       9    0.0001237
+>      171      14    2.335e-05
+>      172      19    0.0003106
+>      173       7    0.0002439
+>      174       0    0.0004117
+>      175       3    0.0001661
+>      176      13    0.0005815
+>      177       2    0.0002745
+>      178      10    2.099e-05
+>      179       3    0.0008032
+>      180       3    3.921e-05
+>      181       5    0.0004757
+>      182       1     4.48e-05
+>      183      14    0.0006137
+>      184       6    1.546e-05
+>      185       2    0.0002021
+>      186      11    0.0006624
+>      187      18    0.0003134
+>      188      14    0.0005949
+>      189      16    1.105e-05
+>      190       0    0.0001054
+>      191       1    0.0003205
+>      192      14    7.027e-05
+>      193       8    0.0002587
+>      194       1    0.0001374
+>      195      11    0.0008626
+>      196      10    0.0002463
+>      197      16    0.0001381
+>      198      13    0.0004517
+>      199       2    0.0002571
+>      200      16    0.0002174
+>      201      14    0.0007289
+>      202      15    4.618e-05
+>      203      14    0.0009377
+>      204       4     7.65e-05
+>      205       8    8.308e-06
+>      206      15    0.0004151
+>      207      19    0.0007103
+>      208      17    0.0001864
+>      209       7    5.537e-05
+>      210       4            0
+>      211      10    4.296e-05
+>      212       8    0.0002353
+>      213       4    0.0006485
+>      214      11    0.0002215
+>      215      18    0.0003004
+>      216       7    0.0001135
+>      217       2    0.0001946
+>      218       7    0.0002095
+>      219       9    0.0001752
+>      220       0    0.0003393
+>      221       7    8.477e-05
+>      222       6    1.474e-05
+>      223      15    0.0002721
+>      224       2    2.351e-05
+>      225      19    0.0001184
+>      226       5    7.907e-05
+>      227       3    0.0001432
+>      228      13     0.000787
+>      229       1    0.0002134
+>      230      13     0.001365
+>      231      13    0.0002626
+>      232       8     0.000415
+>      233      10    0.0001229
+>      234       5    0.0002515
+>      235       7     7.76e-05
+>      236       7    4.335e-05
+>      237       1    0.0003705
+>      238       8    2.043e-05
+>      239       5    0.0007586
+>      240       5    0.0002503
+>      241      14    0.0002152
+>      242       8    0.0004836
+>      243      16     4.31e-05
+>      244      11      0.00029
+>      245       5     0.000282
+>      246       2    0.0002914
+>      247      17    0.0003255
+>      248      14    0.0005175
+>      249       9    0.0001391
+>      250       2    0.0001095
+>      251      19    7.294e-06
+>      252      18    8.343e-05
+>      253      12    6.862e-05
+>      254      12    7.347e-05
+>      255      19    2.077e-05
+>      256       3    0.0002275
+>      257       0    0.0001264
+>      258       3    0.0005575
+>      259       9    3.398e-05
+>      260      15    8.981e-05
+>      261       8    4.184e-05
+>      262       1     0.001673
+>      263       9    0.0001042
+>      264       5    2.607e-05
+>      265      16    9.669e-05
+>      266      19    0.0007305
+>      267      16    0.0001479
+>      268      12    0.0001246
+>      269      14    0.0001925
+>      270       6    0.0004669
+>      271      11    0.0001034
+>      272       1    0.0006271
+>      273      19    0.0001435
+>      274      10    1.084e-05
+>      275      18    0.0002359
+>      276      12    0.0008166
+>      277      14    1.784e-06
+>      278      19     0.000198
+>      279       2     6.16e-05
+>      280      16    4.966e-05
+>      281       7    0.0001986
+>      282      13     0.000573
+>      283       6    3.669e-05
+>      284      10     0.000111
+>      285      17    0.0003993
+>      286      19    5.051e-05
+>      287       3    0.0005599
+>      288       4     0.000299
+>      289      18    2.565e-05
+>      290       1    0.0003241
+>      291       0    0.0006716
+>      292       2    0.0001522
+>      293      10    0.0006253
+>      294       5    7.487e-05
+>      295       5    2.411e-05
+>      296      19    5.145e-05
+>      297       7     0.000318
+>      298       8    2.023e-05
+>      299       4    5.477e-05
+>      300       4    0.0003906
+>      301       1    7.984e-05
+>      302       8    3.461e-05
+>      303       0    7.878e-05
+>      304      17    0.0009736
+>      305      18     8.39e-05
+>      306      18    0.0002245
+>      307      13     0.000204
+>      308       9    0.0001296
+>      309      14    0.0002808
+>      310      15     8.33e-05
+>      311      11    0.0005975
+>      312      10    4.773e-05
+>      313      15    3.724e-05
+>      314      15      1.9e-05
+>      315      12    0.0001151
+>      316       8    0.0003728
+>      317       3    2.135e-05
+>      318      17    1.356e-05
+>      319      18    1.659e-05
+>      320       6     0.000444
+>      321       4    0.0008001
+>      322       7    0.0001347
+>      323      12    2.977e-05
+>      324      13    3.006e-05
+>      325      11    0.0001723
+>      326       0    0.0005137
+>      327      12    0.0001901
+>      328      18    0.0003066
+>      329      16     5.68e-05
+>      330       5    2.913e-05
+>      331      15    2.338e-06
+>      332       4    0.0001754
+>      333       7     0.000191
+>      334       2     0.000341
+>      335       2    4.082e-05
+>      336      12    0.0001438
+>      337      12    0.0005622
+>      338       4    0.0001227
+>      339       7    0.0001305
+>      340      14    0.0004726
+>      341       2     0.001301
+>      342       1    0.0002129
+>      343      13    0.0004453
+>      344       6    0.0004699
+>      345       8    8.051e-05
+>      346      12    2.389e-05
+>      347      18    0.0007661
+>      348       1     0.001117
+>      349       4    9.898e-05
+>      350      13    0.0007116
+>      351       0    2.283e-05
+>      352      14    0.0002634
+>      353      10    1.907e-05
+>      354      19    0.0001658
+>      355      13    0.0009575
+>      356       9    0.0003337
+>      357      12    2.323e-05
+>      358      19     0.001081
+>      359       7    6.028e-05
+>      360      12    0.0001522
+>      361       2    2.424e-05
+>      362      19    0.0001039
+>      363      14    0.0003207
+>      364      11    0.0006147
+>      365       3    0.0002741
+>      366       3    0.0003006
+>      367      16    0.0001101
+>      368      11    0.0005854
+>      369      14    0.0004089
+>      370       4    5.786e-05
+>      371       3    3.646e-05
+>      372      16    8.238e-05
+>      373       8    0.0008224
+>      374      18    5.621e-05
+>      375       9    0.0003186
+>      376       0    0.0003234
+>      377       2    0.0001476
+>      378      16    0.0003532
+>      379      10    0.0005593
+>      380       6     0.000395
+>      381       5    5.688e-05
+>      382       5    0.0005158
+>      383       3    0.0003293
+>      384       9            0
+>      385      13    0.0001046
+>      386       1    6.243e-05
+>      387       5     0.000193
+>      388      13    0.0002652
+>      389      18    0.0001506
+>      390      17    3.649e-05
+>      391       9    0.0001273
+>      392      17    1.559e-05
+>      393      12    0.0002691
+>      394      18    0.0008253
+>      395       5    4.991e-05
+>      396       1    1.706e-05
+>      397      18    0.0002296
+>      398      17    0.0006472
+>      399       6    0.0003034
+>      400      16    4.883e-06
+>      401      10    0.0001627
+>      402       7     0.000142
+>      403       2    4.178e-05
+>      404       6     0.000344
+>      405      17    2.386e-05
+>      406      15            0
+>      407       2    0.0008954
+>      408      10    0.0001136
+>      409       8    0.0002037
+>      410      10    0.0007777
+>      411      13    0.0007832
+>      412      14    0.0003121
+>      413       2    5.075e-05
+>      414      10    0.0002097
+>      415       5    9.265e-05
+>      416       3    0.0006956
+>      417      15     4.97e-05
+>      418      19    0.0002834
+>      419      16    0.0001202
+>      420       6    0.0009629
+>      421       3    0.0009141
+>      422      16    6.028e-05
+>      423       8    0.0008711
+>      424      18    0.0005718
+>      425       7    4.035e-05
+>      426      10    7.378e-05
+>      427       3    0.0001937
+>      428       1    0.0003295
+>      429      18     0.000351
+>      430       9    0.0002451
+>      431       2    8.752e-05
+>      432      14    0.0006454
+>      433       3    0.0008523
+>      434       1    0.0003562
+>      435       4    7.384e-05
+>      436      13    0.0002333
+>      437       7    0.0007985
+>      438       7    3.185e-05
+>      439       6    0.0001541
+>      440      18    0.0007637
+>      441      14    0.0002322
+>      442       1    0.0004107
+>      443       1    9.869e-05
+>      444       1    0.0002804
+>      445       9    0.0002323
+>      446      11    4.536e-05
+>      447      11    0.0004564
+>      448       7    6.016e-05
+>      449       2    0.0001645
+>      450       3    0.0005784
+>      451       0     0.000183
+>      452      11    0.0001957
+>      453      14    1.227e-05
+>      454      17     0.000173
+>      455      18    8.484e-05
+>      456      17    0.0002635
+>      457       4    6.742e-05
+>      458      10    0.0006446
+>      459       5    0.0002178
+>      460       3    1.093e-07
+>      461       6    0.0001944
+>      462       6    0.0001743
+>      463       5    0.0001724
+>      464       0    8.089e-05
+>      465      18     0.000104
+>      466      12    4.809e-05
+>      467       5    0.0004584
+>      468      17    0.0001109
+>      469       3     0.001001
+>      470       3    0.0001266
+>      471      10    0.0001603
+>      472       3     0.000305
+>      473       3    0.0005019
+>      474      12    0.0009302
+>      475       1    0.0001045
+>      476      19    1.924e-06
+>      477      15    2.549e-05
+>      478       7    0.0006333
+>      479       8    0.0002062
+>      480      19    0.0005866
+>      481      18    0.0002954
+>      482      16    0.0001494
+>      483      19    0.0003766
+>      484       0    0.0001543
+>      485       7    0.0003794
+>      486       8    0.0003272
+>      487       2    0.0002895
+>      488      17    1.868e-05
+>      489       1     0.000361
+>      490      10    1.193e-05
+>      491       3    0.0001918
+>      492      11    0.0005706
+>      493      13    0.0001765
+>      494      19     0.000242
+>      495       3    0.0003788
+>      496      14    0.0003758
+>      497      15    0.0007948
+>      498      16    4.672e-05
+>      499       9    0.0003096
+>      500      11    0.0003019
+>      501      14    0.0001681
+>      502       5    0.0002352
+>      503      11    0.0007566
+>      504      16    7.554e-05
+>      505      13     0.001063
+>      506      14     0.000357
+>      507      15     0.000465
+>      508      10    0.0003885
+>      509       6    0.0001503
+>      510      14     0.001195
+>      511       3    2.598e-05
+>      512       1    0.0002804
+>      513       8    0.0001686
+>      514      10     0.001087
+>      515       8    6.926e-05
+>      516       3    0.0002227
+>      517       8    1.466e-06
+>      518      17    0.0003456
+>      519      10    0.0001165
+>      520      17    0.0002528
+>      521      10    0.0004553
+>      522      11     0.001199
+>      523       3    0.0002592
+>      524       6    0.0002135
+>      525       0    0.0002956
+>      526      19    5.354e-05
+>      527      12    8.334e-05
+>      528       3    0.0004867
+>      529      19    7.164e-05
+>      530       1    0.0004927
+>      531      14    0.0003865
+>      532       7    5.673e-05
+>      533      15    0.0002607
+>      534       5    0.0002405
+>      535      11     0.000179
+>      536      13    0.0001326
+>      537       9    0.0002462
+>      538      16    0.0006791
+>      539       5    0.0002581
+>      540       8    8.746e-05
+>      541       9    4.168e-05
+>      542      18    0.0007718
+>      543      17    0.0001193
+>      544       8    0.0001145
+>      545       8    0.0002867
+>      546      14    5.987e-05
+>      547       6    0.0001169
+>      548      10            0
+>      549      16    0.0001297
+>      550      15    0.0007125
+>      551       2    0.0003839
+>      552       0    0.0002172
+>      553       2    7.489e-05
+>      554      17    9.099e-05
+>      555       4    2.635e-05
+>      556       9    0.0003821
+>      557       9    0.0004667
+>      558      12    3.509e-05
+>      559      11    0.0003043
+>      560       9    0.0004968
+>      561       8    0.0004595
+>      562       9     0.001049
+>      563       2    6.661e-05
+>      564       4    0.0003218
+>      565      14    0.0002833
+>      566       2    0.0003235
+>      567      18    0.0002064
+>      568      18    0.0002825
+>      569       8    0.0001852
+>      570       6    0.0001387
+>      571       5            0
+>      572      15    6.273e-05
+>      573      16    0.0004043
+>      574       9     0.000188
+>      575       5    0.0001283
+>      576       4    0.0005045
+>      577      16    1.295e-05
+>      578       1    0.0003632
+>      579       2    0.0006022
+>      580      18    0.0003579
+>      581      10    0.0005259
+>      582      13    7.673e-05
+>      583       8    5.217e-06
+>      584      16    3.096e-05
+>      585      11    0.0003193
+>      586       8    0.0001804
+>      587      11    0.0001863
+>      588       9    0.0009232
+>      589       0    1.844e-05
+>      590      15    0.0005004
+>      591       9    3.055e-05
+>      592       3    0.0003401
+>      593       0    0.0001017
+>      594       5    0.0004496
+>      595      15    8.261e-05
+>      596       3    1.003e-05
+>      597       7     0.001008
+>      598      14    0.0006115
+>      599      15    0.0003928
+>      600       2    0.0002191
+>      601       7    0.0001182
+>      602       6    4.663e-05
+>      603      19    0.0001333
+>      604      15    0.0002527
+>      605       0    0.0005589
+>      606       8    0.0004105
+>      607       3    0.0004942
+>      608      12    0.0001398
+>      609       3    0.0007587
+>      610      11     0.000443
+>      611       7    0.0001591
+>      612       3    0.0009191
+>      613       7    0.0001983
+>      614      10    0.0001417
+>      615       3    7.388e-05
+>      616      10    0.0002174
+>      617       4    0.0003622
+>      618      12     0.000164
+>      619       7    0.0002096
+>      620      18    0.0004877
+>      621      12    0.0003083
+>      622       5    8.398e-05
+>      623      17    8.734e-05
+>      624       3    7.818e-05
+>      625       0    0.0002053
+>      626      18            0
+>      627      15    8.619e-05
+>      628      10    0.0001802
+>      629       1    0.0001287
+>      630      15    1.766e-05
+>      631      18    0.0001209
+>      632      15    3.675e-05
+>      633       5     4.35e-05
+>      634       8    0.0005561
+>      635      10    0.0001272
+>      636      14     0.000497
+>      637       6    0.0004235
+>      638      17     0.000197
+>      639       1    0.0006878
+>      640       3    0.0002302
+>      641       4        0.001
+>      642      10    4.683e-05
+>      643       4    0.0002354
+>      644      18    0.0002719
+>      645      19    6.932e-05
+>      646      12    0.0002777
+>      647      11    0.0003734
+>      648       4    0.0003823
+>      649       4     0.000174
+>      650      13    0.0006407
+>      651      14    0.0004592
+>      652       0    0.0006596
+>      653      17    0.0004148
+>      654       7            0
+>      655      12    0.0005578
+>      656       1            0
+>      657      17    4.727e-05
+>      658       0    2.641e-05
+>      659      14    0.0003637
+>      660      16            0
+>      661       6            0
+>      662       3    0.0005957
+>      663      10      0.00021
+>      664       2    0.0001754
+>      665       0    0.0001337
+>      666       0    6.928e-05
+>      667      18    4.939e-05
+>      668       7    0.0004081
+>      669       0    5.837e-05
+>      670      19    8.875e-05
+>      671      12    0.0001739
+>      672       5    0.0003721
+>      673       2    0.0003226
+>      674       9    0.0003334
+>      675       8    0.0002941
+>      676      16    0.0002806
+>      677      19    8.083e-06
+>      678       7    0.0005156
+>      679      15    0.0002676
+>      680       0     7.52e-05
+>      681      18      0.00052
+>      682      19     1.53e-05
+>      683       8    6.232e-05
+>      684      13    0.0004736
+>      685      12    0.0001156
+>      686       1     0.000365
+>      687       3    0.0008766
+>      688       2    0.0004271
+>      689      15    0.0002803
+>      690       5    4.995e-05
+>      691      17    0.0004879
+>      692       8    0.0001687
+>      693       2     0.000434
+>      694      10    8.835e-05
+>      695       9    0.0005494
+>      696      12    9.868e-05
+>      697       1    0.0003098
+>      698       0    0.0003179
+>      699       5     0.000147
+>      700       3    5.117e-05
+>      701       7    0.0001485
+>      702      10    0.0001354
+>      703       4    0.0001777
+>      704      13     0.000655
+>      705      12    6.808e-05
+>      706      14    8.027e-05
+>      707      12    0.0001093
+>      708       5    1.277e-05
+>      709      10    3.131e-05
+>      710      15    0.0005944
+>      711       3     0.000826
+>      712      19     0.000449
+>      713       2    0.0008022
+>      714      12    0.0002602
+>      715       5    0.0004702
+>      716      13    0.0004127
+>      717       2     0.000251
+>      718      12    0.0001181
+>      719      15    0.0003456
+>      720      13      0.00021
+>      721      18    0.0002773
+>      722       9    7.354e-06
+>      723       8     0.001303
+>      724      10    0.0004388
+>      725      11    0.0002576
+>      726      14    0.0009239
+>      727      12    0.0001041
+>      728      15    0.0004483
+>      729      16    2.214e-05
+>      730       7    0.0002041
+>      731      14    0.0004473
+>      732      16    6.168e-05
+>      733      12    0.0002925
+>      734      14    0.0004597
+>      735       0    0.0001963
+>      736      17    0.0002068
+>      737      13    0.0007854
+>      738       5    0.0003802
+>      739       8    0.0003294
+>      740      13            0
+>      741      12    0.0001942
+>      742      11    0.0001144
+>      743       8    0.0002641
+>      744      10    2.941e-05
+>      745       9    0.0007048
+>      746       7    0.0005827
+>      747      18     0.000225
+>      748      16    0.0003861
+>      749       5    7.619e-05
+>      750      15    5.675e-05
+>      751       1    7.976e-05
+>      752       1    0.0003009
+>      753      16    0.0001437
+>      754       3    0.0001058
+>      755       5    0.0003885
+>      756      17    0.0001845
+>      757      18    7.647e-05
+>      758      11    0.0003348
+>      759      12    0.0001018
+>      760       3     0.001033
+>      761       3    0.0006274
+>      762      18     7.48e-05
+>      763      17    1.138e-05
+>      764       5    0.0003334
+>      765       8     0.001158
+>      766       6    0.0005556
+>      767      10     2.49e-06
+>      768       3            0
+>      769      15     3.27e-05
+>      770       3    0.0001336
+>      771       7    4.141e-06
+>      772      12    0.0001655
+>      773      16    2.967e-05
+>      774      14    0.0006345
+>      775       2    0.0003057
+>      776       9    7.103e-06
+>      777      15    0.0001021
+>      778      16     0.000185
+>      779       8     0.000829
+>      780      12    0.0001302
+>      781      12    0.0001449
+>      782      13    0.0003972
+>      783       7    7.366e-05
+>      784      11    0.0003521
+>      785       0    0.0006923
+>      786       2     3.94e-06
+>      787      19    9.924e-05
+>      788      17            0
+>      789      17    0.0003787
+>      790      10    0.0004035
+>      791       5    7.896e-05
+>      792      17    5.958e-05
+>      793       8    0.0001472
+>      794       9    0.0001863
+>      795       7    0.0001614
+>      796       0    0.0001603
+>      797      11    0.0003925
+>      798       8            0
+>      799       3    3.362e-05
+>      800       2    0.0003052
+>      801      16    6.354e-05
+>      802       0    3.057e-05
+>      803       9    1.905e-05
+>      804      19    0.0001701
+>      805       0    6.523e-05
+>      806       1    0.0002617
+>      807       8    0.0005374
+>      808      13    0.0009005
+>      809       0    0.0001612
+>      810       1    0.0001782
+>      811      18    0.0004312
+>      812      16    2.294e-05
+>      813       8    0.0001701
+>      814       0    0.0005645
+>      815       9    4.189e-05
+>      816      12    5.923e-05
+>      817       1    0.0001664
+>      818       2    0.0005327
+>      819      13    0.0005315
+>      820      17    7.685e-05
+>      821      15    0.0001623
+>      822       0    0.0002021
+>      823       2    7.494e-05
+>      824       3    0.0002992
+>      825      17    0.0002884
+>      826       5    0.0001245
+>      827       5    9.154e-05
+>      828      11    0.0004257
+>      829      15    6.715e-05
+>      830      16    1.814e-05
+>      831       7    0.0003256
+>      832      16    0.0002857
+>      833       9    2.062e-05
+>      834      19    0.0008797
+>      835      18    0.0002972
+>      836       8    0.0001505
+>      837       6    0.0007477
+>      838       0    8.225e-05
+>      839      17    7.164e-05
+>      840       9    0.0001243
+>      841       8    3.737e-05
+>      842      10    0.0009906
+>      843      10    2.792e-05
+>      844      14            0
+>      845      17    2.714e-05
+>      846       2    2.422e-05
+>      847       7    6.802e-05
+>      848      19    0.0003241
+>      849       0    0.0007896
+>      850      14    0.0002457
+>      851       9    7.309e-05
+>      852       3    0.0002706
+>      853      17    0.0001071
+>      854      16    1.719e-05
+>      855       2    0.0003862
+>      856      14    0.0004518
+>      857       2    0.0001322
+>      858      11      0.00081
+>      859      10    4.927e-05
+>      860      17    0.0005355
+>      861      14    0.0004341
+>      862       4    0.0002315
+>      863       4    3.636e-05
+>      864      10    8.663e-05
+>      865       8    0.0002241
+>      866       3    0.0005105
+>      867      10    0.0004152
+>      868       6    0.0001589
+>      869      16    0.0001137
+>      870       7    0.0001267
+>      871       4    0.0001151
+>      872      16    0.0002913
+>      873      11      0.00024
+>      874      10    1.858e-05
+>      875      16    4.396e-05
+>      876       0    0.0003671
+>      877      16    0.0002658
+>      878      17    0.0002514
+>      879       1    0.0001887
+>      880       0    0.0001824
+>      881      13    0.0001177
+>      882       4    0.0003257
+>      883       0    0.0001213
+>      884       5    2.835e-05
+>      885       3     0.001203
+>      886      18    0.0002828
+>      887       3     1.22e-05
+>      888      10    4.043e-05
+>      889       1    6.738e-05
+>      890      14    0.0005622
+>      891      14    0.0003574
+>      892      19    0.0005315
+>      893      12    0.0001738
+>      894      10    1.707e-06
+>      895      10    1.148e-05
+>      896       6    0.0002954
+>      897      13    0.0004424
+>      898      16    0.0003472
+>      899       7    7.214e-05
+>      900      11            0
+>      901      10    3.201e-05
+>      902      13    0.0004149
+>      903      16    0.0002596
+>      904      12    9.301e-06
+>      905       3    1.484e-06
+>      906      11    0.0005147
+>      907       6    8.604e-05
+>      908       5    0.0001495
+>      909       9    0.0008885
+>      910       4    0.0008686
+>      911       2    3.622e-05
+>      912       0    0.0001807
+>      913       4    0.0008178
+>      914       3    0.0007572
+>      915       1    0.0001809
+>      916       0    0.0001824
+>      917      18    3.342e-06
+>      918      19    0.0004084
+>      919      18    0.0002719
+>      920       4     0.000158
+>      921      14     0.001775
+>      922       7    3.802e-05
+>      923      17    0.0002759
+>      924       7    0.0002242
+>      925       4    5.073e-05
+>      926       4    4.746e-05
+>      927      19     0.001044
+>      928       8    0.0004051
+>      929       1    0.0003676
+>      930      19    0.0001825
+>      931       7    0.0003965
+>      932       6     0.000642
+>      933       8    0.0001767
+>      934      13    4.535e-05
+>      935      11    0.0003557
+>      936       5     2.25e-05
+>      937      15    0.0001265
+>      938      10    8.717e-05
+>      939      17     0.001476
+>      940      16    0.0004213
+>      941      17    2.902e-06
+>      942      12    0.0003854
+>      943      12    8.121e-05
+>      944      11    0.0008092
+>      945      16    0.0002194
+>      946      14    0.0005831
+>      947      16    7.344e-05
+>      948      13    0.0003526
+>      949      11     0.000699
+>      950       2    0.0002846
+>      951      14    0.0007623
+>      952       0    2.999e-05
+>      953      10    6.829e-07
+>      954      11    4.861e-05
+>      955       8    0.0004681
+>      956       5    0.0003469
+>      957      16    0.0004819
+>      958      15    0.0002401
+>      959      13    6.053e-05
+>      960      12    0.0001027
+>      961      10    7.747e-05
+>      962      10    8.475e-05
+>      963      14     0.000323
+>      964      14    0.0002496
+>      965       6    9.976e-06
+>      966       6    0.0006764
+>      967      10     0.000207
+>      968       8    0.0003362
+>      969       9    1.801e-05
+>      970       2    0.0006221
+>      971       6    7.748e-05
+>      972      14    0.0004468
+>      973       2    0.0003881
+>      974      11    0.0004978
+>      975      18    4.932e-06
+>      976      15    1.676e-05
+>      977      10    0.0004447
+>      978      18    1.699e-05
+>      979       7    3.006e-05
+>      980      10    0.0003705
+>      981       9    0.0002764
+>      982       0    9.824e-05
+>      983       0     0.000128
+>      984       0    0.0004447
+>      985       4    0.0004636
+>      986      16    0.0001457
+>      987       4    4.461e-05
+>      988       0            0
+>      989      16    0.0002268
+>      990       8     7.98e-05
+>      991      13    3.863e-05
+>      992       2    0.0003142
+>      993       9    0.0002885
+>      994      16    0.0001217
+>      995      11     0.001107
+>      996      11    0.0003117
+>      997       4    0.0005865
+>      998      15    8.172e-05
+>      999       7    0.0002614

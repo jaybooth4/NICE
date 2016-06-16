@@ -1,0 +1,6 @@
+I created two test files which read in a sample file that I found online. For dlib this file is called kkmeans located in the example folder. This is run by g++ kkmeans_ex.cpp -I (directory to dlib).
+In kmlocal, the edited file is located in src, called kmlsample. This is run with several flags. 
+make sample
+./kmlsample -d 3 -df ~/Desktop/Tests/Kmeans/kmlocal-1.7.2/src/data1.t
+
+If you just run ./kmlsample this should give you more information about the flags. Feel free to email questions!
