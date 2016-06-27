@@ -1,0 +1,1 @@
+/usr/bin/c++         CMakeFiles/waffles_wizard.dir/__/GClasses/usage.cpp.o CMakeFiles/waffles_wizard.dir/main.cpp.o  -o /home/jason.b/Desktop/Github/NICE/waffles/bin/waffles_wizard -rdynamic /home/jason.b/Desktop/Github/NICE/waffles/lib/libGClasses.a -lpthread 

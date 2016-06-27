@@ -1,0 +1,1 @@
+/usr/bin/c++         CMakeFiles/waffles_transform.dir/main.cpp.o  -o /home/jason.b/Desktop/Github/NICE/waffles/bin/waffles_transform -rdynamic /home/jason.b/Desktop/Github/NICE/waffles/lib/libGClasses.a -lpthread 
