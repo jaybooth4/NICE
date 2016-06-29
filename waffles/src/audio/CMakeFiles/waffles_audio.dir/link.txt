@@ -1,1 +1,0 @@
-/usr/bin/c++         CMakeFiles/waffles_audio.dir/main.cpp.o  -o /home/jason.b/Desktop/Github/NICE/waffles/bin/waffles_audio -rdynamic /home/jason.b/Desktop/Github/NICE/waffles/lib/libGClasses.a -lpthread 

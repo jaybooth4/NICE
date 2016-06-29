@@ -1,1 +1,0 @@
-/usr/bin/c++         CMakeFiles/waffles_cluster.dir/main.cpp.o  -o /home/jason.b/Desktop/Github/NICE/waffles/bin/waffles_cluster -rdynamic /home/jason.b/Desktop/Github/NICE/waffles/lib/libGClasses.a -lpthread 

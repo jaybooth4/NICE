@@ -106,9 +106,11 @@ int main(int argc, char **argv)
 	kmClusGaussPts(dataPts.getPts(), nPts, dim, k);
     }
 
+/*
     cout << "Data Points:\n";			// echo data points
     for (int i = 0; i < nPts; i++)
 	printPt(cout, dataPts[i]);
+*/
 
     dataPts.setNPts(nPts);			// set actual number of pts
     dataPts.buildKcTree();			// build filtering structure
@@ -116,7 +118,7 @@ int main(int argc, char **argv)
     KMfilterCenters ctrs(k, dataPts);		// allocate centers
 
     						// run each of the algorithms
-    cout << "\nExecuting Clustering Algorithm: Lloyd's\n";
+/*    cout << "\nExecuting Clustering Algorithm: Lloyd's\n";
     KMlocalLloyds kmLloyds(ctrs, term);		// repeated Lloyd's
     ctrs = kmLloyds.execute();			// execute
     printSummary(kmLloyds, dataPts, ctrs);	// print summary
@@ -129,12 +131,12 @@ int main(int argc, char **argv)
     cout << "\nExecuting Clustering Algorithm: EZ-Hybrid\n";
     KMlocalEZ_Hybrid kmEZ_Hybrid(ctrs, term);	// EZ-Hybrid heuristic
     ctrs = kmEZ_Hybrid.execute();
-    printSummary(kmEZ_Hybrid, dataPts, ctrs);
+    printSummary(kmEZ_Hybrid, dataPts, ctrs);*/
 
     cout << "\nExecuting Clustering Algorithm: Hybrid\n";
     KMlocalHybrid kmHybrid(ctrs, term);		// Hybrid heuristic
     ctrs = kmHybrid.execute();
-    printSummary(kmHybrid, dataPts, ctrs);
+    //printSummary(kmHybrid, dataPts, ctrs);
 
     kmExit(0);
 }

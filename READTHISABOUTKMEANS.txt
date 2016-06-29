@@ -1,6 +1,23 @@
-I created two test files which read in a sample file that I found online. For dlib this file is called kkmeans located in the example folder. This is run by g++ kkmeans_ex.cpp -I (directory to dlib).
-In kmlocal, the edited file is located in src, called kmlsample. This is run with several flags. 
-make sample
-./kmlsample -d 3 -df ~/Desktop/Tests/Kmeans/kmlocal-1.7.2/src/data1.t
+I created test datasets from the python script given to me by Xiangyu. 
 
-If you just run ./kmlsample this should give you more information about the flags. Feel free to email questions!
+I adjusted what was necessary in each file to allow for the reading in of data. Changes made by me from sample files are marked with either /* */ notation to suppress output, or four slashes to delineate between my comments and those that were already included.
+
+
+DLib:
+The test file is called kkmeans located in the example folder. This is run by g++ kkmeans_ex.cpp -I (directory to dlib). It reads in the file called data_k4_p100000_d4_c1.txt located in the same directory. There are also example files called EIGEN_EXAMPLE.cc and EIGEN_INSTREAM.cc that demonstrate dlib's functionality with Eigen.
+
+
+KMlocal: (UMD library)
+The edited file is located in src, called kmlsample. This is run with several flags. 
+make sample (in the bin directory)
+./kmlsample -d 4 -k 4 -max 10000 -df [location of file, must be a space separated dataset] 
+If you just run ./kmlsample this should give you more information about the flags. 
+
+
+Waffles: (Brigham Young library)
+After compilation the executable waffles_cluster located in the bin can be run using 
+./waffles_cluster kmeans ~/Desktop/Github/NICE/data_k4_p100000_d4_c1.dat 4
+There is also an Eigen example located in teh demos directory.
+
+
+Feel free to email questions!

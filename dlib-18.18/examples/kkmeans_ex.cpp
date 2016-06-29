@@ -1,3 +1,14 @@
+// This is an example file that runs the kkmeans function within dlib
+// The alterations made by me have been marked with four slashes (////)
+// The alterations allow for an input file and change the dimensions,
+// Number of clusters, and amount of information printed. The original
+// Can be found at http://dlib.net/kkmeans_ex.cpp.html
+// To compile this program run g++ filename -I (path to dlib folder)
+
+
+
+
+
 // The contents of this file are in the public domain. See LICENSE_FOR_EXAMPLE_PROGRAMS.txt
 /*
     This is an example illustrating the use of the kkmeans object 
@@ -31,16 +42,19 @@ using namespace dlib;
 
 int main()
 {
-	//////// Input stream to assign matrix
-	//////////////////// To compile run g++ filename -I (path to dlib folder)
-	ifstream myfile ("SpaceSeparated.txt");
+	//// Input stream to assign matrix
+	ifstream myfile ("data_k4_p100000_d4_c1.txt");
 	if (myfile.is_open())
 		cout << "open!" << endl;
 	dlib::matrix <float> InMatrix;
 	myfile >> InMatrix;
-	cout << rowm(InMatrix, range(1,7)) << endl;
+	//cout << rowm(InMatrix, range(0,100)) << endl;  //// For printing input
 	myfile.close();
 	dlib::matrix<float> TransposeInMatrix = trans(InMatrix);
+    //// Transpose matrix to allow for easy transition to a dataset
+	//// For the kkmeans function
+
+
     // Here we declare that our samples will be 2 dimensional column vectors.  
     // (Note that if you don't know the dimensionality of your vectors at compile time
     // you can change the 2 to a 0 and then set the size at runtime)
@@ -70,21 +84,25 @@ int main()
     std::vector<sample_type> samples;
     std::vector<sample_type> initial_centers;
 
-    sample_type m;
-    ////////// Produce points
-    for (int i=0; i < 1000; ++i) {
+
+    sample_type m;  //// Declare a data point variable
+    for (int i=0; i < 10000; ++i) {
     	dlib::matrix <float> ColumnVector = colm(TransposeInMatrix, i);
-    	m(0)=ColumnVector(i);
-    	m(1)=ColumnVector(i);
-    	m(2)=ColumnVector(i);
-    	m(3)=ColumnVector(i);
-    	samples.push_back(m);
+    	m(0)=ColumnVector(0);
+    	m(1)=ColumnVector(1);
+    	m(2)=ColumnVector(2);
+    	m(3)=ColumnVector(3);  //// Assign elements to a data point
+    	samples.push_back(m);  //// Add data point to the data vector
     }
-    //dlib::rand rnd;
+
+    //// Commented out section assigns clusters based on rand() function
+/*
+    dlib::rand rnd;
+
 
     // we will make 50 points from each class
     const long num = 50;
-/*
+
     // make some samples near the origin
     double radius = 0.5;
     for (long i = 0; i < num; ++i)
@@ -131,28 +149,35 @@ int main()
         samples.push_back(m);
     }
 */
+
+
     // tell the kkmeans object we made that we want to run k-means with k set to 3. 
     // (i.e. we want 3 clusters)
-    test.set_number_of_centers(3);
+    test.set_number_of_centers(4);
 
     // You need to pick some initial centers for the k-means algorithm.  So here
     // we will use the dlib::pick_initial_centers() function which tries to find
     // n points that are far apart (basically).  
-    pick_initial_centers(3, initial_centers, samples, test.get_kernel());
+    pick_initial_centers(4, initial_centers, samples, test.get_kernel());
 
     // now run the k-means algorithm on our set of samples.  
     test.train(samples,initial_centers);
 
     // now loop over all our samples and print out their predicted class.  In this example
     // all points are correctly identified.
-    for (unsigned long i = 0; i < samples.size()/4; ++i)
-    {
-        cout << test(samples[i]) << " ";
-        cout << test(samples[i+num]) << " ";
-        cout << test(samples[i+2*num]) << " ";
-        cout << test(samples[i+3*num]) << "\n";
-    }
 
+    /*  //// For printing assignments
+    for (unsigned long i = 0; i < 25; ++i)
+    {
+        cout << test(samples[i*4]) << " ";
+        cout << test(samples[1+i*41]) << " ";
+        cout << test(samples[2+i*4]) << " ";
+        cout << test(samples[3+i*4]) << "\n";
+    }
+	*/
+
+/*  //// Dictionary vector determine the accuracy of your result. More can be
+ *  //// Enable if you alter the source code, but it will take more time
     // Now print out how many dictionary vectors each center used.  Note that 
     // the maximum number of 8 was reached.  If you went back to the kcentroid 
     // constructor and changed the 8 to some bigger number you would see that these
@@ -160,14 +185,16 @@ int main()
     cout << "num dictionary vectors for center 0: " << test.get_kcentroid(0).dictionary_size() << endl;
     cout << "num dictionary vectors for center 1: " << test.get_kcentroid(1).dictionary_size() << endl;
     cout << "num dictionary vectors for center 2: " << test.get_kcentroid(2).dictionary_size() << endl;
-    cout << "num dictionary vectors for center 2: " << test.get_kcentroid(3).dictionary_size() << endl;
+    cout << "num dictionary vectors for center 3: " << test.get_kcentroid(3).dictionary_size() << endl;
+*/
 
+/*
     // Finally, we can also solve the same kind of non-linear clustering problem with
     // spectral_cluster().  The output is a vector that indicates which cluster each sample
     // belongs to.  Just like with kkmeans, it assigns each point to the correct cluster.
-    std::vector<unsigned long> assignments = spectral_cluster(kernel_type(0.1), samples, 3);
+    std::vector<unsigned long> assignments = spectral_cluster(kernel_type(0.1), samples, 4);
     cout << mat(assignments) << endl;
-
+*/
 }
 
 
