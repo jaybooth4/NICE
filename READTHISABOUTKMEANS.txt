@@ -19,5 +19,9 @@ After compilation the executable waffles_cluster located in the bin can be run u
 ./waffles_cluster kmeans ~/Desktop/Github/NICE/data_k4_p100000_d4_c1.dat 4
 There is also an Eigen example located in teh demos directory.
 
+Shark:
+After compiling with cmake, there will be a bin folder in the build directory with a KMeans tutorial executable. This is run with ./KmeansTutorial [input file]. This program automatically recognizes the dimensionality of the dataset. You must set the number of clusters desired, and alter the output setting based on the number of clusters. I believe this library uses vectors for storage but I am not sure.
+
+
 
 Feel free to email questions!
