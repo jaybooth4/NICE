@@ -67,6 +67,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/libshogun.dir/base/Parameter.cpp.o"
   "CMakeFiles/libshogun.dir/base/init.cpp.o"
   "CMakeFiles/libshogun.dir/base/Parallel.cpp.o"
+  "CMakeFiles/libshogun.dir/base/class_list.cpp.o"
   "CMakeFiles/libshogun.dir/ensemble/WeightedMajorityVote.cpp.o"
   "CMakeFiles/libshogun.dir/ensemble/MeanRule.cpp.o"
   "CMakeFiles/libshogun.dir/ensemble/CombinationRule.cpp.o"
@@ -668,7 +669,6 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/libshogun.dir/lib/external/PMurHash.c.o"
   "CMakeFiles/libshogun.dir/lib/external/SFMT/SFMT.c.o"
   "CMakeFiles/libshogun.dir/lib/external/dSFMT/dSFMT.c.o"
-  "CMakeFiles/libshogun.dir/base/class_list.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

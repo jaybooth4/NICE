@@ -38,7 +38,7 @@ OTHERLIBS	= -lm
 #-----------------------------------------------------------------------------
 
 KMLTEST = $(BIN_DIR)/kmltest
-KMLSAMPLE = $(BIN_DIR)/kmlsample
+KMLSAMPLE = kmlsample#$(BIN_DIR)/kmlsample
 KMLMINIMAL = $(BIN_DIR)/kmlminimal
 
 TESTSOURCES = KM_ANN.cpp KMeans.cpp  KMterm.cpp KMrand.cpp \
@@ -67,7 +67,7 @@ TESTOBJECTS = $(TESTSOURCES:.cpp=.o)
 C++ = g++
 #CFLAGS = -O3 
 #CFLAGS = -g -Wall -DASSERT -traditional
-CFLAGS = -O3 -Wall -DASSERT
+CFLAGS = -g -O3 -Wall -DASSERT
 
 #-----------------------------------------------------------------------------
 # Make the program
@@ -88,8 +88,8 @@ $(KMLTEST): $(TESTOBJECTS) kmltest.o
 	mv -f kmltest $(KMLTEST)
 
 $(KMLSAMPLE): $(TESTOBJECTS) kmlsample.o
-	$(C++) $(TESTOBJECTS) kmlsample.o -o kmlsample $(LDFLAGS) $(OTHERLIBS)
-	mv -f kmlsample $(KMLSAMPLE)
+	$(C++) -g -pg $(TESTOBJECTS) kmlsample.o -o kmlsample $(LDFLAGS) $(OTHERLIBS)
+	#mv -f kmlsample $(KMLSAMPLE)
 
 $(KMLMINIMAL): $(TESTOBJECTS) kmlminimal.o
 	$(C++) $(TESTOBJECTS) kmlminimal.o -o kmlminimal $(LDFLAGS) $(OTHERLIBS)
@@ -141,7 +141,7 @@ kmltest.o: KMeans.h KMdata.h KMcenters.h KMfilterCenters.h \
 
 kmlsample.o: KMeans.h KMdata.h KMcenters.h KMfilterCenters.h \
 	KMlocal.h KMterm.h kmlsample.cpp
-	$(C++) -c $(CFLAGS) kmlsample.cpp
+	$(C++) -c -pg $(CFLAGS) kmlsample.cpp
 
 kmlminimal.o: KMeans.h KMdata.h KMcenters.h KMfilterCenters.h \
 	KMlocal.h KMterm.h kmlminimal.cpp

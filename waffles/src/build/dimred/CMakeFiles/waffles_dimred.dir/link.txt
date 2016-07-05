@@ -1,0 +1,1 @@
+/usr/bin/c++         CMakeFiles/waffles_dimred.dir/main.cpp.o  -o ../../bin/waffles_dimred -rdynamic ../../lib/libGClasses.a -lpthread 

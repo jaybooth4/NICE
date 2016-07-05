@@ -23,4 +23,4 @@ for i in np.arange(numCenters):
   points = np.random.multivariate_normal(mean, cov, numPoints-1)
   data[i*numPoints+1:(i+1)*numPoints, :] = points
 
-np.savetxt('data_k'+str(numCenters)+'_p'+str(numPoints)+'_d'+str(dim)+'_c'+str(dia)+'.txt', data, delimiter='	')
+np.savetxt('data_k'+str(numCenters)+'_p'+str(numPoints)+'_d'+str(dim)+'_c'+str(dia)+'.txt', data, delimiter=' ')

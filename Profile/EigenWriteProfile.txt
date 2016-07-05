@@ -1,0 +1,625 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 40.03      0.02     0.02        1    20.02    40.03  FromFile(std::string const&, int, int)
+ 20.02      0.03     0.01   400000     0.00     0.00  Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::operator()(long, long)
+ 20.02      0.04     0.01   400000     0.00     0.00  Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::coeffRef(long, long)
+ 20.02      0.05     0.01   200000     0.00     0.00  void Eigen::internal::pstore<float, float __vector(4)>(float*, float __vector(4) const&)
+  0.00      0.05     0.00  1400016     0.00     0.00  Eigen::DenseStorage<float, -1, -1, -1, 0>::rows() const
+  0.00      0.05     0.00  1000031     0.00     0.00  Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() const
+  0.00      0.05     0.00   800015     0.00     0.00  Eigen::DenseStorage<float, -1, -1, -1, 0>::cols() const
+  0.00      0.05     0.00   800015     0.00     0.00  Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::cols() const
+  0.00      0.05     0.00   600016     0.00     0.00  Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::rows() const
+  0.00      0.05     0.00   600007     0.00     0.00  Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived()
+  0.00      0.05     0.00   600000     0.00     0.00  Eigen::DenseStorage<float, -1, -1, -1, 0>::data()
+  0.00      0.05     0.00   600000     0.00     0.00  Eigen::DenseStorage<float, -1, -1, -1, 0>::data() const
+  0.00      0.05     0.00   400007     0.00     0.00  Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::cols() const
+  0.00      0.05     0.00   400007     0.00     0.00  Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::rows() const
+  0.00      0.05     0.00   400000     0.00     0.00  Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::coeff(long, long) const
+  0.00      0.05     0.00   200000     0.00     0.00  void Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::copyPacket<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1, 1>(long, Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&)
+  0.00      0.05     0.00   200000     0.00     0.00  void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::writePacket<1>(long, float __vector const&)
+  0.00      0.05     0.00   200000     0.00     0.00  float __vector(4) Eigen::internal::pload<float __vector(4)>(Eigen::internal::unpacket_traits<float __vector(4)>::type const*)
+  0.00      0.05     0.00   200000     0.00     0.00  float __vector Eigen::internal::ploadt<float __vector, 1>(Eigen::internal::unpacket_traits<float __vector>::type const*)
+  0.00      0.05     0.00   200000     0.00     0.00  void Eigen::internal::pstoret<float, float __vector(4), 1>(float*, float __vector(4) const&)
+  0.00      0.05     0.00   200000     0.00     0.00  float __vector(4) Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::packet<1>(long) const
+  0.00      0.05     0.00        5     0.00     0.00  Eigen::internal::aligned_free(void*)
+  0.00      0.05     0.00        5     0.00     0.00  void Eigen::internal::conditional_aligned_free<true>(void*)
+  0.00      0.05     0.00        5     0.00     0.00  void Eigen::internal::conditional_aligned_delete_auto<float, true>(float*, unsigned long)
+  0.00      0.05     0.00        3     0.00     0.00  Eigen::MatrixBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::MatrixBase()
+  0.00      0.05     0.00        3     0.00     0.00  Eigen::DenseStorage<float, -1, -1, -1, 0>::resize(long, long, long)
+  0.00      0.05     0.00        3     0.00     0.00  Eigen::DenseStorage<float, -1, -1, -1, 0>::~DenseStorage()
+  0.00      0.05     0.00        3     0.00     0.00  Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 0>::DenseCoeffsBase()
+  0.00      0.05     0.00        3     0.00     0.00  Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::DenseCoeffsBase()
+  0.00      0.05     0.00        3     0.00     0.00  Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 3>::DenseCoeffsBase()
+  0.00      0.05     0.00        3     0.00     0.00  Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_check_template_params()
+  0.00      0.05     0.00        3     0.00     0.00  Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::resize(long, long)
+  0.00      0.05     0.00        3     0.00     0.00  Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::~PlainObjectBase()
+  0.00      0.05     0.00        3     0.00     0.00  Eigen::Matrix<float, -1, -1, 0, -1, -1>::~Matrix()
+  0.00      0.05     0.00        3     0.00     0.00  Eigen::internal::aligned_malloc(unsigned long)
+  0.00      0.05     0.00        3     0.00     0.00  Eigen::internal::special_scalar_op_base<Eigen::Matrix<float, -1, -1, 0, -1, -1>, float, float, false>::special_scalar_op_base()
+  0.00      0.05     0.00        3     0.00     0.00  void* Eigen::internal::conditional_aligned_malloc<true>(unsigned long)
+  0.00      0.05     0.00        3     0.00     0.00  Eigen::internal::check_that_malloc_is_allowed()
+  0.00      0.05     0.00        3     0.00     0.00  float* Eigen::internal::conditional_aligned_new_auto<float, true>(unsigned long)
+  0.00      0.05     0.00        3     0.00     0.00  Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::DenseBase()
+  0.00      0.05     0.00        3     0.00     0.00  Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::EigenBase()
+  0.00      0.05     0.00        3     0.00     0.00  Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::size() const
+  0.00      0.05     0.00        2     0.00     0.00  Eigen::DenseStorage<float, -1, -1, -1, 0>::DenseStorage()
+  0.00      0.05     0.00        2     0.00     5.00  Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::lazyAssign<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&)
+  0.00      0.05     0.00        2     0.00     0.00  void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::resizeLike<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&)
+  0.00      0.05     0.00        2     0.00     5.00  Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set_noalias<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&)
+  0.00      0.05     0.00        2     0.00     0.00  void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_resize_to_match<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&)
+  0.00      0.05     0.00        2     0.00     0.00  Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::PlainObjectBase()
+  0.00      0.05     0.00        2     0.00     5.00  Eigen::internal::assign_impl<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1>, 3, 0, 0>::run(Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&)
+  0.00      0.05     0.00        2     0.00     5.00  Eigen::internal::assign_selector<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1>, false, false>::run(Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&)
+  0.00      0.05     0.00        2     0.00     0.00  void Eigen::internal::unaligned_assign_impl<false>::run<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1>::Index, Eigen::Matrix<float, -1, -1, 0, -1, -1>::Index)
+  0.00      0.05     0.00        2     0.00     0.00  void Eigen::internal::unaligned_assign_impl<true>::run<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1>::Index, Eigen::Matrix<float, -1, -1, 0, -1, -1>::Index)
+  0.00      0.05     0.00        2     0.00     0.00  Eigen::internal::checkTransposeAliasing_impl<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1>, false>::run(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&)
+  0.00      0.05     0.00        2     0.00     5.00  Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::lazyAssign<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&)
+  0.00      0.05     0.00        2     0.00     0.00  void Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::checkTransposeAliasing<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) const
+  0.00      0.05     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z8FromFileRKSsii
+  0.00      0.05     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.05     0.00        1     0.00     0.00  ToFile(Eigen::Matrix<float, -1, -1, 0, -1, -1>)
+  0.00      0.05     0.00        1     0.00     0.00  Eigen::WithFormat<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::WithFormat(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::IOFormat const&)
+  0.00      0.05     0.00        1     0.00     0.00  Eigen::WithFormat<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::~WithFormat()
+  0.00      0.05     0.00        1     0.00     0.00  Eigen::DenseStorage<float, -1, -1, -1, 0>::DenseStorage(long, long, long)
+  0.00      0.05     0.00        1     0.00     5.00  void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set_selector<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::internal::false_type const&)
+  0.00      0.05     0.00        1     0.00     5.00  Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&)
+  0.00      0.05     0.00        1     0.00     0.00  void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_init2<int, int>(long, long, Eigen::internal::enable_if<true, int>::type*)
+  0.00      0.05     0.00        1     0.00     0.00  Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::PlainObjectBase(long, long, long)
+  0.00      0.05     0.00        1     0.00     5.00  Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&)
+  0.00      0.05     0.00        1     0.00     0.00  Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix<int, int>(int const&, int const&)
+  0.00      0.05     0.00        1     0.00     0.00  Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix()
+  0.00      0.05     0.00        1     0.00     5.00  Eigen::Matrix<float, -1, -1, 0, -1, -1>::operator=(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&)
+  0.00      0.05     0.00        1     0.00     0.00  Eigen::IOFormat::IOFormat(Eigen::IOFormat const&)
+  0.00      0.05     0.00        1     0.00     0.00  Eigen::IOFormat::IOFormat(int, int, std::string const&, std::string const&, std::string const&, std::string const&, std::string const&, std::string const&)
+  0.00      0.05     0.00        1     0.00     0.00  Eigen::IOFormat::~IOFormat()
+  0.00      0.05     0.00        1     0.00     0.00  std::ostream& Eigen::internal::print_matrix<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(std::ostream&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::IOFormat const&)
+  0.00      0.05     0.00        1     0.00     0.00  Eigen::operator<<(std::ostream&, Eigen::WithFormat<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&)
+  0.00      0.05     0.00        1     0.00     0.00  Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::eval() const
+  0.00      0.05     0.00        1     0.00     0.00  Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::format(Eigen::IOFormat const&) const
+  0.00      0.05     0.00        1     0.00     0.00  std::operator|(std::_Ios_Openmode, std::_Ios_Openmode)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 19.98% of 0.05 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    0.00    0.05                 main [1]
+                0.02    0.02       1/1           FromFile(std::string const&, int, int) [2]
+                0.00    0.01       1/1           Eigen::Matrix<float, -1, -1, 0, -1, -1>::operator=(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [17]
+                0.00    0.01       1/1           Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [16]
+                0.00    0.00       3/3           Eigen::Matrix<float, -1, -1, 0, -1, -1>::~Matrix() [50]
+                0.00    0.00       1/1           Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix() [76]
+                0.00    0.00       1/1           ToFile(Eigen::Matrix<float, -1, -1, 0, -1, -1>) [69]
+-----------------------------------------------
+                0.02    0.02       1/1           main [1]
+[2]     80.0    0.02    0.02       1         FromFile(std::string const&, int, int) [2]
+                0.01    0.01  400000/400000      Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::operator()(long, long) [3]
+                0.00    0.00       1/1           Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix<int, int>(int const&, int const&) [75]
+-----------------------------------------------
+                0.01    0.01  400000/400000      FromFile(std::string const&, int, int) [2]
+[3]     40.0    0.01    0.01  400000         Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::operator()(long, long) [3]
+                0.01    0.00  400000/400000      Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::coeffRef(long, long) [4]
+                0.00    0.00  400000/400007      Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::rows() const [33]
+                0.00    0.00  400000/400007      Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::cols() const [32]
+                0.00    0.00  400000/600007      Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() [29]
+-----------------------------------------------
+                0.01    0.00  400000/400000      Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::operator()(long, long) [3]
+[4]     20.0    0.01    0.00  400000         Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::coeffRef(long, long) [4]
+                0.00    0.00  400000/1400016     Eigen::DenseStorage<float, -1, -1, -1, 0>::rows() const [24]
+                0.00    0.00  400000/600000      Eigen::DenseStorage<float, -1, -1, -1, 0>::data() [30]
+-----------------------------------------------
+                0.00    0.01  200000/200000      Eigen::internal::assign_impl<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1>, 3, 0, 0>::run(Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [11]
+[5]     20.0    0.00    0.01  200000         void Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::copyPacket<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1, 1>(long, Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [5]
+                0.00    0.01  200000/200000      void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::writePacket<1>(long, float __vector const&) [6]
+                0.00    0.00  200000/1000031     Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() const [25]
+                0.00    0.00  200000/200000      float __vector(4) Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::packet<1>(long) const [37]
+                0.00    0.00  200000/600007      Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() [29]
+-----------------------------------------------
+                0.00    0.01  200000/200000      void Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::copyPacket<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1, 1>(long, Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [5]
+[6]     20.0    0.00    0.01  200000         void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::writePacket<1>(long, float __vector const&) [6]
+                0.00    0.01  200000/200000      void Eigen::internal::pstoret<float, float __vector(4), 1>(float*, float __vector(4) const&) [8]
+                0.00    0.00  200000/600000      Eigen::DenseStorage<float, -1, -1, -1, 0>::data() [30]
+-----------------------------------------------
+                0.01    0.00  200000/200000      void Eigen::internal::pstoret<float, float __vector(4), 1>(float*, float __vector(4) const&) [8]
+[7]     20.0    0.01    0.00  200000         void Eigen::internal::pstore<float, float __vector(4)>(float*, float __vector(4) const&) [7]
+-----------------------------------------------
+                0.00    0.01  200000/200000      void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::writePacket<1>(long, float __vector const&) [6]
+[8]     20.0    0.00    0.01  200000         void Eigen::internal::pstoret<float, float __vector(4), 1>(float*, float __vector(4) const&) [8]
+                0.01    0.00  200000/200000      void Eigen::internal::pstore<float, float __vector(4)>(float*, float __vector(4) const&) [7]
+-----------------------------------------------
+                0.00    0.01       2/2           Eigen::internal::assign_selector<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1>, false, false>::run(Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [12]
+[9]     20.0    0.00    0.01       2         Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::lazyAssign<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [9]
+                0.00    0.01       2/2           Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::lazyAssign<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [13]
+                0.00    0.00       2/2           void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_resize_to_match<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [61]
+                0.00    0.00       2/1000031     Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() const [25]
+-----------------------------------------------
+                0.00    0.01       1/2           Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [16]
+                0.00    0.01       1/2           void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set_selector<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::internal::false_type const&) [14]
+[10]    20.0    0.00    0.01       2         Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set_noalias<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [10]
+                0.00    0.01       2/2           Eigen::internal::assign_selector<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1>, false, false>::run(Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [12]
+                0.00    0.00       2/1000031     Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() const [25]
+                0.00    0.00       2/600007      Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() [29]
+-----------------------------------------------
+                0.00    0.01       2/2           Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::lazyAssign<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [13]
+[11]    20.0    0.00    0.01       2         Eigen::internal::assign_impl<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1>, 3, 0, 0>::run(Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [11]
+                0.00    0.01  200000/200000      void Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::copyPacket<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1, 1>(long, Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [5]
+                0.00    0.00       2/3           Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::size() const [58]
+                0.00    0.00       2/2           void Eigen::internal::unaligned_assign_impl<true>::run<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1>::Index, Eigen::Matrix<float, -1, -1, 0, -1, -1>::Index) [64]
+                0.00    0.00       2/2           void Eigen::internal::unaligned_assign_impl<false>::run<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1>::Index, Eigen::Matrix<float, -1, -1, 0, -1, -1>::Index) [63]
+-----------------------------------------------
+                0.00    0.01       2/2           Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set_noalias<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [10]
+[12]    20.0    0.00    0.01       2         Eigen::internal::assign_selector<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1>, false, false>::run(Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [12]
+                0.00    0.01       2/2           Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::lazyAssign<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [9]
+                0.00    0.00       2/1000031     Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() const [25]
+-----------------------------------------------
+                0.00    0.01       2/2           Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::lazyAssign<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [9]
+[13]    20.0    0.00    0.01       2         Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::lazyAssign<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [13]
+                0.00    0.01       2/2           Eigen::internal::assign_impl<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1>, 3, 0, 0>::run(Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [11]
+                0.00    0.00       4/400007      Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::rows() const [33]
+                0.00    0.00       4/400007      Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::cols() const [32]
+                0.00    0.00       4/1000031     Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() const [25]
+                0.00    0.00       4/600007      Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() [29]
+                0.00    0.00       2/2           void Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::checkTransposeAliasing<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) const [66]
+-----------------------------------------------
+                0.00    0.01       1/1           Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [15]
+[14]    10.0    0.00    0.01       1         void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set_selector<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::internal::false_type const&) [14]
+                0.00    0.01       1/2           Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set_noalias<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [10]
+-----------------------------------------------
+                0.00    0.01       1/1           Eigen::Matrix<float, -1, -1, 0, -1, -1>::operator=(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [17]
+[15]    10.0    0.00    0.01       1         Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [15]
+                0.00    0.01       1/1           void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set_selector<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::internal::false_type const&) [14]
+                0.00    0.00       1/1000031     Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() const [25]
+                0.00    0.00       1/600007      Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() [29]
+-----------------------------------------------
+                0.00    0.01       1/1           main [1]
+[16]    10.0    0.00    0.01       1         Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [16]
+                0.00    0.01       1/2           Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set_noalias<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [10]
+                0.00    0.00       2/800015      Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::cols() const [27]
+                0.00    0.00       2/600016      Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::rows() const [28]
+                0.00    0.00       1/1           Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::PlainObjectBase(long, long, long) [74]
+                0.00    0.00       1/3           Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_check_template_params() [47]
+-----------------------------------------------
+                0.00    0.01       1/1           main [1]
+[17]    10.0    0.00    0.01       1         Eigen::Matrix<float, -1, -1, 0, -1, -1>::operator=(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [17]
+                0.00    0.01       1/1           Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [15]
+-----------------------------------------------
+                0.00    0.00  400000/1400016     Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::coeffRef(long, long) [4]
+                0.00    0.00  400000/1400016     Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::coeff(long, long) const [34]
+                0.00    0.00  600016/1400016     Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::rows() const [28]
+[24]     0.0    0.00    0.00 1400016         Eigen::DenseStorage<float, -1, -1, -1, 0>::rows() const [24]
+-----------------------------------------------
+                0.00    0.00       1/1000031     Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::format(Eigen::IOFormat const&) const [83]
+                0.00    0.00       1/1000031     Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::eval() const [82]
+                0.00    0.00       1/1000031     Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [15]
+                0.00    0.00       2/1000031     Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set_noalias<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [10]
+                0.00    0.00       2/1000031     Eigen::internal::assign_selector<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1>, false, false>::run(Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [12]
+                0.00    0.00       2/1000031     Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::lazyAssign<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [9]
+                0.00    0.00       2/1000031     void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::resizeLike<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [60]
+                0.00    0.00       2/1000031     void Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::checkTransposeAliasing<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) const [66]
+                0.00    0.00       4/1000031     Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::lazyAssign<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [13]
+                0.00    0.00  200000/1000031     void Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::copyPacket<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1, 1>(long, Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [5]
+                0.00    0.00  400007/1000031     Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::cols() const [32]
+                0.00    0.00  400007/1000031     Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::rows() const [33]
+[25]     0.0    0.00    0.00 1000031         Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() const [25]
+-----------------------------------------------
+                0.00    0.00  800015/800015      Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::cols() const [27]
+[26]     0.0    0.00    0.00  800015         Eigen::DenseStorage<float, -1, -1, -1, 0>::cols() const [26]
+-----------------------------------------------
+                0.00    0.00       2/800015      Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [16]
+                0.00    0.00       6/800015      void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::resizeLike<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [60]
+                0.00    0.00  400000/800015      std::ostream& Eigen::internal::print_matrix<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(std::ostream&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::IOFormat const&) [80]
+                0.00    0.00  400007/800015      Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::cols() const [32]
+[27]     0.0    0.00    0.00  800015         Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::cols() const [27]
+                0.00    0.00  800015/800015      Eigen::DenseStorage<float, -1, -1, -1, 0>::cols() const [26]
+-----------------------------------------------
+                0.00    0.00       2/600016      Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [16]
+                0.00    0.00       6/600016      void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::resizeLike<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [60]
+                0.00    0.00  200001/600016      std::ostream& Eigen::internal::print_matrix<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(std::ostream&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::IOFormat const&) [80]
+                0.00    0.00  400007/600016      Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::rows() const [33]
+[28]     0.0    0.00    0.00  600016         Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::rows() const [28]
+                0.00    0.00  600016/1400016     Eigen::DenseStorage<float, -1, -1, -1, 0>::rows() const [24]
+-----------------------------------------------
+                0.00    0.00       1/600007      Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [15]
+                0.00    0.00       2/600007      Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set_noalias<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [10]
+                0.00    0.00       4/600007      Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::lazyAssign<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [13]
+                0.00    0.00  200000/600007      void Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::copyPacket<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1, 1>(long, Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [5]
+                0.00    0.00  400000/600007      Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::operator()(long, long) [3]
+[29]     0.0    0.00    0.00  600007         Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() [29]
+-----------------------------------------------
+                0.00    0.00  200000/600000      void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::writePacket<1>(long, float __vector const&) [6]
+                0.00    0.00  400000/600000      Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::coeffRef(long, long) [4]
+[30]     0.0    0.00    0.00  600000         Eigen::DenseStorage<float, -1, -1, -1, 0>::data() [30]
+-----------------------------------------------
+                0.00    0.00  200000/600000      float __vector(4) Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::packet<1>(long) const [37]
+                0.00    0.00  400000/600000      Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::coeff(long, long) const [34]
+[31]     0.0    0.00    0.00  600000         Eigen::DenseStorage<float, -1, -1, -1, 0>::data() const [31]
+-----------------------------------------------
+                0.00    0.00       3/400007      Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::size() const [58]
+                0.00    0.00       4/400007      Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::lazyAssign<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [13]
+                0.00    0.00  400000/400007      Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::operator()(long, long) [3]
+[32]     0.0    0.00    0.00  400007         Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::cols() const [32]
+                0.00    0.00  400007/1000031     Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() const [25]
+                0.00    0.00  400007/800015      Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::cols() const [27]
+-----------------------------------------------
+                0.00    0.00       3/400007      Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::size() const [58]
+                0.00    0.00       4/400007      Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::lazyAssign<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [13]
+                0.00    0.00  400000/400007      Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::operator()(long, long) [3]
+[33]     0.0    0.00    0.00  400007         Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::rows() const [33]
+                0.00    0.00  400007/600016      Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::rows() const [28]
+                0.00    0.00  400007/1000031     Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() const [25]
+-----------------------------------------------
+                0.00    0.00  400000/400000      std::ostream& Eigen::internal::print_matrix<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(std::ostream&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::IOFormat const&) [80]
+[34]     0.0    0.00    0.00  400000         Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::coeff(long, long) const [34]
+                0.00    0.00  400000/1400016     Eigen::DenseStorage<float, -1, -1, -1, 0>::rows() const [24]
+                0.00    0.00  400000/600000      Eigen::DenseStorage<float, -1, -1, -1, 0>::data() const [31]
+-----------------------------------------------
+                0.00    0.00  200000/200000      float __vector Eigen::internal::ploadt<float __vector, 1>(Eigen::internal::unpacket_traits<float __vector>::type const*) [36]
+[35]     0.0    0.00    0.00  200000         float __vector(4) Eigen::internal::pload<float __vector(4)>(Eigen::internal::unpacket_traits<float __vector(4)>::type const*) [35]
+-----------------------------------------------
+                0.00    0.00  200000/200000      float __vector(4) Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::packet<1>(long) const [37]
+[36]     0.0    0.00    0.00  200000         float __vector Eigen::internal::ploadt<float __vector, 1>(Eigen::internal::unpacket_traits<float __vector>::type const*) [36]
+                0.00    0.00  200000/200000      float __vector(4) Eigen::internal::pload<float __vector(4)>(Eigen::internal::unpacket_traits<float __vector(4)>::type const*) [35]
+-----------------------------------------------
+                0.00    0.00  200000/200000      void Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::copyPacket<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1, 1>(long, Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [5]
+[37]     0.0    0.00    0.00  200000         float __vector(4) Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::packet<1>(long) const [37]
+                0.00    0.00  200000/600000      Eigen::DenseStorage<float, -1, -1, -1, 0>::data() const [31]
+                0.00    0.00  200000/200000      float __vector Eigen::internal::ploadt<float __vector, 1>(Eigen::internal::unpacket_traits<float __vector>::type const*) [36]
+-----------------------------------------------
+                0.00    0.00       5/5           void Eigen::internal::conditional_aligned_free<true>(void*) [39]
+[38]     0.0    0.00    0.00       5         Eigen::internal::aligned_free(void*) [38]
+-----------------------------------------------
+                0.00    0.00       5/5           void Eigen::internal::conditional_aligned_delete_auto<float, true>(float*, unsigned long) [40]
+[39]     0.0    0.00    0.00       5         void Eigen::internal::conditional_aligned_free<true>(void*) [39]
+                0.00    0.00       5/5           Eigen::internal::aligned_free(void*) [38]
+-----------------------------------------------
+                0.00    0.00       2/5           Eigen::DenseStorage<float, -1, -1, -1, 0>::resize(long, long, long) [42]
+                0.00    0.00       3/5           Eigen::DenseStorage<float, -1, -1, -1, 0>::~DenseStorage() [43]
+[40]     0.0    0.00    0.00       5         void Eigen::internal::conditional_aligned_delete_auto<float, true>(float*, unsigned long) [40]
+                0.00    0.00       5/5           void Eigen::internal::conditional_aligned_free<true>(void*) [39]
+-----------------------------------------------
+                0.00    0.00       1/3           Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::PlainObjectBase(long, long, long) [74]
+                0.00    0.00       2/3           Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::PlainObjectBase() [62]
+[41]     0.0    0.00    0.00       3         Eigen::MatrixBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::MatrixBase() [41]
+                0.00    0.00       3/3           Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::DenseBase() [56]
+-----------------------------------------------
+                0.00    0.00       3/3           Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::resize(long, long) [48]
+[42]     0.0    0.00    0.00       3         Eigen::DenseStorage<float, -1, -1, -1, 0>::resize(long, long, long) [42]
+                0.00    0.00       2/5           void Eigen::internal::conditional_aligned_delete_auto<float, true>(float*, unsigned long) [40]
+                0.00    0.00       2/3           float* Eigen::internal::conditional_aligned_new_auto<float, true>(unsigned long) [55]
+-----------------------------------------------
+                0.00    0.00       3/3           Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::~PlainObjectBase() [49]
+[43]     0.0    0.00    0.00       3         Eigen::DenseStorage<float, -1, -1, -1, 0>::~DenseStorage() [43]
+                0.00    0.00       3/5           void Eigen::internal::conditional_aligned_delete_auto<float, true>(float*, unsigned long) [40]
+-----------------------------------------------
+                0.00    0.00       3/3           Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::DenseCoeffsBase() [45]
+[44]     0.0    0.00    0.00       3         Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 0>::DenseCoeffsBase() [44]
+                0.00    0.00       3/3           Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::EigenBase() [57]
+-----------------------------------------------
+                0.00    0.00       3/3           Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 3>::DenseCoeffsBase() [46]
+[45]     0.0    0.00    0.00       3         Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::DenseCoeffsBase() [45]
+                0.00    0.00       3/3           Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 0>::DenseCoeffsBase() [44]
+-----------------------------------------------
+                0.00    0.00       3/3           Eigen::internal::special_scalar_op_base<Eigen::Matrix<float, -1, -1, 0, -1, -1>, float, float, false>::special_scalar_op_base() [52]
+[46]     0.0    0.00    0.00       3         Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 3>::DenseCoeffsBase() [46]
+                0.00    0.00       3/3           Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::DenseCoeffsBase() [45]
+-----------------------------------------------
+                0.00    0.00       1/3           Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix<int, int>(int const&, int const&) [75]
+                0.00    0.00       1/3           Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [16]
+                0.00    0.00       1/3           Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix() [76]
+[47]     0.0    0.00    0.00       3         Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_check_template_params() [47]
+-----------------------------------------------
+                0.00    0.00       1/3           void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_init2<int, int>(long, long, Eigen::internal::enable_if<true, int>::type*) [73]
+                0.00    0.00       2/3           void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::resizeLike<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [60]
+[48]     0.0    0.00    0.00       3         Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::resize(long, long) [48]
+                0.00    0.00       3/3           Eigen::DenseStorage<float, -1, -1, -1, 0>::resize(long, long, long) [42]
+-----------------------------------------------
+                0.00    0.00       3/3           Eigen::Matrix<float, -1, -1, 0, -1, -1>::~Matrix() [50]
+[49]     0.0    0.00    0.00       3         Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::~PlainObjectBase() [49]
+                0.00    0.00       3/3           Eigen::DenseStorage<float, -1, -1, -1, 0>::~DenseStorage() [43]
+-----------------------------------------------
+                0.00    0.00       3/3           main [1]
+[50]     0.0    0.00    0.00       3         Eigen::Matrix<float, -1, -1, 0, -1, -1>::~Matrix() [50]
+                0.00    0.00       3/3           Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::~PlainObjectBase() [49]
+-----------------------------------------------
+                0.00    0.00       3/3           void* Eigen::internal::conditional_aligned_malloc<true>(unsigned long) [53]
+[51]     0.0    0.00    0.00       3         Eigen::internal::aligned_malloc(unsigned long) [51]
+                0.00    0.00       3/3           Eigen::internal::check_that_malloc_is_allowed() [54]
+-----------------------------------------------
+                0.00    0.00       3/3           Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::DenseBase() [56]
+[52]     0.0    0.00    0.00       3         Eigen::internal::special_scalar_op_base<Eigen::Matrix<float, -1, -1, 0, -1, -1>, float, float, false>::special_scalar_op_base() [52]
+                0.00    0.00       3/3           Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 3>::DenseCoeffsBase() [46]
+-----------------------------------------------
+                0.00    0.00       3/3           float* Eigen::internal::conditional_aligned_new_auto<float, true>(unsigned long) [55]
+[53]     0.0    0.00    0.00       3         void* Eigen::internal::conditional_aligned_malloc<true>(unsigned long) [53]
+                0.00    0.00       3/3           Eigen::internal::aligned_malloc(unsigned long) [51]
+-----------------------------------------------
+                0.00    0.00       3/3           Eigen::internal::aligned_malloc(unsigned long) [51]
+[54]     0.0    0.00    0.00       3         Eigen::internal::check_that_malloc_is_allowed() [54]
+-----------------------------------------------
+                0.00    0.00       1/3           Eigen::DenseStorage<float, -1, -1, -1, 0>::DenseStorage(long, long, long) [72]
+                0.00    0.00       2/3           Eigen::DenseStorage<float, -1, -1, -1, 0>::resize(long, long, long) [42]
+[55]     0.0    0.00    0.00       3         float* Eigen::internal::conditional_aligned_new_auto<float, true>(unsigned long) [55]
+                0.00    0.00       3/3           void* Eigen::internal::conditional_aligned_malloc<true>(unsigned long) [53]
+-----------------------------------------------
+                0.00    0.00       3/3           Eigen::MatrixBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::MatrixBase() [41]
+[56]     0.0    0.00    0.00       3         Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::DenseBase() [56]
+                0.00    0.00       3/3           Eigen::internal::special_scalar_op_base<Eigen::Matrix<float, -1, -1, 0, -1, -1>, float, float, false>::special_scalar_op_base() [52]
+-----------------------------------------------
+                0.00    0.00       3/3           Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 0>::DenseCoeffsBase() [44]
+[57]     0.0    0.00    0.00       3         Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::EigenBase() [57]
+-----------------------------------------------
+                0.00    0.00       1/3           std::ostream& Eigen::internal::print_matrix<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(std::ostream&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::IOFormat const&) [80]
+                0.00    0.00       2/3           Eigen::internal::assign_impl<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1>, 3, 0, 0>::run(Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [11]
+[58]     0.0    0.00    0.00       3         Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::size() const [58]
+                0.00    0.00       3/400007      Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::rows() const [33]
+                0.00    0.00       3/400007      Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::cols() const [32]
+-----------------------------------------------
+                0.00    0.00       2/2           Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::PlainObjectBase() [62]
+[59]     0.0    0.00    0.00       2         Eigen::DenseStorage<float, -1, -1, -1, 0>::DenseStorage() [59]
+-----------------------------------------------
+                0.00    0.00       2/2           void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_resize_to_match<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [61]
+[60]     0.0    0.00    0.00       2         void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::resizeLike<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [60]
+                0.00    0.00       6/800015      Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::cols() const [27]
+                0.00    0.00       6/600016      Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::rows() const [28]
+                0.00    0.00       2/1000031     Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() const [25]
+                0.00    0.00       2/3           Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::resize(long, long) [48]
+-----------------------------------------------
+                0.00    0.00       2/2           Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::lazyAssign<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [9]
+[61]     0.0    0.00    0.00       2         void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_resize_to_match<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [61]
+                0.00    0.00       2/2           void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::resizeLike<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [60]
+-----------------------------------------------
+                0.00    0.00       1/2           Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix<int, int>(int const&, int const&) [75]
+                0.00    0.00       1/2           Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix() [76]
+[62]     0.0    0.00    0.00       2         Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::PlainObjectBase() [62]
+                0.00    0.00       2/3           Eigen::MatrixBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::MatrixBase() [41]
+                0.00    0.00       2/2           Eigen::DenseStorage<float, -1, -1, -1, 0>::DenseStorage() [59]
+-----------------------------------------------
+                0.00    0.00       2/2           Eigen::internal::assign_impl<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1>, 3, 0, 0>::run(Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [11]
+[63]     0.0    0.00    0.00       2         void Eigen::internal::unaligned_assign_impl<false>::run<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1>::Index, Eigen::Matrix<float, -1, -1, 0, -1, -1>::Index) [63]
+-----------------------------------------------
+                0.00    0.00       2/2           Eigen::internal::assign_impl<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1>, 3, 0, 0>::run(Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [11]
+[64]     0.0    0.00    0.00       2         void Eigen::internal::unaligned_assign_impl<true>::run<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1>::Index, Eigen::Matrix<float, -1, -1, 0, -1, -1>::Index) [64]
+-----------------------------------------------
+                0.00    0.00       2/2           void Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::checkTransposeAliasing<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) const [66]
+[65]     0.0    0.00    0.00       2         Eigen::internal::checkTransposeAliasing_impl<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1>, false>::run(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [65]
+-----------------------------------------------
+                0.00    0.00       2/2           Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::lazyAssign<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [13]
+[66]     0.0    0.00    0.00       2         void Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::checkTransposeAliasing<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) const [66]
+                0.00    0.00       2/1000031     Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() const [25]
+                0.00    0.00       2/2           Eigen::internal::checkTransposeAliasing_impl<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1>, false>::run(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [65]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [110]
+[67]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z8FromFileRKSsii [67]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [68]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__Z8FromFileRKSsii [67]
+[68]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [68]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[69]     0.0    0.00    0.00       1         ToFile(Eigen::Matrix<float, -1, -1, 0, -1, -1>) [69]
+                0.00    0.00       1/1           std::operator|(std::_Ios_Openmode, std::_Ios_Openmode) [84]
+                0.00    0.00       1/1           Eigen::IOFormat::IOFormat(int, int, std::string const&, std::string const&, std::string const&, std::string const&, std::string const&, std::string const&) [78]
+                0.00    0.00       1/1           Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::format(Eigen::IOFormat const&) const [83]
+                0.00    0.00       1/1           Eigen::operator<<(std::ostream&, Eigen::WithFormat<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [81]
+                0.00    0.00       1/1           Eigen::WithFormat<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::~WithFormat() [71]
+-----------------------------------------------
+                0.00    0.00       1/1           Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::format(Eigen::IOFormat const&) const [83]
+[70]     0.0    0.00    0.00       1         Eigen::WithFormat<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::WithFormat(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::IOFormat const&) [70]
+                0.00    0.00       1/1           Eigen::IOFormat::IOFormat(Eigen::IOFormat const&) [77]
+-----------------------------------------------
+                0.00    0.00       1/1           ToFile(Eigen::Matrix<float, -1, -1, 0, -1, -1>) [69]
+[71]     0.0    0.00    0.00       1         Eigen::WithFormat<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::~WithFormat() [71]
+                0.00    0.00       1/1           Eigen::IOFormat::~IOFormat() [79]
+-----------------------------------------------
+                0.00    0.00       1/1           Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::PlainObjectBase(long, long, long) [74]
+[72]     0.0    0.00    0.00       1         Eigen::DenseStorage<float, -1, -1, -1, 0>::DenseStorage(long, long, long) [72]
+                0.00    0.00       1/3           float* Eigen::internal::conditional_aligned_new_auto<float, true>(unsigned long) [55]
+-----------------------------------------------
+                0.00    0.00       1/1           Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix<int, int>(int const&, int const&) [75]
+[73]     0.0    0.00    0.00       1         void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_init2<int, int>(long, long, Eigen::internal::enable_if<true, int>::type*) [73]
+                0.00    0.00       1/3           Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::resize(long, long) [48]
+-----------------------------------------------
+                0.00    0.00       1/1           Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [16]
+[74]     0.0    0.00    0.00       1         Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::PlainObjectBase(long, long, long) [74]
+                0.00    0.00       1/3           Eigen::MatrixBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::MatrixBase() [41]
+                0.00    0.00       1/1           Eigen::DenseStorage<float, -1, -1, -1, 0>::DenseStorage(long, long, long) [72]
+-----------------------------------------------
+                0.00    0.00       1/1           FromFile(std::string const&, int, int) [2]
+[75]     0.0    0.00    0.00       1         Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix<int, int>(int const&, int const&) [75]
+                0.00    0.00       1/3           Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_check_template_params() [47]
+                0.00    0.00       1/2           Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::PlainObjectBase() [62]
+                0.00    0.00       1/1           void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_init2<int, int>(long, long, Eigen::internal::enable_if<true, int>::type*) [73]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[76]     0.0    0.00    0.00       1         Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix() [76]
+                0.00    0.00       1/3           Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_check_template_params() [47]
+                0.00    0.00       1/2           Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::PlainObjectBase() [62]
+-----------------------------------------------
+                0.00    0.00       1/1           Eigen::WithFormat<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::WithFormat(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::IOFormat const&) [70]
+[77]     0.0    0.00    0.00       1         Eigen::IOFormat::IOFormat(Eigen::IOFormat const&) [77]
+-----------------------------------------------
+                0.00    0.00       1/1           ToFile(Eigen::Matrix<float, -1, -1, 0, -1, -1>) [69]
+[78]     0.0    0.00    0.00       1         Eigen::IOFormat::IOFormat(int, int, std::string const&, std::string const&, std::string const&, std::string const&, std::string const&, std::string const&) [78]
+-----------------------------------------------
+                0.00    0.00       1/1           Eigen::WithFormat<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::~WithFormat() [71]
+[79]     0.0    0.00    0.00       1         Eigen::IOFormat::~IOFormat() [79]
+-----------------------------------------------
+                0.00    0.00       1/1           Eigen::operator<<(std::ostream&, Eigen::WithFormat<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [81]
+[80]     0.0    0.00    0.00       1         std::ostream& Eigen::internal::print_matrix<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(std::ostream&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::IOFormat const&) [80]
+                0.00    0.00  400000/400000      Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::coeff(long, long) const [34]
+                0.00    0.00  400000/800015      Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::cols() const [27]
+                0.00    0.00  200001/600016      Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::rows() const [28]
+                0.00    0.00       1/3           Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::size() const [58]
+-----------------------------------------------
+                0.00    0.00       1/1           ToFile(Eigen::Matrix<float, -1, -1, 0, -1, -1>) [69]
+[81]     0.0    0.00    0.00       1         Eigen::operator<<(std::ostream&, Eigen::WithFormat<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [81]
+                0.00    0.00       1/1           Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::eval() const [82]
+                0.00    0.00       1/1           std::ostream& Eigen::internal::print_matrix<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(std::ostream&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::IOFormat const&) [80]
+-----------------------------------------------
+                0.00    0.00       1/1           Eigen::operator<<(std::ostream&, Eigen::WithFormat<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [81]
+[82]     0.0    0.00    0.00       1         Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::eval() const [82]
+                0.00    0.00       1/1000031     Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() const [25]
+-----------------------------------------------
+                0.00    0.00       1/1           ToFile(Eigen::Matrix<float, -1, -1, 0, -1, -1>) [69]
+[83]     0.0    0.00    0.00       1         Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::format(Eigen::IOFormat const&) const [83]
+                0.00    0.00       1/1000031     Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() const [25]
+                0.00    0.00       1/1           Eigen::WithFormat<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::WithFormat(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::IOFormat const&) [70]
+-----------------------------------------------
+                0.00    0.00       1/1           ToFile(Eigen::Matrix<float, -1, -1, 0, -1, -1>) [69]
+[84]     0.0    0.00    0.00       1         std::operator|(std::_Ios_Openmode, std::_Ios_Openmode) [84]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [67] _GLOBAL__sub_I__Z8FromFileRKSsii (To_File.cc) [48] Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::resize(long, long) [40] void Eigen::internal::conditional_aligned_delete_auto<float, true>(float*, unsigned long)
+  [68] __static_initialization_and_destruction_0(int, int) (To_File.cc) [4] Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::coeffRef(long, long) [35] float __vector(4) Eigen::internal::pload<float __vector(4)>(Eigen::internal::unpacket_traits<float __vector(4)>::type const*)
+  [69] ToFile(Eigen::Matrix<float, -1, -1, 0, -1, -1>) [74] Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::PlainObjectBase(long, long, long) [36] float __vector Eigen::internal::ploadt<float __vector, 1>(Eigen::internal::unpacket_traits<float __vector>::type const*)
+   [2] FromFile(std::string const&, int, int) [62] Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::PlainObjectBase() [7] void Eigen::internal::pstore<float, float __vector(4)>(float*, float __vector(4) const&)
+  [41] Eigen::MatrixBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::MatrixBase() [49] Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::~PlainObjectBase() [8] void Eigen::internal::pstoret<float, float __vector(4), 1>(float*, float __vector(4) const&)
+  [70] Eigen::WithFormat<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::WithFormat(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::IOFormat const&) [16] Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [13] Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::lazyAssign<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&)
+  [71] Eigen::WithFormat<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::~WithFormat() [75] Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix<int, int>(int const&, int const&) [56] Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::DenseBase()
+  [30] Eigen::DenseStorage<float, -1, -1, -1, 0>::data() [76] Eigen::Matrix<float, -1, -1, 0, -1, -1>::Matrix() [29] Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived()
+  [42] Eigen::DenseStorage<float, -1, -1, -1, 0>::resize(long, long, long) [50] Eigen::Matrix<float, -1, -1, 0, -1, -1>::~Matrix() [57] Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::EigenBase()
+  [59] Eigen::DenseStorage<float, -1, -1, -1, 0>::DenseStorage() [17] Eigen::Matrix<float, -1, -1, 0, -1, -1>::operator=(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [81] Eigen::operator<<(std::ostream&, Eigen::WithFormat<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&)
+  [72] Eigen::DenseStorage<float, -1, -1, -1, 0>::DenseStorage(long, long, long) [77] Eigen::IOFormat::IOFormat(Eigen::IOFormat const&) [26] Eigen::DenseStorage<float, -1, -1, -1, 0>::cols() const
+  [43] Eigen::DenseStorage<float, -1, -1, -1, 0>::~DenseStorage() [78] Eigen::IOFormat::IOFormat(int, int, std::string const&, std::string const&, std::string const&, std::string const&, std::string const&, std::string const&) [31] Eigen::DenseStorage<float, -1, -1, -1, 0>::data() const
+  [44] Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 0>::DenseCoeffsBase() [79] Eigen::IOFormat::~IOFormat() [24] Eigen::DenseStorage<float, -1, -1, -1, 0>::rows() const
+   [5] void Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::copyPacket<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1, 1>(long, Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [11] Eigen::internal::assign_impl<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1>, 3, 0, 0>::run(Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [27] Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::cols() const
+  [45] Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::DenseCoeffsBase() [38] Eigen::internal::aligned_free(void*) [28] Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::rows() const
+   [3] Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 1>::operator()(long, long) [80] std::ostream& Eigen::internal::print_matrix<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(std::ostream&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::IOFormat const&) [34] Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::coeff(long, long) const
+  [46] Eigen::DenseCoeffsBase<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 3>::DenseCoeffsBase() [51] Eigen::internal::aligned_malloc(unsigned long) [37] float __vector(4) Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::packet<1>(long) const
+   [9] Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::lazyAssign<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [12] Eigen::internal::assign_selector<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1>, false, false>::run(Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [66] void Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::checkTransposeAliasing<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) const
+  [60] void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::resizeLike<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [63] void Eigen::internal::unaligned_assign_impl<false>::run<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1>::Index, Eigen::Matrix<float, -1, -1, 0, -1, -1>::Index) [82] Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::eval() const
+   [6] void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::writePacket<1>(long, float __vector const&) [64] void Eigen::internal::unaligned_assign_impl<true>::run<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::Matrix<float, -1, -1, 0, -1, -1>&, Eigen::Matrix<float, -1, -1, 0, -1, -1>::Index, Eigen::Matrix<float, -1, -1, 0, -1, -1>::Index) [83] Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::format(Eigen::IOFormat const&) const
+  [10] Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set_noalias<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [52] Eigen::internal::special_scalar_op_base<Eigen::Matrix<float, -1, -1, 0, -1, -1>, float, float, false>::special_scalar_op_base() [32] Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::cols() const
+  [14] void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set_selector<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::internal::false_type const&) [39] void Eigen::internal::conditional_aligned_free<true>(void*) [33] Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::rows() const
+  [61] void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_resize_to_match<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [53] void* Eigen::internal::conditional_aligned_malloc<true>(unsigned long) [58] Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::size() const
+  [47] Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_check_template_params() [65] Eigen::internal::checkTransposeAliasing_impl<Eigen::Matrix<float, -1, -1, 0, -1, -1>, Eigen::Matrix<float, -1, -1, 0, -1, -1>, false>::run(Eigen::Matrix<float, -1, -1, 0, -1, -1> const&, Eigen::Matrix<float, -1, -1, 0, -1, -1> const&) [25] Eigen::EigenBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::derived() const
+  [15] Eigen::Matrix<float, -1, -1, 0, -1, -1>& Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_set<Eigen::Matrix<float, -1, -1, 0, -1, -1> >(Eigen::DenseBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> > const&) [54] Eigen::internal::check_that_malloc_is_allowed() [84] std::operator|(std::_Ios_Openmode, std::_Ios_Openmode)
+  [73] void Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 0, -1, -1> >::_init2<int, int>(long, long, Eigen::internal::enable_if<true, int>::type*) [55] float* Eigen::internal::conditional_aligned_new_auto<float, true>(unsigned long)

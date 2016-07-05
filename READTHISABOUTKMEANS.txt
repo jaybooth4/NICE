@@ -4,7 +4,7 @@ I adjusted what was necessary in each file to allow for the reading in of data. 
 
 
 DLib:
-The test file is called kkmeans located in the example folder. This is run by g++ kkmeans_ex.cpp -I (directory to dlib). It reads in the file called data_k4_p100000_d4_c1.txt located in the same directory. There are also example files called EIGEN_EXAMPLE.cc and EIGEN_INSTREAM.cc that demonstrate dlib's functionality with Eigen.
+The test file is called kkmeans located in the example folder. This is compiled by g++ kkmeans_ex.cpp -I (directory to dlib). It reads in the file called data_k4_p100000_d4_c1.txt located in the same directory. There are also example files called EIGEN_EXAMPLE.cc and EIGEN_INSTREAM.cc that demonstrate dlib's functionality with Eigen. Be sure to compile with c++11!
 
 
 KMlocal: (UMD library)
@@ -15,13 +15,26 @@ If you just run ./kmlsample this should give you more information about the flag
 
 
 Waffles: (Brigham Young library)
-After compilation the executable waffles_cluster located in the bin can be run using 
+create a build directory, cmake .., make -j 4
+After compilation the executable waffles_cluster located in src/bin can be run using 
 ./waffles_cluster kmeans ~/Desktop/Github/NICE/data_k4_p100000_d4_c1.dat 4
-There is also an Eigen example located in teh demos directory.
+Source code for this example located in src/cluster/main.cpp
+There is also an Eigen example located in the demos directory.
+Input file must be a .dat format, can have commas or no commas. aarf, csv or .dat
+There is no built in compatability with eigen
+
 
 Shark:
 After compiling with cmake, there will be a bin folder in the build directory with a KMeans tutorial executable. This is run with ./KmeansTutorial [input file]. This program automatically recognizes the dimensionality of the dataset. You must set the number of clusters desired, and alter the output setting based on the number of clusters. I believe this library uses vectors for storage but I am not sure.
+The set up of this project is such that it creates its own makefiles on the fly. I attempted to change the .flags file in the KMeans.dir directory, but due to my understanding that the gprof files can only be produced if the .cpp is in the same directory as the executable, it was unable to produce a gmon file. I attempted to compile by hand using 
+g++ -fopenmp -g -pg -O3 -I/home/jason.b/NICE/Shark-3.0.0/include/ -I/home/jason.b/NICE/Shark-3.0.0/build/include/ -L/usr/lib/x86_64-linux-gnu/libboost_math_c99.so -lboost_math_c99 KMeansTutorial.cpp 2> boost_math.txt
+But this provided errors which have been sent to error files. Read these then ask for help.
 
+Shogun:
+Still attempting to figure out how to use the eigen-->SGmatrix function call
+It is able to compile after running cmake, files are located in the section labeled examples/undocumented/libshogun. How do I read in a file?
+
+-pg flags have been added to the Makefile flags
 
 
 Feel free to email questions!

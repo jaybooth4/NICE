@@ -79,15 +79,15 @@ int main(int argc, char **argv) {
 	// compute centroids using k-means clustering
 	//###begin<clustering>
 	Centroids centroids;
-	size_t iterations = kMeans(data, 3, centroids);  //// data, numclusters, centroids
+	size_t iterations = kMeans(data, 4, centroids);  //// data, numclusters, centroids
 	//###end<clustering>
-	// report number of iterations by the clustering algorithm
+	//report number of iterations by the clustering algorithm
 	cout << "iterations: " << iterations << endl;
 
 	// write cluster centers/centroids
 	//###begin<print_cluster_means>
 	Data<RealVector> const& c = centroids.centroids();
-	cout<<c<<std::endl;
+        //cout<<c<<std::endl;
 	//###end<print_cluster_means>
 
 	// cluster data
@@ -96,6 +96,7 @@ int main(int argc, char **argv) {
 	Data<unsigned> clusters = model(data);
 	//###end<assign_cluster>
 	
+	/*
 	// write results to files
 	ofstream c1("cl1.csv");
 	ofstream c2("cl2.csv");
@@ -110,4 +111,5 @@ int main(int argc, char **argv) {
 	//###end<print_cluster_assignment>
 	cc << c.element(0)(0) << " " << c.element(0)(1) << endl;
 	cc << c.element(1)(0) << " " << c.element(1)(1) << endl;
+    */
 }

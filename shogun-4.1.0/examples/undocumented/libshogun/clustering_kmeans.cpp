@@ -20,6 +20,7 @@
 #include <shogun/clustering/KMeans.h>
 #include <shogun/distance/EuclideanDistance.h>
 #include <shogun/distance/MinkowskiMetric.h>
+#include <iostream>
 
 
 using namespace shogun;
@@ -33,9 +34,9 @@ void print_message(FILE* target, const char* str)
 int main(int argc, char **argv)
 {
 	init_shogun(&print_message, &print_message, &print_message);
-
+	std::cout << "Just messing with you!!! CMAKE";
 	int32_t num_clusters=4;
-	int32_t num_features=11;
+	//int32_t num_features=11;
 	int32_t dim_features=3;
 	int32_t num_vectors_per_cluster=5;
 	float64_t cluster_std_dev=2.0;
@@ -69,10 +70,10 @@ int main(int argc, char **argv)
 	features->set_feature_matrix(data);
 	SG_REF(features);
 
-	/* create labels for cluster centers */
-	CMulticlassLabels* labels=new CMulticlassLabels(num_features);
-	for (index_t i=0; i<num_features; ++i)
-		labels->set_label(i, i%2==0 ? 0 : 1);
+//	/* create labels for cluster centers */
+//	CMulticlassLabels* labels=new CMulticlassLabels(num_features);
+//	for (index_t i=0; i<num_features; ++i)
+//		labels->set_label(i, i%2==0 ? 0 : 1);
 
 	/* create distance */
 	CEuclideanDistance* distance=new CEuclideanDistance(features, features);
@@ -102,7 +103,7 @@ int main(int argc, char **argv)
 	SG_UNREF(result);
 	SG_UNREF(centers);
 	SG_UNREF(clustering);
-	SG_UNREF(labels);
+//	SG_UNREF(labels);
 	SG_UNREF(features);
 
 	exit_shogun();

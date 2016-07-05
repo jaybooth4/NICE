@@ -70,7 +70,7 @@ void printPt(				// print a point
 
 int	k		= 4;		// number of centers
 int	dim		= 2;		// dimension
-int	maxPts		= 100;		// max number of data points
+int	maxPts		= 100000;		// max number of data points
 int	stages		= 100;		// number of stages
 istream* dataIn = NULL;		// input data stream
 
@@ -133,7 +133,7 @@ int main(int argc, char **argv)
     ctrs = kmEZ_Hybrid.execute();
     printSummary(kmEZ_Hybrid, dataPts, ctrs);*/
 
-    cout << "\nExecuting Clustering Algorithm: Hybrid\n";
+    //cout << "\nExecuting Clustering Algorithm: Hybrid\n";
     KMlocalHybrid kmHybrid(ctrs, term);		// Hybrid heuristic
     ctrs = kmHybrid.execute();
     //printSummary(kmHybrid, dataPts, ctrs);

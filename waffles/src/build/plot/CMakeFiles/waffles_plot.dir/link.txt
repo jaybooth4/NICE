@@ -1,0 +1,1 @@
+/usr/bin/c++         CMakeFiles/waffles_plot.dir/main.cpp.o  -o ../../bin/waffles_plot -rdynamic ../../lib/libGClasses.a -lpthread 

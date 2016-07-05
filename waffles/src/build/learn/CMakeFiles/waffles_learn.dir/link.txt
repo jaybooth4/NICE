@@ -1,0 +1,1 @@
+/usr/bin/c++         CMakeFiles/waffles_learn.dir/main.cpp.o  -o ../../bin/waffles_learn -rdynamic ../../lib/libGClasses.a -lpthread 

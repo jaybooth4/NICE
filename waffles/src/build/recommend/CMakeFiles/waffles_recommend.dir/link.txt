@@ -1,0 +1,1 @@
+/usr/bin/c++         CMakeFiles/waffles_recommend.dir/main.cpp.o  -o ../../bin/waffles_recommend -rdynamic ../../lib/libGClasses.a -lpthread 

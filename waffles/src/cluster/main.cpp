@@ -83,9 +83,9 @@ void loadData(GMatrix& m, const char* szFilename)
 		GCSVParser parser;
 		parser.setSeparator('\0');
 		parser.parse(m, szFilename);
-		cerr << "\nParsing Report:\n";
-		for(size_t i = 0; i < m.cols(); i++)
-			cerr << to_str(i) << ") " << parser.report(i) << "\n";
+		//cerr << "\nParsing Report:\n";
+		//for(size_t i = 0; i < m.cols(); i++)
+			//cerr << to_str(i) << ") " << parser.report(i) << "\n";
 	}
 	else
 		throw Ex("Unsupported file format: ", szFilename + pd.extStart);
@@ -147,7 +147,7 @@ void kmeans(GArgReader& args)
 
 	// Parse Options
 	unsigned int nSeed = getpid() * (unsigned int)time(NULL);
-	size_t reps = 1;
+	size_t reps = 4;
 	while(args.size() > 0)
 	{
 		if(args.if_pop("-seed"))
@@ -164,7 +164,7 @@ void kmeans(GArgReader& args)
 	clusterer.setReps(reps);
 	GMatrix* pOut = clusterer.reduce(data);
 	std::unique_ptr<GMatrix> hOut(pOut);
-	pOut->print(cout);
+	//pOut->print(cout);
 }
 
 void kmedoids(GArgReader& args)

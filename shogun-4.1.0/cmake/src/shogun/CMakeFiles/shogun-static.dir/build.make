@@ -124,6 +124,7 @@ shogun__static_EXTERNAL_OBJECTS = \
 "/home/jason.b/Desktop/Github/NICE/shogun-4.1.0/cmake/src/shogun/CMakeFiles/libshogun.dir/base/Parameter.cpp.o" \
 "/home/jason.b/Desktop/Github/NICE/shogun-4.1.0/cmake/src/shogun/CMakeFiles/libshogun.dir/base/init.cpp.o" \
 "/home/jason.b/Desktop/Github/NICE/shogun-4.1.0/cmake/src/shogun/CMakeFiles/libshogun.dir/base/Parallel.cpp.o" \
+"/home/jason.b/Desktop/Github/NICE/shogun-4.1.0/cmake/src/shogun/CMakeFiles/libshogun.dir/base/class_list.cpp.o" \
 "/home/jason.b/Desktop/Github/NICE/shogun-4.1.0/cmake/src/shogun/CMakeFiles/libshogun.dir/ensemble/WeightedMajorityVote.cpp.o" \
 "/home/jason.b/Desktop/Github/NICE/shogun-4.1.0/cmake/src/shogun/CMakeFiles/libshogun.dir/ensemble/MeanRule.cpp.o" \
 "/home/jason.b/Desktop/Github/NICE/shogun-4.1.0/cmake/src/shogun/CMakeFiles/libshogun.dir/ensemble/CombinationRule.cpp.o" \
@@ -724,8 +725,7 @@ shogun__static_EXTERNAL_OBJECTS = \
 "/home/jason.b/Desktop/Github/NICE/shogun-4.1.0/cmake/src/shogun/CMakeFiles/libshogun.dir/ui/GUIFeatures.cpp.o" \
 "/home/jason.b/Desktop/Github/NICE/shogun-4.1.0/cmake/src/shogun/CMakeFiles/libshogun.dir/lib/external/PMurHash.c.o" \
 "/home/jason.b/Desktop/Github/NICE/shogun-4.1.0/cmake/src/shogun/CMakeFiles/libshogun.dir/lib/external/SFMT/SFMT.c.o" \
-"/home/jason.b/Desktop/Github/NICE/shogun-4.1.0/cmake/src/shogun/CMakeFiles/libshogun.dir/lib/external/dSFMT/dSFMT.c.o" \
-"/home/jason.b/Desktop/Github/NICE/shogun-4.1.0/cmake/src/shogun/CMakeFiles/libshogun.dir/base/class_list.cpp.o"
+"/home/jason.b/Desktop/Github/NICE/shogun-4.1.0/cmake/src/shogun/CMakeFiles/libshogun.dir/lib/external/dSFMT/dSFMT.c.o"
 
 src/shogun/libshogun.a: src/shogun/CMakeFiles/libshogun.dir/kernel/GaussianShortRealKernel.cpp.o
 src/shogun/libshogun.a: src/shogun/CMakeFiles/libshogun.dir/kernel/PowerKernel.cpp.o
@@ -794,6 +794,7 @@ src/shogun/libshogun.a: src/shogun/CMakeFiles/libshogun.dir/base/SGObject.cpp.o
 src/shogun/libshogun.a: src/shogun/CMakeFiles/libshogun.dir/base/Parameter.cpp.o
 src/shogun/libshogun.a: src/shogun/CMakeFiles/libshogun.dir/base/init.cpp.o
 src/shogun/libshogun.a: src/shogun/CMakeFiles/libshogun.dir/base/Parallel.cpp.o
+src/shogun/libshogun.a: src/shogun/CMakeFiles/libshogun.dir/base/class_list.cpp.o
 src/shogun/libshogun.a: src/shogun/CMakeFiles/libshogun.dir/ensemble/WeightedMajorityVote.cpp.o
 src/shogun/libshogun.a: src/shogun/CMakeFiles/libshogun.dir/ensemble/MeanRule.cpp.o
 src/shogun/libshogun.a: src/shogun/CMakeFiles/libshogun.dir/ensemble/CombinationRule.cpp.o
@@ -1395,7 +1396,6 @@ src/shogun/libshogun.a: src/shogun/CMakeFiles/libshogun.dir/ui/GUIFeatures.cpp.o
 src/shogun/libshogun.a: src/shogun/CMakeFiles/libshogun.dir/lib/external/PMurHash.c.o
 src/shogun/libshogun.a: src/shogun/CMakeFiles/libshogun.dir/lib/external/SFMT/SFMT.c.o
 src/shogun/libshogun.a: src/shogun/CMakeFiles/libshogun.dir/lib/external/dSFMT/dSFMT.c.o
-src/shogun/libshogun.a: src/shogun/CMakeFiles/libshogun.dir/base/class_list.cpp.o
 src/shogun/libshogun.a: src/shogun/CMakeFiles/shogun-static.dir/build.make
 src/shogun/libshogun.a: src/shogun/CMakeFiles/shogun-static.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libshogun.a"

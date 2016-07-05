@@ -36,21 +36,34 @@
 #include <fstream>
 #include <dlib/clustering.h>
 #include <dlib/rand.h>
+#include <eigen3/Eigen/Dense>
+#include <cstdlib>
+#include <algorithm>
+#include <string>
 
 using namespace std;
 using namespace dlib;
 
+Eigen::MatrixXf FromFile(const std::string &input_file_path, int num_rows,
+                   int num_cols);
+
+matrix<float> TransformData(Eigen::MatrixXf EigenMatrix);
+
 int main()
 {
 	//// Input stream to assign matrix
-	ifstream myfile ("data_k4_p100000_d4_c1.txt");
-	if (myfile.is_open())
-		cout << "open!" << endl;
-	dlib::matrix <float> InMatrix;
-	myfile >> InMatrix;
+  Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic> EigenMatrix(100000, 4);
+  EigenMatrix = FromFile("data_k4_p25000_d4_c100.txt", 100000, 4);
+
+	//ifstream myfile ("data_k4_p100000_d4_c1.txt");
+//	if (myfile.is_open())
+	//	cout << "open!" << endl;
+	//myfile >> InMatrix;
 	//cout << rowm(InMatrix, range(0,100)) << endl;  //// For printing input
-	myfile.close();
-	dlib::matrix<float> TransposeInMatrix = trans(InMatrix);
+	//myfile.close();
+  dlib::matrix<float> InMatrix;
+  InMatrix = TransformData(EigenMatrix);
+  dlib::matrix<float> TransposeInMatrix = trans(InMatrix);
     //// Transpose matrix to allow for easy transition to a dataset
 	//// For the kkmeans function
 
@@ -197,4 +210,24 @@ int main()
 */
 }
 
+Eigen::MatrixXf FromFile(const std::string &input_file_path, int num_rows,
+                   int num_cols) {
+  std::ifstream input_file(input_file_path, std::ifstream::in);
+  Eigen::MatrixXf m(num_rows, num_cols);
+  if (input_file) {
+    for (int i = 0; i < num_rows; i++)
+      for (int j = 0; j < num_cols; j++)
+        input_file >> m(i, j);
+    return m;
+  } else {
+    std::cerr << "Cannot open file " + input_file_path + ", exiting...";
+    exit(1);
+  }
+}
 
+
+matrix<float> TransformData(Eigen::MatrixXf EigenMatrix) {
+  matrix<float> InMatrix;
+  InMatrix = mat(EigenMatrix);
+  return InMatrix;
+}

@@ -1,0 +1,11 @@
+/home/jason.b/NICE/waffles/src/build/GClasses/CMakeFiles/GClasses.dir
+/home/jason.b/NICE/waffles/src/build/test/CMakeFiles/test.dir
+/home/jason.b/NICE/waffles/src/build/audio/CMakeFiles/waffles_audio.dir
+/home/jason.b/NICE/waffles/src/build/cluster/CMakeFiles/waffles_cluster.dir
+/home/jason.b/NICE/waffles/src/build/dimred/CMakeFiles/waffles_dimred.dir
+/home/jason.b/NICE/waffles/src/build/learn/CMakeFiles/waffles_learn.dir
+/home/jason.b/NICE/waffles/src/build/plot/CMakeFiles/waffles_plot.dir
+/home/jason.b/NICE/waffles/src/build/recommend/CMakeFiles/waffles_recommend.dir
+/home/jason.b/NICE/waffles/src/build/sparse/CMakeFiles/waffles_sparse.dir
+/home/jason.b/NICE/waffles/src/build/transform/CMakeFiles/waffles_transform.dir
+/home/jason.b/NICE/waffles/src/build/wizard/CMakeFiles/waffles_wizard.dir

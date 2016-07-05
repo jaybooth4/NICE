@@ -121,7 +121,7 @@ if(${CMAKE_BUILD_TYPE}  MATCHES "debug")
 	#we want to be warned in debug mode
 	if(UNIX)
 #		if(CMAKE_COMPILER_IS_GNUCC)
-		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
+		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -pg -Wall")
 #		endif()
 	endif()
 endif()
