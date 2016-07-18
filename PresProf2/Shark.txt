@@ -1,0 +1,61 @@
+real	0m1.156s
+user	0m1.725s
+sys	0m0.051s
+
+real	0m2.330s
+user	0m3.437s
+sys	0m0.127s
+
+real	0m12.923s
+user	0m26.069s
+sys	0m0.281s
+
+real	0m14.996s
+user	0m30.352s
+sys	0m0.259s
+
+real	0m4.223s
+user	0m4.501s
+sys	0m0.238s
+-----------------------
+real	0m0.847s
+user	0m0.952s
+sys	0m0.057s
+
+real	0m1.865s
+user	0m2.310s
+sys	0m0.105s
+
+real	0m3.894s
+user	0m5.800s
+sys	0m0.123s
+
+real	0m4.943s
+user	0m6.765s
+sys	0m0.183s
+
+real	0m4.290s
+user	0m4.750s
+sys	0m0.163s
+---------------------
+real	0m0.819s
+user	0m0.868s
+sys	0m0.037s
+
+real	0m0.872s
+user	0m0.967s
+sys	0m0.057s
+
+real	0m1.250s
+user	0m1.873s
+sys	0m0.048s
+
+real	0m1.365s
+user	0m2.491s
+sys	0m0.032s
+
+real	0m1.471s
+user	0m2.630s
+sys	0m0.036s
+
+There seems to be some reduction in time when using very large numbers

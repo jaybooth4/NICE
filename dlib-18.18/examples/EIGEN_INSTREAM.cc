@@ -17,21 +17,21 @@ using namespace dlib;
 Eigen::MatrixXf FromFile(const std::string &input_file_path, int num_rows,
                    int num_cols);
 int main() {
-	Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic> TestMatrix;
+	Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic> TestMatrix;  //// Declare Eigen matrix
 	TestMatrix.setRandom(10,3);
 	cout << TestMatrix << endl;
   ofstream outfile;
   outfile.open("EigenWrite.txt");
-  outfile << TestMatrix;
+  outfile << TestMatrix;  //// Write to file
   outfile.close();
 //	//ifstream myfile ("EigenWrite.txt");
 //	//if (myfile.is_open())
 //		//cout << "open!" << endl;
 	Eigen::Matrix<float, 10, 3> InTest;
-  InTest = FromFile("EigenWrite.txt", 10, 3);
-  dlib::matrix<float, 10, 3> Test = mat(InTest);
+  InTest = FromFile("EigenWrite.txt", 10, 3); //// Read from file
+  dlib::matrix<float, 10, 3> Test = mat(InTest);  //// Assign a dlib matrix
   cout << InTest << endl;
-  cout << rowm(InTest, range(1,7)) << endl;
+  cout << rowm(InTest, range(1,7)) << endl; //// Print a section of the matrix (rows 1-7)
   //myfile.close();
 	return 0;
 }

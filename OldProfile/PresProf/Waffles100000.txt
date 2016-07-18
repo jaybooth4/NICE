@@ -1,0 +1,553 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  us/call  us/call  name    
+ 29.50      0.30     0.30                             GClasses::GRowDistance::squaredDistance(GClasses::GVec const&, GClasses::GVec const&) const
+ 15.00      0.45     0.15                             GClasses::GVec::operator[](unsigned long) const
+ 10.00      0.55     0.10                             GClasses::GBits::isValidFloat(char const*, unsigned long)
+  5.00      0.60     0.05                             GClasses::GCSVParser::parse(GClasses::GMatrix&, char const*, unsigned long)
+  4.00      0.64     0.04  7200216     0.01     0.01  std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::size() const
+  4.00      0.68     0.04                             GClasses::GKMeans::recomputeCentroids(GClasses::GMatrix const*)
+  2.00      0.70     0.02  7100082     0.00     0.01  GClasses::GMatrix::rows() const
+  2.00      0.72     0.02  2100020     0.01     0.01  GClasses::GMatrix::row(unsigned long)
+  2.00      0.74     0.02                             GClasses::GKMeans::assignClusters(GClasses::GMatrix const*)
+  2.00      0.76     0.02                             GClasses::GMixedRelation::size() const
+  2.00      0.78     0.02                             std::vector<char const*, std::allocator<char const*> >::vector()
+  1.50      0.79     0.02                             std::vector<GClasses::ImportRow, std::allocator<GClasses::ImportRow> >::size() const
+  1.50      0.81     0.02                             std::vector<unsigned long, std::allocator<unsigned long> >::size() const
+  1.00      0.82     0.01                             GClasses::Ex::Ex(std::string, std::string, std::string)
+  1.00      0.83     0.01                             GClasses::GRand::next(unsigned long)
+  1.00      0.84     0.01                             GClasses::GMatrix::operator[](unsigned long)
+  1.00      0.85     0.01                             GClasses::GMixedRelation::valueCount(unsigned long) const
+  1.00      0.86     0.01                             GClasses::GVec::size() const
+  1.00      0.87     0.01                             std::vector<char const*, std::allocator<char const*> >::size() const
+  1.00      0.88     0.01                             std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::operator[](unsigned long) const
+  1.00      0.89     0.01                             std::vector<unsigned long, std::allocator<unsigned long> >::operator[](unsigned long) const
+  1.00      0.90     0.01                             std::_Vector_base<char const*, std::allocator<char const*> >::_M_get_Tp_allocator()
+  1.00      0.91     0.01                             std::enable_if<std::__and_<std::allocator_traits<std::allocator<GClasses::GVec*> >::__construct_helper<GClasses::GVec*, GClasses::GVec* const&>::type>::value, void>::type std::allocator_traits<std::allocator<GClasses::GVec*> >::_S_construct<GClasses::GVec*, GClasses::GVec* const&>(std::allocator<GClasses::GVec*>&, GClasses::GVec**, GClasses::GVec* const&)
+  1.00      0.92     0.01                             char const** std::__uninitialized_copy<false>::__uninit_copy<std::move_iterator<char const**>, char const**>(std::move_iterator<char const**>, std::move_iterator<char const**>, char const**)
+  1.00      0.93     0.01                             void std::vector<char const*, std::allocator<char const*> >::_M_emplace_back_aux<char const*>(char const*&&)
+  1.00      0.94     0.01                             std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::push_back(GClasses::GVec* const&)
+  1.00      0.95     0.01                             std::move_iterator<char const**> std::__make_move_if_noexcept_iterator<char const**, std::move_iterator<char const**> >(char const**)
+  1.00      0.96     0.01                             char const** std::__uninitialized_move_if_noexcept_a<char const**, char const**, std::allocator<char const*> >(char const**, char const**, char const**, std::allocator<char const*>&)
+  1.00      0.97     0.01                             std::remove_reference<char const**&>::type&& std::move<char const**&>(char const**&)
+  1.00      0.98     0.01                             bool std::operator==<char const**>(std::move_iterator<char const**> const&, std::move_iterator<char const**> const&)
+  1.00      0.99     0.01                             operator new(unsigned long, void*)
+  0.50      0.99     0.01                             GTestAtomicCycleFinder::gotEmAll()
+  0.50      1.00     0.01                             GClasses::GRowDistance::init(GClasses::GRelation const*, bool)
+  0.50      1.00     0.01                             std::vector<GClasses::ImportRow, std::allocator<GClasses::ImportRow> >::~vector()
+  0.00      1.00     0.00  2700024     0.00     0.00  std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::operator[](unsigned long)
+  0.00      1.00     0.00   500072     0.00     0.00  GClasses::GVec::operator[](unsigned long)
+  0.00      1.00     0.00   100085     0.00     0.00  GClasses::GMatrix::cols() const
+  0.00      1.00     0.00        8     0.00     0.00  std::vector<std::string, std::allocator<std::string> >::operator[](unsigned long)
+  0.00      1.00     0.00        4     0.00     0.00  std::string GClasses::to_str<unsigned long>(unsigned long const&)
+  0.00      1.00     0.00        4     0.00     0.00  GClasses::GRelation::GRelation()
+  0.00      1.00     0.00        4     0.00     0.00  std::ios_base::precision(long)
+  0.00      1.00     0.00        4     0.00     0.00  std::default_delete<GClasses::GMatrix>&& std::forward<std::default_delete<GClasses::GMatrix> >(std::remove_reference<std::default_delete<GClasses::GMatrix> >::type&)
+  0.00      1.00     0.00        3     0.00     0.00  GClasses::GMatrix*& std::forward<GClasses::GMatrix*&>(std::remove_reference<GClasses::GMatrix*&>::type&)
+  0.00      1.00     0.00        2     0.00     0.00  GClasses::GUniformRelation::GUniformRelation(unsigned long, unsigned long)
+  0.00      1.00     0.00        2     0.00     0.00  std::_Tuple_impl<2ul>::_Tuple_impl()
+  0.00      1.00     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z8loadDataRN8GClasses7GMatrixEPKc
+  0.00      1.00     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      1.00     0.00        1     0.00   952.38  kmeans(GClasses::GArgReader&)
+  0.00      1.00     0.00        1     0.00     0.00  loadData(GClasses::GMatrix&, char const*)
+  0.00      1.00     0.00        1     0.00     0.00  GClasses::GCSVParser::setSeparator(char)
+  0.00      1.00     0.00        1     0.00   952.38  GClasses::GClusterer::reduce(GClasses::GMatrix const&)
+  0.00      1.00     0.00        1     0.00     0.00  GClasses::GKMeans::setReps(unsigned long)
+  0.00      1.00     0.00        1     0.00     0.00  std::default_delete<GClasses::GMatrix>::operator()(GClasses::GMatrix*) const
+  0.00      1.00     0.00        1     0.00     0.00  std::_Head_base<0ul, GClasses::GMatrix*, false>::_M_head(std::_Head_base<0ul, GClasses::GMatrix*, false>&)
+  0.00      1.00     0.00        1     0.00     0.00  std::_Head_base<0ul, GClasses::GMatrix*, false>::_Head_base<GClasses::GMatrix*&, void>(GClasses::GMatrix*&)
+  0.00      1.00     0.00        1     0.00     0.00  std::_Head_base<1ul, std::default_delete<GClasses::GMatrix>, true>::_M_head(std::_Head_base<1ul, std::default_delete<GClasses::GMatrix>, true>&)
+  0.00      1.00     0.00        1     0.00     0.00  std::_Head_base<1ul, std::default_delete<GClasses::GMatrix>, true>::_Head_base<std::default_delete<GClasses::GMatrix>, void>(std::default_delete<GClasses::GMatrix>&&)
+  0.00      1.00     0.00        1     0.00     0.00  std::unique_ptr<GClasses::GMatrix, std::default_delete<GClasses::GMatrix> >::get_deleter()
+  0.00      1.00     0.00        1     0.00     0.00  std::unique_ptr<GClasses::GMatrix, std::default_delete<GClasses::GMatrix> >::unique_ptr(GClasses::GMatrix*)
+  0.00      1.00     0.00        1     0.00     0.00  std::unique_ptr<GClasses::GMatrix, std::default_delete<GClasses::GMatrix> >::~unique_ptr()
+  0.00      1.00     0.00        1     0.00     0.00  std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::_Tuple_impl<GClasses::GMatrix*<std::default_delete<GClasses::GMatrix> >&, void>(GClasses::GMatrix*<std::default_delete<GClasses::GMatrix> >&, (void&&)...)
+  0.00      1.00     0.00        1     0.00     0.00  std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::_M_head(std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&)
+  0.00      1.00     0.00        1     0.00     0.00  std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix> >::_M_head(std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix> >&)
+  0.00      1.00     0.00        1     0.00     0.00  std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix> >::_Tuple_impl<std::default_delete<GClasses::GMatrix>, , void>(std::default_delete<GClasses::GMatrix>&&)
+  0.00      1.00     0.00        1     0.00     0.00  std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::tuple<GClasses::GMatrix*&, std::default_delete<GClasses::GMatrix>, void>(GClasses::GMatrix*&, std::default_delete<GClasses::GMatrix>&&)
+  0.00      1.00     0.00        1     0.00     0.00  std::__add_ref<GClasses::GMatrix*>::type std::__get_helper<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >(std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&)
+  0.00      1.00     0.00        1     0.00     0.00  std::__add_ref<std::default_delete<GClasses::GMatrix> >::type std::__get_helper<1ul, std::default_delete<GClasses::GMatrix>>(std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix>>&)
+  0.00      1.00     0.00        1     0.00     0.00  std::__add_ref<std::tuple_element<0ul, std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> > >::type>::type std::get<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >(std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&)
+  0.00      1.00     0.00        1     0.00     0.00  std::__add_ref<std::tuple_element<1ul, std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> > >::type>::type std::get<1ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >(std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 1.00% of 1.00 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     29.5    0.30    0.00                 GClasses::GRowDistance::squaredDistance(GClasses::GVec const&, GClasses::GVec const&) const [1]
+-----------------------------------------------
+                                                 <spontaneous>
+[2]     15.0    0.15    0.00                 GClasses::GVec::operator[](unsigned long) const [2]
+-----------------------------------------------
+                                                 <spontaneous>
+[3]     10.0    0.10    0.00                 GClasses::GBits::isValidFloat(char const*, unsigned long) [3]
+-----------------------------------------------
+                                                 <spontaneous>
+[4]      9.4    0.04    0.05                 GClasses::GKMeans::recomputeCentroids(GClasses::GMatrix const*) [4]
+                0.02    0.04 6400065/7100082     GClasses::GMatrix::rows() const [5]
+                0.00    0.00      16/2100020     GClasses::GMatrix::row(unsigned long) [9]
+                0.00    0.00      85/100085      GClasses::GMatrix::cols() const [58]
+                0.00    0.00      72/500072      GClasses::GVec::operator[](unsigned long) [57]
+-----------------------------------------------
+                0.00    0.00       1/7100082     GClasses::GClusterer::reduce(GClasses::GMatrix const&) [38]
+                0.00    0.00       1/7100082     GClasses::GMatrix::setRelation(GClasses::GRelation*) [46]
+                0.00    0.00       2/7100082     GClasses::GKMeans::init(GClasses::GMatrix const*) [43]
+                0.00    0.00  200008/7100082     GClasses::GMatrix::flush() [35]
+                0.00    0.00  500005/7100082     GClasses::GKMeans::assignClusters(GClasses::GMatrix const*) [7]
+                0.02    0.04 6400065/7100082     GClasses::GKMeans::recomputeCentroids(GClasses::GMatrix const*) [4]
+[5]      5.9    0.02    0.04 7100082         GClasses::GMatrix::rows() const [5]
+                0.04    0.00 7100082/7200216     std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::size() const [8]
+-----------------------------------------------
+                                                 <spontaneous>
+[6]      5.0    0.05    0.00                 GClasses::GCSVParser::parse(GClasses::GMatrix&, char const*, unsigned long) [6]
+                0.00    0.00  400000/500072      GClasses::GVec::operator[](unsigned long) [57]
+                0.00    0.00       8/8           std::vector<std::string, std::allocator<std::string> >::operator[](unsigned long) [59]
+                0.00    0.00       4/4           std::string GClasses::to_str<unsigned long>(unsigned long const&) [60]
+-----------------------------------------------
+                                                 <spontaneous>
+[7]      4.3    0.02    0.02                 GClasses::GKMeans::assignClusters(GClasses::GMatrix const*) [7]
+                0.02    0.00 2000000/2100020     GClasses::GMatrix::row(unsigned long) [9]
+                0.00    0.00  500005/7100082     GClasses::GMatrix::rows() const [5]
+-----------------------------------------------
+                0.00    0.00       2/7200216     std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::reserve(unsigned long) [45]
+                0.00    0.00       2/7200216     GClasses::GMatrix::newRows(unsigned long) [44]
+                0.00    0.00      18/7200216     void std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::_M_emplace_back_aux<GClasses::GVec* const&>(GClasses::GVec* const&) [42]
+                0.00    0.00      40/7200216     GClasses::GMatrix::countUniqueValues(unsigned long, unsigned long) const [41]
+                0.00    0.00      72/7200216     std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::_M_check_len(unsigned long, char const*) const [40]
+                0.00    0.00  100000/7200216     GClasses::GMatrix::takeRow(GClasses::GVec*, unsigned long) [39]
+                0.04    0.00 7100082/7200216     GClasses::GMatrix::rows() const [5]
+[8]      4.0    0.04    0.00 7200216         std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::size() const [8]
+-----------------------------------------------
+                0.00    0.00       4/2100020     GClasses::GKMeans::init(GClasses::GMatrix const*) [43]
+                0.00    0.00      16/2100020     GClasses::GKMeans::recomputeCentroids(GClasses::GMatrix const*) [4]
+                0.00    0.00  100000/2100020     GClasses::GClusterer::reduce(GClasses::GMatrix const&) [38]
+                0.02    0.00 2000000/2100020     GClasses::GKMeans::assignClusters(GClasses::GMatrix const*) [7]
+[9]      2.0    0.02    0.00 2100020         GClasses::GMatrix::row(unsigned long) [9]
+                0.00    0.00 2100020/2700024     std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::operator[](unsigned long) [56]
+-----------------------------------------------
+                                                 <spontaneous>
+[10]     2.0    0.02    0.00                 GClasses::GMixedRelation::size() const [10]
+-----------------------------------------------
+                                                 <spontaneous>
+[11]     2.0    0.02    0.00                 std::vector<char const*, std::allocator<char const*> >::vector() [11]
+-----------------------------------------------
+                                                 <spontaneous>
+[12]     1.5    0.02    0.00                 std::vector<GClasses::ImportRow, std::allocator<GClasses::ImportRow> >::size() const [12]
+-----------------------------------------------
+                                                 <spontaneous>
+[13]     1.5    0.02    0.00                 std::vector<unsigned long, std::allocator<unsigned long> >::size() const [13]
+-----------------------------------------------
+                                                 <spontaneous>
+[14]     1.0    0.01    0.00                 GClasses::Ex::Ex(std::string, std::string, std::string) [14]
+-----------------------------------------------
+                                                 <spontaneous>
+[15]     1.0    0.01    0.00                 GClasses::GRand::next(unsigned long) [15]
+-----------------------------------------------
+                                                 <spontaneous>
+[16]     1.0    0.01    0.00                 GClasses::GMatrix::operator[](unsigned long) [16]
+                0.00    0.00  400000/2700024     std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::operator[](unsigned long) [56]
+-----------------------------------------------
+                                                 <spontaneous>
+[17]     1.0    0.01    0.00                 GClasses::GMixedRelation::valueCount(unsigned long) const [17]
+-----------------------------------------------
+                                                 <spontaneous>
+[18]     1.0    0.01    0.00                 GClasses::GVec::size() const [18]
+-----------------------------------------------
+                                                 <spontaneous>
+[19]     1.0    0.01    0.00                 std::vector<char const*, std::allocator<char const*> >::size() const [19]
+-----------------------------------------------
+                                                 <spontaneous>
+[20]     1.0    0.01    0.00                 std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::operator[](unsigned long) const [20]
+-----------------------------------------------
+                                                 <spontaneous>
+[21]     1.0    0.01    0.00                 std::vector<unsigned long, std::allocator<unsigned long> >::operator[](unsigned long) const [21]
+-----------------------------------------------
+                                                 <spontaneous>
+[22]     1.0    0.01    0.00                 std::_Vector_base<char const*, std::allocator<char const*> >::_M_get_Tp_allocator() [22]
+-----------------------------------------------
+                                                 <spontaneous>
+[23]     1.0    0.01    0.00                 std::enable_if<std::__and_<std::allocator_traits<std::allocator<GClasses::GVec*> >::__construct_helper<GClasses::GVec*, GClasses::GVec* const&>::type>::value, void>::type std::allocator_traits<std::allocator<GClasses::GVec*> >::_S_construct<GClasses::GVec*, GClasses::GVec* const&>(std::allocator<GClasses::GVec*>&, GClasses::GVec**, GClasses::GVec* const&) [23]
+-----------------------------------------------
+                                                 <spontaneous>
+[24]     1.0    0.01    0.00                 char const** std::__uninitialized_copy<false>::__uninit_copy<std::move_iterator<char const**>, char const**>(std::move_iterator<char const**>, std::move_iterator<char const**>, char const**) [24]
+-----------------------------------------------
+                                                 <spontaneous>
+[25]     1.0    0.01    0.00                 void std::vector<char const*, std::allocator<char const*> >::_M_emplace_back_aux<char const*>(char const*&&) [25]
+-----------------------------------------------
+                                                 <spontaneous>
+[26]     1.0    0.01    0.00                 std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::push_back(GClasses::GVec* const&) [26]
+-----------------------------------------------
+                                                 <spontaneous>
+[27]     1.0    0.01    0.00                 std::move_iterator<char const**> std::__make_move_if_noexcept_iterator<char const**, std::move_iterator<char const**> >(char const**) [27]
+-----------------------------------------------
+                                                 <spontaneous>
+[28]     1.0    0.01    0.00                 char const** std::__uninitialized_move_if_noexcept_a<char const**, char const**, std::allocator<char const*> >(char const**, char const**, char const**, std::allocator<char const*>&) [28]
+-----------------------------------------------
+                                                 <spontaneous>
+[29]     1.0    0.01    0.00                 std::remove_reference<char const**&>::type&& std::move<char const**&>(char const**&) [29]
+-----------------------------------------------
+                                                 <spontaneous>
+[30]     1.0    0.01    0.00                 bool std::operator==<char const**>(std::move_iterator<char const**> const&, std::move_iterator<char const**> const&) [30]
+-----------------------------------------------
+                                                 <spontaneous>
+[31]     1.0    0.01    0.00                 operator new(unsigned long, void*) [31]
+-----------------------------------------------
+                                                 <spontaneous>
+[32]     0.5    0.01    0.00                 GTestAtomicCycleFinder::gotEmAll() [32]
+-----------------------------------------------
+                                                 <spontaneous>
+[33]     0.5    0.01    0.00                 GClasses::GRowDistance::init(GClasses::GRelation const*, bool) [33]
+-----------------------------------------------
+                                                 <spontaneous>
+[34]     0.5    0.01    0.00                 std::vector<GClasses::ImportRow, std::allocator<GClasses::ImportRow> >::~vector() [34]
+-----------------------------------------------
+                                                 <spontaneous>
+[35]     0.2    0.00    0.00                 GClasses::GMatrix::flush() [35]
+                0.00    0.00  200008/7100082     GClasses::GMatrix::rows() const [5]
+                0.00    0.00  200004/2700024     std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::operator[](unsigned long) [56]
+-----------------------------------------------
+                                                 <spontaneous>
+[36]     0.1    0.00    0.00                 main [36]
+                0.00    0.00       1/1           kmeans(GClasses::GArgReader&) [37]
+-----------------------------------------------
+                0.00    0.00       1/1           main [36]
+[37]     0.1    0.00    0.00       1         kmeans(GClasses::GArgReader&) [37]
+                0.00    0.00       1/1           GClasses::GClusterer::reduce(GClasses::GMatrix const&) [38]
+                0.00    0.00       1/1           loadData(GClasses::GMatrix&, char const*) [69]
+                0.00    0.00       1/1           GClasses::GKMeans::setReps(unsigned long) [71]
+                0.00    0.00       1/1           std::unique_ptr<GClasses::GMatrix, std::default_delete<GClasses::GMatrix> >::unique_ptr(GClasses::GMatrix*) [78]
+                0.00    0.00       1/1           std::unique_ptr<GClasses::GMatrix, std::default_delete<GClasses::GMatrix> >::~unique_ptr() [79]
+-----------------------------------------------
+                0.00    0.00       1/1           kmeans(GClasses::GArgReader&) [37]
+[38]     0.1    0.00    0.00       1         GClasses::GClusterer::reduce(GClasses::GMatrix const&) [38]
+                0.00    0.00  100000/2100020     GClasses::GMatrix::row(unsigned long) [9]
+                0.00    0.00       1/7100082     GClasses::GMatrix::rows() const [5]
+                0.00    0.00  100000/500072      GClasses::GVec::operator[](unsigned long) [57]
+                0.00    0.00       1/2           GClasses::GUniformRelation::GUniformRelation(unsigned long, unsigned long) [65]
+-----------------------------------------------
+                                                 <spontaneous>
+[39]     0.1    0.00    0.00                 GClasses::GMatrix::takeRow(GClasses::GVec*, unsigned long) [39]
+                0.00    0.00  100000/7200216     std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::size() const [8]
+                0.00    0.00  100000/100085      GClasses::GMatrix::cols() const [58]
+-----------------------------------------------
+                                                 <spontaneous>
+[40]     0.0    0.00    0.00                 std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::_M_check_len(unsigned long, char const*) const [40]
+                0.00    0.00      72/7200216     std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::size() const [8]
+-----------------------------------------------
+                                                 <spontaneous>
+[41]     0.0    0.00    0.00                 GClasses::GMatrix::countUniqueValues(unsigned long, unsigned long) const [41]
+                0.00    0.00      40/7200216     std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::size() const [8]
+-----------------------------------------------
+                                                 <spontaneous>
+[42]     0.0    0.00    0.00                 void std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::_M_emplace_back_aux<GClasses::GVec* const&>(GClasses::GVec* const&) [42]
+                0.00    0.00      18/7200216     std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::size() const [8]
+-----------------------------------------------
+                                                 <spontaneous>
+[43]     0.0    0.00    0.00                 GClasses::GKMeans::init(GClasses::GMatrix const*) [43]
+                0.00    0.00       4/2100020     GClasses::GMatrix::row(unsigned long) [9]
+                0.00    0.00       2/7100082     GClasses::GMatrix::rows() const [5]
+-----------------------------------------------
+                                                 <spontaneous>
+[44]     0.0    0.00    0.00                 GClasses::GMatrix::newRows(unsigned long) [44]
+                0.00    0.00       2/7200216     std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::size() const [8]
+-----------------------------------------------
+                                                 <spontaneous>
+[45]     0.0    0.00    0.00                 std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::reserve(unsigned long) [45]
+                0.00    0.00       2/7200216     std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::size() const [8]
+-----------------------------------------------
+                                                 <spontaneous>
+[46]     0.0    0.00    0.00                 GClasses::GMatrix::setRelation(GClasses::GRelation*) [46]
+                0.00    0.00       1/7100082     GClasses::GMatrix::rows() const [5]
+-----------------------------------------------
+                0.00    0.00  200004/2700024     GClasses::GMatrix::flush() [35]
+                0.00    0.00  400000/2700024     GClasses::GMatrix::operator[](unsigned long) [16]
+                0.00    0.00 2100020/2700024     GClasses::GMatrix::row(unsigned long) [9]
+[56]     0.0    0.00    0.00 2700024         std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::operator[](unsigned long) [56]
+-----------------------------------------------
+                0.00    0.00      72/500072      GClasses::GKMeans::recomputeCentroids(GClasses::GMatrix const*) [4]
+                0.00    0.00  100000/500072      GClasses::GClusterer::reduce(GClasses::GMatrix const&) [38]
+                0.00    0.00  400000/500072      GClasses::GCSVParser::parse(GClasses::GMatrix&, char const*, unsigned long) [6]
+[57]     0.0    0.00    0.00  500072         GClasses::GVec::operator[](unsigned long) [57]
+-----------------------------------------------
+                0.00    0.00      85/100085      GClasses::GKMeans::recomputeCentroids(GClasses::GMatrix const*) [4]
+                0.00    0.00  100000/100085      GClasses::GMatrix::takeRow(GClasses::GVec*, unsigned long) [39]
+[58]     0.0    0.00    0.00  100085         GClasses::GMatrix::cols() const [58]
+-----------------------------------------------
+                0.00    0.00       8/8           GClasses::GCSVParser::parse(GClasses::GMatrix&, char const*, unsigned long) [6]
+[59]     0.0    0.00    0.00       8         std::vector<std::string, std::allocator<std::string> >::operator[](unsigned long) [59]
+-----------------------------------------------
+                0.00    0.00       4/4           GClasses::GCSVParser::parse(GClasses::GMatrix&, char const*, unsigned long) [6]
+[60]     0.0    0.00    0.00       4         std::string GClasses::to_str<unsigned long>(unsigned long const&) [60]
+                0.00    0.00       4/4           std::ios_base::precision(long) [62]
+-----------------------------------------------
+                0.00    0.00       2/4           GClasses::GUniformRelation::GUniformRelation(unsigned long, unsigned long) [65]
+                0.00    0.00       2/4           GClasses::GMixedRelation::GMixedRelation() [1105]
+[61]     0.0    0.00    0.00       4         GClasses::GRelation::GRelation() [61]
+-----------------------------------------------
+                0.00    0.00       4/4           std::string GClasses::to_str<unsigned long>(unsigned long const&) [60]
+[62]     0.0    0.00    0.00       4         std::ios_base::precision(long) [62]
+-----------------------------------------------
+                0.00    0.00       1/4           std::_Head_base<1ul, std::default_delete<GClasses::GMatrix>, true>::_Head_base<std::default_delete<GClasses::GMatrix>, void>(std::default_delete<GClasses::GMatrix>&&) [76]
+                0.00    0.00       1/4           std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix> >::_Tuple_impl<std::default_delete<GClasses::GMatrix>, , void>(std::default_delete<GClasses::GMatrix>&&) [83]
+                0.00    0.00       1/4           std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::_Tuple_impl<GClasses::GMatrix*<std::default_delete<GClasses::GMatrix> >&, void>(GClasses::GMatrix*<std::default_delete<GClasses::GMatrix> >&, (void&&)...) [80]
+                0.00    0.00       1/4           std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::tuple<GClasses::GMatrix*&, std::default_delete<GClasses::GMatrix>, void>(GClasses::GMatrix*&, std::default_delete<GClasses::GMatrix>&&) [84]
+[63]     0.0    0.00    0.00       4         std::default_delete<GClasses::GMatrix>&& std::forward<std::default_delete<GClasses::GMatrix> >(std::remove_reference<std::default_delete<GClasses::GMatrix> >::type&) [63]
+-----------------------------------------------
+                0.00    0.00       1/3           std::_Head_base<0ul, GClasses::GMatrix*, false>::_Head_base<GClasses::GMatrix*&, void>(GClasses::GMatrix*&) [74]
+                0.00    0.00       1/3           std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::_Tuple_impl<GClasses::GMatrix*<std::default_delete<GClasses::GMatrix> >&, void>(GClasses::GMatrix*<std::default_delete<GClasses::GMatrix> >&, (void&&)...) [80]
+                0.00    0.00       1/3           std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::tuple<GClasses::GMatrix*&, std::default_delete<GClasses::GMatrix>, void>(GClasses::GMatrix*&, std::default_delete<GClasses::GMatrix>&&) [84]
+[64]     0.0    0.00    0.00       3         GClasses::GMatrix*& std::forward<GClasses::GMatrix*&>(std::remove_reference<GClasses::GMatrix*&>::type&) [64]
+-----------------------------------------------
+                0.00    0.00       1/2           GClasses::GClusterer::reduce(GClasses::GMatrix const&) [38]
+                0.00    0.00       1/2           __static_initialization_and_destruction_0(int, int) [192]
+[65]     0.0    0.00    0.00       2         GClasses::GUniformRelation::GUniformRelation(unsigned long, unsigned long) [65]
+                0.00    0.00       2/4           GClasses::GRelation::GRelation() [61]
+-----------------------------------------------
+                0.00    0.00       1/2           std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix> >::_Tuple_impl<std::default_delete<GClasses::GMatrix>, , void>(std::default_delete<GClasses::GMatrix>&&) [83]
+                0.00    0.00       1/2           std::_Tuple_impl<1ul, std::default_delete<char []> >::_Tuple_impl<std::default_delete<char []>, , void>(std::default_delete<char []>&&) [5430]
+[66]     0.0    0.00    0.00       2         std::_Tuple_impl<2ul>::_Tuple_impl() [66]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [8985]
+[67]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z8loadDataRN8GClasses7GMatrixEPKc [67]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [68]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__Z8loadDataRN8GClasses7GMatrixEPKc [67]
+[68]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [68]
+-----------------------------------------------
+                0.00    0.00       1/1           kmeans(GClasses::GArgReader&) [37]
+[69]     0.0    0.00    0.00       1         loadData(GClasses::GMatrix&, char const*) [69]
+                0.00    0.00       1/1           GClasses::GCSVParser::setSeparator(char) [70]
+-----------------------------------------------
+                0.00    0.00       1/1           loadData(GClasses::GMatrix&, char const*) [69]
+[70]     0.0    0.00    0.00       1         GClasses::GCSVParser::setSeparator(char) [70]
+-----------------------------------------------
+                0.00    0.00       1/1           kmeans(GClasses::GArgReader&) [37]
+[71]     0.0    0.00    0.00       1         GClasses::GKMeans::setReps(unsigned long) [71]
+-----------------------------------------------
+                0.00    0.00       1/1           std::unique_ptr<GClasses::GMatrix, std::default_delete<GClasses::GMatrix> >::~unique_ptr() [79]
+[72]     0.0    0.00    0.00       1         std::default_delete<GClasses::GMatrix>::operator()(GClasses::GMatrix*) const [72]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::_M_head(std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&) [81]
+[73]     0.0    0.00    0.00       1         std::_Head_base<0ul, GClasses::GMatrix*, false>::_M_head(std::_Head_base<0ul, GClasses::GMatrix*, false>&) [73]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::_Tuple_impl<GClasses::GMatrix*<std::default_delete<GClasses::GMatrix> >&, void>(GClasses::GMatrix*<std::default_delete<GClasses::GMatrix> >&, (void&&)...) [80]
+[74]     0.0    0.00    0.00       1         std::_Head_base<0ul, GClasses::GMatrix*, false>::_Head_base<GClasses::GMatrix*&, void>(GClasses::GMatrix*&) [74]
+                0.00    0.00       1/3           GClasses::GMatrix*& std::forward<GClasses::GMatrix*&>(std::remove_reference<GClasses::GMatrix*&>::type&) [64]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix> >::_M_head(std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix> >&) [82]
+[75]     0.0    0.00    0.00       1         std::_Head_base<1ul, std::default_delete<GClasses::GMatrix>, true>::_M_head(std::_Head_base<1ul, std::default_delete<GClasses::GMatrix>, true>&) [75]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix> >::_Tuple_impl<std::default_delete<GClasses::GMatrix>, , void>(std::default_delete<GClasses::GMatrix>&&) [83]
+[76]     0.0    0.00    0.00       1         std::_Head_base<1ul, std::default_delete<GClasses::GMatrix>, true>::_Head_base<std::default_delete<GClasses::GMatrix>, void>(std::default_delete<GClasses::GMatrix>&&) [76]
+                0.00    0.00       1/4           std::default_delete<GClasses::GMatrix>&& std::forward<std::default_delete<GClasses::GMatrix> >(std::remove_reference<std::default_delete<GClasses::GMatrix> >::type&) [63]
+-----------------------------------------------
+                0.00    0.00       1/1           std::unique_ptr<GClasses::GMatrix, std::default_delete<GClasses::GMatrix> >::~unique_ptr() [79]
+[77]     0.0    0.00    0.00       1         std::unique_ptr<GClasses::GMatrix, std::default_delete<GClasses::GMatrix> >::get_deleter() [77]
+                0.00    0.00       1/1           std::__add_ref<std::tuple_element<1ul, std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> > >::type>::type std::get<1ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >(std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&) [88]
+-----------------------------------------------
+                0.00    0.00       1/1           kmeans(GClasses::GArgReader&) [37]
+[78]     0.0    0.00    0.00       1         std::unique_ptr<GClasses::GMatrix, std::default_delete<GClasses::GMatrix> >::unique_ptr(GClasses::GMatrix*) [78]
+                0.00    0.00       1/1           std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::tuple<GClasses::GMatrix*&, std::default_delete<GClasses::GMatrix>, void>(GClasses::GMatrix*&, std::default_delete<GClasses::GMatrix>&&) [84]
+-----------------------------------------------
+                0.00    0.00       1/1           kmeans(GClasses::GArgReader&) [37]
+[79]     0.0    0.00    0.00       1         std::unique_ptr<GClasses::GMatrix, std::default_delete<GClasses::GMatrix> >::~unique_ptr() [79]
+                0.00    0.00       1/1           std::__add_ref<std::tuple_element<0ul, std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> > >::type>::type std::get<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >(std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&) [87]
+                0.00    0.00       1/1           std::default_delete<GClasses::GMatrix>::operator()(GClasses::GMatrix*) const [72]
+                0.00    0.00       1/1           std::unique_ptr<GClasses::GMatrix, std::default_delete<GClasses::GMatrix> >::get_deleter() [77]
+-----------------------------------------------
+                0.00    0.00       1/1           std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::tuple<GClasses::GMatrix*&, std::default_delete<GClasses::GMatrix>, void>(GClasses::GMatrix*&, std::default_delete<GClasses::GMatrix>&&) [84]
+[80]     0.0    0.00    0.00       1         std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::_Tuple_impl<GClasses::GMatrix*<std::default_delete<GClasses::GMatrix> >&, void>(GClasses::GMatrix*<std::default_delete<GClasses::GMatrix> >&, (void&&)...) [80]
+                0.00    0.00       1/4           std::default_delete<GClasses::GMatrix>&& std::forward<std::default_delete<GClasses::GMatrix> >(std::remove_reference<std::default_delete<GClasses::GMatrix> >::type&) [63]
+                0.00    0.00       1/1           std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix> >::_Tuple_impl<std::default_delete<GClasses::GMatrix>, , void>(std::default_delete<GClasses::GMatrix>&&) [83]
+                0.00    0.00       1/3           GClasses::GMatrix*& std::forward<GClasses::GMatrix*&>(std::remove_reference<GClasses::GMatrix*&>::type&) [64]
+                0.00    0.00       1/1           std::_Head_base<0ul, GClasses::GMatrix*, false>::_Head_base<GClasses::GMatrix*&, void>(GClasses::GMatrix*&) [74]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__add_ref<GClasses::GMatrix*>::type std::__get_helper<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >(std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&) [85]
+[81]     0.0    0.00    0.00       1         std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::_M_head(std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&) [81]
+                0.00    0.00       1/1           std::_Head_base<0ul, GClasses::GMatrix*, false>::_M_head(std::_Head_base<0ul, GClasses::GMatrix*, false>&) [73]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__add_ref<std::default_delete<GClasses::GMatrix> >::type std::__get_helper<1ul, std::default_delete<GClasses::GMatrix>>(std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix>>&) [86]
+[82]     0.0    0.00    0.00       1         std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix> >::_M_head(std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix> >&) [82]
+                0.00    0.00       1/1           std::_Head_base<1ul, std::default_delete<GClasses::GMatrix>, true>::_M_head(std::_Head_base<1ul, std::default_delete<GClasses::GMatrix>, true>&) [75]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::_Tuple_impl<GClasses::GMatrix*<std::default_delete<GClasses::GMatrix> >&, void>(GClasses::GMatrix*<std::default_delete<GClasses::GMatrix> >&, (void&&)...) [80]
+[83]     0.0    0.00    0.00       1         std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix> >::_Tuple_impl<std::default_delete<GClasses::GMatrix>, , void>(std::default_delete<GClasses::GMatrix>&&) [83]
+                0.00    0.00       1/2           std::_Tuple_impl<2ul>::_Tuple_impl() [66]
+                0.00    0.00       1/4           std::default_delete<GClasses::GMatrix>&& std::forward<std::default_delete<GClasses::GMatrix> >(std::remove_reference<std::default_delete<GClasses::GMatrix> >::type&) [63]
+                0.00    0.00       1/1           std::_Head_base<1ul, std::default_delete<GClasses::GMatrix>, true>::_Head_base<std::default_delete<GClasses::GMatrix>, void>(std::default_delete<GClasses::GMatrix>&&) [76]
+-----------------------------------------------
+                0.00    0.00       1/1           std::unique_ptr<GClasses::GMatrix, std::default_delete<GClasses::GMatrix> >::unique_ptr(GClasses::GMatrix*) [78]
+[84]     0.0    0.00    0.00       1         std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::tuple<GClasses::GMatrix*&, std::default_delete<GClasses::GMatrix>, void>(GClasses::GMatrix*&, std::default_delete<GClasses::GMatrix>&&) [84]
+                0.00    0.00       1/4           std::default_delete<GClasses::GMatrix>&& std::forward<std::default_delete<GClasses::GMatrix> >(std::remove_reference<std::default_delete<GClasses::GMatrix> >::type&) [63]
+                0.00    0.00       1/3           GClasses::GMatrix*& std::forward<GClasses::GMatrix*&>(std::remove_reference<GClasses::GMatrix*&>::type&) [64]
+                0.00    0.00       1/1           std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::_Tuple_impl<GClasses::GMatrix*<std::default_delete<GClasses::GMatrix> >&, void>(GClasses::GMatrix*<std::default_delete<GClasses::GMatrix> >&, (void&&)...) [80]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__add_ref<std::tuple_element<0ul, std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> > >::type>::type std::get<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >(std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&) [87]
+[85]     0.0    0.00    0.00       1         std::__add_ref<GClasses::GMatrix*>::type std::__get_helper<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >(std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&) [85]
+                0.00    0.00       1/1           std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::_M_head(std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&) [81]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__add_ref<std::tuple_element<1ul, std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> > >::type>::type std::get<1ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >(std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&) [88]
+[86]     0.0    0.00    0.00       1         std::__add_ref<std::default_delete<GClasses::GMatrix> >::type std::__get_helper<1ul, std::default_delete<GClasses::GMatrix>>(std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix>>&) [86]
+                0.00    0.00       1/1           std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix> >::_M_head(std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix> >&) [82]
+-----------------------------------------------
+                0.00    0.00       1/1           std::unique_ptr<GClasses::GMatrix, std::default_delete<GClasses::GMatrix> >::~unique_ptr() [79]
+[87]     0.0    0.00    0.00       1         std::__add_ref<std::tuple_element<0ul, std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> > >::type>::type std::get<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >(std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&) [87]
+                0.00    0.00       1/1           std::__add_ref<GClasses::GMatrix*>::type std::__get_helper<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >(std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&) [85]
+-----------------------------------------------
+                0.00    0.00       1/1           std::unique_ptr<GClasses::GMatrix, std::default_delete<GClasses::GMatrix> >::get_deleter() [77]
+[88]     0.0    0.00    0.00       1         std::__add_ref<std::tuple_element<1ul, std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> > >::type>::type std::get<1ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >(std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&) [88]
+                0.00    0.00       1/1           std::__add_ref<std::default_delete<GClasses::GMatrix> >::type std::__get_helper<1ul, std::default_delete<GClasses::GMatrix>>(std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix>>&) [86]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [67] _GLOBAL__sub_I__Z8loadDataRN8GClasses7GMatrixEPKc (main.cpp) [10] GClasses::GMixedRelation::size() const [66] std::_Tuple_impl<2ul>::_Tuple_impl()
+  [68] __static_initialization_and_destruction_0(int, int) (main.cpp) [18] GClasses::GVec::size() const [22] std::_Vector_base<char const*, std::allocator<char const*> >::_M_get_Tp_allocator()
+  [37] kmeans(GClasses::GArgReader&) [2] GClasses::GVec::operator[](unsigned long) const [23] std::enable_if<std::__and_<std::allocator_traits<std::allocator<GClasses::GVec*> >::__construct_helper<GClasses::GVec*, GClasses::GVec* const&>::type>::value, void>::type std::allocator_traits<std::allocator<GClasses::GVec*> >::_S_construct<GClasses::GVec*, GClasses::GVec* const&>(std::allocator<GClasses::GVec*>&, GClasses::GVec**, GClasses::GVec* const&)
+  [69] loadData(GClasses::GMatrix&, char const*) [58] GClasses::GMatrix::cols() const [24] char const** std::__uninitialized_copy<false>::__uninit_copy<std::move_iterator<char const**>, char const**>(std::move_iterator<char const**>, std::move_iterator<char const**>, char const**)
+  [32] GTestAtomicCycleFinder::gotEmAll() [5] GClasses::GMatrix::rows() const [84] std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::tuple<GClasses::GMatrix*&, std::default_delete<GClasses::GMatrix>, void>(GClasses::GMatrix*&, std::default_delete<GClasses::GMatrix>&&)
+  [70] GClasses::GCSVParser::setSeparator(char) [72] std::default_delete<GClasses::GMatrix>::operator()(GClasses::GMatrix*) const [34] std::vector<GClasses::ImportRow, std::allocator<GClasses::ImportRow> >::~vector()
+   [6] GClasses::GCSVParser::parse(GClasses::GMatrix&, char const*, unsigned long) [12] std::vector<GClasses::ImportRow, std::allocator<GClasses::ImportRow> >::size() const [25] void std::vector<char const*, std::allocator<char const*> >::_M_emplace_back_aux<char const*>(char const*&&)
+  [38] GClasses::GClusterer::reduce(GClasses::GMatrix const&) [19] std::vector<char const*, std::allocator<char const*> >::size() const [11] std::vector<char const*, std::allocator<char const*> >::vector()
+  [33] GClasses::GRowDistance::init(GClasses::GRelation const*, bool) [8] std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::size() const [26] std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::push_back(GClasses::GVec* const&)
+  [65] GClasses::GUniformRelation::GUniformRelation(unsigned long, unsigned long) [20] std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::operator[](unsigned long) const [56] std::vector<GClasses::GVec*, std::allocator<GClasses::GVec*> >::operator[](unsigned long)
+  [14] GClasses::Ex::Ex(std::string, std::string, std::string) [13] std::vector<unsigned long, std::allocator<unsigned long> >::size() const [59] std::vector<std::string, std::allocator<std::string> >::operator[](unsigned long)
+  [57] GClasses::GVec::operator[](unsigned long) [21] std::vector<unsigned long, std::allocator<unsigned long> >::operator[](unsigned long) const [62] std::ios_base::precision(long)
+   [3] GClasses::GBits::isValidFloat(char const*, unsigned long) [73] std::_Head_base<0ul, GClasses::GMatrix*, false>::_M_head(std::_Head_base<0ul, GClasses::GMatrix*, false>&) [85] std::__add_ref<GClasses::GMatrix*>::type std::__get_helper<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >(std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&)
+  [15] GClasses::GRand::next(unsigned long) [74] std::_Head_base<0ul, GClasses::GMatrix*, false>::_Head_base<GClasses::GMatrix*&, void>(GClasses::GMatrix*&) [86] std::__add_ref<std::default_delete<GClasses::GMatrix> >::type std::__get_helper<1ul, std::default_delete<GClasses::GMatrix>>(std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix>>&)
+  [60] std::string GClasses::to_str<unsigned long>(unsigned long const&) [75] std::_Head_base<1ul, std::default_delete<GClasses::GMatrix>, true>::_M_head(std::_Head_base<1ul, std::default_delete<GClasses::GMatrix>, true>&) [27] std::move_iterator<char const**> std::__make_move_if_noexcept_iterator<char const**, std::move_iterator<char const**> >(char const**)
+   [7] GClasses::GKMeans::assignClusters(GClasses::GMatrix const*) [76] std::_Head_base<1ul, std::default_delete<GClasses::GMatrix>, true>::_Head_base<std::default_delete<GClasses::GMatrix>, void>(std::default_delete<GClasses::GMatrix>&&) [28] char const** std::__uninitialized_move_if_noexcept_a<char const**, char const**, std::allocator<char const*> >(char const**, char const**, char const**, std::allocator<char const*>&)
+   [4] GClasses::GKMeans::recomputeCentroids(GClasses::GMatrix const*) [77] std::unique_ptr<GClasses::GMatrix, std::default_delete<GClasses::GMatrix> >::get_deleter() [87] std::__add_ref<std::tuple_element<0ul, std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> > >::type>::type std::get<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >(std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&)
+  [71] GClasses::GKMeans::setReps(unsigned long) [78] std::unique_ptr<GClasses::GMatrix, std::default_delete<GClasses::GMatrix> >::unique_ptr(GClasses::GMatrix*) [88] std::__add_ref<std::tuple_element<1ul, std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> > >::type>::type std::get<1ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >(std::tuple<GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&)
+   [9] GClasses::GMatrix::row(unsigned long) [79] std::unique_ptr<GClasses::GMatrix, std::default_delete<GClasses::GMatrix> >::~unique_ptr() [29] std::remove_reference<char const**&>::type&& std::move<char const**&>(char const**&)
+  [16] GClasses::GMatrix::operator[](unsigned long) [80] std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::_Tuple_impl<GClasses::GMatrix*<std::default_delete<GClasses::GMatrix> >&, void>(GClasses::GMatrix*<std::default_delete<GClasses::GMatrix> >&, (void&&)...) [64] GClasses::GMatrix*& std::forward<GClasses::GMatrix*&>(std::remove_reference<GClasses::GMatrix*&>::type&)
+  [61] GClasses::GRelation::GRelation() [81] std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >::_M_head(std::_Tuple_impl<0ul, GClasses::GMatrix*, std::default_delete<GClasses::GMatrix> >&) [63] std::default_delete<GClasses::GMatrix>&& std::forward<std::default_delete<GClasses::GMatrix> >(std::remove_reference<std::default_delete<GClasses::GMatrix> >::type&)
+   [1] GClasses::GRowDistance::squaredDistance(GClasses::GVec const&, GClasses::GVec const&) const [82] std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix> >::_M_head(std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix> >&) [30] bool std::operator==<char const**>(std::move_iterator<char const**> const&, std::move_iterator<char const**> const&)
+  [17] GClasses::GMixedRelation::valueCount(unsigned long) const [83] std::_Tuple_impl<1ul, std::default_delete<GClasses::GMatrix> >::_Tuple_impl<std::default_delete<GClasses::GMatrix>, , void>(std::default_delete<GClasses::GMatrix>&&) [31] operator new(unsigned long, void*)

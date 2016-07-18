@@ -2,7 +2,7 @@ import numpy as np
 import sys
 
 if len(sys.argv) != 5:
-  print 'Usage: python genKmeansData.py numCenters numPoints dim cov'
+  print 'Usage: python genKmeansData.py numCenters numPoints dim variance'
   sys.exit(-1)
 numCenters = int(sys.argv[1])
 numPoints = int(sys.argv[2])

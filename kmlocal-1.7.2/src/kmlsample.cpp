@@ -1,3 +1,6 @@
+//// Everything in this file was kept the same except for the supression of
+//// Some output and the execution of other kmeans algorithms
+
 //----------------------------------------------------------------------
 //	File:		kmlsample.cpp
 //	Programmer:	David Mount
@@ -70,8 +73,8 @@ void printPt(				// print a point
 
 int	k		= 4;		// number of centers
 int	dim		= 2;		// dimension
-int	maxPts		= 100000;		// max number of data points
-int	stages		= 100;		// number of stages
+int	maxPts		= 1000000;		// max number of data points
+int	stages		= 1000;		// number of stages
 istream* dataIn = NULL;		// input data stream
 
 //----------------------------------------------------------------------
@@ -79,7 +82,7 @@ istream* dataIn = NULL;		// input data stream
 //	These are explained in the file KMterm.h and KMlocal.h.  Unless
 //	you are into fine tuning, don't worry about changing these.
 //----------------------------------------------------------------------
-KMterm	term(100, 0, 0, 0,		// run for 100 stages
+KMterm	term(1000, 0, 0, 0,		// run for 100 stages
 		0.10,			// min consec RDL
 		0.10,			// min accum RDL
 		3,			// max run stages

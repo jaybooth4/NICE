@@ -4,6 +4,8 @@
 // Number of clusters, and amount of information printed. The original
 // Can be found at http://dlib.net/kkmeans_ex.cpp.html
 // To compile this program run g++ filename -I (path to dlib folder)
+// Each run must be recompiled, and the number of data points specified
+// Along with the file name
 
 
 
@@ -40,6 +42,8 @@
 #include <cstdlib>
 #include <algorithm>
 #include <string>
+#define DLIB_USE_BLAS 1  //// Attempt to use blas, has not worked as of yet
+#define DLIB_USE_LAPACK 1  //// Attempt to use Lapack, ldd shows no dependency
 
 using namespace std;
 using namespace dlib;
@@ -51,20 +55,21 @@ matrix<float> TransformData(Eigen::MatrixXf EigenMatrix);
 
 int main()
 {
-	//// Input stream to assign matrix
-  Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic> EigenMatrix(100000, 4);
-  EigenMatrix = FromFile("data_k4_p25000_d4_c100.txt", 100000, 4);
+	//// Input stream to assign matrix, instead a raw buffer from a file is used
+  //Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic> EigenMatrix(100000, 4);
+  //EigenMatrix = FromFile("data_k4_p25000_d4_c100.txt", 100000, 4);
 
-	//ifstream myfile ("data_k4_p100000_d4_c1.txt");
-//	if (myfile.is_open())
-	//	cout << "open!" << endl;
-	//myfile >> InMatrix;
-	//cout << rowm(InMatrix, range(0,100)) << endl;  //// For printing input
-	//myfile.close();
   dlib::matrix<float> InMatrix;
-  InMatrix = TransformData(EigenMatrix);
+	ifstream myfile ("data_k8_p25000_d4_c1.txt");  //// Must specify file name
+	//// Can potentially be made a command line arguement
+	if (myfile.is_open())
+	myfile >> InMatrix;
+	//cout << rowm(InMatrix, range(0,100)) << endl;  //// For printing input
+	myfile.close();
+
+  //InMatrix = TransformData(EigenMatrix);  //// Data must be in 4x1000000 form
   dlib::matrix<float> TransposeInMatrix = trans(InMatrix);
-    //// Transpose matrix to allow for easy transition to a dataset
+  //// Transpose matrix to allow for easy transition to a dataset
 	//// For the kkmeans function
 
 
@@ -99,7 +104,7 @@ int main()
 
 
     sample_type m;  //// Declare a data point variable
-    for (int i=0; i < 10000; ++i) {
+    for (int i=0; i < 200000; ++i) {
     	dlib::matrix <float> ColumnVector = colm(TransposeInMatrix, i);
     	m(0)=ColumnVector(0);
     	m(1)=ColumnVector(1);
@@ -166,12 +171,12 @@ int main()
 
     // tell the kkmeans object we made that we want to run k-means with k set to 3. 
     // (i.e. we want 3 clusters)
-    test.set_number_of_centers(4);
+    test.set_number_of_centers(8);
 
     // You need to pick some initial centers for the k-means algorithm.  So here
     // we will use the dlib::pick_initial_centers() function which tries to find
     // n points that are far apart (basically).  
-    pick_initial_centers(4, initial_centers, samples, test.get_kernel());
+    pick_initial_centers(8, initial_centers, samples, test.get_kernel());
 
     // now run the k-means algorithm on our set of samples.  
     test.train(samples,initial_centers);

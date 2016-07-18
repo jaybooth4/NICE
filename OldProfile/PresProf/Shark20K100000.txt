@@ -1,0 +1,58 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 27.25      1.03     1.03                             shark::Centroids::distances(shark::blas::matrix<double, shark::blas::row_major> const&) const
+ 25.13      1.98     0.95                             shark::Centroids::softMembership(shark::blas::matrix<double, shark::blas::row_major> const&) const
+ 24.87      2.92     0.94                             void shark::blas::axpy_prod<shark::blas::matrix<double, shark::blas::row_major>, shark::blas::matrix<double, shark::blas::row_major>, shark::blas::matrix_transpose<shark::blas::matrix<double, shark::blas::row_major> const> >(shark::blas::matrix_expression<shark::blas::matrix<double, shark::blas::row_major> > const&, shark::blas::matrix_expression<shark::blas::matrix_transpose<shark::blas::matrix<double, shark::blas::row_major> const> > const&, shark::blas::matrix_expression<shark::blas::matrix<double, shark::blas::row_major> >&, bool, shark::blas::matrix<double, shark::blas::row_major>::value_type)
+  7.41      3.20     0.28                             void shark::blas::detail::distanceSqrBlockBlock<shark::blas::matrix<double, shark::blas::row_major>, shark::blas::matrix<double, shark::blas::row_major>, shark::blas::matrix<double, shark::blas::row_major> >(shark::blas::matrix<double, shark::blas::row_major> const&, shark::blas::matrix<double, shark::blas::row_major> const&, shark::blas::matrix<double, shark::blas::row_major>&, shark::blas::dense_random_access_iterator_tag, shark::blas::dense_random_access_iterator_tag)
+  4.23      3.36     0.16                             shark::AbstractClustering<shark::blas::vector<double> >::hardMembership(shark::blas::matrix<double, shark::blas::row_major> const&) const
+  3.44      3.49     0.13                             std::vector<double, std::allocator<double> >::vector(unsigned long, double const&, std::allocator<double> const&)
+  2.65      3.59     0.10                             shark::kMeans(shark::Data<shark::blas::vector<double> > const&, unsigned long, shark::Centroids&, unsigned long)
+  1.32      3.64     0.05                             std::istream_iterator<char, char, std::char_traits<char>, long>::_M_read()
+  0.79      3.67     0.03                             char* std::string::_S_construct<std::istream_iterator<char, char, std::char_traits<char>, long> >(std::istream_iterator<char, char, std::char_traits<char>, long>, std::istream_iterator<char, char, std::char_traits<char>, long>, std::allocator<char> const&, std::input_iterator_tag)
+  0.53      3.69     0.02                             bool boost::spirit::qi::detail::real_impl<double, boost::spirit::qi::real_policies<double> >::parse<__gnu_cxx::__normal_iterator<char const*, std::string>, double>(__gnu_cxx::__normal_iterator<char const*, std::string>&, __gnu_cxx::__normal_iterator<char const*, std::string> const&, double&, boost::spirit::qi::real_policies<double> const&)
+  0.26      3.70     0.01                             bool boost::range::equal<boost::iterator_range<shark::MultiSequenceIterator<shark::detail::SharedContainer<unsigned int>::BatchRange> >, boost::iterator_range<shark::MultiSequenceIterator<shark::detail::SharedContainer<unsigned int>::BatchRange> > >(boost::iterator_range<shark::MultiSequenceIterator<shark::detail::SharedContainer<unsigned int>::BatchRange> > const&, boost::iterator_range<shark::MultiSequenceIterator<shark::detail::SharedContainer<unsigned int>::BatchRange> > const&)
+  0.26      3.71     0.01                             unsigned long boost::random::detail::generate_uniform_int<boost::random::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>, unsigned long>(boost::random::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, unsigned long, unsigned long, mpl_::bool_<true>)
+  0.26      3.72     0.01                             void boost::spirit::qi::skip_over<__gnu_cxx::__normal_iterator<char const*, std::string>, boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::difference<boost::spirit::qi::char_class<boost::spirit::tag::char_code<boost::spirit::tag::space, boost::spirit::char_encoding::standard> >, boost::spirit::qi::eol_parser>, boost::fusion::cons<boost::spirit::qi::sequence<boost::fusion::cons<boost::spirit::qi::literal_char<boost::spirit::char_encoding::standard, true, false>, boost::fusion::cons<boost::spirit::qi::kleene<boost::spirit::qi::difference<boost::spirit::qi::char_class<boost::spirit::tag::char_code<boost::spirit::tag::char_, boost::spirit::char_encoding::standard> >, boost::spirit::qi::eol_parser> >, boost::fusion::cons<boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::eol_parser, boost::fusion::cons<boost::spirit::qi::eoi_parser, boost::fusion::nil> > >, boost::fusion::nil> > > >, boost::fusion::nil> > > >(__gnu_cxx::__normal_iterator<char const*, std::string>&, __gnu_cxx::__normal_iterator<char const*, std::string> const&, boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::difference<boost::spirit::qi::char_class<boost::spirit::tag::char_code<boost::spirit::tag::space, boost::spirit::char_encoding::standard> >, boost::spirit::qi::eol_parser>, boost::fusion::cons<boost::spirit::qi::sequence<boost::fusion::cons<boost::spirit::qi::literal_char<boost::spirit::char_encoding::standard, true, false>, boost::fusion::cons<boost::spirit::qi::kleene<boost::spirit::qi::difference<boost::spirit::qi::char_class<boost::spirit::tag::char_code<boost::spirit::tag::char_, boost::spirit::char_encoding::standard> >, boost::spirit::qi::eol_parser> >, boost::fusion::cons<boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::eol_parser, boost::fusion::cons<boost::spirit::qi::eoi_parser, boost::fusion::nil> > >, boost::fusion::nil> > > >, boost::fusion::nil> > > const&)
+  0.26      3.73     0.01                             shark::UnlabeledData<shark::blas::vector<float> >::shuffle()
+  0.26      3.74     0.01                             shark::MultiSequenceIterator<shark::detail::SharedContainer<unsigned int>::BatchRange>::increment()
+  0.26      3.75     0.01                             bool boost::spirit::qi::detail::pass_container<boost::spirit::qi::detail::fail_function<__gnu_cxx::__normal_iterator<char const*, std::string>, boost::spirit::context<boost::fusion::cons<std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&, boost::fusion::nil>, boost::spirit::locals<mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na> >, boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::difference<boost::spirit::qi::char_class<boost::spirit::tag::char_code<boost::spirit::tag::space, boost::spirit::char_encoding::standard> >, boost::spirit::qi::eol_parser>, boost::fusion::cons<boost::spirit::qi::sequence<boost::fusion::cons<boost::spirit::qi::literal_char<boost::spirit::char_encoding::standard, true, false>, boost::fusion::cons<boost::spirit::qi::kleene<boost::spirit::qi::difference<boost::spirit::qi::char_class<boost::spirit::tag::char_code<boost::spirit::tag::char_, boost::spirit::char_encoding::standard> >, boost::spirit::qi::eol_parser> >, boost::fusion::cons<boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::eol_parser, boost::fusion::cons<boost::spirit::qi::eoi_parser, boost::fusion::nil> > >, boost::fusion::nil> > > >, boost::fusion::nil> > > >, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >, mpl_::bool_<false> >::dispatch_container<boost::spirit::qi::plus<boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::any_real_parser<double, boost::spirit::qi::real_policies<double> >, boost::fusion::cons<boost::spirit::qi::sequence<boost::fusion::cons<boost::spirit::qi::literal_char<boost::spirit::char_encoding::standard, true, false>, boost::fusion::cons<boost::spirit::qi::attr_parser<double const>, boost::fusion::nil> > >, boost::fusion::nil> > > > >(boost::spirit::qi::plus<boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::any_real_parser<double, boost::spirit::qi::real_policies<double> >, boost::fusion::cons<boost::spirit::qi::sequence<boost::fusion::cons<boost::spirit::qi::literal_char<boost::spirit::char_encoding::standard, true, false>, boost::fusion::cons<boost::spirit::qi::attr_parser<double const>, boost::fusion::nil> > >, boost::fusion::nil> > > > const&, mpl_::bool_<false>) const
+  0.26      3.76     0.01                             shark::AbstractModel<shark::blas::vector<double>, unsigned int>::operator()(shark::Data<shark::blas::vector<double> > const&) const
+  0.26      3.77     0.01                             std::vector<double, std::allocator<double> >::_M_fill_insert(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, unsigned long, double const&)
+  0.13      3.78     0.01                             shark::MultiSequenceIterator<shark::detail::SharedContainer<shark::blas::vector<double> >::BatchRange>::increment()
+  0.13      3.78     0.01                             shark::MultiSequenceIterator<shark::detail::SharedContainer<shark::blas::vector<float> >::BatchRange>::increment()
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.

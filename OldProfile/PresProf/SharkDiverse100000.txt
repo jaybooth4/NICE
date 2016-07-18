@@ -1,0 +1,53 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 30.19      0.16     0.16                             shark::Centroids::distances(shark::blas::matrix<double, shark::blas::row_major> const&) const
+ 11.32      0.22     0.06                             shark::kMeans(shark::Data<shark::blas::vector<double> > const&, unsigned long, shark::Centroids&, unsigned long)
+ 11.32      0.28     0.06                             non-virtual thunk to shark::Centroids::read(boost::archive::polymorphic_iarchive&)
+  7.55      0.32     0.04                             shark::Centroids::softMembership(shark::blas::matrix<double, shark::blas::row_major> const&) const
+  7.55      0.36     0.04                             char* std::string::_S_construct<std::istream_iterator<char, char, std::char_traits<char>, long> >(std::istream_iterator<char, char, std::char_traits<char>, long>, std::istream_iterator<char, char, std::char_traits<char>, long>, std::allocator<char> const&, std::input_iterator_tag)
+  5.66      0.39     0.03                             shark::AbstractClustering<shark::blas::vector<double> >::hardMembership(shark::blas::matrix<double, shark::blas::row_major> const&) const
+  5.66      0.42     0.03                             std::istream_iterator<char, char, std::char_traits<char>, long>::_M_read()
+  3.77      0.44     0.02                             bool boost::spirit::qi::detail::real_impl<double, boost::spirit::qi::real_policies<double> >::parse<__gnu_cxx::__normal_iterator<char const*, std::string>, double>(__gnu_cxx::__normal_iterator<char const*, std::string>&, __gnu_cxx::__normal_iterator<char const*, std::string> const&, double&, boost::spirit::qi::real_policies<double> const&)
+  3.77      0.46     0.02                             void shark::blas::detail::distanceSqrBlockBlockRowWise<shark::blas::matrix<double, shark::blas::row_major>, shark::blas::matrix<double, shark::blas::row_major>, shark::blas::matrix<double, shark::blas::row_major> >(shark::blas::matrix<double, shark::blas::row_major> const&, shark::blas::matrix<double, shark::blas::row_major> const&, shark::blas::matrix<double, shark::blas::row_major>&)
+  3.77      0.48     0.02                             std::vector<double, std::allocator<double> >::vector(unsigned long, double const&, std::allocator<double> const&)
+  1.89      0.49     0.01                             void boost::spirit::qi::skip_over<__gnu_cxx::__normal_iterator<char const*, std::string>, boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::difference<boost::spirit::qi::char_class<boost::spirit::tag::char_code<boost::spirit::tag::space, boost::spirit::char_encoding::standard> >, boost::spirit::qi::eol_parser>, boost::fusion::cons<boost::spirit::qi::sequence<boost::fusion::cons<boost::spirit::qi::literal_char<boost::spirit::char_encoding::standard, true, false>, boost::fusion::cons<boost::spirit::qi::kleene<boost::spirit::qi::difference<boost::spirit::qi::char_class<boost::spirit::tag::char_code<boost::spirit::tag::char_, boost::spirit::char_encoding::standard> >, boost::spirit::qi::eol_parser> >, boost::fusion::cons<boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::eol_parser, boost::fusion::cons<boost::spirit::qi::eoi_parser, boost::fusion::nil> > >, boost::fusion::nil> > > >, boost::fusion::nil> > > >(__gnu_cxx::__normal_iterator<char const*, std::string>&, __gnu_cxx::__normal_iterator<char const*, std::string> const&, boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::difference<boost::spirit::qi::char_class<boost::spirit::tag::char_code<boost::spirit::tag::space, boost::spirit::char_encoding::standard> >, boost::spirit::qi::eol_parser>, boost::fusion::cons<boost::spirit::qi::sequence<boost::fusion::cons<boost::spirit::qi::literal_char<boost::spirit::char_encoding::standard, true, false>, boost::fusion::cons<boost::spirit::qi::kleene<boost::spirit::qi::difference<boost::spirit::qi::char_class<boost::spirit::tag::char_code<boost::spirit::tag::char_, boost::spirit::char_encoding::standard> >, boost::spirit::qi::eol_parser> >, boost::fusion::cons<boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::eol_parser, boost::fusion::cons<boost::spirit::qi::eoi_parser, boost::fusion::nil> > >, boost::fusion::nil> > > >, boost::fusion::nil> > > const&)
+  1.89      0.50     0.01                             shark::MultiSequenceIterator<shark::detail::SharedContainer<unsigned int>::BatchRange>::increment()
+  1.89      0.51     0.01                             void shark::blas::detail::distanceSqrBlockBlock<shark::blas::matrix<double, shark::blas::row_major>, shark::blas::matrix<double, shark::blas::row_major>, shark::blas::matrix<double, shark::blas::row_major> >(shark::blas::matrix<double, shark::blas::row_major> const&, shark::blas::matrix<double, shark::blas::row_major> const&, shark::blas::matrix<double, shark::blas::row_major>&, shark::blas::dense_random_access_iterator_tag, shark::blas::dense_random_access_iterator_tag)
+  1.89      0.52     0.01                             std::vector<double, std::allocator<double> >::_M_insert_aux(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&)
+  1.89      0.53     0.01                             std::vector<double, std::allocator<double> >::vector(std::vector<double, std::allocator<double> > const&)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.

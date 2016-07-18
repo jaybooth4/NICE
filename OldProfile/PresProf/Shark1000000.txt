@@ -1,0 +1,77 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 23.84      4.52     4.52                             shark::Centroids::distances(shark::blas::matrix<double, shark::blas::row_major> const&) const
+ 22.47      8.78     4.26                             shark::Centroids::softMembership(shark::blas::matrix<double, shark::blas::row_major> const&) const
+ 19.15     12.41     3.63                             non-virtual thunk to shark::Centroids::read(boost::archive::polymorphic_iarchive&)
+ 10.87     14.47     2.06                             shark::kMeans(shark::Data<shark::blas::vector<double> > const&, unsigned long, shark::Centroids&, unsigned long)
+  4.75     15.37     0.90                             void shark::blas::detail::distanceSqrBlockBlockRowWise<shark::blas::matrix<double, shark::blas::row_major>, shark::blas::matrix<double, shark::blas::row_major>, shark::blas::matrix<double, shark::blas::row_major> >(shark::blas::matrix<double, shark::blas::row_major> const&, shark::blas::matrix<double, shark::blas::row_major> const&, shark::blas::matrix<double, shark::blas::row_major>&)
+  4.64     16.25     0.88                             shark::AbstractClustering<shark::blas::vector<double> >::hardMembership(shark::blas::matrix<double, shark::blas::row_major> const&) const
+  3.11     16.84     0.59                             std::vector<double, std::allocator<double> >::vector(unsigned long, double const&, std::allocator<double> const&)
+  2.69     17.35     0.51                             std::istream_iterator<char, char, std::char_traits<char>, long>::_M_read()
+  2.37     17.80     0.45                             char* std::string::_S_construct<std::istream_iterator<char, char, std::char_traits<char>, long> >(std::istream_iterator<char, char, std::char_traits<char>, long>, std::istream_iterator<char, char, std::char_traits<char>, long>, std::allocator<char> const&, std::input_iterator_tag)
+  1.27     18.04     0.24                             shark::MultiSequenceIterator<shark::detail::SharedContainer<unsigned int>::BatchRange>::increment()
+  1.11     18.25     0.21                             bool boost::spirit::qi::detail::real_impl<double, boost::spirit::qi::real_policies<double> >::parse<__gnu_cxx::__normal_iterator<char const*, std::string>, double>(__gnu_cxx::__normal_iterator<char const*, std::string>&, __gnu_cxx::__normal_iterator<char const*, std::string> const&, double&, boost::spirit::qi::real_policies<double> const&)
+  0.69     18.38     0.13                             bool boost::range::equal<boost::iterator_range<shark::MultiSequenceIterator<shark::detail::SharedContainer<unsigned int>::BatchRange> >, boost::iterator_range<shark::MultiSequenceIterator<shark::detail::SharedContainer<unsigned int>::BatchRange> > >(boost::iterator_range<shark::MultiSequenceIterator<shark::detail::SharedContainer<unsigned int>::BatchRange> > const&, boost::iterator_range<shark::MultiSequenceIterator<shark::detail::SharedContainer<unsigned int>::BatchRange> > const&)
+  0.69     18.51     0.13                             shark::MultiSequenceIterator<shark::detail::SharedContainer<shark::blas::vector<double> >::BatchRange>::increment()
+  0.37     18.58     0.07                             shark::DataView<shark::Data<shark::blas::vector<double> > const> shark::randomSubset<shark::Data<shark::blas::vector<double> > const>(shark::DataView<shark::Data<shark::blas::vector<double> > const> const&, unsigned long)
+  0.26     18.63     0.05                             shark::MultiSequenceIterator<shark::detail::SharedContainer<shark::blas::vector<float> >::BatchRange>::increment()
+  0.21     18.67     0.04                             shark::UnlabeledData<shark::blas::vector<float> >::shuffle()
+  0.16     18.70     0.03                             boost::detail::shared_count::~shared_count()
+  0.11     18.72     0.02                             unsigned long boost::random::detail::generate_uniform_int<boost::random::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>, unsigned long>(boost::random::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, unsigned long, unsigned long, mpl_::bool_<true>)
+  0.11     18.74     0.02                             shark::csvStringToData(shark::Data<shark::blas::vector<double> >&, std::string const&, char, char, unsigned long)
+  0.11     18.76     0.02                             bool boost::spirit::qi::detail::pass_container<boost::spirit::qi::detail::fail_function<__gnu_cxx::__normal_iterator<char const*, std::string>, boost::spirit::context<boost::fusion::cons<std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&, boost::fusion::nil>, boost::spirit::locals<mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na, mpl_::na> >, boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::difference<boost::spirit::qi::char_class<boost::spirit::tag::char_code<boost::spirit::tag::space, boost::spirit::char_encoding::standard> >, boost::spirit::qi::eol_parser>, boost::fusion::cons<boost::spirit::qi::sequence<boost::fusion::cons<boost::spirit::qi::literal_char<boost::spirit::char_encoding::standard, true, false>, boost::fusion::cons<boost::spirit::qi::kleene<boost::spirit::qi::difference<boost::spirit::qi::char_class<boost::spirit::tag::char_code<boost::spirit::tag::char_, boost::spirit::char_encoding::standard> >, boost::spirit::qi::eol_parser> >, boost::fusion::cons<boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::eol_parser, boost::fusion::cons<boost::spirit::qi::eoi_parser, boost::fusion::nil> > >, boost::fusion::nil> > > >, boost::fusion::nil> > > >, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >, mpl_::bool_<false> >::dispatch_container<boost::spirit::qi::plus<boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::any_real_parser<double, boost::spirit::qi::real_policies<double> >, boost::fusion::cons<boost::spirit::qi::sequence<boost::fusion::cons<boost::spirit::qi::literal_char<boost::spirit::char_encoding::standard, true, false>, boost::fusion::cons<boost::spirit::qi::attr_parser<double const>, boost::fusion::nil> > >, boost::fusion::nil> > > > >(boost::spirit::qi::plus<boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::any_real_parser<double, boost::spirit::qi::real_policies<double> >, boost::fusion::cons<boost::spirit::qi::sequence<boost::fusion::cons<boost::spirit::qi::literal_char<boost::spirit::char_encoding::standard, true, false>, boost::fusion::cons<boost::spirit::qi::attr_parser<double const>, boost::fusion::nil> > >, boost::fusion::nil> > > > const&, mpl_::bool_<false>) const
+  0.11     18.78     0.02                             std::vector<double, std::allocator<double> >::_M_insert_aux(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&)
+  0.11     18.80     0.02                             std::vector<double, std::allocator<double> >::_M_fill_insert(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, unsigned long, double const&)
+  0.08     18.82     0.02                             void boost::spirit::qi::skip_over<__gnu_cxx::__normal_iterator<char const*, std::string>, boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::difference<boost::spirit::qi::char_class<boost::spirit::tag::char_code<boost::spirit::tag::space, boost::spirit::char_encoding::standard> >, boost::spirit::qi::eol_parser>, boost::fusion::cons<boost::spirit::qi::sequence<boost::fusion::cons<boost::spirit::qi::literal_char<boost::spirit::char_encoding::standard, true, false>, boost::fusion::cons<boost::spirit::qi::kleene<boost::spirit::qi::difference<boost::spirit::qi::char_class<boost::spirit::tag::char_code<boost::spirit::tag::char_, boost::spirit::char_encoding::standard> >, boost::spirit::qi::eol_parser> >, boost::fusion::cons<boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::eol_parser, boost::fusion::cons<boost::spirit::qi::eoi_parser, boost::fusion::nil> > >, boost::fusion::nil> > > >, boost::fusion::nil> > > >(__gnu_cxx::__normal_iterator<char const*, std::string>&, __gnu_cxx::__normal_iterator<char const*, std::string> const&, boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::difference<boost::spirit::qi::char_class<boost::spirit::tag::char_code<boost::spirit::tag::space, boost::spirit::char_encoding::standard> >, boost::spirit::qi::eol_parser>, boost::fusion::cons<boost::spirit::qi::sequence<boost::fusion::cons<boost::spirit::qi::literal_char<boost::spirit::char_encoding::standard, true, false>, boost::fusion::cons<boost::spirit::qi::kleene<boost::spirit::qi::difference<boost::spirit::qi::char_class<boost::spirit::tag::char_code<boost::spirit::tag::char_, boost::spirit::char_encoding::standard> >, boost::spirit::qi::eol_parser> >, boost::fusion::cons<boost::spirit::qi::alternative<boost::fusion::cons<boost::spirit::qi::eol_parser, boost::fusion::cons<boost::spirit::qi::eoi_parser, boost::fusion::nil> > >, boost::fusion::nil> > > >, boost::fusion::nil> > > const&)
+  0.05     18.83     0.01                             (anonymous namespace)::importCSVReaderSingleValues(std::string const&, char, char)
+  0.05     18.84     0.01                             bool boost::spirit::qi::extract_int<int, 10u, 1u, -1>::call<__gnu_cxx::__normal_iterator<char const*, std::string> >(__gnu_cxx::__normal_iterator<char const*, std::string>&, __gnu_cxx::__normal_iterator<char const*, std::string> const&, int&)
+  0.05     18.85     0.01                             shark::blas::vector<double> shark::mean<shark::blas::vector<double> >(shark::Data<shark::blas::vector<double> > const&)
+  0.05     18.86     0.01                             shark::detail::SharedContainer<shark::blas::vector<double> >::~SharedContainer()
+  0.05     18.87     0.01                             void shark::meanvar<shark::blas::vector<double>, shark::blas::vector<double>, shark::blas::vector<double> >(shark::Data<shark::blas::vector<double> > const&, shark::blas::vector_container<shark::blas::vector<double> >&, shark::blas::vector_container<shark::blas::vector<double> >&)
+  0.05     18.88     0.01                             shark::Centroids::initFromData(shark::Data<shark::blas::vector<double> > const&, unsigned long)
+  0.05     18.89     0.01                             boost::archive::detail::iserializer<boost::archive::polymorphic_iarchive, std::vector<float, std::allocator<float> > >::load_object_data(boost::archive::detail::basic_iarchive&, void*, unsigned int) const
+  0.05     18.90     0.01                             shark::HardClusteringModel<shark::blas::vector<double> >::eval(shark::blas::matrix<double, shark::blas::row_major> const&, shark::blas::vector<unsigned int>&) const
+  0.05     18.91     0.01                             std::vector<boost::shared_ptr<shark::blas::vector<unsigned int> >, std::allocator<boost::shared_ptr<shark::blas::vector<unsigned int> > > >::operator=(std::vector<boost::shared_ptr<shark::blas::vector<unsigned int> >, std::allocator<boost::shared_ptr<shark::blas::vector<unsigned int> > > > const&)
+  0.05     18.92     0.01                             std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::insert(__gnu_cxx::__normal_iterator<std::vector<double, std::allocator<double> >*, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > >, std::vector<double, std::allocator<double> > const&)
+  0.05     18.93     0.01                             std::vector<double, std::allocator<double> >::insert(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&)
+  0.05     18.94     0.01                             std::vector<double, std::allocator<double> >::vector(std::vector<double, std::allocator<double> > const&)
+  0.05     18.95     0.01                             frame_dummy
+  0.03     18.95     0.01                             boost::container::vector<unsigned int, std::allocator<unsigned int> >::resize(unsigned long)
+  0.03     18.96     0.01                             shark::Data<unsigned int>::makeIndependent()
+  0.03     18.96     0.01                             shark::blas::matrix_row<shark::blas::matrix<double, shark::blas::row_major> >& shark::blas::matrix_row<shark::blas::matrix<double, shark::blas::row_major> >::operator=<shark::blas::vector<double> >(shark::blas::vector_expression<shark::blas::vector<double> > const&)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.

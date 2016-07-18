@@ -135,7 +135,7 @@ void fuzzykmeans(GArgReader& args)
 	clusterer.setReps(reps);
 	GMatrix* pOut = clusterer.reduce(data);
 	std::unique_ptr<GMatrix> hOut(pOut);
-	pOut->print(cout);
+	//pOut->print(cout);
 }
 
 void kmeans(GArgReader& args)
@@ -147,7 +147,7 @@ void kmeans(GArgReader& args)
 
 	// Parse Options
 	unsigned int nSeed = getpid() * (unsigned int)time(NULL);
-	size_t reps = 4;
+	size_t reps = 1;
 	while(args.size() > 0)
 	{
 		if(args.if_pop("-seed"))

@@ -629,6 +629,7 @@ void GKMeans::cluster(const GMatrix* pData)
 		delete[] m_pClusters;
 		m_pClusters = pBest;
 	}
+	std::cout << iters << std::endl;
 }
 
 // virtual

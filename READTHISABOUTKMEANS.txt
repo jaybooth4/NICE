@@ -1,40 +1,68 @@
 I created test datasets from the python script given to me by Xiangyu. 
 
 I adjusted what was necessary in each file to allow for the reading in of data. Changes made by me from sample files are marked with either /* */ notation to suppress output, or four slashes to delineate between my comments and those that were already included.
-
+There are several basic script files used to generate output files using time ./runtests.sh 2>&1 | tee output.txt notation, but these can be improved to allow for 
+Command line arguements and continuous compilation for those libraries which must specify the number of clusters within the source.
 
 DLib:
-The test file is called kkmeans located in the example folder. This is compiled by g++ kkmeans_ex.cpp -I (directory to dlib). It reads in the file called data_k4_p100000_d4_c1.txt located in the same directory. There are also example files called EIGEN_EXAMPLE.cc and EIGEN_INSTREAM.cc that demonstrate dlib's functionality with Eigen. Be sure to compile with c++11!
-
+The test file is called kkmeans located in the example folder. This is compiled by g++ -std=c++11 kkmeans_ex.cpp -I (directory to dlib). 
+It reads in the file which must be located in the same directory. There are also example files called EIGEN_EXAMPLE.cc and EIGEN_INSTREAM.cc that 
+demonstrate dlib's functionality with Eigen. Each run must be recompiled, and the number of data points specified along with the file name
+Kkmeans is a more complicated implementation of kmeans. This method implements a regression model for centroid storage based on a paper by Y. Engel
+Titled The Kernel Recursive Least Squares Algorithm. Dlib also uses a basic version of kmeans++ with smarter intialization.
 
 KMlocal: (UMD library)
 The edited file is located in src, called kmlsample. This is run with several flags. 
 make sample (in the bin directory)
 ./kmlsample -d 4 -k 4 -max 10000 -df [location of file, must be a space separated dataset] 
 If you just run ./kmlsample this should give you more information about the flags. 
+Kmlocal uses a simulated annealing technique to compare the SSE (Sum of Squared Error) of several runs of kmeans on randomly assigned centers
+Read the papers https://www.cs.umd.edu/~mount/Projects/KMeans/kmlocal-doc.pdf and https://www.cs.umd.edu/~mount/Projects/KMeans/kmlocal-cgta.pdf
+for more information. Kmlocal was developed by the university of Maryland
 
 
 Waffles: (Brigham Young library)
 create a build directory, cmake .., make -j 4
 After compilation the executable waffles_cluster located in src/bin can be run using 
-./waffles_cluster kmeans ~/Desktop/Github/NICE/data_k4_p100000_d4_c1.dat 4
+./waffles_cluster kmeans ~/Desktop/NICE/PresData2/dat/c1/data_k4_p100000_d4_c1.dat 4
 Source code for this example located in src/cluster/main.cpp
 There is also an Eigen example located in the demos directory.
-Input file must be a .dat format, can have commas or no commas. aarf, csv or .dat
-There is no built in compatability with eigen
+Input file must be an .aarf, .csv, or .dat .dat format, can have commas or no commas. 
+Waffles uses a vanilla implementation of kmeans and will continue until convergence. This means that based on
+Random initialization of points it is very possible for runs to take an extremely long amount of time. Has a variable
+Called reps to specify the number of times it will execute the kmeans algorithm, then choose the best SSE out of those runs.
 
 
 Shark:
-After compiling with cmake, there will be a bin folder in the build directory with a KMeans tutorial executable. This is run with ./KmeansTutorial [input file]. This program automatically recognizes the dimensionality of the dataset. You must set the number of clusters desired, and alter the output setting based on the number of clusters. I believe this library uses vectors for storage but I am not sure.
-The set up of this project is such that it creates its own makefiles on the fly. I attempted to change the .flags file in the KMeans.dir directory, but due to my understanding that the gprof files can only be produced if the .cpp is in the same directory as the executable, it was unable to produce a gmon file. I attempted to compile by hand using 
-g++ -fopenmp -g -pg -O3 -I/home/jason.b/NICE/Shark-3.0.0/include/ -I/home/jason.b/NICE/Shark-3.0.0/build/include/ -L/usr/lib/x86_64-linux-gnu/libboost_math_c99.so -lboost_math_c99 KMeansTutorial.cpp 2> boost_math.txt
-But this provided errors which have been sent to error files. Read these then ask for help.
+After compiling with cmake, there will be a bin folder in the build directory with a KMeans tutorial executable. 
+This is run with ./KmeansTutorial [input file]. This program automatically recognizes the dimensionality of the dataset. 
+You must set the number of clusters desired, and alter the output setting based on the number of clusters.
+The set up of this project is such that it creates its own makefiles on the fly. I attempted to change the .flags file in the KMeans.dir directory, but this
+File is regenerated with each compilation of CMake. I therefore had to compile by hand by changing to the build directory and calling make examples, then in the 
+directory ~/NICE/Shark-3.0.0/build/examples/Unsupervised  calling: g++ -fopenmp -g -pg /home/jason.b/NICE/Shark-3.0.0/build/examples/CMakeFiles/KMeansTutorial.dir/Unsupervised/KMeansTutorial.cpp.o 
+-o executable /home/jason.b/NICE/Shark-3.0.0/build/lib/libshark.a -lboost_system -lboost_date_time -lboost_filesystem -lboost_program_options -lboost_serialization -lboost_thread -lboost_unit_test_framework -lpthread
+This is done like this because the linking that I found in the link.txt cmake generated file is based on linking to a .o file. This is a different command from linking to a .cpp, in which you must
+Use the -Wl, -L -l format, making the compilation much more lengthly. This way make examples creates the updated .cpp and .o from the .tpp files (~/NICE/Shark-3.0.0/examples/Unsupervised) which you then link by hand
+This library uses a vanilla implementation of KMeans with a limit on the number of iterations used, compomising accuracy for speed
+
 
 Shogun:
-Still attempting to figure out how to use the eigen-->SGmatrix function call
-It is able to compile after running cmake, files are located in the section labeled examples/undocumented/libshogun. How do I read in a file?
+This library took a long time to compile due to several dependencies which were necessary for some files like HDF5, which the makefile struggled to locate.
+This was fixed by realizing that most messages are warnings, and either changing the makefile to not look for the dependencies, or manually changing the search path for CMake. Files are located in the section labeled 
+examples/undocumented/libshogun. This library uses Eigen as a backend. Executables are located in ~/NICE/Shark-3.0.0/examples/Unsupervised
+Compile using g++ -std=c++11 -g -pg -Wall -Wno-unused-parameter -Wformat -Wformat-security -Wparentheses -Wshadow -Wno-unknown-pragmas -Wno-deprecated  -fopenmp  -O3 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps 
+-finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse clustering_kmeans3.cpp -I/home/jason.b/NICE/shogun-4.1.0/src/ -I/home/jason.b/NICE/shogun-4.1.0/src/shogun -I/home/jason.b/NICE/shogun-4.1.0/build/src 
+-I/home/jason.b/NICE/shogun-4.1.0/build/src/shogun -I/usr/lib/../include -I/usr/include/libxml2 -c
+g++ -g -pg clustering_kmeans3.o -o clustering_kmeans3 -rdynamic /home/jason.b/NICE/shogun-4.1.0/build/src/shogun/libshogun.so.17.1 
+-lpthread -llapack /usr/lib/libf77blas.so.3gf /usr/lib/libatlas.so.3gf /usr/lib/libcblas.so.3 -larpack -lxml2 -lhdf5 -lpthread -lz -ldl 
+-lm -lz -ldl -lm -lsnappy -Wl,-rpath,/home/jason.b/NICE/shogun-4.1.0/build/src2shogun
+This is located in the compile.sh file in ~/NICE/shogun-4.1.0/examples/undocumented/libshogun
+I had some trouble with this library, it is fairly undocumented and did not seem to allow me to do runs with more than 200,000 points, potentially due to the data structure used
+Also, this library is incompatable with gprof. When gprof is run it seems that the shogun_init() function blocks the ability to see more details about execution
+Download from http://www.shogun-toolbox.org/new/42/
 
--pg flags have been added to the Makefile flags
+
+-pg flags have been added to the Makefile flags to allow for a run of gprof 
 
 
-Feel free to email questions!
+Feel free to email questions! booth.j@husky.neu.edu

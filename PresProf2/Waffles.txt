@@ -1,0 +1,100 @@
+real	0m2.899s
+user	0m2.810s
+sys	0m0.084s
+
+real	0m5.117s
+user	0m4.954s
+sys	0m0.156s
+
+real	5m55.538s
+user	5m54.994s
+sys	0m0.235s
+
+real	5m47.119s
+user	5m46.530s
+sys	0m0.284s
+
+real	8m43.149s
+user	8m42.330s
+sys	0m0.360s
+--------------------
+real	0m3.268s
+user	0m3.150s
+sys	0m0.112s
+
+real	0m5.840s
+user	0m5.675s
+sys	0m0.160s
+
+real	7m1.712s
+user	7m0.859s
+sys	0m0.448s
+
+real	0m12.033s
+user	0m11.523s
+sys	0m0.411s
+
+real	4m0.144s
+user	3m59.592s
+sys	0m0.316s
+-------------------
+real	0m1.895s
+user	0m1.828s
+sys	0m0.066s
+
+real	0m2.890s
+user	0m2.820s
+sys	0m0.064s
+
+real	2m57.944s
+user	2m57.744s
+sys	0m0.049s
+
+real	2m9.671s
+user	2m9.508s
+sys	0m0.053s
+
+real	1m39.697s
+user	1m39.568s
+sys	0m0.045s
+----------------------alt Kvar data
+real	0m1.924s
+user	0m1.861s
+sys	0m0.060s
+
+real	0m3.044s
+user	0m2.968s
+sys	0m0.072s
+
+real	1m2.128s
+user	1m1.994s
+sys	0m0.080s
+
+real	2m50.329s
+user	2m50.115s
+sys	0m0.072s
+
+real	2m54.911s
+user	2m54.714s
+sys	0m0.052s
+--------------------alt 2
+real	0m1.935s
+user	0m1.866s
+sys	0m0.064s
+
+real	1m30.530s
+user	1m30.352s
+sys	0m0.093s
+
+real	0m52.374s
+user	0m52.268s
+sys	0m0.061s
+
+real	3m28.827s
+user	3m28.562s
+sys	0m0.089s
+
+real	1m39.371s
+user	1m39.209s
+sys	0m0.077s
+

@@ -33,12 +33,12 @@
     {
         Eigen::Matrix<int, 2, 1> TestMatrix;
         TestMatrix.setZero();
-        dlib::matrix<int, 2, 1> Test = mat(TestMatrix);
+        dlib::matrix<int, 2, 1> Test = mat(TestMatrix);  //// Test Assignment
         cout << Test << endl;
-	dlib::matrix<int, 1, 2> TransTest= trans(Test);
-	cout << TransTest << endl;
-        Test = Test + 5;
-	cout << Test << endl;
+        dlib::matrix<int, 1, 2> TransTest= trans(Test);  //// Test Transpose
+        cout << TransTest << endl;
+        Test = Test + 5;  //// Test coefficient-wise addition
+        cout << Test << endl;
 	// Here we declare that our samples will be 2 dimensional column vectors.
         // (Note that if you don't know the dimensionality of your vectors at compile time
         // you can change the 2 to a 0 and then set the size at runtime)
