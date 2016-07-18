@@ -3,8 +3,11 @@ set(PROJECT_NAME Nice)
 project(Nice)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 include(eigen)
+message(STATUS "Status of Eigen:" eigen)
 include(check)
 include(doc)
+include(kmlocal)
+message(STATUS "Status of kmlocal:" kmlocal)
 find_package(Threads REQUIRED)
 
 set(CMAKE_BUILD_TYPE Release)
@@ -18,8 +21,11 @@ add_definitions(-std=c++11)
 #    add_definitions(-std=c++11)
 #endif()
 message(STATUS "Eigen path: " ${EIGEN_INCLUDE_DIRS})
+set(KMLOCAL_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/build/kmlocal/src/kmlocal/src)
+message(STATUS "kmlocal path: " ${KMLOCAL_INCLUDE_DIRS})
 set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR})
 include_directories(${EIGEN_INCLUDE_DIRS})
+include_directories(${KMLOCAL_INCLUDE_DIRS})
 include_directories(${COMMON_INCLUDES}) 
 
 # Set source files
@@ -64,6 +70,7 @@ else()
 endif()
 
 add_dependencies(${PROJECT_NAME} eigen)
+add_dependencies(${PROJECT_NAME} kmlocal)
 
 # Test
 option (enable-test "Compile all Nice unit tests" ON)
@@ -97,6 +104,7 @@ if (enable-test)
 
   add_dependencies(${PROJECT_TEST_NAME} googletest)
   add_dependencies(${PROJECT_TEST_NAME} eigen)
+  add_dependencies(${PROJECT_TEST_NAME} kmlocal)
   add_dependencies(${PROJECT_TEST_NAME} ${PROJECT_NAME})
 
   # Add dependencies and link libraries according to machine setup
