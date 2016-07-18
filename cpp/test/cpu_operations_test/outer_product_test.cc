@@ -20,33 +20,49 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#include <stdio.h>
-#include <stdlib.h>
+
+
+
+
+#include <unistd.h>
 #include <iostream>
+#include "include/cpu_operations.h"
 #include "Eigen/Dense"
 #include "gtest/gtest.h"
-#include "include/cpu_operations.h"
 #include "include/matrix.h"
+#include "include/vector.h"
 
+// Typed Tests
 template<class T>
-class TraceTest : public ::testing::Test {
- public:
+class OuterProductTest : public ::testing::Test {
+ public :
+  Nice::Vector<T> v1;
+  Nice::Vector<T> v2;
   Nice::Matrix<T> m1;
-  T correct_ans;
-  T Tracer() {
-    return Nice::CpuOperations<T>::Trace(m1);
+  Nice::Matrix<T> m2;
+
+  void OuterProducter() {
+    m2 = Nice::CpuOperations<T>::OuterProduct(this->v1, this->v2);
   }
 };
 
 typedef ::testing::Types<int, float, double> MyTypes;
-TYPED_TEST_CASE(TraceTest, MyTypes);
+TYPED_TEST_CASE(OuterProductTest, MyTypes);
 
-TYPED_TEST(TraceTest, BasicTest) {
-  this->m1.resize(4, 4);
-  this->m1 << 8, 5, 3, 4,
-              2, 4, 8, 9,
-              7, 6, 1, 0,
-              9, 2, 5, 7;
-  this->correct_ans = 20;
-  EXPECT_EQ(this-> correct_ans, this->Tracer());
+// Tests a regular outer product operation
+TYPED_TEST(OuterProductTest, BasicFunctionality) {
+  this->v1.resize(2);
+  this->v2.resize(3);
+  this->m1.resize(2, 3);
+  this->v1 << 1, 2;
+  this->v2 << 3, 4, 5;
+  this->m1 << 3, 4, 5,
+              6, 8, 10;
+  this->OuterProducter();
+  ASSERT_TRUE(this->m1.isApprox(this->m2));
+}
+
+// Tests with empty vectors
+TYPED_TEST(OuterProductTest, EmptyVectors) {
+  ASSERT_DEATH(this->OuterProducter(), ".*");
 }
