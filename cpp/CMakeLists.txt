@@ -21,7 +21,7 @@ add_definitions(-std=c++11)
 #    add_definitions(-std=c++11)
 #endif()
 message(STATUS "Eigen path: " ${EIGEN_INCLUDE_DIRS})
-set(KMLOCAL_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/build/kmlocal/src/kmlocal/src)
+#set(KMLOCAL_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/build/kmlocal/src/kmlocal/src)
 message(STATUS "kmlocal path: " ${KMLOCAL_INCLUDE_DIRS})
 set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR})
 include_directories(${EIGEN_INCLUDE_DIRS})
@@ -96,7 +96,8 @@ if (enable-test)
          ${PROJECT_SOURCE_DIR} 
          test/cpu_operations_test/*.cc
          test/util_test/*.cc
-         test/cpu_solver_test/*.cc)
+         test/cpu_solver_test/*.cc
+         test/kmeans_test/*.cc)
   endif()
   message(STATUS "Test case source files: " ${TEST_SRC_FILES})
 
