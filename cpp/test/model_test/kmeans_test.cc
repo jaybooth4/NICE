@@ -59,7 +59,7 @@ public:
 TEST_F(KmeansTest, SimpleTest) {
   this->GetLabel();
   Eigen::VectorXi LabelsTruth(40);
-  LabelsTruth << 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
+  LabelsTruth << 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3;
   EXPECT_MATRIX_EQ(LabelsTruth, LabelsKmeans);
 }
 

@@ -56,6 +56,7 @@
 #include "KMterm.h"
 #include "include/model.h"
 #include "include/matrix.h"
+#include "include/vector.h"
 
 #include <cstring>
 #include <string.h>
@@ -87,7 +88,6 @@ class Kmeans
   int dim;
   int maxPts;
   int stages;
-  KMterm term;
   istream* dataIn;   // input data stream
   //KMdata dataPts;    // allocate data storage
   std::string fileLocation;
@@ -107,16 +107,6 @@ class Kmeans
   //// Number of stage. It seems as though the 100, 0, 0, 0 is an initial
   //// Value and 2 linear multipliers and a power value, where max stages
   //// Is equal to a*b + a*c + a^d (see KMterm)
-
-  KMterm  term(100, 0, 0, 0,   // run for 100 stages
-      0.10,     // min consec RDL
-      0.10,     // min accum RDL
-      3,      // max run stages
-      0.50,     // init. prob. of acceptance
-      10,     // temp. run length
-      0.95);      // temp. reduction factor
-
-  term.setAbsMaxTotStage(stages);   // set number of stages
 
  }
 
@@ -146,52 +136,68 @@ class Kmeans
   }
   }
   else {
-    std::cout<<"Issues here"<<std::endl;
+//    std::cout<<"Issues here"<<std::endl;
   }
 
-  std::cout << "Data Points:\n";     // echo data points
-  for (int i = 0; i < nPts; i++) {
-    std::cout << "(" << dataPts[i][0];
-    for (int j = 1; j < dim; j++) {
-      std::cout << ", " << dataPts[i][j];
-    }
-    std::cout << ")\n";
- }
+//  std::cout << "Data Points:\n";     // echo data points
+//  for (int i = 0; i < nPts; i++) {
+//    std::cout << "(" << dataPts[i][0];
+//    for (int j = 1; j < dim; j++) {
+//      std::cout << ", " << dataPts[i][j];
+//    }
+//    std::cout << ")\n";
+// }
 
   dataPts.setNPts(nPts);      // set actual number of pts
   dataPts.buildKcTree();      // build filtering structure
 
   KMfilterCenters ctrs{k, dataPts};   // allocate centers
 
-  cout << "\nExecuting Clustering Algorithm: Hybrid\n";
+  KMterm  term(100, 0, 0, 0,   // run for 100 stages
+      0.10,     // min consec RDL
+      0.10,     // min accum RDL
+      3,      // max run stages
+      0.50,     // init. prob. of acceptance
+      10,     // temp. run length
+      0.95);      // temp. reduction factor
+
+  term.setAbsMaxTotStage(stages);   // set number of stages
+
+//  cout << "\nExecuting Clustering Algorithm: Hybrid\n";
   KMlocalHybrid kmHybrid{ctrs, term};   // Hybrid heuristic
   ctrs = kmHybrid.execute();
 
-   cout << "Number of stages: " << kmHybrid.getTotalStages() << "\n";
-   cout << "Average distortion: " <<
-   ctrs.getDist(false)/double(ctrs.getNPts()) << "\n";
+//   cout << "Number of stages: " << kmHybrid.getTotalStages() << "\n";
+//   cout << "Average distortion: " <<
+//   ctrs.getDist(false)/double(ctrs.getNPts()) << "\n";
+
    // print final center points
-   cout << "(Final Center Points:\n";
-   ctrs.print();
-   cout << ")\n";
-             // get/print final cluster assignments
+//   cout << "(Final Center Points:\n";
+//   ctrs.print();
+//   cout << ")\n";
+
+   // get/print final cluster assignments
+
    KMctrIdxArray closeCtr = new KMctrIdx[dataPts.getNPts()];
+
    double* sqDist = new double[dataPts.getNPts()];
+
    ctrs.getAssignments(closeCtr, sqDist);
 
-   Vector <int> assignments;
+   Nice::Vector<int> assignments;
+   assignments.setZero(dataPts.getNPts());
+
    for (int i = 0; i < dataPts.getNPts(); i++) {
-     assignments[i] = closeCtr[i];
+     assignments(i) = closeCtr[i];
+  //   std::cout << closeCtr[i] << std::endl;
    }
-   for (int i = 0; i < dataPts.getNPts(); i++) {
-        std::cout << assignments[i] << "\n";
-   }
+
    delete [] closeCtr;
    return assignments;
  }
 
  ~Kmeans() {
-  kmExit(0);
+//  kmExit(0);
  }
 };
 
