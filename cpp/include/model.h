@@ -41,6 +41,4 @@ class Model {
 
 }
 
-
-
-
+#endif // CPP_INCLUDE_MODEL_H_

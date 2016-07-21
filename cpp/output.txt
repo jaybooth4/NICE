@@ -1,0 +1,496 @@
+-- The C compiler identification is GNU 4.9.2
+-- The CXX compiler identification is GNU 4.9.2
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Status of Eigen:eigen
+-- Found PythonInterp: /usr/bin/python (found version "2.7.6") 
+-- Could NOT find Doxygen (missing:  DOXYGEN_EXECUTABLE) 
+Doxygen not found(You might need to install the dot)
+-- Command :  mkdirkmlocalkmlocallib
+--2016-07-21 14:59:25--  https://www.cs.umd.edu/~mount/Projects/KMeans/kmlocal-1.7.2.tar.gz
+Resolving www.cs.umd.edu (www.cs.umd.edu)... 128.8.127.30
+Connecting to www.cs.umd.edu (www.cs.umd.edu)|128.8.127.30|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 998138 (975K) [application/x-gzip]
+Saving to: ‘kmlocal-1.7.2.tar.gz’
+
+     0K .......... .......... .......... .......... ..........  5%  563K 2s
+    50K .......... .......... .......... .......... .......... 10%  931K 1s
+   100K .......... .......... .......... .......... .......... 15% 1.71M 1s
+   150K .......... .......... .......... .......... .......... 20%  960K 1s
+   200K .......... .......... .......... .......... .......... 25% 1.73M 1s
+   250K .......... .......... .......... .......... .......... 30% 1.83M 1s
+   300K .......... .......... .......... .......... .......... 35% 13.4M 1s
+   350K .......... .......... .......... .......... .......... 41% 1.89M 0s
+   400K .......... .......... .......... .......... .......... 46% 1.84M 0s
+   450K .......... .......... .......... .......... .......... 51% 2.03M 0s
+   500K .......... .......... .......... .......... .......... 56% 16.2M 0s
+   550K .......... .......... .......... .......... .......... 61% 1.95M 0s
+   600K .......... .......... .......... .......... .......... 66% 15.4M 0s
+   650K .......... .......... .......... .......... .......... 71% 1.98M 0s
+   700K .......... .......... .......... .......... .......... 76% 13.3M 0s
+   750K .......... .......... .......... .......... .......... 82% 2.20M 0s
+   800K .......... .......... .......... .......... .......... 87% 23.6M 0s
+   850K .......... .......... .......... .......... .......... 92% 2.02M 0s
+   900K .......... .......... .......... .......... .......... 97% 16.9M 0s
+   950K .......... .......... ....                            100% 19.3M=0.5s
+
+2016-07-21 14:59:25 (2.02 MB/s) - ‘kmlocal-1.7.2.tar.gz’ saved [998138/998138]
+
+-- Command :  wgethttps://www.cs.umd.edu/~mount/Projects/KMeans/kmlocal-1.7.2.tar.gz
+kmlocal-1.7.2/
+kmlocal-1.7.2/sample/
+kmlocal-1.7.2/sample/Makefile
+kmlocal-1.7.2/sample/data_pts.txt
+kmlocal-1.7.2/sample/sample.save
+kmlocal-1.7.2/sample/ReadMe.txt
+kmlocal-1.7.2/sample/minimal.save
+kmlocal-1.7.2/KMLwin32/
+kmlocal-1.7.2/KMLwin32/Makefile
+kmlocal-1.7.2/KMLwin32/bin/
+kmlocal-1.7.2/KMLwin32/bin/kmlsample.exe
+kmlocal-1.7.2/KMLwin32/bin/kmltest.exe
+kmlocal-1.7.2/KMLwin32/bin/kmlminimal.exe
+kmlocal-1.7.2/KMLwin32/kmlsample/
+kmlocal-1.7.2/KMLwin32/kmlsample/kmlsample.vcproj
+kmlocal-1.7.2/KMLwin32/KMLwin32.sln
+kmlocal-1.7.2/KMLwin32/kmlminimal/
+kmlocal-1.7.2/KMLwin32/kmlminimal/kmlminimal.vcproj
+kmlocal-1.7.2/KMLwin32/kmltest/
+kmlocal-1.7.2/KMLwin32/kmltest/kmltest.vcproj
+kmlocal-1.7.2/KMLwin32/resource.h
+kmlocal-1.7.2/Makefile
+kmlocal-1.7.2/bin/
+kmlocal-1.7.2/src/
+kmlocal-1.7.2/src/KMfilterCenters.h
+kmlocal-1.7.2/src/TODO.txt
+kmlocal-1.7.2/src/KMdata.h
+kmlocal-1.7.2/src/KMeans.h
+kmlocal-1.7.2/src/Makefile
+kmlocal-1.7.2/src/KM_ANN.cpp
+kmlocal-1.7.2/src/KMterm.h
+kmlocal-1.7.2/src/KMterm.cpp
+kmlocal-1.7.2/src/KCutil.cpp
+kmlocal-1.7.2/src/KMfilterCenters.cpp
+kmlocal-1.7.2/src/KMeans.cpp
+kmlocal-1.7.2/src/ReadMe.txt
+kmlocal-1.7.2/src/KMrand.h
+kmlocal-1.7.2/src/KCtree.h
+kmlocal-1.7.2/src/KMcenters.h
+kmlocal-1.7.2/src/KMlocal.h
+kmlocal-1.7.2/src/kmlsample.cpp
+kmlocal-1.7.2/src/kmlminimal.cpp
+kmlocal-1.7.2/src/KM_ANN.h
+kmlocal-1.7.2/src/KMcenters.cpp
+kmlocal-1.7.2/src/KCutil.h
+kmlocal-1.7.2/src/KMrand.cpp
+kmlocal-1.7.2/src/kmltest.cpp
+kmlocal-1.7.2/src/KMdata.cpp
+kmlocal-1.7.2/src/KCtree.cpp
+kmlocal-1.7.2/src/KMlocal.cpp
+kmlocal-1.7.2/doc/
+kmlocal-1.7.2/doc/kmlocal-doc.pdf
+kmlocal-1.7.2/doc/Makefile
+kmlocal-1.7.2/doc/kmlocal-doc.ps
+kmlocal-1.7.2/doc/kmlocal-doc.tex
+kmlocal-1.7.2/ReadMe.txt
+kmlocal-1.7.2/test/
+kmlocal-1.7.2/test/test5.in
+kmlocal-1.7.2/test/test7.in
+kmlocal-1.7.2/test/test4.in
+kmlocal-1.7.2/test/test3.in
+kmlocal-1.7.2/test/test6.save
+kmlocal-1.7.2/test/Makefile
+kmlocal-1.7.2/test/testMin.save
+kmlocal-1.7.2/test/test6.in
+kmlocal-1.7.2/test/test1.save
+kmlocal-1.7.2/test/test7.save
+kmlocal-1.7.2/test/testSamp.save
+kmlocal-1.7.2/test/test3.save
+kmlocal-1.7.2/test/ReadMe.txt
+kmlocal-1.7.2/test/test2.save
+kmlocal-1.7.2/test/test0.save
+kmlocal-1.7.2/test/test5.save
+kmlocal-1.7.2/test/test4.save
+kmlocal-1.7.2/test/test1.in
+kmlocal-1.7.2/test/test1-dat.txt
+kmlocal-1.7.2/test/test0.in
+kmlocal-1.7.2/test/test2.in
+kmlocal-1.7.2/ToDo.txt
+kmlocal-1.7.2/Copyright.txt
+-- Command :  tar-xvfkmlocal-1.7.2.tar.gz
+-- Command :  g++-c/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KCtree.cpp/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KCutil.cpp/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KM_ANN.cpp/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMcenters.cpp/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMdata.cpp/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMeans.cpp/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMfilterCenters.cpp/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMlocal.cpp/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMrand.cpp/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMterm.cpp
+ar: creating libkmlocal.a
+a - /home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KCtree.o
+a - /home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KCutil.o
+a - /home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KM_ANN.o
+a - /home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMcenters.o
+a - /home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMdata.o
+a - /home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMeans.o
+a - /home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMfilterCenters.o
+a - /home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMlocal.o
+a - /home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMrand.o
+a - /home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMterm.o
+-- Command :  arrvslibkmlocal.a/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KCtree.o/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KCutil.o/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KM_ANN.o/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMcenters.o/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMdata.o/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMeans.o/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMfilterCenters.o/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMlocal.o/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMrand.o/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMterm.o
+-- Command :  mvlibkmlocal.a/home/jason.b/NICE/cpp/build/kmlocallib
+-- Status of kmlocal:kmlocal
+-- Looking for include file pthread.h
+-- Looking for include file pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Eigen path: /home/jason.b/NICE/cpp/build/eigen/src/eigen
+-- kmlocal path: /home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src
+-- CMAKE_SOURCE_DIR/home/jason.b/NICE/cpp
+-- Source files: src/util/gpu_util.ccsrc/nice_main.cc
+CUDA_TOOLKIT_ROOT_DIR not found or specified
+-- Could NOT find CUDA (missing:  CUDA_TOOLKIT_ROOT_DIR CUDA_NVCC_EXECUTABLE CUDA_INCLUDE_DIRS CUDA_CUDART_LIBRARY) 
+-- CUDA not exists
+-- KMSOURCES VARIABLE:/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KCtree.cpp/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KCutil.cpp/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KM_ANN.cpp/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMcenters.cpp/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMdata.cpp/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMeans.cpp/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMfilterCenters.cpp/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMlocal.cpp/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMrand.cpp/home/jason.b/NICE/cpp/build/kmlocal/kmlocal-1.7.2/src/KMterm.cpp
+-- Found Git: /usr/bin/git (found version "1.9.1") 
+-- Test case source files: test/cpu_operations_test/frobenius_norm_test.cctest/cpu_operations_test/inverse_test.cctest/cpu_operations_test/rank_test.cctest/cpu_operations_test/add_test.cctest/cpu_operations_test/matrix_subtract_test.cctest/cpu_operations_test/logical_not_test.cctest/cpu_operations_test/transpose_test.cctest/cpu_operations_test/multiply_test.cctest/cpu_operations_test/outer_product_test.cctest/cpu_operations_test/logical_or_test.cctest/cpu_operations_test/logical_and_test.cctest/cpu_operations_test/trace_test.cctest/cpu_operations_test/dot_product_test.cctest/util_test/from_file_test.cctest/cpu_solver_test/cpu_svd_test.cctest/model_test/kmeans_test.cc
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jason.b/NICE/cpp/build
+Scanning dependencies of target googletest
+Scanning dependencies of target eigen
+[  2%] [  5%] Creating directories for 'googletest'
+Creating directories for 'eigen'
+[  8%] [ 11%] Performing download step (git clone) for 'googletest'
+Performing download step (download, verify and extract) for 'eigen'
+-- downloading...
+     src='http://bitbucket.org/eigen/eigen/get/3.2.8.tar.bz2'
+     dst='/home/jason.b/NICE/cpp/build/eigen/src/3.2.8.tar.bz2'
+     timeout='none'
+Cloning into 'googletest'...
+-- [download 1% complete]
+-- [download 3% complete]
+-- [download 4% complete]
+-- [download 6% complete]
+-- [download 7% complete]
+-- [download 8% complete]
+-- [download 10% complete]
+-- [download 11% complete]
+-- [download 13% complete]
+-- [download 14% complete]
+-- [download 15% complete]
+-- [download 17% complete]
+-- [download 18% complete]
+-- [download 20% complete]
+-- [download 21% complete]
+-- [download 22% complete]
+-- [download 24% complete]
+-- [download 25% complete]
+-- [download 27% complete]
+-- [download 28% complete]
+-- [download 30% complete]
+-- [download 31% complete]
+-- [download 32% complete]
+-- [download 34% complete]
+-- [download 35% complete]
+-- [download 37% complete]
+-- [download 38% complete]
+-- [download 39% complete]
+-- [download 41% complete]
+-- [download 42% complete]
+-- [download 44% complete]
+-- [download 45% complete]
+-- [download 46% complete]
+-- [download 48% complete]
+-- [download 49% complete]
+-- [download 51% complete]
+-- [download 52% complete]
+-- [download 53% complete]
+-- [download 55% complete]
+-- [download 56% complete]
+-- [download 58% complete]
+-- [download 59% complete]
+-- [download 61% complete]
+-- [download 62% complete]
+-- [download 63% complete]
+-- [download 65% complete]
+-- [download 66% complete]
+-- [download 68% complete]
+-- [download 69% complete]
+-- [download 70% complete]
+-- [download 72% complete]
+-- [download 73% complete]
+-- [download 75% complete]
+-- [download 76% complete]
+-- [download 77% complete]
+-- [download 79% complete]
+-- [download 80% complete]
+-- [download 82% complete]
+-- [download 83% complete]
+-- [download 84% complete]
+-- [download 86% complete]
+-- [download 87% complete]
+-- [download 89% complete]
+-- [download 90% complete]
+-- [download 92% complete]
+-- [download 93% complete]
+-- [download 94% complete]
+-- [download 96% complete]
+-- [download 97% complete]
+-- [download 99% complete]
+-- [download 100% complete]
+-- downloading... done
+-- verifying file...
+     file='/home/jason.b/NICE/cpp/build/eigen/src/3.2.8.tar.bz2'
+-- verifying file... warning: did not verify file - no URL_HASH specified?
+-- extracting...
+     src='/home/jason.b/NICE/cpp/build/eigen/src/3.2.8.tar.bz2'
+     dst='/home/jason.b/NICE/cpp/build/eigen/src/eigen'
+-- extracting... [tar xfz]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+[ 14%] [ 17%] No update step for 'eigen'
+No patch step for 'eigen'
+[ 20%] Performing configure step for 'eigen'
+-- The C compiler identification is GNU 4.9.2
+-- The CXX compiler identification is GNU 4.9.2
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+[ 23%] [ 26%] No patch step for 'googletest'
+Performing update step for 'googletest'
+-- Detecting CXX compiler ABI info - done
+-- Performing Test standard_math_library_linked_to_automatically
+-- Performing Test standard_math_library_linked_to_automatically - Success
+-- Standard libraries to link to explicitly: none
+-- Performing Test COMPILER_SUPPORT_WERROR
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+-- Performing Test COMPILER_SUPPORT_WERROR - Success
+-- Performing Test COMPILER_SUPPORT_pedantic
+[ 29%] Performing configure step for 'googletest'
+-- Performing Test COMPILER_SUPPORT_pedantic - Success
+-- Performing Test COMPILER_SUPPORT_Wall
+-- The C compiler identification is GNU 4.9.2
+-- The CXX compiler identification is GNU 4.9.2
+-- Check for working C compiler: /usr/bin/cc
+-- Performing Test COMPILER_SUPPORT_Wall - Success
+-- Performing Test COMPILER_SUPPORT_Wextra
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Performing Test COMPILER_SUPPORT_Wextra - Success
+-- Performing Test COMPILER_SUPPORT_Wundef
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Performing Test COMPILER_SUPPORT_Wundef - Success
+-- Performing Test COMPILER_SUPPORT_Wcastalign
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Performing Test COMPILER_SUPPORT_Wcastalign - Success
+-- Performing Test COMPILER_SUPPORT_Wcharsubscripts
+-- Detecting CXX compiler ABI info - done
+-- Performing Test COMPILER_SUPPORT_Wcharsubscripts - Success
+-- Performing Test COMPILER_SUPPORT_Wnonvirtualdtor
+-- Found PythonInterp: /usr/bin/python (found version "2.7.6") 
+-- Looking for include file pthread.h
+-- Performing Test COMPILER_SUPPORT_Wnonvirtualdtor - Success
+-- Performing Test COMPILER_SUPPORT_Wunusedlocaltypedefs
+-- Looking for include file pthread.h - found
+-- Looking for pthread_create
+-- Performing Test COMPILER_SUPPORT_Wunusedlocaltypedefs - Success
+-- Performing Test COMPILER_SUPPORT_Wpointerarith
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Performing Test COMPILER_SUPPORT_Wpointerarith - Success
+-- Performing Test COMPILER_SUPPORT_Wwritestrings
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_ARCHIVE_OUTPUT_DIRECTORY_DEBUG
+    CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE
+
+
+-- Build files have been written to: /home/jason.b/NICE/cpp/build/gtest/src/googletest-build
+[ 32%] Performing build step for 'googletest'
+-- Performing Test COMPILER_SUPPORT_Wwritestrings - Success
+-- Performing Test COMPILER_SUPPORT_Wformatsecurity
+Scanning dependencies of target gtest
+Scanning dependencies of target gmock
+Scanning dependencies of target gmock_main
+[ 14%] [ 28%] [ 42%] Building CXX object googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+Building CXX object googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o
+Building CXX object googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o
+-- Performing Test COMPILER_SUPPORT_Wformatsecurity - Success
+-- Performing Test COMPILER_SUPPORT_Wnopsabi
+-- Performing Test COMPILER_SUPPORT_Wnopsabi - Success
+-- Performing Test COMPILER_SUPPORT_Wnovariadicmacros
+-- Performing Test COMPILER_SUPPORT_Wnovariadicmacros - Success
+-- Performing Test COMPILER_SUPPORT_Wnolonglong
+-- Performing Test COMPILER_SUPPORT_Wnolonglong - Success
+-- Performing Test COMPILER_SUPPORT_fnochecknew
+-- Performing Test COMPILER_SUPPORT_fnochecknew - Success
+-- Performing Test COMPILER_SUPPORT_fnocommon
+-- Performing Test COMPILER_SUPPORT_fnocommon - Success
+-- Performing Test COMPILER_SUPPORT_fstrictaliasing
+-- Performing Test COMPILER_SUPPORT_fstrictaliasing - Success
+-- Performing Test COMPILER_SUPPORT_wd981
+-- Performing Test COMPILER_SUPPORT_wd981 - Failed
+-- Performing Test COMPILER_SUPPORT_wd2304
+-- Performing Test COMPILER_SUPPORT_wd2304 - Failed
+-- Performing Test COMPILER_SUPPORT_STRICTANSI
+-- Performing Test COMPILER_SUPPORT_STRICTANSI - Failed
+-- Performing Test COMPILER_SUPPORT_Qunusedarguments
+-- Performing Test COMPILER_SUPPORT_Qunusedarguments - Failed
+-- Performing Test COMPILER_SUPPORT_ansi
+-- Performing Test COMPILER_SUPPORT_ansi - Success
+-- Performing Test COMPILER_SUPPORT_OPENMP
+-- Performing Test COMPILER_SUPPORT_OPENMP - Success
+qmake: could not exec '/usr/lib/x86_64-linux-gnu/qt4/bin/qmake': No such file or directory
+-- Found unsuitable Qt version "" from NOTFOUND
+-- /home/jason.b/NICE/cpp/build/eigen/src/eigen-build/test
+-- Could NOT find CHOLMOD (missing:  CHOLMOD_INCLUDES CHOLMOD_LIBRARIES) 
+-- Could NOT find UMFPACK (missing:  UMFPACK_INCLUDES UMFPACK_LIBRARIES) 
+-- Found SUPERLU: /usr/include/superlu  
+-- Could NOT find PASTIX (missing:  PASTIX_INCLUDES PASTIX_LIBRARIES) 
+-- Could NOT find SCOTCH (missing:  SCOTCH_INCLUDES SCOTCH_LIBRARIES) 
+-- Could NOT find METIS (missing:  METIS_INCLUDES METIS_LIBRARIES) 
+-- Could NOT find SPQR (missing:  SPQR_INCLUDES SPQR_LIBRARIES) 
+qmake: could not exec '/usr/lib/x86_64-linux-gnu/qt4/bin/qmake': No such file or directory
+-- Found unsuitable Qt version "" from NOTFOUND
+-- The Fortran compiler identification is GNU
+-- Check for working Fortran compiler: /usr/bin/gfortran
+-- Check for working Fortran compiler: /usr/bin/gfortran  -- works
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Checking whether /usr/bin/gfortran supports Fortran 90
+-- Checking whether /usr/bin/gfortran supports Fortran 90 -- yes
+Linking CXX static library libgtest.a
+[ 57%] Building CXX object googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[ 57%] Built target gtest
+Scanning dependencies of target gtest_main
+[ 71%] Building CXX object googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[ 85%] Building CXX object googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o
+-- Could NOT find GOOGLEHASH (missing:  GOOGLEHASH_INCLUDES GOOGLEHASH_COMPILE) 
+-- Could NOT find ADOLC (missing:  ADOLC_INCLUDES ADOLC_LIBRARIES) 
+-- Could NOT find MPFR (missing:  MPFR_INCLUDES MPFR_LIBRARIES MPFR_VERSION_OK) (Required is at least version "2.3.0")
+-- Could NOT find GMP (missing:  GMP_INCLUDES GMP_LIBRARIES) 
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.26") 
+-- Could NOT find FFTW (missing:  FFTW_INCLUDES FFTW_LIBRARIES) 
+-- Could NOT find OpenGL (missing:  OPENGL_gl_LIBRARY) 
+-- Found GLUT: /usr/local/lib/libglut.a  
+-- Found Glew: /usr/lib/x86_64-linux-gnu/libGLEW.so
+qmake: could not exec '/usr/lib/x86_64-linux-gnu/qt4/bin/qmake': No such file or directory
+-- Found unsuitable Qt version "" from NOTFOUND
+-- Qt4 not found, so disabling the mandelbrot and opengl demos
+-- Could NOT find CHOLMOD (missing:  CHOLMOD_INCLUDES CHOLMOD_LIBRARIES) 
+-- Could NOT find UMFPACK (missing:  UMFPACK_INCLUDES UMFPACK_LIBRARIES) 
+-- Could NOT find PASTIX (missing:  PASTIX_INCLUDES PASTIX_LIBRARIES) 
+-- Could NOT find SCOTCH (missing:  SCOTCH_INCLUDES SCOTCH_LIBRARIES) 
+-- Could NOT find METIS (missing:  METIS_INCLUDES METIS_LIBRARIES) 
+-- ************************************************************
+-- ***    Eigen's unit tests configuration summary          ***
+-- ************************************************************
+-- 
+-- Build type:        Release
+-- Build site:        nucar-fusion
+-- Build string:      linux-3.13.0-45-generic-_-4.9.2-sse2-64bit
+-- Enabled backends:  SuperLU, 
+-- Disabled backends: Cholmod,  UmfPack,  PaStiX,  METIS,  Qt4 support,  GoogleHash,  Adolc,  MPFR C++,  fftw,  OpenGL, 
+-- Default order:     Column-major
+-- Maximal matrix/vector size: 320
+-- SSE2:              Using architecture defaults
+-- SSE3:              Using architecture defaults
+-- SSSE3:             Using architecture defaults
+-- SSE4.1:            Using architecture defaults
+-- SSE4.2:            Using architecture defaults
+-- Altivec:           Using architecture defaults
+-- ARM NEON:          Using architecture defaults
+-- 
+CXX:               /usr/bin/c++
+ CXX_VERSION:       c++ (Ubuntu 4.9.2-0ubuntu1~14.04) 4.9.2
+ CXX_FLAGS:          -fexceptions -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -ansi  -g2
+ Sparse lib flags:   ;/usr/lib/libsuperlu.so;eigen_blas
+
+-- ************************************************************
+-- 
+-- Configured Eigen 3.2.8
+-- 
+-- Some things you can do now:
+-- --------------+--------------------------------------------------------------
+-- Command       |   Description
+-- --------------+--------------------------------------------------------------
+-- make install  | Install Eigen. Headers will be installed to:
+--               |     <CMAKE_INSTALL_PREFIX>/<INCLUDE_INSTALL_DIR>
+--               |   Using the following values:
+--               |     CMAKE_INSTALL_PREFIX: /usr/local
+--               |     INCLUDE_INSTALL_DIR:  include/eigen3
+--               |   Change the install location of Eigen headers using:
+--               |     cmake . -DCMAKE_INSTALL_PREFIX=yourprefix
+--               |   Or:
+--               |     cmake . -DINCLUDE_INSTALL_DIR=yourdir
+-- make doc      | Generate the API documentation, requires Doxygen & LaTeX
+-- make check    | Build and run the unit-tests. Read this page:
+--               |   http://eigen.tuxfamily.org/index.php?title=Tests
+-- make blas     | Build BLAS library (not the same thing as Eigen)
+-- --------------+--------------------------------------------------------------
+-- 
+-- Configuring done
+Linking CXX static library libgtest_main.a
+[ 85%] Built target gtest_main
+[100%] Building CXX object googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+Linking CXX static library libgmock.a
+-- Generating done
+Linking CXX static library libgmock_main.a
+[100%] Built target gmock
+[100%] Built target gmock_main
+-- Build files have been written to: /home/jason.b/NICE/cpp/build/eigen/src/eigen-build
+[ 35%] No install step for 'googletest'
+[ 38%] Completed 'googletest'
+[ 41%] Performing build step for 'eigen'
+[ 41%] Built target googletest
+[ 44%] No install step for 'eigen'
+[ 47%] Completed 'eigen'
+[ 47%] Built target eigen
+Scanning dependencies of target Nice
+[ 50%] [ 52%] Building CXX object CMakeFiles/Nice.dir/src/nice_main.cc.o
+Building CXX object CMakeFiles/Nice.dir/src/util/gpu_util.cc.o
+Linking CXX shared library libNice.so
+[ 52%] Built target Nice
+Scanning dependencies of target Nice_test
+[ 55%] [ 58%] [ 61%] Building CXX object CMakeFiles/Nice_test.dir/test/cpu_operations_test/frobenius_norm_test.cc.o
+[ 64%] Building CXX object CMakeFiles/Nice_test.dir/test/cpu_operations_test/rank_test.cc.o
+Building CXX object CMakeFiles/Nice_test.dir/test/cpu_operations_test/inverse_test.cc.o
+Building CXX object CMakeFiles/Nice_test.dir/test/cpu_operations_test/add_test.cc.o
+[ 67%] Building CXX object CMakeFiles/Nice_test.dir/test/cpu_operations_test/matrix_subtract_test.cc.o
+[ 70%] Building CXX object CMakeFiles/Nice_test.dir/test/cpu_operations_test/logical_not_test.cc.o
+[ 73%] Building CXX object CMakeFiles/Nice_test.dir/test/cpu_operations_test/transpose_test.cc.o
+[ 76%] Building CXX object CMakeFiles/Nice_test.dir/test/cpu_operations_test/multiply_test.cc.o
+[ 79%] Building CXX object CMakeFiles/Nice_test.dir/test/cpu_operations_test/outer_product_test.cc.o
+[ 82%] Building CXX object CMakeFiles/Nice_test.dir/test/cpu_operations_test/logical_or_test.cc.o
+[ 85%] Building CXX object CMakeFiles/Nice_test.dir/test/cpu_operations_test/logical_and_test.cc.o
+[ 88%] Building CXX object CMakeFiles/Nice_test.dir/test/cpu_operations_test/trace_test.cc.o
+[ 91%] Building CXX object CMakeFiles/Nice_test.dir/test/cpu_operations_test/dot_product_test.cc.o
+[ 94%] Building CXX object CMakeFiles/Nice_test.dir/test/util_test/from_file_test.cc.o
+[ 97%] Building CXX object CMakeFiles/Nice_test.dir/test/cpu_solver_test/cpu_svd_test.cc.o
+[100%] Building CXX object CMakeFiles/Nice_test.dir/test/model_test/kmeans_test.cc.o
+Linking CXX executable Nice_test
+[100%] Built target Nice_test

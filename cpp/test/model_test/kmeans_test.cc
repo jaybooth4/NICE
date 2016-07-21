@@ -31,12 +31,23 @@
  
 #include <iostream>
 #include <cmath>
+#include <string>
+#include <string.h>
 #include "Eigen/Dense"
 #include "gtest/gtest.h"
 #include "include/matrix.h"
 #include "include/vector.h"
 #include "include/kmeans.h"
 
+class KmeansTest : public ::testing::Test {
+public:
+  Nice::Vector<int> LabelsKmeans;
+  string inFile = "data_k4_p10_d4_c1.txt";
+  Nice::Kmeans model = Nice::Kmeans(4, 4, 40, 100, inFile);
+  void GetLabel() {
+    LabelsKmeans = model.FitPredict();
+  }
+};
 
 #define EXPECT_MATRIX_EQ(a, ref)\
     EXPECT_EQ(a.rows(), ref.rows());\
@@ -45,17 +56,10 @@
       for (int j = 0; j < a.cols(); j++)\
         EXPECT_NEAR(double(a(i, j)), double(ref(i, j)), 0.0001);\
 
-class KmeansTest : public ::testing::Test {
-public:
-  Nice::Vector<int> LabelsTruth;
-  Nice::Vector<int> LabelsKmeans;
-  void GetLabel() {
-    LabelsKmeans = Nice::Kmeans(4, 4, 40, 100, "data_k4_p10_d4_c1.txt");
-  }
-}
-
 TEST_F(KmeansTest, SimpleTest) {
-  this->LabelsTruth = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
   this->GetLabel();
+  Eigen::VectorXi LabelsTruth(40);
+  LabelsTruth << 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
   EXPECT_MATRIX_EQ(LabelsTruth, LabelsKmeans);
 }
+

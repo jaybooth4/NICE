@@ -45,15 +45,15 @@
 
 #include <iostream>
 #include <fstream>
-#include <KCtree.h>
-#include <KCutil.h>
-#include <KMcenters.h>
-#include <KMdata.h>
-#include <KMeans.h>
-#include <KMfilterCenters.h>
-#include <KMlocal.h>
-#include <KMrand.h>
-#include <KMterm.h>
+#include "KCtree.h"
+#include "KCutil.h"
+#include "KMcenters.h"
+#include "KMdata.h"
+#include "KMeans.h"
+#include "KMfilterCenters.h"
+#include "KMlocal.h"
+#include "KMrand.h"
+#include "KMterm.h"
 #include "include/model.h"
 #include "include/matrix.h"
 
@@ -73,12 +73,6 @@
 //
 
 //----------------------------------------------------------------------
-//  Global parameters (some are set in getArgs())
-//----------------------------------------------------------------------
-
-
-
-//----------------------------------------------------------------------
 //  Termination conditions
 //  These are explained in the file KMterm.h and KMlocal.h.  Unless
 //  you are into fine tuning, don't worry about changing these.
@@ -86,7 +80,7 @@
 
 namespace Nice{
 
-class Kmeans : public Model
+class Kmeans
 {
  private:
   int k;
@@ -95,18 +89,17 @@ class Kmeans : public Model
   int stages;
   KMterm term;
   istream* dataIn;   // input data stream
-  KMdata dataPts;    // allocate data storage
-  string fileLocation;
+  //KMdata dataPts;    // allocate data storage
+  std::string fileLocation;
 
  public:
 
- Kmeans(int numClusters, int dimensions, int maximumPoints, int numStages, string inputFile) {
+ Kmeans(int numClusters, int dimensions, int maximumPoints, int numStages, std::string inputFile) {
 
   k   = numClusters;    // number of centers
   dim   = dimensions;    // dimension
   maxPts    = maximumPoints;    // max number of data points
   stages    = numStages;   // number of stages
-  dataPts(dim, maxPts);    // allocate data storage
   fileLocation = inputFile;
   dataIn = NULL;   // input data stream
 
@@ -127,8 +120,10 @@ class Kmeans : public Model
 
  }
 
- void GetData(string fileLocation) {
 
+ Vector <int> FitPredict() {
+
+  KMdata dataPts{dim, maxPts};    // allocate data storage
   int nPts = 0;       // actual number of points
   static ifstream dataStream;     // data file stream
   dataStream.open(fileLocation, ios::in);
@@ -143,7 +138,7 @@ class Kmeans : public Model
     bool readPt = true;
   while (nPts < maxPts && readPt) {
     for (int d = 0; d < dim; d++) {
-    if(!(*dataIn >> dataPts[nPts][i]))
+    if(!(*dataIn >> dataPts[nPts][d]))
       readPt = false;
     }
     readPt = true;
@@ -163,19 +158,14 @@ class Kmeans : public Model
     std::cout << ")\n";
  }
 
-Vector <int> FitPredict() {
-
-  GetData(fileLocation);
-
   dataPts.setNPts(nPts);      // set actual number of pts
   dataPts.buildKcTree();      // build filtering structure
 
-  KMfilterCenters ctrs(k, dataPts);   // allocate centers
+  KMfilterCenters ctrs{k, dataPts};   // allocate centers
 
   cout << "\nExecuting Clustering Algorithm: Hybrid\n";
-  KMlocalHybrid kmHybrid(ctrs, term);   // Hybrid heuristic
+  KMlocalHybrid kmHybrid{ctrs, term};   // Hybrid heuristic
   ctrs = kmHybrid.execute();
-  printSummary(kmHybrid, dataPts, ctrs);
 
    cout << "Number of stages: " << kmHybrid.getTotalStages() << "\n";
    cout << "Average distortion: " <<
@@ -191,7 +181,7 @@ Vector <int> FitPredict() {
 
    Vector <int> assignments;
    for (int i = 0; i < dataPts.getNPts(); i++) {
-     assignments[i] = closeCtr[i]
+     assignments[i] = closeCtr[i];
    }
    for (int i = 0; i < dataPts.getNPts(); i++) {
         std::cout << assignments[i] << "\n";
@@ -204,3 +194,7 @@ Vector <int> FitPredict() {
   kmExit(0);
  }
 };
+
+} // Namespace Nice
+#endif // CPP_INCLUDE_KMEANS_H
+
