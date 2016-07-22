@@ -75,8 +75,16 @@ class Kmeans {
   KMdata* dataPts;    // allocate data storage
   Nice::Matrix<T>* m;
   KMterm* term;
-  //KMcenterArray ctrsData;
   KMfilterCenters* ctrsData;
+  Nice::Vector<int>* assignments;
+
+  void assignData() {
+    for (int pt = 0; pt < numPts; ++pt) {
+      for (int d = 0; d < dim; ++d) {
+        (*dataPts)[pt][d] = m->coeffRef(pt, d);
+      }
+    }
+  }
 
  public:
 
@@ -87,11 +95,7 @@ class Kmeans {
     stages = numStages;   // number of stages
     m = &inMatrix;
     dataPts = new KMdata(dim, numPts);    // allocate data storage
-    for (int pt = 0; pt < numPts; ++pt) {
-      for (int d = 0; d < dim; ++d) {
-        (*dataPts)[pt][d] = m->coeffRef(pt, d);
-      }
-    }
+    assignData();
     ctrsData = NULL;
     //
     // std::cout << "Data Points:\n";     // echo data points
@@ -103,12 +107,12 @@ class Kmeans {
     //   std::cout << ")\n";
     //}
     term = new KMterm(100, 0, 0, 0,   // run for 100 stages
-                    0.10,     // min consec RDL
-                    0.10,     // min accum RDL
-                    3,      // max run stages
-                    0.50,     // init. prob. of acceptance
-                    10,     // temp. run length
-                    0.95);      // temp. reduction factor
+                      0.10,     // min consec RDL
+                      0.10,     // min accum RDL
+                      3,      // max run stages
+                      0.50,     // init. prob. of acceptance
+                      10,     // temp. run length
+                      0.95);      // temp. reduction factor
 
     term->setAbsMaxTotStage(stages);   // set number of stages
 
@@ -116,50 +120,56 @@ class Kmeans {
 
   void Fit() {
 
-       dataPts->setNPts(numPts);      // set number of pts
-       dataPts->buildKcTree();      // build filtering structure
-       KMfilterCenters ctrs(k, (*dataPts));   // allocate centers
+    dataPts->setNPts(numPts);      // set number of pts
+    dataPts->buildKcTree();      // build filtering structure
+    KMfilterCenters ctrs(k, (*dataPts));   // allocate centers
 
-   //  cout << "\nExecuting Clustering Algorithm: Hybrid\n";
-       KMlocalHybrid kmHybrid (ctrs, (*term));   // Hybrid heuristic
-       ctrs = kmHybrid.execute();
-       ctrsData = ctrs.getCtrPts();
-  };
+    //  cout << "\nExecuting Clustering Algorithm: Hybrid\n";
+    KMlocalHybrid kmHybrid(ctrs, (*term));   // Hybrid heuristic
+    ctrs = kmHybrid.execute();
+    ctrsData = ctrs.getCtrPts();
+  }
 
-  Nice::Vector<int> Predict(Nice::Matrix<T> &m) {
+  Nice::Vector<int> Predict(Nice::Matrix<T> &inMatrix) {
     if (ctrsData == NULL) {
       std::cerr << "ERROR: NO CENTERS CALCULATED\n";
-      return(1);
+      return (1);
     }
 
-      KMctrIdxArray closeCtr = new KMctrIdx[dataPts->getNPts()];
+    numPts = inMatrix.rows();
+    dim = inMatrix.cols();
+    m = &inMatrix;
+    dataPts = new KMdata(dim, numPts);    // allocate data storage
+    assignData();
 
-      double* sqDist = new double[dataPts->getNPts()];
+    KMctrIdxArray closeCtr = new KMctrIdx[dataPts->getNPts()];
 
-      ctrsData->getAssignments(closeCtr, sqDist);
+    double* sqDist = new double[dataPts->getNPts()];
 
-      Nice::Vector<int> assignments;
-      assignments.setZero(dataPts->getNPts());
+    ctrsData->getAssignments(closeCtr, sqDist);
 
-      for (int i = 0; i < dataPts->getNPts(); i++) {
-        assignments(i) = closeCtr[i];
-        //   std::cout << closeCtr[i] << std::endl;
-      }
+    assignments = new Nice::Vector<int>;
+       assignments->setZero(dataPts->getNPts());
 
-      delete[] closeCtr;
-      return assignments;
-    }
+       for (int i = 0; i < dataPts->getNPts(); i++) {
+         (*assignments)(i) = closeCtr[i];
+         //   std::cout << closeCtr[i] << std::endl;
+       }
+
+    delete[] closeCtr;
+    return (*assignments);
+  }
 
   Nice::Vector<int> FitPredict() {
 
     dataPts->setNPts(numPts);      // set number of pts
     dataPts->buildKcTree();      // build filtering structure
-    KMfilterCenters ctrs(k, (*dataPts));   // allocate centers
+    ctrsData = new KMfilterCenters(k, (*dataPts));   // allocate centers
 
 //  cout << "\nExecuting Clustering Algorithm: Hybrid\n";
-    KMlocalHybrid kmHybrid (ctrs, (*term));   // Hybrid heuristic
-    ctrs = kmHybrid.execute();
-    ctrsData = &ctrs;
+    KMlocalHybrid kmHybrid((*ctrsData), (*term));   // Hybrid heuristic
+    (*ctrsData) = kmHybrid.execute();
+
 //    ctrsData->print();
 
 //   cout << "Number of stages: " << kmHybrid.getTotalStages() << "\n";
@@ -186,18 +196,18 @@ class Kmeans {
 
     double* sqDist = new double[dataPts->getNPts()];
 
-    ctrs.getAssignments(closeCtr, sqDist);
+    (*ctrsData).getAssignments(closeCtr, sqDist);
 
-    Nice::Vector<int> assignments;
-    assignments.setZero(dataPts->getNPts());
+    assignments = new Nice::Vector<int>;
+    assignments->setZero(dataPts->getNPts());
 
     for (int i = 0; i < dataPts->getNPts(); i++) {
-      assignments(i) = closeCtr[i];
+      (*assignments)(i) = closeCtr[i];
       //   std::cout << closeCtr[i] << std::endl;
     }
 
     delete[] closeCtr;
-    return assignments;
+    return (*assignments);
   }
 
   ~Kmeans() {
