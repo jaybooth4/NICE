@@ -75,7 +75,8 @@ class Kmeans {
   KMdata* dataPts;    // allocate data storage
   Nice::Matrix<T>* m;
   KMterm* term;
-  KMfilterCenters* ctrs;
+  //KMcenterArray ctrsData;
+  KMfilterCenters* ctrsData;
 
  public:
 
@@ -91,7 +92,7 @@ class Kmeans {
         (*dataPts)[pt][d] = m->coeffRef(pt, d);
       }
     }
-
+    ctrsData = NULL;
     //
     // std::cout << "Data Points:\n";     // echo data points
     // for (int i = 0; i < numPts; i++) {
@@ -113,23 +114,70 @@ class Kmeans {
 
   }
 
+  void Fit() {
+
+       dataPts->setNPts(numPts);      // set number of pts
+       dataPts->buildKcTree();      // build filtering structure
+       KMfilterCenters ctrs(k, (*dataPts));   // allocate centers
+
+   //  cout << "\nExecuting Clustering Algorithm: Hybrid\n";
+       KMlocalHybrid kmHybrid (ctrs, (*term));   // Hybrid heuristic
+       ctrs = kmHybrid.execute();
+       ctrsData = ctrs.getCtrPts();
+  };
+
+  Nice::Vector<int> Predict(Nice::Matrix<T> &m) {
+    if (ctrsData == NULL) {
+      std::cerr << "ERROR: NO CENTERS CALCULATED\n";
+      return(1);
+    }
+
+      KMctrIdxArray closeCtr = new KMctrIdx[dataPts->getNPts()];
+
+      double* sqDist = new double[dataPts->getNPts()];
+
+      ctrsData->getAssignments(closeCtr, sqDist);
+
+      Nice::Vector<int> assignments;
+      assignments.setZero(dataPts->getNPts());
+
+      for (int i = 0; i < dataPts->getNPts(); i++) {
+        assignments(i) = closeCtr[i];
+        //   std::cout << closeCtr[i] << std::endl;
+      }
+
+      delete[] closeCtr;
+      return assignments;
+    }
+
   Nice::Vector<int> FitPredict() {
 
     dataPts->setNPts(numPts);      // set number of pts
     dataPts->buildKcTree();      // build filtering structure
-    ctrs = new KMfilterCenters(k, (*dataPts));   // allocate centers
+    KMfilterCenters ctrs(k, (*dataPts));   // allocate centers
 
 //  cout << "\nExecuting Clustering Algorithm: Hybrid\n";
-    KMlocalHybrid kmHybrid ((*ctrs), term);   // Hybrid heuristic
-    (*ctrs) = kmHybrid.execute();
+    KMlocalHybrid kmHybrid (ctrs, (*term));   // Hybrid heuristic
+    ctrs = kmHybrid.execute();
+    ctrsData = &ctrs;
+//    ctrsData->print();
 
 //   cout << "Number of stages: " << kmHybrid.getTotalStages() << "\n";
 //   cout << "Average distortion: " <<
-//   ctrs->getDist(false)/double(ctrs->getNPts()) << "\n";
+//   centerObj.lse)/double(centerObj.getNPts()) << "\n";
 
-    // print final center points
+//    std::cout << ctrs2[0][0] << std::endl;
+//    std::cout << ctrs2[0][1] << std::endl;
+//    std::cout << ctrs2[0][2] << std::endl;
+//    std::cout << ctrs2[0][3] << std::endl;
+//    std::cout << ctrs2[1][0] << std::endl;
+//    std::cout << ctrs2[1][1] << std::endl;
+//    std::cout << ctrs2[1][2] << std::endl;
+//    std::cout << ctrs2[1][3] << std::endl;
+
+//    // print final center points
 //   cout << "(Final Center Points:\n";
-//   ctrs->print();
+//   ctrs.print();
 //   cout << ")\n";
 
     // get/print final cluster assignments
@@ -138,7 +186,7 @@ class Kmeans {
 
     double* sqDist = new double[dataPts->getNPts()];
 
-    ctrs->getAssignments(closeCtr, sqDist);
+    ctrs.getAssignments(closeCtr, sqDist);
 
     Nice::Vector<int> assignments;
     assignments.setZero(dataPts->getNPts());
