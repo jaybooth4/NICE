@@ -27,6 +27,7 @@ set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR})
 include_directories(${EIGEN_INCLUDE_DIRS})
 include_directories(${KMLOCAL_INCLUDE_DIRS})
 include_directories(${COMMON_INCLUDES}) 
+
 #message(STATUS "Include Directories: ")
 #get_property(dirs DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY INCLUDE_DIRECTORIES)
 #foreach(dir ${dirs})

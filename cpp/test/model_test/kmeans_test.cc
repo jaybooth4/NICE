@@ -38,12 +38,14 @@
 #include "include/matrix.h"
 #include "include/vector.h"
 #include "include/kmeans.h"
+#include "include/util.h"
 
 class KmeansTest : public ::testing::Test {
 public:
   Nice::Vector<int> LabelsKmeans;
-  string inFile = "data_k4_p10_d4_c1.txt";
-  Nice::Kmeans model = Nice::Kmeans(4, 4, 40, 100, inFile);
+  std::string inputFile = "data_k4_p10_d4_c1.txt";
+  Nice::Matrix<double> testMatrix= Nice::util::FromFile<double>(inputFile, 40, 4);
+  Nice::Kmeans<double> model = Nice::Kmeans<double>(4, 100, testMatrix);
   void GetLabel() {
     LabelsKmeans = model.FitPredict();
   }
@@ -59,7 +61,7 @@ public:
 TEST_F(KmeansTest, SimpleTest) {
   this->GetLabel();
   Eigen::VectorXi LabelsTruth(40);
-  LabelsTruth << 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3;
+  LabelsTruth << 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3;
   EXPECT_MATRIX_EQ(LabelsTruth, LabelsKmeans);
 }
 
