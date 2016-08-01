@@ -206,6 +206,12 @@ class Kmeans {
       //   std::cout << closeCtr[i] << std::endl;
     }
 
+    std::ofstream outfile;
+    outfile.open("output.txt");
+    outfile << *assignments;
+    outfile.close();
+
+
     delete[] closeCtr;
     return (*assignments);
   }
