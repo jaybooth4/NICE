@@ -67,14 +67,16 @@ print m_u_old
 #########################
 
 plt.figure(1)
-plt.scatter(RandX,RandY,c=ID,edgecolor='k',s=75)
+plt.scatter(RandX,RandY,c=ID,edgecolor='k',s=45)
 plt.hold(True)
 plt.scatter(m_u[:,0],m_u[:,1],marker='*',color='r',edgecolor='b' , s=500, label='centroids')
 plt.grid(True)
-plt.title('K-Means Clustering',fontsize=70)
+plt.title('K-Means Clustering',fontsize=30)
 
 plt.xlabel('X-axis',fontsize=25)
 plt.ylabel('Y-axis',fontsize=25)
+plt.yticks([0,50,100,150,200,250,300,350], fontsize = 21)
+plt.xticks([200,250,300,350,400,450], fontsize = 21)
 plt.legend()
 
 plt.hold(False)
