@@ -207,7 +207,7 @@ class Kmeans {
     }
 
     std::ofstream outfile;
-    outfile.open("output.txt");
+    outfile.open("cluster_results.txt");
     outfile << *assignments;
     outfile.close();
 

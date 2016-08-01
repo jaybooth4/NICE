@@ -43,9 +43,9 @@
 class KmeansTest : public ::testing::Test {
 public:
   Nice::Vector<int> LabelsKmeans;
-  std::string inputFile = "data_k4_p10_d4_c1.txt";
-  Nice::Matrix<double> testMatrix= Nice::util::FromFile<double>(inputFile, 40, 4);
-  Nice::Kmeans<double> model = Nice::Kmeans<double>(4, 100, testMatrix);
+  std::string inputFile = "FormattedData.txt";
+  Nice::Matrix<double> testMatrix= Nice::util::FromFile<double>(inputFile, 150, 4);
+  Nice::Kmeans<double> model = Nice::Kmeans<double>(4, 150, testMatrix);
   void GetLabel() {
     LabelsKmeans = model.FitPredict();
   }
