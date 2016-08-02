@@ -170,7 +170,7 @@ class Kmeans {
     KMlocalHybrid kmHybrid((*ctrsData), (*term));   // Hybrid heuristic
     (*ctrsData) = kmHybrid.execute();
 
-//    ctrsData->print();
+    ctrsData->print();
 
 //   cout << "Number of stages: " << kmHybrid.getTotalStages() << "\n";
 //   cout << "Average distortion: " <<
