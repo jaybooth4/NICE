@@ -29,19 +29,42 @@
 // All tests are made using a templated test fixture which attempts
 // Integer, float, and double data types
 
+#include <string.h>
+#include <cmath>
 #include <iostream>
+#include <string>
 #include "Eigen/Dense"
 #include "gtest/gtest.h"
 #include "include/matrix.h"
-#include "include/vector.h"
-#include "include/kmeans.h"
 #include "include/util.h"
+#include "include/kmeans.h"
 
 class KmeansTest : public ::testing::Test {
  public:
-  // Place holder for actual kmeans test
+  /*
+   Nice::Vector<int>* LabelsKmeans;
+   std::string inputFile = "data_k4_p10_d4_c1.txt";
+   Nice::Matrix<double> testMatrix= Nice::util::FromFile<double>(inputFile, 40, 4);
+   Nice::Kmeans<double> model = Nice::Kmeans<double> (4, 40, testMatrix);
+   void GetLabel() {
+   LabelsKmeans = model.FitPredict();
+   }*/
 };
 
+/*
+ #define EXPECT_MATRIX_EQ(a, ref)\
+    EXPECT_EQ(a.rows(), ref.rows());\
+    EXPECT_EQ(a.cols(), ref.cols());\
+    for (int i = 0; i < a.rows(); i++)\
+      for (int j = 0; j < a.cols(); j++)\
+        EXPECT_NEAR(double(a(i, j)), double(ref(i, j)), 0.0001);\
+*/
+
 TEST_F(KmeansTest, SimpleTest) {
-  EXPECT_EQ(4, 2 + 2);
+  /*this->GetLabel();
+   Eigen::VectorXi LabelsTruth(40);
+   LabelsTruth << 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3;
+   EXPECT_MATRIX_EQ(LabelsTruth, (*LabelsKmeans));
+   */
+  EXPECT_EQ(2 + 2, 4);
 }

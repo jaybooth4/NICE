@@ -43,10 +43,10 @@
 #define CPP_INCLUDE_KMEANS_H_
 
 #include <string.h>
-#include <cstdlib>      // C standard includes
+#include <cstdlib>
 #include <cstring>
-#include <iostream>     // C++ I/O
-#include <string>     // C++ strings
+#include <iostream>
+#include <string>
 #include <fstream>
 #include "KCtree.h"
 #include "KCutil.h"
@@ -65,94 +65,89 @@ namespace Nice {
 template<typename T>
 class Kmeans {
  private:
-  int k;
-  int dim;
-  int numPts;
-  int stages;
-  KMdata* dataPts;    // allocate data storage
-  Nice::Matrix<T>* m;
-  KMterm* term;
-  KMfilterCenters* ctrsData;
-  Nice::Vector<int>* assignments;
-
-  /// This is a private function that assigns data to the KMdata member object
-  ///
-  void assignData() {
-    for (int pt = 0; pt < numPts; ++pt) {
-      for (int d = 0; d < dim; ++d) {
-        (*dataPts)[pt][d] = m->coeffRef(pt, d);
-      }
-    }
-  }
+  int k_;
+  int dims_;
+  int num_pts_;
+  KMfilterCenters* ctrs_data_;
+  int stages_;
+  KMterm* km_specs_;
+  KMdata* data_pts_;    // allocate data storage
 
  public:
   /// This is a constructor that assigns values to member variables to a
   /// Kmeans object
   ///
-  /// \param numClusters
+  /// \param num_clusters
   /// Number of clusters
-  /// \param numStages
+  /// \param num_stages
   /// Number of stages used in Hybrid algorithm
-  /// \param inMatrix
+  /// \param in_matrix
   /// Input matrix passed by reference
-  Kmeans(int numClusters, int numStages, const Nice::Matrix<T> &inMatrix) {
-    k = numClusters;    // number of centers
-    dim = inMatrix.cols();    // dimension
-    numPts = inMatrix.rows();    // max number of data points
-    stages = numStages;   // number of stages
-    m = &inMatrix;
-    dataPts = new KMdata(dim, numPts);    // allocate data storage
-    assignData();
-    ctrsData = NULL;
-    term = new KMterm(100, 0, 0, 0,   // run for 100 stages
-                      0.10,     // min consec RDL
-                      0.10,     // min accum RDL
-                      3,      // max run stages
-                      0.50,     // init. prob. of acceptance
-                      10,     // temp. run length
-                      0.95);      // temp. reduction factor
-    term->setAbsMaxTotStage(stages);   // set number of stages
+  Kmeans(int num_clusters, int num_stages, const Nice::Matrix<T> &in_matrix) {
+    k_ = num_clusters;    // number of centers
+    dims_ = in_matrix.cols();    // dimension
+    num_pts_ = in_matrix.rows();    // max number of data points
+    stages_ = num_stages;   // number of stages
+    ctrs_data_ = NULL;
+    km_specs_ = new KMterm(100, 0, 0, 0,   // run for 100 stages
+                           0.10,     // min consec RDL
+                           0.10,     // min accum RDL
+                           3,      // max run stages
+                           0.50,     // init. prob. of acceptance
+                           10,     // temp. run length
+                           0.95);      // temp. reduction factor
+    km_specs_->setAbsMaxTotStage(stages_);   // set number of stages
+    data_pts_ = new KMdata(dims_, num_pts_);    // allocate data storage
+    for (int pt = 0; pt < num_pts_; ++pt) {
+      for (int d = 0; d < dims_; ++d) {
+        (*data_pts_)[pt][d] = in_matrix.coeffRef(pt, d);
+      }
+    }
   }
 
   /// This function calculates the cluster centers of a given set of points
   /// And stores them in a private member of the Kmeans class
   void Fit() {
-    dataPts->setNPts(numPts);      // set number of pts
-    dataPts->buildKcTree();      // build filtering structure
-    KMfilterCenters ctrs(k, (*dataPts));   // allocate centers
-    KMlocalHybrid kmHybrid(ctrs, (*term));   // Hybrid heuristic
-    ctrs = kmHybrid.execute();
-    ctrsData = ctrs.getCtrPts();
+    data_pts_->setNPts(num_pts_);      // set number of pts
+    data_pts_->buildKcTree();      // build filtering structure
+    KMfilterCenters ctrs(k_, (*data_pts_));   // allocate centers
+    KMlocalHybrid km_hybrid(ctrs, (*km_specs_));   // Hybrid heuristic
+    ctrs = km_hybrid.execute();
+    ctrs_data_ = ctrs.getCtrPts();
   }
 
   /// This function calculates the cluster assignments of a given set of points
   /// based on previously calculated centers from fit() or fitPredict()
   ///
-  /// \param inMatrix
+  /// \param in_matrix
   /// Input Matrix passed by reference
   ///
   /// \return
   /// This function returns a pointer to a Vector with the cluster assignments
-  Nice::Vector<int> Predict(const Nice::Matrix<T> &inMatrix) {
-    if (ctrsData == NULL) {
+  Nice::Vector<int>* Predict(const Nice::Matrix<T> &in_matrix) {
+    if (ctrs_data_ == NULL) {
       std::cerr << "ERROR: NO CENTERS CALCULATED\n";
       return (1);
     }
-    numPts = inMatrix.rows();
-    dim = inMatrix.cols();
-    m = &inMatrix;
-    dataPts = new KMdata(dim, numPts);    // allocate data storage
-    assignData();
-    KMctrIdxArray closeCtr = new KMctrIdx[dataPts->getNPts()];
-    double* sqDist = new double[dataPts->getNPts()];
-    ctrsData->getAssignments(closeCtr, sqDist);
-    assignments = new Nice::Vector<int>;
-    assignments->setZero(dataPts->getNPts());
-    for (int i = 0; i < dataPts->getNPts(); i++) {
-      (*assignments)(i) = closeCtr[i];
+    num_pts_ = in_matrix.rows();
+    dims_ = in_matrix.cols();
+    data_pts_ = new KMdata(dims_, num_pts_);    // allocate data storage
+    for (int pt = 0; pt < num_pts_; ++pt) {
+      for (int d = 0; d < dims_; ++d) {
+        (*data_pts_)[pt][d] = in_matrix.coeffRef(pt, d);
+      }
     }
-    delete[] closeCtr;
-    return (assignments);
+    KMctrIdxArray close_ctr = new KMctrIdx[data_pts_->getNPts()];
+    double* sq_dist = new double[data_pts_->getNPts()];
+    ctrs_data_->getAssignments(close_ctr, sq_dist);
+    Nice::Vector<int>* cluster_labels_ = new Nice::Vector<int>;
+    cluster_labels_->setZero(data_pts_->getNPts());
+    for (int i = 0; i < data_pts_->getNPts(); i++) {
+      (*cluster_labels_)(i) = close_ctr[i];
+    }
+    delete[] close_ctr;
+    delete sq_dist;
+    return (cluster_labels_);
   }
 
   /// This function that calculates the K-Means centers and the cluster
@@ -160,29 +155,34 @@ class Kmeans {
   ///
   /// \return
   /// This function returns a pointer to a Vector with the cluster assignments
-  Nice::Vector<int> FitPredict() {
-    dataPts->setNPts(numPts);      // set number of pts
-    dataPts->buildKcTree();      // build filtering structure
-    ctrsData = new KMfilterCenters(k, (*dataPts));   // allocate centers
-    KMlocalHybrid kmHybrid((*ctrsData), (*term));   // Hybrid heuristic
-    (*ctrsData) = kmHybrid.execute();  // Get centers from hybrid algorithm
-    ctrsData->print();  // Print
-    KMctrIdxArray closeCtr = new KMctrIdx[dataPts->getNPts()];
-    double* sqDist = new double[dataPts->getNPts()];
-    (*ctrsData).getAssignments(closeCtr, sqDist);  // Get data assignments
-    assignments = new Nice::Vector<int>;
-    assignments->setZero(dataPts->getNPts());
-    for (int i = 0; i < dataPts->getNPts(); i++) {
-      (*assignments)(i) = closeCtr[i];  // Assign centers for return
+  Nice::Vector<int>* FitPredict() {
+    data_pts_->setNPts(num_pts_);      // set number of pts
+    data_pts_->buildKcTree();      // build filtering structure
+    ctrs_data_ = new KMfilterCenters(k_, (*data_pts_));   // allocate centers
+    KMlocalHybrid kmHybrid((*ctrs_data_), (*km_specs_));   // Hybrid heuristic
+    (*ctrs_data_) = kmHybrid.execute();  // Get centers from hybrid algorithm
+    KMctrIdxArray close_ctr = new KMctrIdx[data_pts_->getNPts()];
+    double* sq_dist = new double[data_pts_->getNPts()];
+    (*ctrs_data_).getAssignments(close_ctr, sq_dist);  // Get data assignments
+    Nice::Vector<int>* cluster_labels_ = new Nice::Vector<int>;
+    cluster_labels_->setZero(data_pts_->getNPts());
+    for (int i = 0; i < data_pts_->getNPts(); i++) {
+      (*cluster_labels_)(i) = close_ctr[i];  // Assign centers for return
     }
-    delete[] closeCtr;
-    return (assignments);
+    delete[] close_ctr;
+    delete sq_dist;
+    return (cluster_labels_);
   }
 
-  /// This is a destructor for the Kmeans class
+  /// This function that calculates the K-Means centers and the cluster
+  /// assignments for each data point.
   ///
+  /// \return
+  /// This function returns a pointer to a Vector with the cluster assignments
   ~Kmeans() {
-//  kmExit(0);
+    delete data_pts_;
+    delete km_specs_;
+    delete ctrs_data_;
   }
 };
 
