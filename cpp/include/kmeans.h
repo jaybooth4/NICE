@@ -159,8 +159,8 @@ class Kmeans {
     data_pts_->setNPts(num_pts_);      // set number of pts
     data_pts_->buildKcTree();      // build filtering structure
     ctrs_data_ = new KMfilterCenters(k_, (*data_pts_));   // allocate centers
-    KMlocalHybrid kmHybrid((*ctrs_data_), (*km_specs_));   // Hybrid heuristic
-    (*ctrs_data_) = kmHybrid.execute();  // Get centers from hybrid algorithm
+    KMlocalHybrid km_hybrid((*ctrs_data_), (*km_specs_));   // Hybrid heuristic
+    (*ctrs_data_) = km_hybrid.execute();  // Get centers from hybrid algorithm
     KMctrIdxArray close_ctr = new KMctrIdx[data_pts_->getNPts()];
     double* sq_dist = new double[data_pts_->getNPts()];
     (*ctrs_data_).getAssignments(close_ctr, sq_dist);  // Get data assignments
