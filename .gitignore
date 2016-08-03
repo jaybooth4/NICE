@@ -11,3 +11,4 @@ python
 formatData
 Notebooks
 genKmeansData.py
+.ipynb*
