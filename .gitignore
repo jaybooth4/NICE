@@ -8,3 +8,6 @@ cpp/build/
 cpp/dlib/
 cpp/doc/
 python
+formatData
+Notebooks
+genKmeansData.py

@@ -206,10 +206,10 @@ class Kmeans {
       //   std::cout << closeCtr[i] << std::endl;
     }
 
-    std::ofstream outfile;
-    outfile.open("cluster_results.txt");
-    outfile << *assignments;
-    outfile.close();
+//    std::ofstream outfile;
+//    outfile.open("cluster_results.txt");
+//    outfile << *assignments;
+//    outfile.close();
 
 
     delete[] closeCtr;
