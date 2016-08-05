@@ -124,7 +124,7 @@ class Kmeans {
   ///
   /// \return
   /// This function returns a pointer to a Vector with the cluster assignments
-  Nice::Vector<int>* Predict(const Nice::Matrix<T> &in_matrix) {
+  Nice::Vector<int> Predict(const Nice::Matrix<T> &in_matrix) {
     if (ctrs_data_ == NULL) {
       std::cerr << "ERROR: NO CENTERS CALCULATED\n";
       return (1);
@@ -140,14 +140,14 @@ class Kmeans {
     KMctrIdxArray close_ctr = new KMctrIdx[data_pts_->getNPts()];
     double* sq_dist = new double[data_pts_->getNPts()];
     ctrs_data_->getAssignments(close_ctr, sq_dist);
-    Nice::Vector<int>* cluster_labels_ = new Nice::Vector<int>;
-    cluster_labels_->setZero(data_pts_->getNPts());
+    Nice::Vector<int> cluster_labels;
+    cluster_labels.setZero(data_pts_->getNPts());
     for (int i = 0; i < data_pts_->getNPts(); i++) {
-      (*cluster_labels_)(i) = close_ctr[i];
+      (cluster_labels)(i) = close_ctr[i];
     }
     delete[] close_ctr;
     delete sq_dist;
-    return (cluster_labels_);
+    return (cluster_labels);
   }
 
   /// This function that calculates the K-Means centers and the cluster
@@ -155,7 +155,7 @@ class Kmeans {
   ///
   /// \return
   /// This function returns a pointer to a Vector with the cluster assignments
-  Nice::Vector<int>* FitPredict() {
+  Nice::Vector<int> FitPredict() {
     data_pts_->setNPts(num_pts_);      // set number of pts
     data_pts_->buildKcTree();      // build filtering structure
     ctrs_data_ = new KMfilterCenters(k_, (*data_pts_));   // allocate centers
@@ -164,14 +164,38 @@ class Kmeans {
     KMctrIdxArray close_ctr = new KMctrIdx[data_pts_->getNPts()];
     double* sq_dist = new double[data_pts_->getNPts()];
     (*ctrs_data_).getAssignments(close_ctr, sq_dist);  // Get data assignments
-    Nice::Vector<int>* cluster_labels_ = new Nice::Vector<int>;
-    cluster_labels_->setZero(data_pts_->getNPts());
+    Nice::Vector<int> cluster_labels;
+    cluster_labels.setZero(data_pts_->getNPts());
     for (int i = 0; i < data_pts_->getNPts(); i++) {
-      (*cluster_labels_)(i) = close_ctr[i];  // Assign centers for return
+      (cluster_labels)(i) = close_ctr[i];  // Assign centers for return
     }
     delete[] close_ctr;
     delete sq_dist;
-    return (cluster_labels_);
+    return (cluster_labels);
+  }
+
+  /// This function that calculates the K-Means centers and the cluster
+  /// assignments for each data point.
+  ///
+  /// \return
+  /// This function returns a pointer to a Vector with the cluster assignments
+  Nice::Vector<int> FitPredict2() {
+    data_pts_->setNPts(num_pts_);      // set number of pts
+    data_pts_->buildKcTree();      // build filtering structure
+    ctrs_data_ = new KMfilterCenters(k_, (*data_pts_));   // allocate centers
+    KMlocalHybrid km_hybrid((*ctrs_data_), (*km_specs_));   // Hybrid heuristic
+    (*ctrs_data_) = km_hybrid.execute();  // Get centers from hybrid algorithm
+    KMctrIdxArray close_ctr = new KMctrIdx[data_pts_->getNPts()];
+    double* sq_dist = new double[data_pts_->getNPts()];
+    (*ctrs_data_).getAssignments(close_ctr, sq_dist);  // Get data assignments
+    Nice::Vector<int> cluster_labels;
+    cluster_labels.setZero(data_pts_->getNPts());
+    for (int i = 0; i < data_pts_->getNPts(); i++) {
+      (cluster_labels)(i) = close_ctr[i];  // Assign centers for return
+    }
+    delete[] close_ctr;
+    delete sq_dist;
+    return (cluster_labels);
   }
 
   /// This function that calculates the K-Means centers and the cluster
