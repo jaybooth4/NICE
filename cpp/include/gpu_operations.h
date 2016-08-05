@@ -247,12 +247,6 @@ class GpuOperations {
     }
   }
 
-
-
-
-
-
-
   /// This function calculates the difference of the input Matrix and scalar
   ///
   /// \param a
@@ -310,21 +304,6 @@ class GpuOperations {
     cublasDestroy(handle);
     return h_c;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   /// This function subtracts one matrix from another and returns the resulting
   /// matrix.
