@@ -40,31 +40,35 @@
 #include "include/kmeans.h"
 
 class KmeansTest : public ::testing::Test {
+ private:
  public:
-  /*
-   Nice::Vector<int>* LabelsKmeans;
-   std::string inputFile = "data_k4_p10_d4_c1.txt";
-   Nice::Matrix<double> testMatrix= Nice::util::FromFile<double>(inputFile, 40, 4);
-   Nice::Kmeans<double> model = Nice::Kmeans<double> (4, 40, testMatrix);
+   Nice::Vector<int> LabelsKmeans;
    void GetLabel() {
-   LabelsKmeans = model.FitPredict();
-   }*/
+     Nice::Kmeans model = Nice::Kmeans();
+     std::string inputFile = "data_k4_p10_d4_c1.txt";
+     Nice::Matrix<double> testMatrix = Nice::util::FromFile<double>(inputFile, 40, 4);
+     model.Fit(testMatrix);
+//     LabelsKmeans = model.GetLabels();
+//     std::cout << "Hello3\n\n";
+   }
 };
 
-/*
- #define EXPECT_MATRIX_EQ(a, ref)\
+#define EXPECT_MATRIX_EQ(a, ref)\
     EXPECT_EQ(a.rows(), ref.rows());\
     EXPECT_EQ(a.cols(), ref.cols());\
     for (int i = 0; i < a.rows(); i++)\
       for (int j = 0; j < a.cols(); j++)\
         EXPECT_NEAR(double(a(i, j)), double(ref(i, j)), 0.0001);\
-*/
 
 TEST_F(KmeansTest, SimpleTest) {
-  /*this->GetLabel();
-   Eigen::VectorXi LabelsTruth(40);
-   LabelsTruth << 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3;
-   EXPECT_MATRIX_EQ(LabelsTruth, (*LabelsKmeans));
-   */
+  this->GetLabel();
+  Eigen::VectorXi LabelsTruth(40);
+  LabelsTruth << 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3;
+  //EXPECT_MATRIX_EQ(LabelsTruth, LabelsKmeans);
   EXPECT_EQ(2 + 2, 4);
+}
+
+int main(int argc, char **argv) {
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
 }
