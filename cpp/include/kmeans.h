@@ -79,7 +79,7 @@ class Kmeans {
   /// a Kmeans object
   Kmeans() {
     dims_ = 0;    // dimension
-    num_pts_ = 0;    // max number of data points
+    num_pts_ = 40;    // max number of data points
     k_ = 4;    // number of centers
     cluster_type_ = 1;
     ctrs_data_ = NULL;
@@ -107,8 +107,9 @@ class Kmeans {
     num_pts_ = in_matrix.rows();    // max number of data points
     data_pts_ = new KMdata(dims_, num_pts_);    // allocate data storage
     for (int pt = 0; pt < num_pts_; ++pt)
-      for (int d = 0; d < dims_; ++d)
-        (*data_pts_)[pt][d] = in_matrix.coeffRef(pt, d);
+      //for (int d = 0; d < dims_; ++d)
+        //(*data_pts_)[pt][d] = in_matrix.coeffRef(pt, d);
+        Eigen::Map<Nice::Matrix<double>>((*data_pts_)[pt],1,dims_) = in_matrix.row(pt);
     data_pts_->setNPts(num_pts_);      // set number of pts
     data_pts_->buildKcTree();      // build filtering structure
     ctrs_data_ = new KMfilterCenters(k_, (*data_pts_));   // allocate centers
@@ -130,7 +131,6 @@ class Kmeans {
         (*ctrs_data_) = km_hybrid.execute();
       }
     }
-    ctrs_data_->print();
   }
 
   /// This function calculates the K-Means centers and the cluster
@@ -141,12 +141,8 @@ class Kmeans {
   Nice::Vector<int> GetLabels() {
     KMctrIdxArray close_ctr = new KMctrIdx[num_pts_];
     double* sq_dist = new double[num_pts_];
-    ctrs_data_->print();
     ctrs_data_->getAssignments(close_ctr, sq_dist);  // Get data assignments
-    Nice::Vector<int> cluster_labels;
-    cluster_labels.setZero(num_pts_);
-    for (int i = 0; i < num_pts_; i++)
-      (cluster_labels)(i) = close_ctr[i];  // Assign centers for return
+    Nice::Vector<int> cluster_labels = Eigen::Map<Nice::Vector<int>>(close_ctr, num_pts_, 1);
     delete[] close_ctr;
     delete sq_dist;
     return (cluster_labels);
@@ -163,8 +159,6 @@ class Kmeans {
   Nice::Vector<int> Predict(const Nice::Matrix<double> &in_matrix) {
     num_pts_=in_matrix.rows();
     double ** centers = ctrs_data_->getCtrPts();
-    std::cout<<centers[0][0]<<std::endl;
-    std::cout<<centers[0][1]<<std::endl;
     double * distance_to_centers = new double[k_];
     int * closest_centers = new int[num_pts_];
     double distance = 0;
@@ -184,10 +178,9 @@ class Kmeans {
           }
       }
     }
-    Nice::Vector<int> cluster_labels;
-    cluster_labels.setZero(num_pts_);
-    for (int i = 0; i < num_pts_; i++)
-      (cluster_labels)(i) = closest_centers[i];
+    Nice::Vector<int> cluster_labels = Eigen::Map<Nice::Vector<int>>(closest_centers, num_pts_, 1);
+    delete distance_to_centers;
+    delete closest_centers;
     return cluster_labels;
   }
 
