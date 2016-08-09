@@ -68,6 +68,7 @@ class Kmeans {
   int dims_;
   int num_pts_;
   KMfilterCenters* ctrs_data_;
+  KMdata* data_pts_;  // Included as part fo the KMfilterCenters object
   int cluster_type_;
 
  public:
@@ -104,13 +105,13 @@ class Kmeans {
   void Fit(const Nice::Matrix<double> &in_matrix) {
     dims_ = in_matrix.cols();    // dimension
     num_pts_ = in_matrix.rows();    // max number of data points
-    KMdata data_pts(dims_, num_pts_);    // allocate data storage
+    data_pts_ = new KMdata(dims_, num_pts_);    // allocate data storage
     for (int pt = 0; pt < num_pts_; ++pt)
       for (int d = 0; d < dims_; ++d)
-        data_pts[pt][d] = in_matrix.coeffRef(pt, d);
-    data_pts.setNPts(num_pts_);      // set number of pts
-    data_pts.buildKcTree();      // build filtering structure
-    ctrs_data_ = new KMfilterCenters(k_, data_pts);   // allocate centers
+        (*data_pts_)[pt][d] = in_matrix.coeffRef(pt, d);
+    data_pts_->setNPts(num_pts_);      // set number of pts
+    data_pts_->buildKcTree();      // build filtering structure
+    ctrs_data_ = new KMfilterCenters(k_, (*data_pts_));   // allocate centers
     switch(cluster_type_) {
       case 1: {
         KMlocalLloyds km_lloyds((*ctrs_data_), (*km_specs_));   // Hybrid heuristic
@@ -138,19 +139,14 @@ class Kmeans {
   /// \return
   /// This function returns a pointer to a Vector with the cluster assignments
   Nice::Vector<int> GetLabels() {
-    std::cout << "Hello-3\n\n";
     KMctrIdxArray close_ctr = new KMctrIdx[num_pts_];
     double* sq_dist = new double[num_pts_];
-    std::cout << "Hello-2\n\n";
     ctrs_data_->print();
     ctrs_data_->getAssignments(close_ctr, sq_dist);  // Get data assignments
-    std::cout << "Hello-1\n\n";
     Nice::Vector<int> cluster_labels;
     cluster_labels.setZero(num_pts_);
-    std::cout << "Hello0\n\n";
     for (int i = 0; i < num_pts_; i++)
       (cluster_labels)(i) = close_ctr[i];  // Assign centers for return
-    std::cout << "Hello1\n\n";
     delete[] close_ctr;
     delete sq_dist;
     return (cluster_labels);
@@ -165,21 +161,26 @@ class Kmeans {
   /// \return
   /// This function returns a Nice Vector with the cluster assignments
   Nice::Vector<int> Predict(const Nice::Matrix<double> &in_matrix) {
+    num_pts_=in_matrix.rows();
     double ** centers = ctrs_data_->getCtrPts();
+    std::cout<<centers[0][0]<<std::endl;
+    std::cout<<centers[0][1]<<std::endl;
     double * distance_to_centers = new double[k_];
     int * closest_centers = new int[num_pts_];
     double distance = 0;
     for (int points = 0; points < in_matrix.rows(); ++points) {
       for (int center = 0; center < k_; ++center) {
         for (int dim = 0; dim < dims_; ++dim) {
-          distance += abs(centers[center][dim] - in_matrix(center, dim));
+          distance += abs(centers[center][dim] - in_matrix(points, dim));
         }
         distance_to_centers[center] = distance;
+        distance = 0;
       }
-      distance = 0;
-      for(int center = 0; center < k_-1; ++center) {
-          if (distance_to_centers[center] < distance_to_centers[center+1]) {
+      int center_min_dist = INT_MAX;
+      for(int center = 0; center < k_; ++center) {
+          if (distance_to_centers[center] < center_min_dist) {
               closest_centers[points] = center;
+              center_min_dist = distance_to_centers[center];
           }
       }
     }
@@ -196,6 +197,7 @@ class Kmeans {
   /// \return
   /// This function returns a pointer to a Vector with the cluster assignments
   ~Kmeans() {
+    delete data_pts_;
     delete ctrs_data_;
     delete km_specs_;
   }
