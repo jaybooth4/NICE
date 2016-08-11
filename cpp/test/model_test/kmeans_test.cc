@@ -47,6 +47,7 @@ class KmeansTest : public ::testing::Test {
      Nice::Kmeans model = Nice::Kmeans();
      std::string inputFile = "data_k4_p10_d4_c1.txt";
      Nice::Matrix<double> testMatrix = Nice::util::FromFile<double>(inputFile, 40, 4);
+     model.SetClusterType(Nice::Kmeans::lloyds);
      model.Fit(testMatrix);
      LabelsKmeans = model.GetLabels();
    }
@@ -54,6 +55,7 @@ class KmeansTest : public ::testing::Test {
      Nice::Kmeans model = Nice::Kmeans();
      std::string inputFile = "data_k4_p10_d4_c1.txt";
      Nice::Matrix<double> testMatrix = Nice::util::FromFile<double>(inputFile, 40, 4);
+     model.SetClusterType(Nice::Kmeans::hybrid);
      model.Fit(testMatrix);
      LabelsKmeans = model.Predict(testMatrix);
    }
