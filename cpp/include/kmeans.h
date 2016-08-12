@@ -70,7 +70,7 @@ class Kmeans {
   };
 
   // This enum is used for parameters to the total number of stages
-  enum {        // entry names
+  enum {
     KM_TERM_CONST,  // constant term
     KM_TERM_LIN_K,  // linear k multiplier
     KM_TERM_LIN_N,  // linear n multiplier
@@ -121,7 +121,7 @@ class Kmeans {
         temp_reduc_fact_);      // temp. reduction factor
     for (int pt = 0; pt < num_pts_; ++pt)
       Eigen::Map<Nice::Matrix<double>>((*data_pts_)[pt], 1, dims_) = in_matrix
-          .row(pt);
+          .row(pt);  // Map function copies data by row
     data_pts_->setNPts(num_pts_);      // set number of pts
     data_pts_->buildKcTree();      // build filtering structure
     ctrs_data_ = new KMfilterCenters(k_, (*data_pts_));   // allocate centers
@@ -160,6 +160,7 @@ class Kmeans {
     KMctrIdxArray close_ctr = new KMctrIdx[num_pts_];
     double* sq_dist = new double[num_pts_];
     ctrs_data_->getAssignments(close_ctr, sq_dist);  // Get data assignments
+    // Map function used to copy array to Nice::Vector
     Nice::Vector<int> cluster_labels = Eigen::Map<Nice::Vector<int>>(close_ctr,
                                                                      num_pts_,
                                                                      1);
@@ -177,25 +178,30 @@ class Kmeans {
   /// \return
   /// This function returns a Nice Vector with the cluster assignments
   Nice::Vector<int> Predict(const Nice::Matrix<double> &in_matrix) {
-    num_pts_ = in_matrix.rows();
-    double ** centers = ctrs_data_->getCtrPts();
+    num_pts_ = in_matrix.rows();  // Assign number of points
+    double ** centers = ctrs_data_->getCtrPts();  // Holds centers in 2-D array
+    // Holds distance to each cluster center
     double * distance_to_centers = new double[k_];
+    // Holds closest center for each point
     int * closest_centers = new int[num_pts_];
+    // Distance used to calculate distance to a cluster center
     double distance = 0;
-    if (dist_type_ == manhattan) {
-      for (int points = 0; points < in_matrix.rows(); ++points) {
-        for (int center = 0; center < k_; ++center) {
-          for (int dim = 0; dim < dims_; ++dim) {
+    if (dist_type_ == manhattan) {  // If using manhattan distance
+      for (int points = 0; points < in_matrix.rows(); ++points) {  // Per point
+        for (int center = 0; center < k_; ++center) {  // Per center
+          for (int dim = 0; dim < dims_; ++dim) {  // Per dimension
+            // Manhattan distance calculation
             distance += abs(centers[center][dim] - in_matrix(points, dim));
           }
-          distance_to_centers[center] = distance;
-          distance = 0;
+          distance_to_centers[center] = distance;  // Store distance value
+          distance = 0;  // Reset distance
         }
-        int center_min_dist = INT_MAX;
-        for (int center = 0; center < k_; ++center) {
-          if (distance_to_centers[center] < center_min_dist) {
-            closest_centers[points] = center;
-            center_min_dist = distance_to_centers[center];
+        // Iterate through distances to find and assign minimum
+        int center_min_dist = INT_MAX;  // Set minimum value to max
+        for (int center = 0; center < k_; ++center) {  // Per center
+          if (distance_to_centers[center] < center_min_dist) {  // Smaller dist
+            closest_centers[points] = center;  // Assign center
+            center_min_dist = distance_to_centers[center];  // Assign minimum
           }
         }
       }
@@ -203,8 +209,8 @@ class Kmeans {
       std::cerr << "Error, this distance type is not defined!" << std::endl;
     }
     Nice::Vector<int> cluster_labels = Eigen::Map<Nice::Vector<int>>(
-        closest_centers, num_pts_, 1);
-    delete distance_to_centers;
+        closest_centers, num_pts_, 1);  // Map function used to copy array
+    delete distance_to_centers;  // Free memory
     delete closest_centers;
     return cluster_labels;
   }
@@ -242,7 +248,7 @@ class Kmeans {
   /// Type of clustering
   string GetClusterType() {
     switch (cluster_type_) {
-      case (lloyds):
+      case (lloyds):  // Using enum definition
         return "Lloyds";
       case (swap):
         return "Swap";
