@@ -30,3 +30,6 @@
 #include "include/gpu_util.h"
 #include "include/kmeans.h"
 // Place holder
+//
+/// THIS IS A TEST
+/// DOXYGEN - Andrew Tu

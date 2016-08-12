@@ -20,10 +20,9 @@ if(CMAKE_COMPILER_IS_GNUCXX)
 endif()
 
 add_definitions(-std=c++11)
-
-#if("${CMAKE_COMPILER_ID}" STREQUAL "Clang")
-#    add_definitions(-std=c++11)
-#endif()
+if("${CMAKE_COMPILER_ID}" STREQUAL "Clang")
+    add_definitions(-std=c++11)
+endif()
 message(STATUS "Eigen path: " ${EIGEN_INCLUDE_DIRS})
 message(STATUS "kmlocal path: " ${KMLOCAL_INCLUDE_DIRS})
 set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR})

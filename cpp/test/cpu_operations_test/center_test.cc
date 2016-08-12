@@ -20,42 +20,60 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-
-#include "include/gpu_operations.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
 #include "Eigen/Dense"
 #include "gtest/gtest.h"
+#include "include/cpu_operations.h"
+#include "include/matrix.h"
 
-template<class T>
-class GpuMatrixMatrixAddTest : public ::testing::Test {
+template<typename T>
+class MatrixCenterTest : public ::testing::Test {
  public:
   Nice::Matrix<T> a;
-  Nice::Matrix<T> b;
   Nice::Matrix<T> correct_ans;
-  Nice::Matrix<T> calc_ans;
+  Nice::Matrix<T> answer;
+  float precision = .0001;
 
-  void Add() {
-    calc_ans = Nice::GpuOperations<T>::Add(a, b);
+  void MatrixCenter(int row) {
+    answer = Nice::CpuOperations<T>::Center(a, row);
   }
 };
 
-typedef ::testing::Types<float, double> dataTypes;
-TYPED_TEST_CASE(GpuMatrixMatrixAddTest, dataTypes);
+typedef ::testing::Types<float, double> FloatTypes;
+TYPED_TEST_CASE(MatrixCenterTest, FloatTypes);
 
-TYPED_TEST(GpuMatrixMatrixAddTest, BasicTest) {
+TYPED_TEST(MatrixCenterTest, MatrixCenterCol) {
   this->a.resize(3, 3);
-  this->b.resize(3, 3);
+  this->a << 1, 4, 7,
+             2, 5, 8,
+             3, 6, 9;
   this->correct_ans.resize(3, 3);
-  this->a << 0.0, 1.0, 0.0,
-             1.0, 0.0, 1.0,
-             0.0, 1.0, 0.0;
+  this->correct_ans << -1, -1, -1,
+                       0, 0, 0,
+                       1, 1, 1;
+  this->MatrixCenter(0);
+  ASSERT_TRUE(this->correct_ans.isApprox(this->answer, this->precision));
+}
 
-  this->b << 1.0, 0.0, 1.0,
-             0.0, 1.0, 0.0,
-             1.0, 0.0, 1.0;
+TYPED_TEST(MatrixCenterTest, MatrixCenterRow) {
+  this->a.resize(3, 3);
+  this->a << 1, 2, 3,
+             4, 5, 6,
+             7, 8, 9;
+  this->correct_ans.resize(3, 3);
+  this->correct_ans << -1, 0, 1,
+                       -1, 0, 1,
+                       -1, 0, 1;
+  this->MatrixCenter(1);
+  ASSERT_TRUE(this->correct_ans.isApprox(this->answer, this->precision));
+}
 
-  this->correct_ans << 1.0, 1.0, 1.0,
-                       1.0, 1.0, 1.0,
-                       1.0, 1.0, 1.0;
-  this->Add();
-  ASSERT_TRUE(this->correct_ans.isApprox(this->calc_ans));
+TYPED_TEST(MatrixCenterTest, BadAxis) {
+  this->a.resize(3, 3);
+  this->a << 1, 2, 3,
+             4, 5, 6,
+             7, 8, 9;
+  ASSERT_DEATH(this->MatrixCenter(2), ".*");
 }
