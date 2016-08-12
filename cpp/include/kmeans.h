@@ -39,44 +39,44 @@
 // It is provided "as is" without express or implied warranty.
 //----------------------------------------------------------------------
 
-#ifndef CPP_INCLUDE_KMEANS2_H_
-#define CPP_INCLUDE_KMEANS2_H_
+#ifndef CPP_INCLUDE_KMEANS_H_
+#define CPP_INCLUDE_KMEANS_H_
 
-#include <string.h>
-#include <cstdlib>
-#include <cstring>
 #include <iostream>
 #include <string>
-#include <fstream>
-#include "KCtree.h"
-#include "KCutil.h"
-#include "KMcenters.h"
-#include "KMdata.h"
 #include "KMeans.h"
 #include "KMfilterCenters.h"
 #include "KMlocal.h"
-#include "KMrand.h"
-#include "KMterm.h"
 #include "include/matrix.h"
 #include "include/vector.h"
 
 namespace Nice {
 
+// This class implements the Kmeans function from the Kmlocal library
 class Kmeans {
  public:
-  enum cluster_type {
+  enum cluster_type {  // This enum defines the possible cluster types
     lloyds,
     swap,
     simple_hybrid,
     hybrid
   };
+
+  // This enum defines the possible distance calculation types for Fit
+  enum distance_type {
+    euclidean,
+    manhattan,
+    cosine
+  };
+
+  // This enum is used for parameters to the total number of stages
   enum {        // entry names
-    KM_TERM_CONST,    // constant term
-    KM_TERM_LIN_K,    // linear k multiplier
-    KM_TERM_LIN_N,    // linear n multiplier
-    KM_TERM_POW,    // power exponent
-    KM_TERM_VEC_LEN
-  };   // length of termination param vector
+    KM_TERM_CONST,  // constant term
+    KM_TERM_LIN_K,  // linear k multiplier
+    KM_TERM_LIN_N,  // linear n multiplier
+    KM_TERM_POW,  // power exponent
+    KM_TERM_VEC_LEN  // length of termination param vector
+  };
 
   /// This is a constructor that assigns default values to member variables to
   /// a Kmeans object
@@ -84,14 +84,17 @@ class Kmeans {
     dims_ = 0;    // dimension
     num_pts_ = 40;    // max number of data points
     k_ = 4;    // number of centers
-    cluster_type_ = lloyds;
-    data_pts_ = NULL;
-    ctrs_data_ = NULL;
-    max_tot_stage_vec_[0] = 100;  // max total stages
-    max_tot_stage_vec_[1] = 0;
-    max_tot_stage_vec_[2] = 0;
-    max_tot_stage_vec_[3] = 0;
-
+    cluster_type_ = lloyds;  // Type of clustering algorithm used
+    dist_type_ = manhattan;  // Type of distance calculation used
+    ctrs_data_ = NULL;  // Used in calculation of the cluster centers
+    data_pts_ = NULL;  // Is a member of the ctrs_data_ object
+    // The following are default values for the clustering algorithms
+    // The maximum number of stages is calculated by
+    // MAX_STAGE = (const) + ((lin_k)*k + (lin_n)*n)^(pow)
+    max_tot_stage_vec_[KM_TERM_CONST] = 100;
+    max_tot_stage_vec_[KM_TERM_LIN_K] = 0;
+    max_tot_stage_vec_[KM_TERM_LIN_N] = 0;
+    max_tot_stage_vec_[KM_TERM_POW] = 0;
     min_consec_rdl_ = .10;      // min consecutive RDL
     min_accum_rdl_ = .10;     // min accumulated RDL
     max_run_stage_ = 3;     // max stages/run for Lloyd's
@@ -100,112 +103,22 @@ class Kmeans {
     temp_reduc_fact_ = 0.95;     // temperature reduction factor
   }
 
-  void SetK(int num_clusters) {
-    k_ = num_clusters;
-  }
-
-  void SetClusterType(cluster_type clustering_method) {
-    cluster_type_ = clustering_method;
-  }
-
-  void setMaxTotStage(int i, double val) {  // set max stage parameters
-    assert(i >= 0 && i < KM_TERM_VEC_LEN);
-    max_tot_stage_vec_[i] = val;
-  }
-
-  void setAbsMaxTotStage(int s) {   // set max number of stages
-    max_tot_stage_vec_[KM_TERM_CONST] = s;
-    max_tot_stage_vec_[KM_TERM_POW] = 0;
-  }
-
-  int getMaxTotStage() const  // max total stages
-  {
-    double count = max_tot_stage_vec_[KM_TERM_CONST];
-    if (max_tot_stage_vec_[KM_TERM_POW] != 0) {
-      double sum = max_tot_stage_vec_[KM_TERM_LIN_K] * k_
-          + max_tot_stage_vec_[KM_TERM_LIN_N] * num_pts_;
-      count += pow(sum, max_tot_stage_vec_[KM_TERM_POW]);
-    }
-    assert(count >= 0 && count <= INT_MAX);  // should be positive integer
-    if (count <= 0)
-      count = INT_MAX;    // 0 means infinity
-    return int(count);
-  }
-
-  double getMinConsecRDL() const    // return min consec RDL
-  {
-    return min_consec_rdl_;
-  }
-
-  double getMinAccumRDL() const   // return min accum RDL
-  {
-    return min_accum_rdl_;
-  }
-
-  int getMaxRunStage() const      // return max runs per stage
-  {
-    return max_run_stage_;
-  }
-
-  void setMinConsecRDL(double rdl)    // set min consec RDL
-      {
-    min_consec_rdl_ = rdl;
-  }
-
-  void setMinAccumRDL(double rdl)   // set min accum RDL
-      {
-    min_accum_rdl_ = rdl;
-  }
-
-  void setMaxRunStage(int ms)     // set max runs per stage
-      {
-    max_run_stage_ = ms;
-  }
-
-  double getInitProbAccept() const    // return init. prob. accept
-  {
-    return init_prob_accept_;
-  }
-
-  void setInitProbAccept(double ipa)    // set init. prob. accept
-      {
-    init_prob_accept_ = ipa;
-  }
-
-  int getTempRunLength() const    // return temperature run len.
-  {
-    return temp_run_length_;
-  }
-
-  void setTempRunLength(int trl)    // set temperature run length
-      {
-    temp_run_length_ = trl;
-  }
-
-  double getTempReducFact() const   // return temp. reduction fact.
-  {
-    return temp_reduc_fact_;
-  }
-
-  void setTempReducFact(double trf)   // set temp. reduction fact.
-      {
-    temp_reduc_fact_ = trf;
-  }
-
   /// This function calculates the cluster centers of a given set of points
   /// And stores them in a private member of the Kmeans class
   void Fit(const Nice::Matrix<double> &in_matrix) {
     dims_ = in_matrix.cols();    // dimension
     num_pts_ = in_matrix.rows();    // max number of data points
     data_pts_ = new KMdata(dims_, num_pts_);    // allocate data storage
-    KMterm km_specs(max_tot_stage_vec_[0], max_tot_stage_vec_[1],
-                    max_tot_stage_vec_[2], max_tot_stage_vec_[3],  // run for 100 stages
-                    min_consec_rdl_,     // min consec RDL
-                    min_accum_rdl_,     // min accum RDL
-                    max_run_stage_,      // max run stages
-                    init_prob_accept_,     // init. prob. of acceptance
-                    temp_run_length_,     // temp. run length
-                    temp_reduc_fact_);      // temp. reduction factor
+    KMterm km_specs(max_tot_stage_vec_[KM_TERM_CONST],
+                    max_tot_stage_vec_[KM_TERM_LIN_K],
+                    max_tot_stage_vec_[KM_TERM_LIN_N],
+                    max_tot_stage_vec_[KM_TERM_POW],  // run for 100 stages
+        min_consec_rdl_,     // min consec RDL
+        min_accum_rdl_,     // min accum RDL
+        max_run_stage_,      // max run stages
+        init_prob_accept_,     // init. prob. of acceptance
+        temp_run_length_,     // temp. run length
+        temp_reduc_fact_);      // temp. reduction factor
     for (int pt = 0; pt < num_pts_; ++pt)
       Eigen::Map<Nice::Matrix<double>>((*data_pts_)[pt], 1, dims_) = in_matrix
           .row(pt);
@@ -214,21 +127,27 @@ class Kmeans {
     ctrs_data_ = new KMfilterCenters(k_, (*data_pts_));   // allocate centers
     switch (cluster_type_) {
       case lloyds: {
-        KMlocalLloyds km_lloyds((*ctrs_data_), km_specs);   // Hybrid heuristic
+        KMlocalLloyds km_lloyds((*ctrs_data_), km_specs);   // Lloyds
         (*ctrs_data_) = km_lloyds.execute();
+        break;
       }
       case swap: {
-        KMlocalSwap km_swap((*ctrs_data_), km_specs);   // Hybrid heuristic
+        KMlocalSwap km_swap((*ctrs_data_), km_specs);   // Swap
         (*ctrs_data_) = km_swap.execute();
+        break;
       }
       case simple_hybrid: {
-        KMlocalEZ_Hybrid km_ez_hybrid((*ctrs_data_), km_specs);  // Hybrid heuristic
+        KMlocalEZ_Hybrid km_ez_hybrid((*ctrs_data_), km_specs);  // Simple
         (*ctrs_data_) = km_ez_hybrid.execute();
+        break;
       }
       case hybrid: {
-        KMlocalHybrid km_hybrid((*ctrs_data_), km_specs);   // Hybrid heuristic
+        KMlocalHybrid km_hybrid((*ctrs_data_), km_specs);   // Hybrid
         (*ctrs_data_) = km_hybrid.execute();
+        break;
       }
+      default:
+        break;
     }
   }
 
@@ -263,21 +182,25 @@ class Kmeans {
     double * distance_to_centers = new double[k_];
     int * closest_centers = new int[num_pts_];
     double distance = 0;
-    for (int points = 0; points < in_matrix.rows(); ++points) {
-      for (int center = 0; center < k_; ++center) {
-        for (int dim = 0; dim < dims_; ++dim) {
-          distance += abs(centers[center][dim] - in_matrix(points, dim));
+    if (dist_type_ == manhattan) {
+      for (int points = 0; points < in_matrix.rows(); ++points) {
+        for (int center = 0; center < k_; ++center) {
+          for (int dim = 0; dim < dims_; ++dim) {
+            distance += abs(centers[center][dim] - in_matrix(points, dim));
+          }
+          distance_to_centers[center] = distance;
+          distance = 0;
         }
-        distance_to_centers[center] = distance;
-        distance = 0;
-      }
-      int center_min_dist = INT_MAX;
-      for (int center = 0; center < k_; ++center) {
-        if (distance_to_centers[center] < center_min_dist) {
-          closest_centers[points] = center;
-          center_min_dist = distance_to_centers[center];
+        int center_min_dist = INT_MAX;
+        for (int center = 0; center < k_; ++center) {
+          if (distance_to_centers[center] < center_min_dist) {
+            closest_centers[points] = center;
+            center_min_dist = distance_to_centers[center];
+          }
         }
       }
+    } else {
+      std::cerr << "Error, this distance type is not defined!" << std::endl;
     }
     Nice::Vector<int> cluster_labels = Eigen::Map<Nice::Vector<int>>(
         closest_centers, num_pts_, 1);
@@ -286,23 +209,191 @@ class Kmeans {
     return cluster_labels;
   }
 
-  /// This function that calculates the K-Means centers and the cluster
-  /// assignments for each data point.
-  ///
-  /// \return
-  /// This function returns a pointer to a Vector with the cluster assignments
+/// This destructor frees memory allocations created within the kmeans class
   ~Kmeans() {
     delete data_pts_;
     delete ctrs_data_;
   }
 
+  /// This function sets the number of clusters used in K-means
+  ///
+  /// \param
+  /// Number of clusters
+  void SetK(int num_clusters) {
+    k_ = num_clusters;
+  }
+
+  /// This function returns the number of clusters used in K-means
+  ///
+  /// \return
+  /// Number of clusters
+  int GetK() {
+    return k_;
+  }
+
+  /// This function sets the number of clusters used in K-means
+  void SetClusterType(cluster_type clustering_method) {
+    cluster_type_ = clustering_method;
+  }
+
+  /// This function returns the clustering type
+  ///
+  /// \return
+  /// Type of clustering
+  string GetClusterType() {
+    switch (cluster_type_) {
+      case (lloyds):
+        return "Lloyds";
+      case (swap):
+        return "Swap";
+      case (simple_hybrid):
+        return "Simple Hybrid";
+      case (hybrid):
+        return "Hybrid";
+      default:
+        return "Cluster type error";
+    }
+  }
+
+  /// This function sets the max number of stages used in K-means
+  ///
+  /// \param
+  /// Number of clusters
+  void SetMaxTotStage(int index, double val) {  // set max stage parameters
+    assert(index >= 0 && index < KM_TERM_VEC_LEN);
+    max_tot_stage_vec_[index] = val;
+  }
+
+  /// This function returns the maximum number of stages
+  ///
+  /// \return
+  /// Number of stages
+  int GetMaxTotStage() {
+    double count = max_tot_stage_vec_[KM_TERM_CONST];
+    if (max_tot_stage_vec_[KM_TERM_POW] != 0) {
+      double sum = max_tot_stage_vec_[KM_TERM_LIN_K] * k_
+          + max_tot_stage_vec_[KM_TERM_LIN_N] * num_pts_;
+      count += pow(sum, max_tot_stage_vec_[KM_TERM_POW]);
+    }
+    assert(count >= 0 && count <= INT_MAX);  // should be positive integer
+    if (count <= 0)
+      count = INT_MAX;    // 0 means infinity
+    return static_cast<int>(count);
+  }
+
+  /// This function sets the absolute max number of stages used in K-means
+  ///
+  /// \param
+  /// Number of clusters
+  void SetAbsMaxTotStage(int stages) {   // set max number of stages
+    max_tot_stage_vec_[KM_TERM_CONST] = stages;
+    max_tot_stage_vec_[KM_TERM_POW] = 0;
+  }
+
+  /// This function sets the minimum consecutive RDL
+  ///
+  /// \param
+  /// Minimum consecutive RDL
+  void SetMinConsecRDL(double rdl) {
+    min_consec_rdl_ = rdl;
+  }
+
+  /// This function returns the minimum consecutive RDL
+  ///
+  /// \return
+  /// Minumum consecutive RDL
+  double GetMinConsecRDL() {
+    return min_consec_rdl_;
+  }
+
+  /// This function sets the minimum accumulated RDL
+  ///
+  /// \param
+  /// Minimum accumulated RDL
+  void SetMinAccumRDL(double rdl) {
+    min_accum_rdl_ = rdl;
+  }
+
+  /// This function returns the minimum accumulated RDL
+  ///
+  /// \return
+  /// Minumum accumulted RDL
+  double GetMinAccumRDL() {
+    return min_accum_rdl_;
+  }
+
+  /// This function sets the max number of runs per stage used in K-means
+  ///
+  /// \param
+  /// Number of runs per stage
+  void SetMaxRunStage(int ms) {
+    max_run_stage_ = ms;
+  }
+
+  /// This function returns the maximum number of runs per stage
+  ///
+  /// \return
+  /// Maximum runs per stage
+  int GetMaxRunStage() {
+    return max_run_stage_;
+  }
+
+  /// This function sets the initial probability of acceptance
+  ///
+  /// \param
+  /// Initial probability of acceptance
+  void SetInitProbAccept(double ipa) {
+    init_prob_accept_ = ipa;
+  }
+
+  /// This function returns the initial probability of acceptance
+  ///
+  /// \return
+  /// Initial probability of acceptance
+  double GetInitProbAccept() const {
+    return init_prob_accept_;
+  }
+
+  /// This function sets the temperature run length
+  ///
+  /// \param
+  /// Temperature run length
+  void SetTempRunLength(int trl) {
+    temp_run_length_ = trl;
+  }
+
+  /// This function returns the temperature run length
+  ///
+  /// \return
+  /// Temperature run length
+  int GetTempRunLength() const {
+    return temp_run_length_;
+  }
+
+  /// This function sets the temperature reduction factor
+  ///
+  /// \param
+  /// Temperature reduction factor
+  void SetTempReducFact(double trf) {
+    temp_reduc_fact_ = trf;
+  }
+
+  /// This function returns the temperature reduction factor
+  ///
+  /// \return
+  /// Temperature reduction factor
+  double GetTempReducFact() {
+    return temp_reduc_fact_;
+  }
+
  private:
-  int k_;
-  int dims_;
-  int num_pts_;
-  KMfilterCenters* ctrs_data_;
+  int k_;  // Number of clusters
+  int dims_;  // Dimensions
+  int num_pts_;  // Number of points
+  KMfilterCenters* ctrs_data_;  // Stores cluster center data
   KMdata* data_pts_;  // Stored because it's part of the KMfilterCenters object
-  cluster_type cluster_type_;
+  cluster_type cluster_type_;  // Type of clustering algorithm
+  distance_type dist_type_;  // Type of distance calculation
   double max_tot_stage_vec_[KM_TERM_VEC_LEN];  // max total stages
   double min_consec_rdl_;      // min consecutive RDL
   double min_accum_rdl_;     // min accumulated RDL
@@ -313,4 +404,4 @@ class Kmeans {
 };
 
 }  // namespace Nice
-#endif  // CPP_INCLUDE_KMEANS2_H_
+#endif  // CPP_INCLUDE_KMEANS_H_
